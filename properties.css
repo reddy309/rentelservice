@@ -1,0 +1,2717 @@
+/* =========================================
+   PROPERTIES HERO SECTION
+========================================= */
+
+.properties-hero {
+  position: relative;
+  width: 100%;
+  min-height: 570px;
+  height: 90vh;
+  margin-top: var(--header-height, 70px);
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: url("images/propertiesbg.jpg");
+
+  color: #ffffff;
+}
+
+/* PROPERTIES HERO OVERLAY */
+
+.properties-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: rgba(0, 0, 0, 0.85);
+  transition: background 0.4s ease;
+
+  animation: propertiesOverlayIn 1.2s ease both;
+}
+
+/* DARK MODE OVERLAY */
+
+html.dark .properties-hero-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+/* Center content */
+
+.properties-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 90%);
+  margin: 0 auto;
+  padding: 70px 0 100px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Small label */
+
+.properties-hero-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+/* Main heading */
+
+.properties-hero-content h1 {
+  margin: 0;
+
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -1px;
+
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+
+  opacity: 0;
+  animation: propertiesFadeUp 1s ease 0.4s forwards;
+}
+
+.properties-hero-content h1 span {
+  color: var(--secondary);
+}
+
+/* Description */
+
+.properties-hero-content p {
+  max-width: 640px;
+  margin: 25px auto 0;
+
+  color: rgba(255, 255, 255, 0.88);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.9;
+
+  opacity: 0;
+  animation: propertiesFadeUp 1s ease 0.6s forwards;
+}
+
+/* Buttons */
+
+.properties-hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 35px;
+
+  opacity: 0;
+  animation: propertiesFadeUp 1s ease 0.8s forwards;
+}
+
+.properties-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.properties-btn svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.3s ease;
+}
+
+.properties-btn:hover {
+  transform: translateY(-4px);
+}
+
+.properties-btn:hover svg {
+  transform: translate(3px, -2px);
+}
+
+/* Primary button */
+
+.properties-btn-primary {
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+}
+
+.properties-btn-primary:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+/* Outline button */
+
+.properties-btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  border-color: var(--secondary);
+  border: 1px solid var(--primary);
+}
+
+.properties-btn-outline:hover {
+  color: var(--text);
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes propertiesFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes propertiesOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollLinePulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scaleX(0.7);
+    transform-origin: left;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* =========================================
+   NETBOOK / SMALL LAPTOP
+========================================= */
+
+@media (min-width: 1025px) {
+  .properties-hero-content {
+    max-width: 1000px;
+  }
+}
+
+/* =========================================
+   iPAD MINI
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .properties-hero {
+    min-height: 620px;
+    height: calc(100vh - 75px);
+  }
+
+  .properties-hero-content {
+    width: 88%;
+    padding-bottom: 85px;
+  }
+
+  .properties-hero-content h1 {
+    font-size: clamp(48px, 7vw, 68px);
+  }
+
+  .properties-hero-content p {
+    max-width: 570px;
+    font-size: 14px;
+  }
+
+  .properties-hero-bottom {
+    gap: 14px;
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .properties-hero {
+    min-height: 650px;
+    height: calc(100svh - 65px);
+    max-height: 820px;
+
+    background-position: 58% center;
+  }
+
+  .properties-hero-overlay {
+    background: rgba(28, 24, 16, 0.68);
+  }
+
+  .properties-hero-content {
+    width: 90%;
+    padding: 50px 0 90px;
+  }
+
+  .properties-hero-label {
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .label-line {
+    width: 20px;
+  }
+
+  .properties-hero-content h1 {
+    font-size: clamp(38px, 10vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -0.5px;
+  }
+
+  .properties-hero-content p {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .properties-hero-buttons {
+    width: 100%;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .properties-btn {
+    min-height: 48px;
+    padding: 0 15px;
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .properties-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .properties-hero-scroll {
+    top: calc(100% + 25px);
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .properties-hero-bottom {
+    gap: 9px;
+    min-height: 52px;
+    padding: 12px 8px;
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
+  .bottom-divider {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 359px) {
+  .properties-hero {
+    min-height: 620px;
+    height: 100svh;
+  }
+
+  .properties-hero-content {
+    width: 92%;
+  }
+
+  .properties-hero-content h1 {
+    font-size: 35px;
+  }
+
+  .properties-hero-content p {
+    font-size: 11px;
+  }
+
+  .properties-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .properties-btn {
+    width: 100%;
+  }
+
+  .properties-hero-bottom {
+    gap: 7px;
+    font-size: 7px;
+  }
+}
+/* =========================================
+   PROPERTY SEARCH SECTION
+========================================= */
+
+.property-search-section {
+  position: relative;
+  width: 100%;
+  padding: 90px 24px;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.property-search-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.property-search-heading {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.property-search-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.property-search-heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.property-search-heading h2 span {
+  color: var(--secondary);
+}
+
+.property-search-heading p {
+  max-width: 600px;
+  margin: 16px auto 0;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+/* =========================================
+   PROPERTY SEARCH FORM
+========================================= */
+
+.property-search-form {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr auto;
+  align-items: end;
+  gap: 18px;
+
+  padding: 28px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  box-shadow: 0 15px 45px var(--shadow);
+}
+
+.property-search-field {
+  min-width: 0;
+}
+
+.property-search-field label {
+  display: block;
+  margin-bottom: 11px;
+
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================
+   INPUT AND SELECT FIELDS
+========================================= */
+
+.property-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  padding: 0 13px;
+
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.property-input-wrap:focus-within {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--secondary) 14%, transparent);
+}
+
+.property-input-wrap > svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--secondary);
+}
+
+.property-input-wrap input,
+.property-input-wrap select {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.property-input-wrap input::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.property-input-wrap select {
+  cursor: pointer;
+}
+
+.property-input-wrap select option {
+  background: var(--card);
+  color: var(--text);
+}
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+.property-search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  height: 52px;
+  padding: 0 23px;
+
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+
+  background: var(--primary);
+  color: #ffffff;
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.property-search-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.property-search-button:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.property-search-button:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   POPULAR SEARCHES
+========================================= */
+
+.property-search-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.popular-search-label {
+  margin-right: 5px;
+
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.search-tag {
+  padding: 9px 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 30px;
+
+  background: transparent;
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.search-tag:hover,
+.search-tag.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.search-tag:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   SEARCH FEEDBACK
+========================================= */
+
+.property-search-message {
+  min-height: 20px;
+  margin: 18px 0 0;
+
+  color: var(--secondary);
+  text-align: center;
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.7;
+}
+/* =========================================
+   NETBOOK / SMALL LAPTOP
+   1025px - 1366px
+========================================= */
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .property-search-section {
+    padding: 80px 30px;
+  }
+
+  .property-search-container {
+    max-width: 1150px;
+  }
+
+  .property-search-heading {
+    margin-bottom: 35px;
+  }
+
+  .property-search-heading h2 {
+    font-size: 54px;
+  }
+
+  .property-search-form {
+    grid-template-columns: 1.3fr 1fr 1fr auto;
+    gap: 14px;
+    padding: 24px;
+  }
+
+  .property-search-button {
+    padding: 0 18px;
+  }
+
+  .property-input-wrap {
+    padding: 0 10px;
+  }
+}
+
+/* =========================================
+   IPAD MINI
+   600px - 1024px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .property-search-section {
+    padding: 70px 24px;
+  }
+
+  .property-search-container {
+    max-width: 760px;
+  }
+
+  .property-search-heading {
+    max-width: 650px;
+    margin-bottom: 32px;
+  }
+
+  .property-search-eyebrow {
+    margin-bottom: 15px;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .property-search-heading h2 {
+    font-size: clamp(40px, 5.5vw, 50px);
+  }
+
+  .property-search-heading p {
+    max-width: 540px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .property-search-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .property-search-field label {
+    margin-bottom: 9px;
+    font-size: 12px;
+  }
+
+  .property-input-wrap {
+    height: 50px;
+    padding: 0 12px;
+  }
+
+  .property-input-wrap input,
+  .property-input-wrap select {
+    font-size: 12px;
+  }
+
+  .property-search-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 50px;
+  }
+
+  .property-search-bottom {
+    gap: 9px;
+    margin-top: 22px;
+  }
+
+  .popular-search-label {
+    font-size: 11px;
+  }
+
+  .search-tag {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+ / MOBILE
+   360px - 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .property-search-section {
+    padding: 55px 16px;
+  }
+
+  .property-search-container {
+    width: 100%;
+  }
+
+  .property-search-heading {
+    margin-bottom: 26px;
+  }
+
+  .property-search-eyebrow {
+    padding: 7px 13px;
+    margin-bottom: 15px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .property-search-heading h2 {
+    font-size: clamp(32px, 8.5vw, 42px);
+    line-height: 1.15;
+  }
+
+  .property-search-heading p {
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .property-search-form {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+
+  .property-search-field {
+    width: 100%;
+  }
+
+  .property-search-field label {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .property-input-wrap {
+    height: 48px;
+    padding: 0 11px;
+    gap: 9px;
+  }
+
+  .property-input-wrap > svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .property-input-wrap input,
+  .property-input-wrap select {
+    font-size: 12px;
+  }
+
+  .property-search-button {
+    width: 100%;
+    height: 48px;
+    padding: 0 18px;
+    font-size: 12px;
+  }
+
+  .property-search-bottom {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .popular-search-label {
+    width: 100%;
+    margin: 0 0 4px;
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .search-tag {
+    padding: 8px 11px;
+    font-size: 10px;
+  }
+
+  .property-search-message {
+    margin-top: 15px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+   Below 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .property-search-section {
+    padding: 45px 12px;
+  }
+
+  .property-search-eyebrow {
+    padding: 6px 10px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .property-search-heading h2 {
+    font-size: 30px;
+  }
+
+  .property-search-heading p {
+    font-size: 11px;
+  }
+
+  .property-search-form {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+    padding: 16px 12px;
+  }
+
+  .property-input-wrap {
+    height: 46px;
+    padding: 0 9px;
+  }
+
+  .property-input-wrap input,
+  .property-input-wrap select {
+    font-size: 11px;
+  }
+
+  .property-search-button {
+    width: 100%;
+    height: 46px;
+  }
+
+  .property-search-bottom {
+    gap: 7px;
+  }
+
+  .search-tag {
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+}
+
+.properties-section {
+  width: 100%;
+  padding: 95px 5%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(201, 164, 92, 0.12),
+      transparent 32%
+    ),
+    var(--background);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  transform: translateY(-60px);
+}
+
+/* HEADING */
+
+.section-heading {
+  max-width: 750px;
+  text-align: center;
+  margin: 0 auto 38px;
+}
+
+.eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.section-heading h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.section-heading h1 span {
+  color: var(--secondary);
+}
+
+.section-heading > p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* CATEGORY BUTTONS */
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px;
+  margin-bottom: 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 25px rgba(50, 40, 20, 0.06);
+}
+
+.category-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 47px;
+  padding: 11px 15px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.category-btn svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.category-btn:hover {
+  border-color: var(--primary);
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-color: var(--secondary);
+  color: #fff;
+}
+
+/* PROPERTY GRID */
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 25px;
+}
+
+.category-panel[hidden] {
+  display: none !important;
+}
+
+/* PROPERTY CARD */
+
+.property-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 5px 20px rgba(40, 30, 15, 0.05);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 15px 32px rgba(40, 30, 15, 0.12);
+}
+
+.property-image {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  overflow: hidden;
+  background: #e8e1d5;
+}
+
+.property-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.property-card:hover .property-image img {
+  transform: scale(1.06);
+}
+
+.badge {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  max-width: calc(100% - 26px);
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--secondary);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.price {
+  margin-bottom: 6px;
+  color: var(--secondary);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.card-body h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 9px;
+  overflow-wrap: anywhere;
+}
+
+.location {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.location svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--secondary);
+}
+
+/* PRICE, AREA, FACING, DEPOSIT AND MAINTENANCE */
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 10px;
+  padding: 16px 0;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.details > div {
+  min-width: 0;
+}
+
+.details small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+}
+
+.details strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.furnished {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.furnished svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CATEGORY SWITCH */
+
+.category-panel.is-switching .property-card {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* TABLET: iPAD MINI */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .properties-section {
+    padding: 65px 22px;
+  }
+
+  .property-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .category-buttons {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .category-btn {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .property-image {
+    height: 210px;
+  }
+}
+
+/* MOBILE: SAMSUNG GALAXY S8+ */
+
+@media (max-width: 599px) {
+  .properties-section {
+    padding: 48px 14px;
+  }
+
+  .section-heading {
+    margin-bottom: 27px;
+  }
+
+  .section-heading h1 {
+    font-size: 30px;
+  }
+
+  .section-heading > p {
+    font-size: 13px;
+  }
+
+  .category-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    padding: 11px;
+    margin-bottom: 30px;
+  }
+
+  .category-btn {
+    min-width: 0;
+    width: 100%;
+    min-height: 50px;
+    padding: 9px 6px;
+    gap: 5px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .category-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .category-btn:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .list-heading {
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .list-heading h2 {
+    font-size: 21px;
+  }
+
+  .list-heading p {
+    font-size: 12px;
+  }
+
+  .count {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .property-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .property-image {
+    height: 225px;
+  }
+
+  .card-body {
+    padding: 18px;
+  }
+
+  .price {
+    font-size: 23px;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+
+@media (max-width: 359px) {
+  .properties-section {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .category-buttons {
+    padding: 8px;
+    gap: 7px;
+  }
+
+  .category-btn {
+    font-size: 9px;
+    overflow-wrap: anywhere;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .details {
+    gap: 12px 7px;
+  }
+
+  .details strong {
+    font-size: 11px;
+  }
+}
+/* =====================================
+   AMENITIES & FACILITIES
+===================================== */
+
+.amenities-section {
+  width: 100%;
+  padding: 90px 24px;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  transform: translateY(-100px);
+}
+
+.amenities-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 55px;
+}
+
+/* LEFT SIDE: FOUR BOXES */
+
+.amenities-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.amenity-card {
+  min-width: 0;
+  min-height: 220px;
+  padding: 25px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  background: var(--card-bg);
+  border: 1px solid rgba(201, 164, 92, 0.3);
+  border-radius: 16px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+/* ICON */
+
+.amenity-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary);
+  background: rgba(201, 164, 92, 0.15);
+  border-radius: 12px;
+}
+
+.amenity-icon i {
+  width: 24px;
+  height: 24px;
+}
+
+/* BOX TEXT */
+
+.amenity-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.amenity-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+/* RIGHT SIDE CONTENT */
+
+.amenities-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.amenities-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+  margin-right: 350px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.amenities-content h2 {
+  margin: 0 0 22px;
+  font-size: clamp(45px, 6vw, 60px);
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+.amenities-content h2 span {
+  display: block;
+  margin-top: 5px;
+  color: var(--secondary);
+}
+
+.amenities-content > p {
+  margin: 0 0 17px;
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+
+.amenities-btn {
+  width: fit-content;
+  margin-top: 10px;
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+  border-radius: 9px;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.amenities-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.amenities-btn i {
+  width: 17px;
+  height: 17px;
+}
+
+/* =====================================
+   SCROLL REVEAL ANIMATION
+===================================== */
+
+.amenities-section .reveal-left,
+.amenities-section .reveal-right {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.amenities-section .reveal-left {
+  transform: translateX(-45px);
+}
+
+.amenities-section .reveal-right {
+  transform: translateX(45px);
+}
+
+.amenities-section .reveal-left.is-visible,
+.amenities-section .reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =====================================
+   NET H U B / LAPTOP / TABLET LANDSCAPE
+===================================== */
+
+@media (min-width: 1025px) {
+  .amenities-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .amenities-grid {
+    gap: 18px;
+  }
+
+  .amenity-card {
+    min-height: 210px;
+    padding: 22px 18px;
+  }
+
+  .amenities-eyebrow {
+    width: fit-content;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .amenities-content h2 {
+    font-size: clamp(38px, 3.5vw, 56px);
+  }
+}
+
+/* =====================================
+   iPAD MINI - PORTRAIT / SMALL TABLETS
+===================================== */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .amenities-section {
+    padding: 70px 24px;
+    transform: translateY(-40px);
+  }
+
+  .amenities-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    max-width: 750px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .amenity-card {
+    min-height: 200px;
+    padding: 22px 20px;
+  }
+
+  .amenities-content {
+    width: 100%;
+  }
+
+  .amenities-eyebrow {
+    width: fit-content;
+    max-width: 100%;
+    margin-right: 0;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .amenities-content h2 {
+    font-size: clamp(36px, 5.5vw, 48px);
+  }
+
+  .amenities-content > p {
+    font-size: 14px;
+  }
+}
+
+/* =====================================
+   SAMSUNG GALAXY S8+ / MOBILE
+   360px - 599px
+===================================== */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .amenities-section {
+    padding: 55px 16px;
+    transform: translateY(0);
+  }
+
+  .amenities-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .amenity-card {
+    min-height: 190px;
+    padding: 17px 13px;
+    border-radius: 13px;
+  }
+
+  .amenity-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 13px;
+    border-radius: 10px;
+  }
+
+  .amenity-icon i {
+    width: 21px;
+    height: 21px;
+  }
+
+  .amenity-card h3 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .amenity-card p {
+    font-size: 11px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+
+  .amenities-eyebrow {
+    width: fit-content;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .amenities-content h2 {
+    font-size: clamp(32px, 8vw, 40px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .amenities-content > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .amenities-btn {
+    min-height: 41px;
+    padding: 0 14px;
+    gap: 7px;
+    font-size: 12px;
+  }
+}
+
+/* RENTAL PRICE OVERVIEW */
+
+.rental-price-section {
+  width: 100%;
+  padding: 85px 24px;
+  background: var(--background);
+  color: var(--text);
+  overflow: hidden;
+  transform: translateY(-100px);
+}
+
+.rental-price-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* HEADING */
+
+.rental-price-heading {
+  max-width: 680px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.rental-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.rental-price-heading h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  line-height: 1.25;
+  margin: 0 0 14px;
+  color: var(--text);
+}
+.rental-price-heading h2 span {
+  color: var(--secondary);
+  display: inline;
+}
+.rental-price-heading p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+/* FOUR EQUAL CARDS */
+
+.rental-price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.rental-price-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.1));
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.rental-price-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+
+.rental-image {
+  position: relative;
+  height: 205px;
+  overflow: hidden;
+  background: var(--primary-light);
+}
+
+.rental-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.rental-price-card:hover .rental-image img {
+  transform: scale(1.06);
+}
+
+.rental-type {
+  position: absolute;
+  left: 13px;
+  bottom: 13px;
+  padding: 7px 11px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* CARD CONTENT */
+
+.rental-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 19px 16px 16px;
+}
+
+.rental-card-content h3 {
+  font-size: 17px;
+  line-height: 1.45;
+  margin: 0 0 10px;
+  color: var(--text);
+}
+
+.rental-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 0 0 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.rental-location i {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--secondary);
+}
+
+.rental-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--border, rgba(0, 0, 0, 0.1));
+}
+
+.rental-details span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.rental-details i {
+  width: 15px;
+  height: 15px;
+  color: var(--secondary);
+}
+
+/* PRICE */
+
+.rental-price-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.rental-price-bottom strong {
+  display: inline-block;
+  color: var(--secondary);
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.rental-price-bottom span {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.rental-view-btn {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.rental-view-btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.rental-view-btn i {
+  width: 18px;
+  height: 18px;
+}
+
+/* SCROLL REVEAL */
+
+.rental-price-section .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.rental-price-section .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rental-price-card:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.rental-price-card:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.rental-price-card:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+/* =====================================
+   NETHUB / DESKTOP
+   1025px AND ABOVE
+===================================== */
+
+@media (min-width: 1025px) {
+  .rental-price-section {
+    padding: 75px 24px;
+  }
+
+  .rental-price-container {
+    max-width: 1100px;
+  }
+
+  .rental-price-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .rental-image {
+    height: 190px;
+  }
+
+  .rental-card-content {
+    padding: 17px 14px;
+  }
+
+  .rental-price-heading h2 {
+    font-size: clamp(42px, 4vw, 55px);
+  }
+}
+
+/* =====================================
+   IPAD MINI
+   600px - 1024px
+===================================== */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .rental-price-section {
+    padding: 65px 22px;
+    transform: translateY(-70px);
+  }
+
+  .rental-price-container {
+    max-width: 760px;
+  }
+
+  .rental-price-heading {
+    max-width: 620px;
+    margin-bottom: 32px;
+  }
+
+  .rental-price-heading h2 {
+    font-size: clamp(36px, 5.5vw, 46px);
+    line-height: 1.25;
+  }
+
+  .rental-price-heading p {
+    font-size: 13px;
+  }
+
+  .rental-eyebrow {
+    padding: 6px 13px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .rental-price-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .rental-image {
+    height: 220px;
+  }
+
+  .rental-card-content {
+    padding: 18px;
+  }
+
+  .rental-card-content h3 {
+    font-size: 16px;
+  }
+
+  .rental-price-bottom strong {
+    font-size: 18px;
+  }
+}
+
+/* =====================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+===================================== */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .rental-price-section {
+    padding: 50px 15px;
+    transform: translateY(-35px);
+  }
+
+  .rental-price-container {
+    max-width: 100%;
+  }
+
+  .rental-price-heading {
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .rental-eyebrow {
+    padding: 6px 10px;
+    margin-bottom: 14px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    transform: none;
+  }
+
+  .rental-price-heading h2 {
+    font-size: clamp(29px, 7.5vw, 36px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .rental-price-heading p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .rental-price-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rental-price-card {
+    border-radius: 12px;
+  }
+
+  .rental-image {
+    height: 145px;
+  }
+
+  .rental-type {
+    left: 8px;
+    bottom: 8px;
+    padding: 5px 7px;
+    font-size: 9px;
+  }
+
+  .rental-card-content {
+    padding: 12px 10px;
+  }
+
+  .rental-card-content h3 {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 8px;
+  }
+
+  .rental-location {
+    gap: 4px;
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .rental-location i {
+    width: 13px;
+    height: 13px;
+  }
+
+  .rental-details {
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+
+  .rental-details span {
+    gap: 4px;
+    font-size: 9px;
+  }
+
+  .rental-details i {
+    width: 12px;
+    height: 12px;
+  }
+
+  .rental-price-bottom {
+    gap: 5px;
+    padding-top: 12px;
+  }
+
+  .rental-price-bottom strong {
+    font-size: 14px;
+  }
+
+  .rental-price-bottom span {
+    font-size: 9px;
+  }
+
+  .rental-view-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+  }
+
+  .rental-view-btn i {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+   BELOW 360px
+===================================== */
+
+@media (max-width: 359px) {
+  .rental-price-section {
+    padding: 40px 12px;
+    transform: translateY(-20px);
+  }
+
+  .rental-price-heading {
+    margin-bottom: 25px;
+  }
+
+  .rental-price-heading h2 {
+    font-size: 28px;
+  }
+
+  .rental-eyebrow {
+    padding: 6px 9px;
+    font-size: 9px;
+    letter-spacing: 0.8px;
+    transform: none;
+  }
+
+  .rental-price-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .rental-image {
+    height: 210px;
+  }
+
+  .rental-card-content {
+    padding: 16px;
+  }
+
+  .rental-card-content h3 {
+    font-size: 16px;
+  }
+
+  .rental-price-bottom strong {
+    font-size: 18px;
+  }
+}
+
+/* =====================================
+   LIST YOUR PROPERTY CTA
+===================================== */
+
+.list-property-cta {
+  width: 100%;
+  padding: 70px 24px;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: -100px;
+}
+
+.list-property-container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.list-property-content {
+  width: 75%;
+  max-width: 850px;
+  margin: 0 auto;
+
+  min-height: 240px;
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    rgba(201, 164, 92, 0.2),
+    rgba(139, 100, 44, 0.1)
+  );
+
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(60, 45, 20, 0.07);
+}
+
+/* DECORATIVE CIRCLES */
+
+.list-property-content::before,
+.list-property-content::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(139, 100, 44, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.list-property-content::before {
+  width: 230px;
+  height: 230px;
+  top: -130px;
+  left: -70px;
+}
+
+.list-property-content::after {
+  width: 280px;
+  height: 280px;
+  right: -100px;
+  bottom: -175px;
+}
+
+/* EYEBROW */
+
+.list-property-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+/* HEADING */
+
+.list-property-content h2 {
+  max-width: 800px;
+  margin: 0 0 18px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.2;
+
+  color: var(--text);
+}
+
+.list-property-content h2 span {
+  display: block;
+  margin-top: 5px;
+  color: var(--secondary);
+}
+
+/* DESCRIPTION */
+
+.list-property-content p {
+  max-width: 680px;
+  margin: 0 0 25px;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text);
+  opacity: 0.82;
+}
+
+/* BUTTON */
+
+.list-property-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.list-property-btn i {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.list-property-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+/* =====================================
+   SCROLL REVEAL
+===================================== */
+
+.list-property-cta .cta-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.list-property-cta .cta-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   NET HUB / LARGE DESKTOP
+   1025px and above
+========================================= */
+
+@media (min-width: 1025px) {
+  .list-property-cta {
+    padding: 55px 24px;
+    margin-top: -100px;
+  }
+
+  .list-property-container {
+    max-width: 1150px;
+  }
+
+  .list-property-content {
+    width: 75%;
+    max-width: 850px;
+    min-height: 240px;
+    padding: 30px 25px;
+  }
+
+  .list-property-content h2 {
+    font-size: clamp(42px, 4vw, 54px);
+  }
+
+  .list-property-content p {
+    max-width: 650px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   IPAD MINI
+   600px - 1024px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .list-property-cta {
+    padding: 45px 24px;
+    margin-top: -65px;
+  }
+
+  .list-property-container {
+    max-width: 100%;
+  }
+
+  .list-property-content {
+    width: 85%;
+    max-width: 720px;
+    min-height: 220px;
+    padding: 28px 24px;
+    border-radius: 16px;
+  }
+
+  .list-property-content::before {
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    left: -60px;
+  }
+
+  .list-property-content::after {
+    width: 210px;
+    height: 210px;
+    right: -75px;
+    bottom: -130px;
+  }
+
+  .list-property-eyebrow {
+    padding: 6px 14px;
+    margin-bottom: 12px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transform: none;
+  }
+
+  .list-property-content h2 {
+    max-width: 100%;
+    margin-bottom: 12px;
+    font-size: clamp(34px, 5vw, 44px);
+    line-height: 1.2;
+  }
+
+  .list-property-content h2 span {
+    margin-top: 4px;
+  }
+
+  .list-property-content p {
+    max-width: 580px;
+    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .list-property-btn {
+    min-height: 41px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .list-property-cta {
+    padding: 35px 16px;
+    margin-top: -40px;
+  }
+
+  .list-property-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .list-property-content {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    padding: 26px 16px;
+    border-radius: 14px;
+  }
+
+  .list-property-content::before {
+    width: 140px;
+    height: 140px;
+    top: -80px;
+    left: -50px;
+  }
+
+  .list-property-content::after {
+    width: 160px;
+    height: 160px;
+    right: -65px;
+    bottom: -100px;
+  }
+
+  .list-property-eyebrow {
+    padding: 6px 11px;
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    transform: none;
+  }
+
+  .list-property-content h2 {
+    max-width: 100%;
+    margin-bottom: 12px;
+    font-size: 31px;
+    line-height: 1.2;
+  }
+
+  .list-property-content h2 span {
+    margin-top: 4px;
+  }
+
+  .list-property-content p {
+    max-width: 100%;
+    margin-bottom: 17px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .list-property-btn {
+    min-height: 39px;
+    padding: 0 14px;
+    gap: 7px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  .list-property-btn i {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+   Below 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .list-property-cta {
+    padding: 28px 12px;
+    margin-top: -25px;
+  }
+
+  .list-property-content {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    padding: 22px 12px;
+    border-radius: 12px;
+  }
+
+  .list-property-eyebrow {
+    padding: 5px 8px;
+    margin-bottom: 10px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    transform: none;
+  }
+
+  .list-property-content h2 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .list-property-content p {
+    font-size: 11px;
+    line-height: 1.65;
+    margin-bottom: 15px;
+  }
+
+  .list-property-btn {
+    min-height: 37px;
+    padding: 0 11px;
+    font-size: 11px;
+    gap: 6px;
+  }
+}

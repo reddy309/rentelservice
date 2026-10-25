@@ -1,0 +1,1451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>property management& rental service</title>
+
+    <link rel="stylesheet" href="index1.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo rentel1.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo rentel1.png" alt="rental servive" />
+          </span>
+
+          <span class="logo-name"> Estate<strong>Nest</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- ================= HOME DROPDOWN ================= -->
+
+          <div class="nav-dropdown">
+            <button
+              type="button"
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html"> Home 1 </a>
+
+              <a href="index1.html"> Home 2 </a>
+            </div>
+          </div>
+
+          <!-- ================= OUR SERVICES ================= -->
+          <a href="about.html" class="nav-link"> About </a>
+
+          <a href="service.html" class="nav-link"> Services </a>
+
+          <!-- ================= PACKAGES ================= -->
+
+          <!-- ================= PRICING ================= -->
+          <a href="properties.html" class="nav-link"> Properties </a>
+          <a href="pricing.html" class="nav-link"> Pricing </a>
+
+          <!-- ================= DASHBOARD ================= -->
+
+          <!-- ================= CONTACT ================= -->
+
+          <a href="contact.html" class="nav-link"> Contact </a>
+          <a href="dashboard.html" class="nav-link"> Dashboard </a>
+
+          <!-- ================= MOBILE LOGIN ================= -->
+
+          <a href="login.html" class="nav-link mobile-login"> Login </a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- PREMIUM PROPERTY HERO -->
+    <section class="property-hero">
+      <div class="property-hero-overlay"></div>
+
+      <div class="property-hero-content">
+        <span class="property-hero-label"> PREMIUM PROPERTY MANAGEMENT </span>
+
+        <h1>
+          Find Your Perfect
+          <span>Rental Property</span>
+        </h1>
+
+        <p>
+          Discover exceptional properties and enjoy stress-free rental
+          management with trusted professionals. Your property journey starts
+          here.
+        </p>
+
+        <div class="property-hero-buttons">
+          <a href="service.html" class="hero-btn primary-btn">
+            Explore Properties
+          </a>
+
+          <a href="contact.html" class="hero-btn secondary-btn"> Contact Us </a>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================
+       SIGNATURE RENTAL COLLECTION
+  ====================================== -->
+
+    <section class="signature-section" id="signature-properties">
+      <div class="signature-container">
+        <!-- SECTION HEADING -->
+
+        <div class="signature-heading reveal">
+          <span class="signature-eyebrow">
+            <span class="eyebrow-line"></span>
+            THE ESTATENEST COLLECTION
+            <span class="eyebrow-line"></span>
+          </span>
+
+          <h2>
+            Signature
+            <span>Rental Collection</span>
+          </h2>
+
+          <p>
+            Discover exceptional residences selected for their distinctive
+            character, thoughtful design, and elevated living experience.
+          </p>
+        </div>
+
+        <!-- PROPERTY GRID -->
+
+        <div class="signature-grid">
+          <!-- PROPERTY 1 -->
+
+          <article class="signature-card reveal">
+            <div class="signature-image">
+              <img
+                src="images/elegent garden villa.jpg"
+                alt="Elegant luxury garden villa"
+                loading="lazy"
+              />
+
+              <span class="signature-badge">Featured</span>
+
+              <button
+                class="signature-favorite"
+                type="button"
+                aria-label="Add Elegant Garden Villa to favorites"
+                aria-pressed="false"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+              <span class="image-number">01 / 06</span>
+            </div>
+
+            <div class="signature-content">
+              <span class="signature-category">LUXURY VILLA</span>
+
+              <h3>Elegant Garden Villa</h3>
+
+              <p class="signature-location">
+                <i data-lucide="map-pin"></i>
+                Hyderabad, Telangana
+              </p>
+
+              <div class="signature-features">
+                <span>
+                  <i data-lucide="bed-double"></i>
+                  4 Beds
+                </span>
+
+                <span>
+                  <i data-lucide="bath"></i>
+                  3 Baths
+                </span>
+
+                <span>
+                  <i data-lucide="ruler"></i>
+                  2,400 sqft
+                </span>
+              </div>
+
+              <div class="signature-bottom">
+                <div class="signature-price">
+                  <strong>₹45,000</strong>
+                  <span>/ month</span>
+                </div>
+
+                <a
+                  class="signature-link"
+                  href="contact.html"
+                  
+                >
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROPERTY 2 -->
+
+          <article class="signature-card reveal">
+            <div class="signature-image">
+              <img
+                src="images/modern city residence.jpg"
+                alt="Modern city residence"
+                loading="lazy"
+              />
+
+              <span class="signature-badge">Popular</span>
+
+              <button
+                class="signature-favorite"
+                type="button"
+                aria-label="Add Modern City Residence to favorites"
+                aria-pressed="false"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+              <span class="image-number">02 / 06</span>
+            </div>
+
+            <div class="signature-content">
+              <span class="signature-category">CITY RESIDENCE</span>
+
+              <h3>Modern City Residence</h3>
+
+              <p class="signature-location">
+                <i data-lucide="map-pin"></i>
+                Gachibowli, Hyderabad
+              </p>
+
+              <div class="signature-features">
+                <span>
+                  <i data-lucide="bed-double"></i>
+                  3 Beds
+                </span>
+
+                <span>
+                  <i data-lucide="bath"></i>
+                  2 Baths
+                </span>
+
+                <span>
+                  <i data-lucide="ruler"></i>
+                  1,650 sqft
+                </span>
+              </div>
+
+              <div class="signature-bottom">
+                <div class="signature-price">
+                  <strong>₹32,000</strong>
+                  <span>/ month</span>
+                </div>
+
+                <a
+                  class="signature-link"
+                  href="contact.html"
+              
+                >
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROPERTY 3 -->
+
+          <article class="signature-card reveal">
+            <div class="signature-image">
+              <img
+                src="images/scencre family hoe.jpg"
+                alt="Serene contemporary family home"
+                loading="lazy"
+              />
+
+              <span class="signature-badge">Family Living</span>
+
+              <button
+                class="signature-favorite"
+                type="button"
+                aria-label="Add Serene Family Home to favorites"
+                aria-pressed="false"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+              <span class="image-number">03 / 06</span>
+            </div>
+
+            <div class="signature-content">
+              <span class="signature-category">FAMILY RESIDENCE</span>
+
+              <h3>Serene Family Home</h3>
+
+              <p class="signature-location">
+                <i data-lucide="map-pin"></i>
+                Kukatpally, Hyderabad
+              </p>
+
+              <div class="signature-features">
+                <span>
+                  <i data-lucide="bed-double"></i>
+                  3 Beds
+                </span>
+
+                <span>
+                  <i data-lucide="bath"></i>
+                  3 Baths
+                </span>
+
+                <span>
+                  <i data-lucide="ruler"></i>
+                  1,900 sqft
+                </span>
+              </div>
+
+              <div class="signature-bottom">
+                <div class="signature-price">
+                  <strong>₹28,000</strong>
+                  <span>/ month</span>
+                </div>
+
+                <a
+                  class="signature-link"
+                  href="contact.html"
+                  
+                >
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROPERTY 4 -->
+
+          <article class="signature-card reveal">
+            <div class="signature-image">
+              <img
+                src="images/luxury pent house.jpg"
+                alt="Luxury penthouse with panoramic city views"
+                loading="lazy"
+              />
+
+              <span class="signature-badge">Exclusive</span>
+
+              <button
+                class="signature-favorite"
+                type="button"
+                aria-label="Add Skyline Luxury Penthouse to favorites"
+                aria-pressed="false"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+              <span class="image-number">04 / 06</span>
+            </div>
+
+            <div class="signature-content">
+              <span class="signature-category">LUXURY PENTHOUSE</span>
+
+              <h3>Skyline Luxury Penthouse</h3>
+
+              <p class="signature-location">
+                <i data-lucide="map-pin"></i>
+                Financial District, Hyderabad
+              </p>
+
+              <div class="signature-features">
+                <span>
+                  <i data-lucide="bed-double"></i>
+                  4 Beds
+                </span>
+
+                <span>
+                  <i data-lucide="bath"></i>
+                  4 Baths
+                </span>
+
+                <span>
+                  <i data-lucide="ruler"></i>
+                  2,800 sqft
+                </span>
+              </div>
+
+              <div class="signature-bottom">
+                <div class="signature-price">
+                  <strong>₹65,000</strong>
+                  <span>/ month</span>
+                </div>
+
+                <a
+                  class="signature-link"
+                  href="contact.html"
+                  
+                >
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROPERTY 5 -->
+
+          <article class="signature-card reveal">
+            <div class="signature-image">
+              <img
+                src="images/urban comfrt studio.jpg"
+                alt="Premium urban studio apartment"
+                loading="lazy"
+              />
+
+              <span class="signature-badge">Smart Living</span>
+
+              <button
+                class="signature-favorite"
+                type="button"
+                aria-label="Add Urban Comfort Studio to favorites"
+                aria-pressed="false"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+              <span class="image-number">05 / 06</span>
+            </div>
+
+            <div class="signature-content">
+              <span class="signature-category">STUDIO APARTMENT</span>
+
+              <h3>Urban Comfort Studio</h3>
+
+              <p class="signature-location">
+                <i data-lucide="map-pin"></i>
+                Madhapur, Hyderabad
+              </p>
+
+              <div class="signature-features">
+                <span>
+                  <i data-lucide="bed-double"></i>
+                  1 Bed
+                </span>
+
+                <span>
+                  <i data-lucide="bath"></i>
+                  1 Bath
+                </span>
+
+                <span>
+                  <i data-lucide="ruler"></i>
+                  650 sqft
+                </span>
+              </div>
+
+              <div class="signature-bottom">
+                <div class="signature-price">
+                  <strong>₹16,000</strong>
+                  <span>/ month</span>
+                </div>
+
+                <a
+                  class="signature-link"
+                  href="contact.html"
+                 
+                >
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROPERTY 6 -->
+
+          <article class="signature-card reveal">
+            <div class="signature-image">
+              <img
+                src="images/comptery luxury.jpg"
+                alt="Contemporary luxury duplex house"
+                loading="lazy"
+              />
+
+              <span class="signature-badge">Premium</span>
+
+              <button
+                class="signature-favorite"
+                type="button"
+                aria-label="Add Contemporary Duplex to favorites"
+                aria-pressed="false"
+              >
+                <i data-lucide="heart"></i>
+              </button>
+
+              <span class="image-number">06 / 06</span>
+            </div>
+
+            <div class="signature-content">
+              <span class="signature-category">CONTEMPORARY DUPLEX</span>
+
+              <h3>Contemporary Duplex</h3>
+
+              <p class="signature-location">
+                <i data-lucide="map-pin"></i>
+                Kondapur, Hyderabad
+              </p>
+
+              <div class="signature-features">
+                <span>
+                  <i data-lucide="bed-double"></i>
+                  3 Beds
+                </span>
+
+                <span>
+                  <i data-lucide="bath"></i>
+                  3 Baths
+                </span>
+
+                <span>
+                  <i data-lucide="ruler"></i>
+                  2,100 sqft
+                </span>
+              </div>
+
+              <div class="signature-bottom">
+                <div class="signature-price">
+                  <strong>₹38,000</strong>
+                  <span>/ month</span>
+                </div>
+
+                <a
+                  class="signature-link"
+                  href="contact.html"
+                  
+                >
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+       ESTATENEST STORY SECTION
+  ====================================== -->
+
+    <section class="estate-story" id="estate-story">
+      <div class="estate-story-container">
+        <!-- LEFT SIDE IMAGE -->
+
+        <div class="story-visual story-reveal">
+          <div class="story-image-frame"></div>
+
+          <div class="story-image-wrapper">
+            <img
+              src="images/every story.png"
+              alt="Elegant modern residential property surrounded by greenery"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE CONTENT -->
+
+        <div class="story-content story-reveal">
+          <div class="story-eyebrow">
+            <span class="story-eyebrow-line"></span>
+            <span>The EstateNest Story</span>
+          </div>
+
+          <h2>
+            Every Property Has a Story.
+            <span>Let's Begin Yours.</span>
+          </h2>
+
+          <p class="story-intro">
+            We believe property management should feel effortless, personal, and
+            built around what matters most to you.
+          </p>
+
+          <p class="story-description">
+            EstateNest brings property owners and residents together through
+            thoughtful management, transparent communication, and dependable
+            service. From finding the right tenants to caring for your
+            investment, we look after every detail with professionalism and
+            attention.
+          </p>
+
+          <!-- OUR VALUES -->
+
+          <div class="story-values">
+            <div class="story-value">
+              <div class="story-value-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+
+              <div class="story-value-content">
+                <h3>Trust in Every Step</h3>
+                <p>
+                  Clear communication and dependable support throughout your
+                  property journey.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-value">
+              <div class="story-value-icon">
+                <i data-lucide="house"></i>
+              </div>
+
+              <div class="story-value-content">
+                <h3>Spaces That Feel Like Home</h3>
+                <p>
+                  Thoughtful rental experiences for owners and residents alike.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA BUTTON -->
+
+          <a href="about.html" class="story-button">
+            <span>Discover Our Story</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="bespoke-section" id="bespoke-services">
+
+    <div class="bespoke-container">
+
+      <!-- SECTION HEADING -->
+
+      <div class="bespoke-heading service-reveal">
+
+        <span class="bespoke-eyebrow">
+          BESPOKE MANAGEMENT
+        </span>
+
+        <h2>
+          Thoughtful Services.
+          <span>Exceptional Living.</span>
+        </h2>
+
+        <p>
+          Discover a more considered approach to property ownership.
+          Our tailored services protect your investment, simplify
+          everyday responsibilities, and create better rental experiences.
+        </p>
+
+      </div>
+
+
+      <!-- SERVICE CARDS -->
+
+      <div class="bespoke-grid">
+
+        <!-- CARD 1 -->
+
+        <article class="bespoke-card service-reveal">
+
+          <div class="bespoke-image">
+            <img
+              src="images/popety managent.jpg"
+              alt="Elegant residential property managed professionally"
+              loading="lazy"
+            >
+
+            <span class="bespoke-number">01</span>
+          </div>
+
+          <div class="bespoke-card-content">
+
+            <span class="bespoke-category">PROPERTY OWNERSHIP</span>
+
+            <h3>Complete Property Management</h3>
+
+            <p>
+              From everyday coordination to ongoing oversight,
+              we help keep your property organized and well managed.
+            </p>
+
+            <a href="servicedetails.html"
+               class="bespoke-link">
+              <span>Explore Service</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD 2 -->
+
+        <article class="bespoke-card service-reveal">
+
+          <div class="bespoke-image">
+            <img
+              src="images/tent screbning idesx2.jpg"
+              alt="Welcoming modern home prepared for new residents"
+              loading="lazy"
+            >
+
+            <span class="bespoke-number">02</span>
+          </div>
+
+          <div class="bespoke-card-content">
+
+            <span class="bespoke-category">TENANT EXPERIENCE</span>
+
+            <h3>Tenant Placement & Screening</h3>
+
+            <p>
+              Find suitable residents through a structured screening
+              process and a carefully coordinated rental journey.
+            </p>
+
+            <a href="servicedetails.html"
+               class="bespoke-link">
+              <span>Explore Service</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD 3 -->
+
+        <article class="bespoke-card service-reveal">
+
+          <div class="bespoke-image">
+            <img
+              src="images/rent collecting.jpg"
+              alt="Professional rental income planning and financial records"
+              loading="lazy"
+            >
+
+            <span class="bespoke-number">03</span>
+          </div>
+
+          <div class="bespoke-card-content">
+
+            <span class="bespoke-category">FINANCIAL OVERSIGHT</span>
+
+            <h3>Rent Collection & Reporting</h3>
+
+            <p>
+              Keep track of rent payments, rental records, and
+              income updates with a clear and organized approach.manage your investment with confidence.
+            </p>
+
+            <a href="servicedetails.html"
+               class="bespoke-link">
+              <span>Explore Service</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD 4 -->
+
+        <article class="bespoke-card service-reveal">
+
+          <div class="bespoke-image">
+            <img
+              src="images/poperty maintence index1.jpg"
+              alt="Well-maintained contemporary residential interior"
+              loading="lazy"
+            >
+
+            <span class="bespoke-number">04</span>
+          </div>
+
+          <div class="bespoke-card-content">
+
+            <span class="bespoke-category">PROPERTY PRESERVATION</span>
+
+            <h3>Maintenance & Property Care</h3>
+
+            <p>
+              Coordinate repairs, routine inspections, and essential
+              property care to help preserve your investment.
+            </p>
+
+            <a href="servicedetails.html"
+               class="bespoke-link">
+              <span>Explore Service</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD 5 -->
+
+        <article class="bespoke-card service-reveal">
+
+          <div class="bespoke-image">
+            <img
+              src="images/poprty leing index1.jpg"
+              alt="Beautiful home prepared for a rental property listing"
+              loading="lazy"
+            >
+
+            <span class="bespoke-number">05</span>
+          </div>
+
+          <div class="bespoke-card-content">
+
+            <span class="bespoke-category">PROPERTY VISIBILITY</span>
+
+            <h3>Property Marketing & Leasing</h3>
+
+            <p>
+              Present your property with thoughtful listing
+              information and coordinated viewing arrangements.
+            </p>
+
+            <a href="servicedetails.html"
+               class="bespoke-link">
+              <span>Explore Service</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD 6 -->
+
+        <article class="bespoke-card service-reveal">
+
+          <div class="bespoke-image">
+            <img
+              src="images/ownsrv asstiance.jpg"
+              alt="Professional property consultation with an owner"
+              loading="lazy"
+            >
+
+            <span class="bespoke-number">06</span>
+          </div>
+
+          <div class="bespoke-card-content">
+
+            <span class="bespoke-category">PERSONALIZED SUPPORT</span>
+
+            <h3>Dedicated Owner Assistance</h3>
+
+            <p>
+              Receive coordinated communication, helpful updates,
+              and support for your property management needs.income and simplify property management.
+            </p>
+
+            <a href="servicedetails.html"
+               class="bespoke-link">
+              <span>Explore Service</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+
+  </section>
+
+  
+<!-- ESTATENEST ADVANTAGE SECTION -->
+<section class="ownership-section" id="ownership">
+
+  <div class="ownership-layout">
+
+    <!-- LEFT SIDE CONTENT -->
+    <div class="ownership-heading reveal-left">
+      <span class="ownership-eyebrow">WHY ESTATENEST</span>
+
+     <h2>
+  The <span>EstateNest</span> Advantage
+</h2>
+
+      <p>
+        Experience smarter property management with reliable support,
+        transparent communication, and convenient solutions designed
+        to protect your investment and simplify ownership.
+      </p>
+
+      <a href="servicedetails.html" class="ownership-btn">
+        Explore Our Services
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- RIGHT SIDE: FOUR BOXES -->
+    <div class="ownership-timeline">
+
+      <article class="ownership-step reveal-right">
+        <div class="ownership-icon">
+          <i data-lucide="search"></i>
+        </div>
+        <span class="ownership-label">STEP 01</span>
+        <h3>Discover Your Needs</h3>
+        <p>
+          We understand your property goals and management requirements.
+        </p>
+      </article>
+
+      <article class="ownership-step reveal-right">
+        <div class="ownership-icon">
+          <i data-lucide="clipboard-check"></i>
+        </div>
+        <span class="ownership-label">STEP 02</span>
+        <h3>Create Your Plan</h3>
+        <p>
+          Get a clear strategy tailored to your property and priorities.
+        </p>
+      </article>
+
+      <article class="ownership-step reveal-right">
+        <div class="ownership-icon">
+          <i data-lucide="building-2"></i>
+        </div>
+        <span class="ownership-label">STEP 03</span>
+        <h3>Prepare &amp; Manage</h3>
+        <p>
+          We coordinate tenants, rent collection, and property upkeep.
+        </p>
+      </article>
+
+      <article class="ownership-step reveal-right">
+        <div class="ownership-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <span class="ownership-label">STEP 04</span>
+        <h3>Enjoy Peace of Mind</h3>
+        <p>
+          Stay informed while we help keep your investment running smoothly.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <section class="rental-income" id="rental-income">
+    <div class="container">
+
+      <!-- Section Heading -->
+      <div class="section-heading reveal">
+        <span class="eyebrow">PROPERTY MANAGEMENT</span>
+        <h1>Rental Income <span>Collection</span></h1>
+        <p>
+          Manage rental income, monitor payments, and track your
+          property earnings in one place.
+        </p>
+      </div>
+
+      <!-- Income Summary Cards -->
+      <div class="income-grid">
+
+        <div class="income-card reveal">
+          <div class="card-top">
+            <div class="card-icon">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <span class="card-label">Total Income</span>
+          </div>
+          <h2>₹2,50,000</h2>
+          <p class="card-description">Total expected rent this month</p>
+          <div class="card-bottom">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Monthly overview</span>
+          </div>
+        </div>
+
+        <div class="income-card reveal">
+          <div class="card-top">
+            <div class="card-icon">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <span class="card-label">Collected</span>
+          </div>
+          <h2>₹2,00,000</h2>
+          <p class="card-description">Rent successfully received</p>
+          <div class="progress-track">
+            <span style="width: 80%"></span>
+          </div>
+          <div class="card-bottom">
+            <span>80% collected</span>
+          </div>
+        </div>
+
+        <div class="income-card reveal">
+          <div class="card-top">
+            <div class="card-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <span class="card-label">Pending Rent</span>
+          </div>
+          <h2>₹50,000</h2>
+          <p class="card-description">Payments awaiting collection</p>
+          <div class="card-bottom">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Follow up with tenants</span>
+          </div>
+        </div>
+
+        <div class="income-card net-card reveal">
+          <div class="card-top">
+            <div class="card-icon">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <span class="card-label">Rental Properties</span>
+          </div>
+          <h2>20</h2>
+          <p class="card-description">Properties in your portfolio</p>
+          <div class="card-bottom">
+            <i class="fa-solid fa-house"></i>
+            <span>Property overview</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent Collections -->
+      <div class="collection-section">
+
+        <div class="collection-heading reveal">
+          <div>
+            <span class="eyebrow">PAYMENT ACTIVITY</span>
+            <h2>Recent Rent Collections</h2>
+            <p>Review your latest rental payment updates.</p>
+          </div>
+
+          <span class="record-count">
+            <i class="fa-solid fa-list-check"></i>
+            3 Records
+          </span>
+        </div>
+
+        <div class="collection-list">
+
+          <!-- Property 1 -->
+          <article class="property-row reveal">
+            <img
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400&q=80"
+              alt="Modern rental house"
+              class="property-image">
+
+            <div class="property-info">
+              <h3>Apartment A-101</h3>
+              <p><i class="fa-solid fa-user"></i> Ravi Kumar</p>
+              <span class="property-type">Residential Apartment</span>
+            </div>
+
+            <div class="payment-info">
+              <h3>₹15,000</h3>
+              <span class="payment-status paid">
+                <i class="fa-solid fa-circle-check"></i> Paid
+              </span>
+            </div>
+          </article>
+
+          <!-- Property 2 -->
+          <article class="property-row reveal">
+            <img
+              src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=400&q=80"
+              alt="Luxury rental villa"
+              class="property-image">
+
+            <div class="property-info">
+              <h3>Villa B-02</h3>
+              <p><i class="fa-solid fa-user"></i> Suresh Kumar</p>
+              <span class="property-type">Luxury Villa</span>
+            </div>
+
+            <div class="payment-info">
+              <h3>₹25,000</h3>
+              <span class="payment-status pending">
+                <i class="fa-solid fa-clock"></i> Pending
+              </span>
+            </div>
+          </article>
+
+          <!-- Property 3 -->
+          <article class="property-row reveal">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80"
+              alt="Modern apartment interior"
+              class="property-image">
+
+            <div class="property-info">
+              <h3>Flat C-204</h3>
+              <p><i class="fa-solid fa-user"></i> Prasad Kumar</p>
+              <span class="property-type">Residential Flat</span>
+            </div>
+
+            <div class="payment-info">
+              <h3>₹12,000</h3>
+              <span class="payment-status paid">
+                <i class="fa-solid fa-circle-check"></i> Paid
+              </span>
+            </div>
+          </article>
+
+        </div>
+
+    </div>
+  </section>
+
+<section class="ownership-journey">
+  <div class="oj-heading reveal">
+    <label class="oj-label">OUR PROCESS</label>
+
+    <h2>The Ownership <span>Journey</span></h2>
+    <p>Simple steps to manage your property with confidence.</p>
+  </div>
+
+  <div class="oj-timeline">
+    <div class="oj-step reveal">
+      <span class="oj-number">01</span>
+      <h3>Initial Consultation</h3>
+      <p>We understand your property goals and requirementsWe understand your property goals and requirements.We discuss your expectations and budget.
+</p>
+    </div>
+
+    <div class="oj-step reveal">
+      <span class="oj-number">02</span>
+      <h3>Property Evaluation</h3>
+      <p>We evaluate your property and determine rental valueWe carefully evaluate your property's condition and value.We analyze the local rental market and demand.</p>
+    </div>
+
+    <div class="oj-step reveal">
+      <span class="oj-number">03</span>
+      <h3>Tenant Setup reliable </h3>
+      <p>We help find suitable tenants and manage agreements.We find suitable tenants for your property.We verify tenant details and rental history.property visits and tenant</p>
+    </div>
+
+    <div class="oj-step reveal">
+      <span class="oj-number">04</span>
+      <h3>Ongoing Management</h3>
+      <p>We handle rent collection and maintenance requests.We manage your property on an ongoing basis.We monitor rent payments and follow up on pending .
+</p>
+    </div>
+  </div>
+</section>
+
+<section class="property-care">
+  <div class="pc-container">
+
+    <div class="pc-heading reveal">
+      <label class="pc-label">PROPERTY MANAGEMENT</label>
+
+      <h2>Property Care <span>&amp; Preservation</span></h2>
+
+      <p>
+        Professional property care solutions to protect your investment,
+        preserve its quality, and maintain long-term value.
+      </p>
+    </div>
+
+    <div class="pc-grid">
+
+      <article class="pc-card reveal">
+        <div class="pc-number">01</div>
+        <h3>Regular Inspections</h3>
+        <p>
+          We conduct regular property inspections to identify potential
+          issues early and maintain your property's condition.We conduct routine property inspections.
+        </p>
+      </article>
+
+      <article class="pc-card reveal">
+        <div class="pc-number">02</div>
+        <h3>Maintenance &amp; Repairs</h3>
+        <p>
+          We coordinate timely repairs and maintenance to keep your
+          property safe, functional, and in excellent condition.
+        </p>
+      </article>
+
+      <article class="pc-card reveal">
+        <div class="pc-number">03</div>
+        <h3>Cleaning &amp; Upkeep</h3>
+        <p>
+          We help maintain clean, organized, and welcoming spaces
+          to improve tenant satisfaction and property appeal.  We keep your property clean
+        </p>
+      </article>
+
+      <article class="pc-card reveal">
+        <div class="pc-number">04</div>
+        <h3>Long-Term Preservation</h3>
+        <p>
+          We recommend preventive care and practical improvements
+          to protect your investment and preserve its long-term value.
+        </p>
+      </article>
+
+    </div>
+</section>
+
+<section class="property-cta">
+  <div class="property-cta-container reveal">
+
+    <div class="property-cta-content">
+      <span class="property-cta-label">
+        PROPERTY MANAGEMENT
+      </span>
+
+      <h2>
+        Your Property, <span>Our Responsibility</span>
+      </h2>
+
+      <p>
+        Protect your investment with reliable property management
+        and professional maintenance services. We take care of
+        your property so you can enjoy complete peace of mind.
+      </p>
+
+      <div class="property-cta-features">
+        <span>Reliable Management</span>
+        <span>Quality Maintenance</span>
+        <span>Long-Term Value</span>
+      </div>
+
+      <a href="contact.html" class="property-cta-button">
+        Get Started
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="property-cta-decoration">
+      <div class="property-cta-square square-one"></div>
+      <div class="property-cta-square square-two"></div>
+
+      <div class="property-cta-info">
+        <span class="property-cta-info-label">YOUR PROPERTY</span>
+        <h3>Managed With Care.</h3>
+        <p>Protected For The Future.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ========================================
+     PREMIUM FOOTER — ESTATENEST
+======================================== -->
+        <section class="footer-section">
+          <footer class="site-footer">
+            <div class="footer-container">
+              <!-- ================= BRAND ================= -->
+              <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                  <!-- LOGO IMAGE -->
+                  <span class="logo-icon">
+                    <img
+                      src="images/logo rentel1.png"
+                      alt="EstateNest Property Management Logo"
+                    />
+                  </span>
+
+                  <!-- BRAND NAME -->
+                  <span class="logo-name"> Estate<strong>Nest</strong> </span>
+                </a>
+
+                <p class="footer-description">
+                  Simplifying property ownership with reliable rental management
+                  and professional tenant screening. From timely rent collection
+                  and lease management
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="social-links">
+                  <a href="#" aria-label="Facebook">
+                    <i data-lucide="users"></i>
+                  </a>
+
+                  <a href="#" aria-label="Instagram">
+                    <i data-lucide="camera"></i>
+                  </a>
+
+                  <a href="#" aria-label="LinkedIn">
+                    <i data-lucide="send"></i>
+                  </a>
+
+                  <a href="#" aria-label="X">
+                    <i data-lucide="play"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- ================= QUICK LINKS ================= -->
+              <div class="footer-column">
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="pricing.html">Pricing</a>
+
+                <a href="contact.html">Contact Us</a>
+
+                <a href="login.html">Owner Login</a>
+              </div>
+
+              <!-- ================= PROPERTY SERVICES ================= -->
+              <div class="footer-column">
+                <h3>Our Services</h3>
+
+                <a href="service.html">Property Management</a>
+
+                <a href="service.html">Tenant Screening</a>
+
+                <a href="service.html">Rent Collection</a>
+
+                <a href="service.html">Lease Management</a>
+
+                <a href="service.html">Property Maintenance</a>
+
+                <a href="service.html">Rental Reporting</a>
+              </div>
+
+              <!-- ================= CONTACT ================= -->
+              <div class="footer-column footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>
+                  <i data-lucide="map-pin"></i>
+                  <span>Hyderabad, India</span>
+                </p>
+
+                <p>
+                  <i data-lucide="phone"></i>
+                  <a href="tel:+919876543210"> +91 98765 43210 </a>
+                </p>
+
+                <p>
+                  <i data-lucide="mail"></i>
+                  <a href="mailto:hello@estatenest.com">
+                    hello@estatenest.com
+                  </a>
+                </p>
+
+                <p>
+                  <i data-lucide="clock"></i>
+                  <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- ================= FOOTER BOTTOM ================= -->
+            <div class="footer-bottom">
+              <p>© 2026 EstateNest. All Rights Reserved.</p>
+
+              <div class="footer-bottom-links">
+                <a href="privacy-policy.html"> Privacy Policy </a>
+
+                <a href="terms.html"> Terms &amp; Conditions </a>
+              </div>
+            </div>
+          </footer>
+        </section>
+<script src="main.js"></script>
+ <script src="index1.js"></script>
+  </body>
+</html>

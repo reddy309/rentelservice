@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>property management& rental service</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo rentel1.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo rentel1.png" alt="rental servive" />
+          </span>
+
+          <span class="logo-name"> Estate<strong>Nest</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- ================= HOME DROPDOWN ================= -->
+
+          <div class="nav-dropdown">
+            <button
+              type="button"
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html"> Home 1 </a>
+
+              <a href="index1.html"> Home 2 </a>
+            </div>
+          </div>
+
+          <!-- ================= OUR SERVICES ================= -->
+          <a href="about.html" class="nav-link"> About </a>
+
+          <a href="service.html" class="nav-link"> Services </a>
+
+          <!-- ================= PACKAGES ================= -->
+
+          <!-- ================= PRICING ================= -->
+          <a href="properties.html" class="nav-link"> Properties </a>
+          <a href="pricing.html" class="nav-link"> Pricing </a>
+
+          <!-- ================= DASHBOARD ================= -->
+
+          <!-- ================= CONTACT ================= -->
+
+          <a href="contact.html" class="nav-link"> Contact </a>
+          <a href="dashboard.html" class="nav-link"> Dashboard </a>
+
+          <!-- ================= MOBILE LOGIN ================= -->
+
+          <a href="login.html" class="nav-link mobile-login"> Login </a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- =====================================================
+     ESTATENEST — ANIMATED HERO + STATISTICS
+===================================================== -->
+
+    <section class="estate-hero" id="estateHero">
+      <!-- BACKGROUND IMAGE -->
+      <div class="estate-hero-bg"></div>
+      <div class="estate-hero-overlay"></div>
+
+      <div class="estate-hero-container">
+        <!-- HERO CONTENT -->
+        <div class="estate-hero-content">
+          <span class="estate-hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            PROPERTY MANAGEMENT MADE SIMPLE
+          </span>
+
+          <h1 class="hero-title">
+            Hassle-Free
+            <span class="title-line">
+              Property Management</span>
+            </span>
+          </h1>
+
+          <p class="estate-hero-description">
+            Manage your rental properties with confidence. We simplify tenant
+            management, rent collection, and property maintenance for a
+            stress-free experience.
+          </p>
+
+          <!-- BUTTONS -->
+          <div class="estate-hero-buttons">
+            <a href="service.html" class="estate-btn estate-btn-primary">
+              <span>Explore Services</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="contact.html" class="estate-btn estate-btn-secondary">
+              Contact Us
+            </a>
+          </div>
+
+          <!-- TRUST NOTE -->
+          <div class="estate-hero-note">
+            <i data-lucide="shield-check"></i>
+            <span>Reliable Management. Lasting Trust.</span>
+          </div>
+        </div>
+
+        <!-- STATISTICS — SAME SECTION -->
+        <div class="estate-hero-stats">
+          <div class="estate-stat">
+            <div class="estate-stat-icon">
+              <i data-lucide="building-2"></i>
+            </div>
+            <div class="estate-stat-info">
+              <h2><span class="estate-counter" data-target="500">0</span>+</h2>
+              <p>Properties Managed</p>
+            </div>
+          </div>
+
+          <div class="estate-stat">
+            <div class="estate-stat-icon">
+              <i data-lucide="users"></i>
+            </div>
+            <div class="estate-stat-info">
+              <h2><span class="estate-counter" data-target="350">0</span>+</h2>
+              <p>Happy Property Owners</p>
+            </div>
+          </div>
+
+          <div class="estate-stat">
+            <div class="estate-stat-icon">
+              <i data-lucide="handshake"></i>
+            </div>
+            <div class="estate-stat-info">
+              <h2><span class="estate-counter" data-target="98">0</span>%</h2>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
+
+          <div class="estate-stat">
+            <div class="estate-stat-icon">
+              <i data-lucide="headset"></i>
+            </div>
+            <div class="estate-stat-info">
+              <h2>24/7</h2>
+              <p>Property Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- SERVICES SECTION -->
+        <section class="services-section" id="services">
+          <div class="services-container">
+            <!-- SECTION HEADING -->
+            <header class="services-heading reveal">
+              <span class="section-eyebrow">ESTATENEST SERVICES</span>
+
+              <h2>
+                Property Management,
+                <span>Simplified.</span>
+              </h2>
+
+              <p>
+                From finding reliable tenants to maintaining your property, we
+                take care of the details so you can enjoy complete peace of
+                mind.
+              </p>
+            </header>
+
+            <!-- SERVICE CARDS -->
+            <div class="services-grid">
+              <!-- CARD 1 -->
+              <article class="service-card reveal">
+                <div class="service-image">
+                  <img
+                    src="images/poperty management.jpg"
+                    alt="Beautiful residential property managed by EstateNest"
+                    loading="lazy"
+                  />
+                
+                </div>
+
+                <div class="service-content">
+                  <span class="service-label">PROPERTY CARE</span>
+                  <h3>Property Management</h3>
+
+                  <p>
+                    Complete property oversight, from daily coordination to
+                    protecting the long-term value of your investment.
+                    Keep your property organised, maintained, and professionally managed with dependable day-to-day coordination.
+                  </p>
+
+                  <a
+                    href="contact.html"
+                    class="service-link"
+                  >
+                    Enquire Now <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- CARD 2 -->
+              <article class="service-card reveal">
+                <div class="service-image">
+                  <img
+                    src="images/tentet management.jpg"
+                    alt="Real estate professional helping a rental property client"
+                    loading="lazy"
+                  />
+                  
+                </div>
+
+                <div class="service-content">
+                  <span class="service-label">RELIABLE TENANTS</span>
+                  <h3>Tenant Management</h3>
+
+                  <p>
+                    Support with tenant enquiries, screening coordination,
+                    move-in arrangements and ongoing communication.Simplify your rental journey with reliable tenant management. From tenant enquiries and screening and properties
+                  </p>
+
+                  <a
+                    href="contact.html"
+                    class="service-link"
+                  >
+                    Enquire Now <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- CARD 3 -->
+              <article class="service-card reveal">
+                <div class="service-image">
+                  <img
+                    src="images/poperty maintence.jpg"
+                    alt="Professional home maintenance and repair service"
+                    loading="lazy"
+                  />
+                  
+                </div>
+
+                <div class="service-content">
+                  <span class="service-label">PROPERTY UPKEEP</span>
+                  <h3>Property Maintenance</h3>
+
+                  <p>
+                    Coordinate repairs, routine maintenance and trusted service
+                    professionals to keep your property in good shape. Keep your rental property in excellent condition with dependable maintenance coordination rental
+                  </p>
+
+                  <a
+                    href="contact.html?service=property-maintenance"
+                    class="service-link"
+                  >
+                    Enquire Now <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- CARD 4 -->
+              <article class="service-card reveal">
+                <div class="service-image">
+                  <img
+                    src="images/lease admitration.jpg"
+                    alt="Rental paperwork and financial documents"
+                    loading="lazy"
+                  />
+                 
+                </div>
+
+                <div class="service-content">
+                  <span class="service-label">DOCUMENTATION</span>
+                  <h3>Lease Administration</h3>
+
+                  <p>
+                    Organised lease documentation, renewal reminders and support
+                    with rental agreement administration.Keep your rental documentation organised with reliable lease administration. From rental agreements and renewal
+                  </p>
+
+                  <a
+                    href="contact.html"
+                    class="service-link"
+                  >
+                    Enquire Now <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- CARD 5 -->
+              <article class="service-card reveal">
+                <div class="service-image">
+                  <img
+                    src="images/poperty inpection.jpg"
+                    alt="Bright modern residential property interior"
+                    loading="lazy"
+                  />
+                  <span class="service-number">05</span>
+                </div>
+
+                <div class="service-content">
+                  <span class="service-label">REGULAR CHECKS</span>
+                  <h3>Property Inspections</h3>
+
+                  <p>
+                    Arrange property condition checks and document maintenance
+                    concerns before they become bigger problems.Maintain confidence in your property with regular inspection coordination. From checking property
+                  </p>
+
+                  <a
+                    href="contact.html"
+                    class="service-link"
+                  >
+                    Enquire Now <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <!-- CARD 6 -->
+              <article class="service-card reveal">
+                <div class="service-image">
+                  <img
+                    src="images/owner suport.jpg"
+                    alt="Elegant residential living room in a managed property"
+                    loading="lazy"
+                  />
+                  <span class="service-number">06</span>
+                </div>
+
+                <div class="service-content">
+                  <span class="service-label">OWNER ASSISTANCE</span>
+                  <h3>Owner Support</h3>
+
+                  <p>
+                    Stay informed with rental updates, maintenance coordination
+                    and assistance with property-related queries.Enjoy greater peace of mind with dedicated property owner supporthelp property owners save time
+                  </p>
+
+                  <a
+                    href="contact.html?service=owner-support"
+                    class="service-link"
+                  >
+                    Enquire Now <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+        
+          </div>
+        </section>
+      
+  
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="howItWorks">
+  <div class="how-container">
+
+    <!-- SECTION HEADING -->
+    <header class="how-heading reveal">
+      <span class="how-eyebrow">OUR PROCESS</span>
+      <h2>How <span>It Works</span></h2>
+      <p>
+        A simple and transparent process to make
+        managing your rental property easier.
+      </p>
+    </header>
+
+    <!-- 4-STEP TIMELINE -->
+    <div class="how-timeline">
+
+      <!-- STEP 1 -->
+      <article class="how-step reveal">
+        <div class="how-step-marker">
+          
+          <span class="how-step-icon">
+            <i data-lucide="house"></i>
+          </span>
+        </div>
+
+        <div class="how-step-content">
+          <span class="how-step-label">STEP 01</span>
+          <h3>Property Listing</h3>
+          <p>
+            Share your property details and prepare
+            your rental listing.Add your property details and rental information.
+Upload high-quality photos of your property.
+Set your preferred 
+          </p>
+        </div>
+      </article>
+
+      <!-- STEP 2 -->
+      <article class="how-step reveal">
+        <div class="how-step-marker">
+          
+          <span class="how-step-icon">
+            <i data-lucide="users"></i>
+          </span>
+        </div>
+
+        <div class="how-step-content">
+          <span class="how-step-label">STEP 02</span>
+          <h3>Tenant Screening</h3>
+          <p>
+            prospective tenants and simplify
+            selection process.Review tenant applications and personal details.
+Verify employment and income information.
+Check rental history
+
+          </p>
+        </div>
+      </article>
+
+      <!-- STEP 3 -->
+      <article class="how-step reveal">
+        <div class="how-step-marker">
+        
+          <span class="how-step-icon">
+            <i data-lucide="file-check"></i>
+          </span>
+        </div>
+
+        <div class="how-step-content">
+           <span class="how-step-label">STEP 03</span>
+          
+          <h3>Lease Agreement</h3>
+          <p>
+            Organize rental terms and tenancy
+            .Prepare a clear and detailed rental agreement.
+Define monthly rent and payment terms.
+Specify lease duration
+          </p>
+        </div>
+      </article>
+
+      <!-- STEP 4 -->
+      <article class="how-step reveal">
+        <div class="how-step-marker">
+         
+          <span class="how-step-icon">
+            <i data-lucide="wallet"></i>
+          </span>
+        </div>
+
+        <div class="how-step-content">
+           <span class="how-step-label">STEP 04</span>
+          
+          <h3>Rent Collection</h3>
+          <p>
+            Track rent payments and organize
+            your rental income.Collect monthly rent payments from tenants.
+Track payment dates and rental income.
+
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- TENANT SCREENING OVERVIEW -->
+<section class="tenant-overview" id="tenantScreening">
+
+  <div class="tenant-container">
+
+    <!-- SECTION HEADING -->
+    <div class="tenant-heading reveal">
+      <span class="tenant-eyebrow">TENANT MANAGEMENT</span>
+
+      <h2>
+        Tenant Screening
+        <strong>Overview</strong>
+      </h2>
+
+      <p>
+        Find reliable tenants through a simple and organized screening
+        process. Review applications, verify details, and make
+        informed rental decisions.
+      </p>
+    </div>
+
+    <!-- IMAGE LEFT + CARDS RIGHT -->
+    <div class="tenant-layout">
+
+      <!-- LEFT IMAGE -->
+      <div class="tenant-image reveal">
+        <img
+          src="images/tentent screening process.jpg"
+          alt="Property manager reviewing tenant applications"
+        />
+      </div>
+
+      <!-- RIGHT FOUR CARDS -->
+      <div class="tenant-cards">
+
+        <!-- CARD 1 -->
+        <article class="tenant-card reveal">
+          <div class="tenant-icon">
+            <i data-lucide="file-text"></i>
+          </div>
+
+          <h3>Application Review</h3>
+
+          <p>
+            Review tenant applications and personal details carefully.
+          </p>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="tenant-card reveal">
+          <div class="tenant-icon">
+            <i data-lucide="badge-check"></i>
+          </div>
+
+          <h3>Background Verification</h3>
+
+          <p>
+            Verify submitted information and relevant references.
+          </p>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="tenant-card reveal">
+          <div class="tenant-icon">
+            <i data-lucide="wallet"></i>
+          </div>
+
+          <h3>Income Assessment</h3>
+
+          <p>
+            Review income details to assess rental affordability.
+          </p>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="tenant-card reveal">
+          <div class="tenant-icon">
+            <i data-lucide="users"></i>
+          </div>
+
+          <h3>Tenant Selection</h3>
+
+          <p>
+            Compare eligible applicants and select a suitable tenant.
+          </p>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================
+     FEATURED RENTAL PROPERTIES
+========================================= -->
+
+<section class="featured-rentals" id="featuredRentals">
+  <div class="rentals-container">
+
+    <!-- SECTION HEADING -->
+    <header class="rentals-heading reveal">
+      <span class="rentals-eyebrow">EXPLORE PROPERTIES</span>
+
+      <h2>
+        Featured <strong>Rental Properties</strong>
+      </h2>
+
+      <p>
+        Discover quality rental properties that match your lifestyle
+        and budget. Explore comfortable homes in desirable locations.
+      </p>
+    </header>
+
+    <!-- PROPERTY GRID -->
+    <div class="rentals-grid">
+
+      <!-- PROPERTY 1 -->
+      <article class="rental-card reveal">
+        <div class="rental-image">
+          <img src="images/family home.jpg"
+               alt="Modern family house for rent"
+               loading="lazy">
+          <span class="rental-badge">Featured</span>
+        </div>
+
+        <div class="rental-content">
+          <span class="rental-type">Independent House</span>
+          <h3>Modern Family House</h3>
+
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Gachibowli, Hyderabad
+          </p>
+
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 3 Beds</span>
+            <span><i data-lucide="bath"></i> 2 Baths</span>
+            <span><i data-lucide="maximize"></i> 1,800 sq.ft.</span>
+          </div>
+
+          <div class="rental-footer">
+            <p class="rental-price">₹25,000 <span>/ month</span></p>
+            <a href="contact.html" class="rental-link" aria-label="Enquire about Modern Family House">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROPERTY 2 -->
+      <article class="rental-card reveal">
+        <div class="rental-image">
+          <img src="images/premuin city apartmnt.jpg"
+               alt="Luxury apartment for rent"
+               loading="lazy">
+          <span class="rental-badge">Popular</span>
+        </div>
+
+        <div class="rental-content">
+          <span class="rental-type">Luxury Apartment</span>
+          <h3>Premium City Apartment</h3>
+
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Madhapur, Hyderabad
+          </p>
+
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 2 Beds</span>
+            <span><i data-lucide="bath"></i> 2 Baths</span>
+            <span><i data-lucide="maximize"></i> 1,200 sq.ft.</span>
+          </div>
+
+          <div class="rental-footer">
+            <p class="rental-price">₹20,000 <span>/ month</span></p>
+            <a href="contact.html" class="rental-link" aria-label="Enquire about Premium City Apartment">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROPERTY 3 -->
+      <article class="rental-card reveal">
+        <div class="rental-image">
+          <img src="images/garden villa.jpg"
+               alt="Contemporary villa for rent"
+               loading="lazy">
+          <span class="rental-badge">Featured</span>
+        </div>
+
+        <div class="rental-content">
+          <span class="rental-type">Luxury Villa</span>
+          <h3>Contemporary Garden Villa</h3>
+
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Kondapur, Hyderabad
+          </p>
+
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 4 Beds</span>
+            <span><i data-lucide="bath"></i> 3 Baths</span>
+            <span><i data-lucide="maximize"></i> 2,400 sq.ft.</span>
+          </div>
+
+          <div class="rental-footer">
+            <p class="rental-price">₹40,000 <span>/ month</span></p>
+            <a href="contact.html" class="rental-link" aria-label="Enquire about Contemporary Garden Villa">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROPERTY 4 -->
+      <article class="rental-card reveal">
+        <div class="rental-image">
+          <img src="images/comfortble home.jpg"
+               alt="Comfortable two bedroom rental home"
+               loading="lazy">
+          <span class="rental-badge">Available</span>
+        </div>
+
+        <div class="rental-content">
+          <span class="rental-type">Residential Home</span>
+          <h3>Comfort Living Home</h3>
+
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Kukatpally, Hyderabad
+          </p>
+
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 2 Beds</span>
+            <span><i data-lucide="bath"></i> 1 Bath</span>
+            <span><i data-lucide="maximize"></i> 1,000 sq.ft.</span>
+          </div>
+
+          <div class="rental-footer">
+            <p class="rental-price">₹15,000 <span>/ month</span></p>
+            <a href="contact.html" class="rental-link" aria-label="Enquire about Comfort Living Home">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROPERTY 5 -->
+      <article class="rental-card reveal">
+        <div class="rental-image">
+          <img src="images/elegent apartment.jpg"
+               alt="Modern furnished apartment"
+               loading="lazy">
+          <span class="rental-badge">Popular</span>
+        </div>
+
+        <div class="rental-content">
+          <span class="rental-type">Furnished Apartment</span>
+          <h3>Elegant Urban Apartment</h3>
+
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Manikonda, Hyderabad
+          </p>
+
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 2 Beds</span>
+            <span><i data-lucide="bath"></i> 2 Baths</span>
+            <span><i data-lucide="maximize"></i> 1,350 sq.ft.</span>
+          </div>
+
+          <div class="rental-footer">
+            <p class="rental-price">₹22,000 <span>/ month</span></p>
+            <a href="contact.html" class="rental-link" aria-label="Enquire about Elegant Urban Apartment">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROPERTY 6 -->
+      <article class="rental-card reveal">
+        <div class="rental-image">
+          <img src="images/spacies family.webp"
+               alt="Spacious family rental property"
+               loading="lazy">
+          <span class="rental-badge">Available</span>
+        </div>
+
+        <div class="rental-content">
+          <span class="rental-type">Family Apartment</span>
+          <h3>Spacious Family Residence</h3>
+
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Miyapur, Hyderabad
+          </p>
+
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 3 Beds</span>
+            <span><i data-lucide="bath"></i> 2 Baths</span>
+            <span><i data-lucide="maximize"></i> 1,600 sq.ft.</span>
+          </div>
+
+          <div class="rental-footer">
+            <p class="rental-price">₹18,000 <span>/ month</span></p>
+            <a href="contact.html" class="rental-link" aria-label="Enquire about Spacious Family Residence">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROPERTY MAINTENANCE OVERVIEW -->
+<section class="maintenance-overview" id="property-maintenance">
+
+  <div class="maintenance-container">
+
+    <!-- LEFT SIDE CONTENT -->
+    <div class="maintenance-content reveal reveal-left">
+
+      <span class="maintenance-eyebrow">
+        PROPERTY MAINTENANCE
+      </span>
+
+      <h2>
+        Keep Your Property
+        <span>In Excellent Condition</span>
+      </h2>
+
+      <p class="maintenance-description">
+        We help property owners maintain safe, functional,
+        and attractive rental properties through timely
+        repairs and professional maintenance support.
+      </p>
+
+      <!-- FIVE POINTS -->
+      <div class="maintenance-points">
+
+        <div class="maintenance-point">
+          <span class="maintenance-check">
+            <i data-lucide="check"></i>
+          </span>
+          <p>Schedule regular property inspections.</p>
+        </div>
+
+        <div class="maintenance-point">
+          <span class="maintenance-check">
+            <i data-lucide="check"></i>
+          </span>
+          <p>Coordinate plumbing and electrical repairs.</p>
+        </div>
+
+        <div class="maintenance-point">
+          <span class="maintenance-check">
+            <i data-lucide="check"></i>
+          </span>
+          <p>Respond to tenant maintenance requests.</p>
+        </div>
+
+        <div class="maintenance-point">
+          <span class="maintenance-check">
+            <i data-lucide="check"></i>
+          </span>
+          <p>Arrange preventive maintenance services.</p>
+        </div>
+
+        <div class="maintenance-point">
+          <span class="maintenance-check">
+            <i data-lucide="check"></i>
+          </span>
+          <p>Track repairs and maintenance progress.</p>
+        </div>
+
+      </div>
+
+      <!-- BUTTON -->
+      <a href="contact.html" class="maintenance-btn">
+        Request Maintenance
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="maintenance-image reveal reveal-right">
+
+      <img
+        src="images/excelent condtuion.png"
+        alt="Professional property maintenance and repair service"
+      >
+
+    </div>
+
+  </div>
+</section>
+
+<section class="property-benefits" id="property-benefits">
+
+  <div class="benefits-heading reveal">
+    <span class="benefits-tag">WHY CHOOSE US</span>
+    <h2>
+  Benefits for <span>Property Owners</span>
+</h2>
+    <p>
+      We make property ownership easier with reliable management,
+      transparent reporting, and professional support.
+    </p>
+  </div>
+
+  <div class="benefits-layout">
+
+    <!-- Benefit 1 -->
+    <article class="benefit-card benefit-left reveal">
+      <div class="benefit-icon">
+        <i data-lucide="wallet"></i>
+      </div>
+      <h3>Reliable Rent Collection</h3>
+      <p>Enjoy organized rent collection and clear payment updates.</p>
+    </article>
+
+    <!-- Benefit 2 -->
+    <article class="benefit-card benefit-top-left reveal">
+      <div class="benefit-icon">
+        <i data-lucide="users"></i>
+      </div>
+      <h3>Tenant Screening</h3>
+      <p>Find suitable tenants through a structured screening process.</p>
+    </article>
+
+    <!-- Benefit 3 -->
+    <article class="benefit-card benefit-top-right reveal">
+      <div class="benefit-icon">
+        <i data-lucide="wrench"></i>
+      </div>
+      <h3>Maintenance Support</h3>
+      <p>Keep your property in good condition with timely maintenance.</p>
+    </article>
+
+    <!-- Benefit 4 -->
+    <article class="benefit-card benefit-right reveal">
+      <div class="benefit-icon">
+        <i data-lucide="file-check"></i>
+      </div>
+      <h3>Clear Reporting</h3>
+      <p>Track rental income, property details, and important updates.</p>
+    </article>
+
+    <!-- Center Image -->
+    <div class="benefits-center reveal">
+      <div class="center-image">
+        <img
+          src="images/indesx screning.jpg"
+          alt="Modern residential property"
+        />
+        <div class="image-overlay"></div>
+
+        <div class="center-image-content">
+         
+          <h3>Your Property,<br />Our Priority</h3>
+        </div>
+      </div>
+      <div class="center-ring ring-one"></div>
+      <div class="center-ring ring-two"></div>
+    </div>
+
+    <!-- Benefit 5 -->
+    <article class="benefit-card benefit-bottom-left reveal">
+      <div class="benefit-icon">
+        <i data-lucide="shield-check"></i>
+      </div>
+      <h3>Property Protection</h3>
+      <p>Support your property's long-term condition and value.</p>
+    </article>
+
+    <!-- Benefit 6 -->
+    <article class="benefit-card benefit-bottom-right reveal">
+      <div class="benefit-icon">
+        <i data-lucide="clock"></i>
+      </div>
+      <h3>Save Your Time</h3>
+      <p>Reduce day-to-day tasks with organized management services.</p>
+    </article>
+
+    <!-- Benefit 7 -->
+    <article class="benefit-card benefit-bottom reveal">
+      <div class="benefit-icon">
+        <i data-lucide="headset"></i>
+      </div>
+      <h3>Dedicated Support</h3>
+      <p>Get assistance with tenant concerns and property requests.</p>
+    </article>
+
+  </div>
+
+</section>
+
+
+  <section class="why-estatenest" id="why-estatenest">
+
+    <div class="why-container">
+
+      <!-- Section Heading -->
+      <div class="why-heading reveal">
+
+        <span class="why-tag">THE ESTATENEST ADVANTAGE</span>
+
+        <h2>
+          Why Choose
+          <span>EstateNest?</span>
+        </h2>
+
+        <p>
+          We make property ownership easier with reliable management,
+          transparent communication, and personalized care for every property.
+        </p>
+
+      </div>
+
+      <!-- Benefits Layout -->
+      <div class="why-grid">
+
+        <!-- Card 1 -->
+        <article class="why-card reveal">
+
+          <div class="why-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+
+          <span class="why-number">01</span>
+
+          <h3>Trusted Property Care</h3>
+
+          <p>
+            Your property receives professional attention, regular monitoring,
+            and dependable management throughout the year.
+          </p>
+
+          <a href="about.html" class="why-link">
+            Learn More
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </article>
+
+        <!-- Card 2 -->
+        <article class="why-card reveal">
+
+          <div class="why-icon">
+            <i data-lucide="wallet"></i>
+          </div>
+
+          <span class="why-number">02</span>
+
+          <h3>Transparent Pricing</h3>
+
+          <p>
+            Understand your management costs with clear pricing and
+            straightforward communication, without unnecessary surprises.
+          </p>
+
+          <a href="pricing.html" class="why-link">
+            View Pricing
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </article>
+
+        <!-- Card 3 -->
+        <article class="why-card reveal">
+
+          <div class="why-icon">
+            <i data-lucide="users"></i>
+          </div>
+
+          <span class="why-number">03</span>
+
+          <h3>Quality Tenant Screening</h3>
+
+          <p>
+            We help property owners find suitable tenants through an
+            organized screening process and careful communication.
+          </p>
+
+          <a href="services.html" class="why-link">
+            Our Services
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </article>
+
+        <!-- Card 4 -->
+        <article class="why-card reveal">
+
+          <div class="why-icon">
+            <i data-lucide="calendar-check"></i>
+          </div>
+
+          <span class="why-number">04</span>
+
+          <h3>On-Time Rent Tracking</h3>
+
+          <p>
+            Keep rental payments organized and monitor payment records
+            with a convenient property management process.
+          </p>
+
+          <a href="dashboard.html" class="why-link">
+            Explore Dashboard
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </article>
+
+        <!-- Card 5 -->
+        <article class="why-card reveal">
+
+          <div class="why-icon">
+            <i data-lucide="wrench"></i>
+          </div>
+
+          <span class="why-number">05</span>
+
+          <h3>Quick Maintenance Support</h3>
+
+          <p>
+            Report property issues and coordinate maintenance requests
+            to help keep your rental units in good condition.
+          </p>
+
+          <a href="contact.html" class="why-link">
+            Get Support
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </article>
+
+        <!-- Card 6 -->
+        <article class="why-card reveal">
+
+          <div class="why-icon">
+            <i data-lucide="chart-no-axes-combined"></i>
+          </div>
+
+          <span class="why-number">06</span>
+
+          <h3>Better Investment Insights</h3>
+
+          <p>
+            Organize property information and review rental performance
+            to make more informed ownership decisions.
+          </p>
+
+          <a href="dashboard.html" class="why-link">
+            View Dashboard
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+        </article>
+
+      </div>
+    </div>
+
+  </section>
+<section class="cs-testimonials" id="testimonials">
+  <div class="cs-testimonials-container">
+
+    <div class="cs-testimonials-heading reveal">
+      <span class="cs-testimonials-tag">OWNER & TENANT TESTIMONIALS</span>
+      <h2>Trusted by Property Owners <span>& Happy Residents</span></h2>
+      <p>
+        Discover how EstateNest simplifies property management,
+        rental collection, tenant screening, and property maintenance.
+      </p>
+    </div>
+
+    <div class="cs-testimonial-slider reveal">
+
+      <button class="cs-testimonial-arrow cs-prev"
+        type="button" aria-label="Previous testimonial">
+        <i data-lucide="chevron-left"></i>
+      </button>
+
+      <div class="cs-testimonial-track" aria-live="polite">
+
+        <article class="cs-testimonial-slide active">
+          <div class="cs-testimonial-image">
+            <img src="images/rahul.jpg" alt="Rajesh Kumar, property owner" loading="lazy">
+          </div>
+          <div class="cs-testimonial-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <p class="cs-testimonial-review">
+            “EstateNest has made managing my rental properties stress-free.
+            Rent collection, tenant communication, and maintenance are handled
+            professionally, giving me more time to focus on other priorities.”
+          </p>
+          <div class="cs-testimonial-client">
+            <h3>Rajesh Kumar</h3>
+            <span>Property Owner · Hyderabad</span>
+          </div>
+        </article>
+
+        <article class="cs-testimonial-slide">
+          <div class="cs-testimonial-image">
+            <img src="images/priya sharama.jpg" alt="Priya Sharma, property investor" loading="lazy">
+          </div>
+          <div class="cs-testimonial-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <p class="cs-testimonial-review">
+            “The team keeps me informed about my property and makes tenant
+            screening much easier. I appreciate the transparent communication
+            and the organized approach to managing my investment.”
+          </p>
+          <div class="cs-testimonial-client">
+            <h3>Priya Sharma</h3>
+            <span>Property Investor · Bengaluru</span>
+          </div>
+        </article>
+
+        <article class="cs-testimonial-slide">
+          <div class="cs-testimonial-image">
+            <img src="images/vikram kumar.jpg" alt="Arjun Reddy, tenant" loading="lazy">
+          </div>
+          <div class="cs-testimonial-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <p class="cs-testimonial-review">
+            “Finding and renting a home was straightforward. Whenever I needed
+            assistance, the maintenance request process was easy to follow
+            and communication was clear.”
+          </p>
+          <div class="cs-testimonial-client">
+            <h3>Arjun Reddy</h3>
+            <span>Resident Tenant · Hyderabad</span>
+          </div>
+        </article>
+
+        <article class="cs-testimonial-slide">
+          <div class="cs-testimonial-image">
+            <img src="images/rao.jpg" alt="Sneha Varma, property owner" loading="lazy">
+          </div>
+          <div class="cs-testimonial-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i><i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <p class="cs-testimonial-review">
+            “EstateNest gives me a more organized way to look after my
+            rental home. From tenant coordination to maintenance follow-ups,
+            the process feels simpler and more convenient.”
+          </p>
+          <div class="cs-testimonial-client">
+            <h3>Sneha Varma</h3>
+            <span>Property Owner · Vijayawada</span>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="cs-testimonial-arrow cs-next"
+        type="button" aria-label="Next testimonial">
+        <i data-lucide="chevron-right"></i>
+      </button>
+
+    </div>
+
+    <div class="cs-testimonial-controls reveal">
+      <div class="cs-testimonial-dots">
+        <button class="cs-testimonial-dot active" type="button"
+          aria-label="Show testimonial 1" aria-current="true"></button>
+        <button class="cs-testimonial-dot" type="button"
+          aria-label="Show testimonial 2"></button>
+        <button class="cs-testimonial-dot" type="button"
+          aria-label="Show testimonial 3"></button>
+        <button class="cs-testimonial-dot" type="button"
+          aria-label="Show testimonial 4"></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- =========================================
+     ESTATENEST - CTA SECTION
+========================================= -->
+
+<section class="estate-cta-section" id="estate-cta">
+
+  <div class="estate-cta-container">
+
+    <div class="estate-cta-content reveal">
+
+      <span class="estate-cta-tag">
+        READY TO GET STARTED
+      </span>
+
+      <h2>
+        Your Property Deserves
+        <span>Professional Care</span>
+      </h2>
+
+      <p>
+        Simplify property management with reliable support,
+        organized rental tracking, and hassle-free maintenance.
+        Let EstateNest help you manage your property with confidence.
+      </p>
+
+      <div class="estate-cta-actions">
+
+        <a href="contact.html" class="estate-cta-button">
+          Get Started
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="estate-cta-decoration" aria-hidden="true">
+      <span class="estate-cta-circle circle-one"></span>
+      <span class="estate-cta-circle circle-two"></span>
+    </div>
+
+  </div>
+
+</section>
+<!-- ========================================
+     PREMIUM FOOTER — ESTATENEST
+======================================== -->
+        <section class="footer-section">
+          <footer class="site-footer">
+            <div class="footer-container">
+              <!-- ================= BRAND ================= -->
+              <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                  <!-- LOGO IMAGE -->
+                  <span class="logo-icon">
+                    <img
+                      src="images/logo rentel1.png"
+                      alt="EstateNest Property Management Logo"
+                    />
+                  </span>
+
+                  <!-- BRAND NAME -->
+                  <span class="logo-name"> Estate<strong>Nest</strong> </span>
+                </a>
+
+                <p class="footer-description">
+                  Simplifying property ownership with reliable rental management
+                  and professional tenant screening. From timely rent collection
+                  and lease management
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="social-links">
+                  <a href="#" aria-label="Facebook">
+                    <i data-lucide="users"></i>
+                  </a>
+
+                  <a href="#" aria-label="Instagram">
+                    <i data-lucide="camera"></i>
+                  </a>
+
+                  <a href="#" aria-label="LinkedIn">
+                    <i data-lucide="send"></i>
+                  </a>
+
+                  <a href="#" aria-label="X">
+                    <i data-lucide="play"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- ================= QUICK LINKS ================= -->
+              <div class="footer-column">
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="service.html">Services</a>
+
+                <a href="pricing.html">Pricing</a>
+
+                <a href="contact.html">Contact Us</a>
+
+                <a href="login.html">Owner Login</a>
+              </div>
+
+              <!-- ================= PROPERTY SERVICES ================= -->
+              <div class="footer-column">
+                <h3>Our Services</h3>
+
+                <a href="service.html">Property Management</a>
+
+                <a href="service.html">Tenant Screening</a>
+
+                <a href="service.html">Rent Collection</a>
+
+                <a href="service.html">Lease Management</a>
+
+                <a href="service.html">Property Maintenance</a>
+
+                <a href="service.html">Rental Reporting</a>
+              </div>
+
+              <!-- ================= CONTACT ================= -->
+              <div class="footer-column footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>
+                  <i data-lucide="map-pin"></i>
+                  <span>Hyderabad, India</span>
+                </p>
+
+                <p>
+                  <i data-lucide="phone"></i>
+                  <a href="tel:+919876543210"> +91 98765 43210 </a>
+                </p>
+
+                <p>
+                  <i data-lucide="mail"></i>
+                  <a href="mailto:hello@estatenest.com">
+                    hello@estatenest.com
+                  </a>
+                </p>
+
+                <p>
+                  <i data-lucide="clock"></i>
+                  <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- ================= FOOTER BOTTOM ================= -->
+            <div class="footer-bottom">
+              <p>© 2026 EstateNest. All Rights Reserved.</p>
+
+              <div class="footer-bottom-links">
+                <a href="privacy-policy.html"> Privacy Policy </a>
+
+                <a href="terms.html"> Terms &amp; Conditions </a>
+              </div>
+            </div>
+          </footer>
+        </section>
+
+        <script src="main.js"></script>
+        <script src="index.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

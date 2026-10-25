@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>property management& rental service</title>
+
+    <link rel="stylesheet" href="servicedetail.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo rentel1.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo rentel1.png" alt="rental servive" />
+          </span>
+
+          <span class="logo-name"> Estate<strong>Nest</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- ================= HOME DROPDOWN ================= -->
+
+          <div class="nav-dropdown">
+            <button
+              type="button"
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html"> Home 1 </a>
+
+              <a href="index1.html"> Home 2 </a>
+            </div>
+          </div>
+
+          <!-- ================= OUR SERVICES ================= -->
+          <a href="about.html" class="nav-link"> About </a>
+
+          <a href="service.html" class="nav-link"> Services </a>
+
+          <!-- ================= PACKAGES ================= -->
+
+          <!-- ================= PRICING ================= -->
+          <a href="properties.html" class="nav-link"> Properties </a>
+          <a href="pricing.html" class="nav-link"> Pricing </a>
+
+          <!-- ================= DASHBOARD ================= -->
+
+          <!-- ================= CONTACT ================= -->
+
+          <a href="contact.html" class="nav-link"> Contact </a>
+          <a href="dashboard.html" class="nav-link"> Dashboard </a>
+
+          <!-- ================= MOBILE LOGIN ================= -->
+
+          <a href="login.html" class="nav-link mobile-login"> Login </a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- SERVICE DETAILS HERO -->
+    <section class="service-details-hero">
+      <div class="service-details-overlay"></div>
+
+      <div class="service-details-content">
+        <span class="service-details-label">
+          <span class="service-label-line"></span>
+          PROPERTY MANAGEMENT
+          <span class="service-label-line"></span>
+        </span>
+
+        <h1>
+          Professional Property Care,
+          <span>Designed Around You.</span>
+        </h1>
+
+        <p>
+          Discover dependable property management solutions that protect your
+          investment, simplify ownership, and help your property maintain its
+          long-term value.
+        </p>
+
+        <a href="contact.html" class="service-details-button">
+          Enquire Now
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================
+     KEY FEATURES & BENEFITS
+========================================= -->
+
+    <section class="features-section" id="key-features">
+      <div class="features-container">
+        <!-- SECTION HEADER -->
+        <div class="features-header reveal">
+          <span class="features-eyebrow">
+            <span class="eyebrow-line"></span>
+            WHY CHOOSE US
+            <span class="eyebrow-line"></span>
+          </span>
+
+          <h2>Key Features <span>&amp; Benefits</span></h2>
+
+          <p>
+            Smart property management solutions designed to simplify ownership,
+            protect your investment, and deliver peace of mind.
+          </p>
+        </div>
+
+        <!-- FEATURES GRID -->
+        <div class="features-grid">
+          <!-- CARD 1 -->
+          <article class="feature-card reveal">
+            <div class="feature-card-top">
+              <div class="feature-icon">
+                <i data-lucide="building-2"></i>
+              </div>
+            </div>
+
+            <h3>Professional Management</h3>
+
+            <p>
+              Keep your property organized with reliable management, regular
+              supervision, and professional support.
+            </p>
+
+            <a href="service.html" class="feature-link">
+              Explore Feature
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="feature-card reveal">
+            <div class="feature-card-top">
+              <div class="feature-icon">
+                <i data-lucide="users"></i>
+              </div>
+            </div>
+
+            <h3>Tenant Screening</h3>
+
+            <p>
+              Support better rental decisions with a structured tenant
+              evaluation process and organized tenant records.
+            </p>
+
+            <a href="service.html" class="feature-link">
+              Explore Feature
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="feature-card reveal">
+            <div class="feature-card-top">
+              <div class="feature-icon">
+                <i data-lucide="wallet"></i>
+              </div>
+            </div>
+
+            <h3>Reliable Rent Collection</h3>
+
+            <p>
+              Track rental payments, monitor due dates, and maintain clear
+              payment records for your properties.
+            </p>
+
+            <a href="service.html" class="feature-link">
+              Explore Feature
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="feature-card reveal">
+            <div class="feature-card-top">
+              <div class="feature-icon">
+                <i data-lucide="wrench"></i>
+              </div>
+            </div>
+
+            <h3>Property Maintenance</h3>
+
+            <p>
+              Organize maintenance requests, follow repair progress, and help
+              keep your property in excellent condition.
+            </p>
+
+            <a href="service.html" class="feature-link">
+              Explore Feature
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="feature-card reveal">
+            <div class="feature-card-top">
+              <div class="feature-icon">
+                <i data-lucide="chart-no-axes-combined"></i>
+              </div>
+            </div>
+
+            <h3>Financial Transparency</h3>
+
+            <p>
+              Review rental income, property expenses, and payment summaries to
+              make informed ownership decisions.
+            </p>
+
+            <a href="service.html" class="feature-link">
+              Explore Feature
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- CARD 6 -->
+          <article class="feature-card reveal">
+            <div class="feature-card-top">
+              <div class="feature-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+            </div>
+
+            <h3>Secure Owner Dashboard</h3>
+
+            <p>
+              Access property details, rental information, and maintenance
+              updates through a convenient owner dashboard.
+            </p>
+
+            <a href="service.html" class="feature-link">
+              Explore Feature
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     RENT COLLECTION PROCESS — ESTATENEST
+===================================================== -->
+
+    <section class="rent-process-section" id="rent-process">
+      <div class="rent-process-container">
+        <!-- LEFT: RENT COLLECTION STEPS -->
+        <div class="rent-process-content">
+          <span class="rent-eyebrow"> PROPERTY MANAGEMENT </span>
+
+          <h2>Our Rent Collection Process</h2>
+
+          <p class="rent-intro">
+            We simplify rental income management with a structured, transparent
+            process that keeps tenants informed and property owners up to date.
+          </p>
+
+          <div class="rent-steps-grid">
+            <article class="rent-step">
+              <span class="rent-icon">
+                <i data-lucide="calendar-check"></i>
+              </span>
+              <div class="rent-step-content">
+                <h3>01. Rent Schedule Setup</h3>
+                <p>
+                  We establish monthly rent amounts, payment due dates, lease
+                  terms and accepted payment methods for every unit.
+                </p>
+              </div>
+            </article>
+
+            <article class="rent-step">
+              <span class="rent-icon">
+                <i data-lucide="bell-ring"></i>
+              </span>
+              <div class="rent-step-content">
+                <h3>02. Tenant Reminders</h3>
+                <p>
+                  Tenants receive timely reminders before the due date, helping
+                  reduce missed payments and confusion.
+                </p>
+              </div>
+            </article>
+
+            <article class="rent-step">
+              <span class="rent-icon">
+                <i data-lucide="wallet"></i>
+              </span>
+              <div class="rent-step-content">
+                <h3>03. Rent Payment Collection</h3>
+                <p>
+                  Payments are collected through the agreed methods, such as
+                  bank transfer or a supported online payment service.
+                </p>
+              </div>
+            </article>
+
+            <article class="rent-step">
+              <span class="rent-icon">
+                <i data-lucide="clipboard-check"></i>
+              </span>
+              <div class="rent-step-content">
+                <h3>04. Payment Verification</h3>
+                <p>
+                  Each payment is checked against the tenant account. Confirmed
+                  transactions are recorded and balances updated.
+                </p>
+              </div>
+            </article>
+
+            <article class="rent-step">
+              <span class="rent-icon">
+                <i data-lucide="file-check-2"></i>
+              </span>
+              <div class="rent-step-content">
+                <h3>05. Receipts & Records</h3>
+                <p>
+                  We maintain payment receipts, transaction details, outstanding
+                  balances and a clear rental payment history.
+                </p>
+              </div>
+            </article>
+
+            <article class="rent-step">
+              <span class="rent-icon">
+                <i data-lucide="chart-no-axes-combined"></i>
+              </span>
+              <div class="rent-step-content">
+                <h3>06. Owner Reporting</h3>
+                <p>
+                  Owners can review collected rent, overdue amounts and monthly
+                  rental income through organized reports.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <a href="contact.html" class="rent-process-cta">
+            Discuss Your Property
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- RIGHT: IMAGE -->
+        <div class="rent-process-visual">
+          <img
+            src="images/rent collectiong process.jpg"
+            alt="Modern rental property managed by EstateNest"
+            class="rent-process-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     TENANT SCREENING PROCESS — ESTATENEST
+===================================================== -->
+
+    <section class="tenant-screening-section" id="tenant-screening">
+      <div class="tenant-screening-container">
+        <!-- LEFT SIDE IMAGE -->
+
+        <div class="tenant-screening-visual">
+          <img
+            src="images/tent sv=crenig prcesss.jpg"
+            alt="Property manager reviewing a rental application"
+            class="tenant-screening-image"
+          />
+          <div class="tenant-image-caption">
+            <div></div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE CONTENT -->
+
+        <div class="tenant-screening-content">
+          <span class="tenant-eyebrow"> PROFESSIONAL TENANT MANAGEMENT </span>
+
+          <h2>Our Tenant Screening Process</h2>
+
+          <p class="tenant-intro">
+            We help property owners identify suitable tenants through a
+            consistent screening process focused on application accuracy, rental
+            history, financial suitability and verified information.
+          </p>
+
+          <div class="tenant-steps-grid">
+            <!-- STEP 1 -->
+
+            <article class="tenant-step">
+              <span class="tenant-icon">
+                <i data-lucide="file-text"></i>
+              </span>
+
+              <div>
+                <h3>01. Application Review</h3>
+                <p>
+                  Collect rental applications and review the information
+                  provided by prospective tenants.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 2 -->
+
+            <article class="tenant-step">
+              <span class="tenant-icon">
+                <i data-lucide="badge-check"></i>
+              </span>
+
+              <div>
+                <h3>02. Identity Verification</h3>
+                <p>
+                  Verify identity and supporting documents using appropriate,
+                  lawful verification procedures.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 3 -->
+
+            <article class="tenant-step">
+              <span class="tenant-icon">
+                <i data-lucide="wallet"></i>
+              </span>
+
+              <div>
+                <h3>03. Income Assessment</h3>
+                <p>
+                  Assess documented income and affordability against the
+                  property's rental requirements.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 4 -->
+
+            <article class="tenant-step">
+              <span class="tenant-icon">
+                <i data-lucide="history"></i>
+              </span>
+
+              <div>
+                <h3>04. Rental History Check</h3>
+                <p>
+                  Review available rental references and previous tenancy
+                  records, with appropriate consent.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 5 -->
+
+            <article class="tenant-step">
+              <span class="tenant-icon">
+                <i data-lucide="search-check"></i>
+              </span>
+
+              <div>
+                <h3>05. Background Checks</h3>
+                <p>
+                  Conduct legally permitted checks where applicable, with
+                  required consent and privacy safeguards.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 6 -->
+
+            <article class="tenant-step">
+              <span class="tenant-icon">
+                <i data-lucide="file-check-2"></i>
+              </span>
+
+              <div>
+                <h3>06. Final Tenant Selection</h3>
+                <p>
+                  Evaluate applications against consistent criteria and present
+                  suitable candidates to the property owner.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- CTA -->
+
+          <a href="contact.html" class="tenant-screening-cta">
+            Discuss Tenant Screening
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="inspection-section" id="property-inspection">
+      <div class="inspection-container">
+        <!-- LEFT SIDE: CONTENT -->
+        <div class="inspection-content reveal">
+          <span class="inspection-eyebrow"> PROPERTY CARE & MANAGEMENT </span>
+
+          <h2>
+            Property Inspection
+            <span>Details</span>
+          </h2>
+
+          <p class="inspection-intro">
+            Protect your investment with professional property inspections. We
+            carefully assess your property's condition, identify potential
+            issues, and help keep your rental home in excellent shape.
+          </p>
+
+          <!-- INSPECTION FEATURES -->
+          <div class="inspection-features">
+            <div class="inspection-feature">
+              <span class="feature-number">01</span>
+              <div>
+                <h3>Interior Condition</h3>
+                <p>Check walls, flooring, doors, windows, and fixtures.</p>
+              </div>
+            </div>
+
+            <div class="inspection-feature">
+              <span class="feature-number">02</span>
+              <div>
+                <h3>Plumbing & Electrical</h3>
+                <p>
+                  Review visible plumbing, lighting, switches, and fittings.
+                </p>
+              </div>
+            </div>
+
+            <div class="inspection-feature">
+              <span class="feature-number">03</span>
+              <div>
+                <h3>Safety & Maintenance</h3>
+                <p>Identify maintenance concerns and visible safety issues.</p>
+              </div>
+            </div>
+
+            <div class="inspection-feature">
+              <span class="feature-number">04</span>
+              <div>
+                <h3>Inspection Report</h3>
+                <p>Document findings and recommend necessary follow-up work.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE CHECKLIST -->
+          <div class="inspection-checklist">
+            <div class="checklist-heading">
+              <h3>Inspection Checklist</h3>
+              <span id="inspection-progress">0 of 5 reviewed</span>
+            </div>
+
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-label="Inspection checklist progress"
+              aria-valuemin="0"
+              aria-valuemax="5"
+              aria-valuenow="0"
+              id="inspection-progress-track"
+            >
+              <span id="inspection-progress-bar"></span>
+            </div>
+
+            <label class="inspection-check">
+              <input type="checkbox" />
+              <span class="custom-check"></span>
+              <span>Walls, ceilings & flooring</span>
+            </label>
+
+            <label class="inspection-check">
+              <input type="checkbox" />
+              <span class="custom-check"></span>
+              <span>Doors, windows & locks</span>
+            </label>
+
+            <label class="inspection-check">
+              <input type="checkbox" />
+              <span class="custom-check"></span>
+              <span>Plumbing & electrical fixtures</span>
+            </label>
+
+            <label class="inspection-check">
+              <input type="checkbox" />
+              <span class="custom-check"></span>
+              <span>Visible maintenance concerns</span>
+            </label>
+
+            <label class="inspection-check">
+              <input type="checkbox" />
+              <span class="custom-check"></span>
+              <span>Report & follow-up actions</span>
+            </label>
+          </div>
+
+          <!-- CTA -->
+          <div class="inspection-actions">
+            <a href="contact.html" class="inspection-btn">
+              Schedule an Inspection
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: IMAGE -->
+        <div class="inspection-image reveal">
+          <img
+            src="images/indspection prpcess.jpg"
+            alt="Professional property manager inspecting a rental property"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     PROPERTY MAINTENANCE WORKFLOW — ESTATENEST
+========================================= -->
+
+    <section class="maintenance-workflow-section" id="maintenance-workflow">
+      <div class="maintenance-workflow-container">
+        <!-- Section Heading -->
+        <div class="maintenance-heading reveal">
+          <span class="maintenance-eyebrow">PROPERTY CARE, SIMPLIFIED</span>
+
+          <h2>
+            Property Maintenance
+            <span>Workflow</span>
+          </h2>
+
+          <p>
+            From the first maintenance request to the final inspection, we keep
+            every repair organized, transparent, and on schedule.
+          </p>
+        </div>
+
+        <!-- Workflow Steps -->
+        <div class="maintenance-workflow-grid">
+          <!-- Step 1 -->
+          <article class="maintenance-step reveal">
+            <div class="maintenance-step-top">
+              <span class="maintenance-step-number">01</span>
+              <span class="maintenance-step-icon">
+                <i data-lucide="clipboard-list"></i>
+              </span>
+            </div>
+
+            <div class="maintenance-step-line">
+              <span></span>
+            </div>
+
+            <span class="maintenance-status">STEP ONE</span>
+
+            <h3>Request Received</h3>
+
+            <p>
+              Tenants submit a maintenance request with the issue details,
+              photos, and property information.
+            </p>
+
+            <ul>
+              <li><i data-lucide="check"></i> Request logged</li>
+              <li><i data-lucide="check"></i> Priority assigned</li>
+            </ul>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="maintenance-step reveal">
+            <div class="maintenance-step-top">
+              <span class="maintenance-step-number">02</span>
+              <span class="maintenance-step-icon">
+                <i data-lucide="search-check"></i>
+              </span>
+            </div>
+
+            <div class="maintenance-step-line">
+              <span></span>
+            </div>
+
+            <span class="maintenance-status">STEP TWO</span>
+
+            <h3>Inspection</h3>
+
+            <p>
+              Our team assesses the issue, coordinates an inspection, and
+              confirms the repair requirements.
+            </p>
+
+            <ul>
+              <li><i data-lucide="check"></i> Issue evaluated</li>
+              <li><i data-lucide="check"></i> Cost estimate reviewed</li>
+            </ul>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="maintenance-step reveal">
+            <div class="maintenance-step-top">
+              <span class="maintenance-step-number">03</span>
+              <span class="maintenance-step-icon">
+                <i data-lucide="wrench"></i>
+              </span>
+            </div>
+
+            <div class="maintenance-step-line">
+              <span></span>
+            </div>
+
+            <span class="maintenance-status">STEP THREE</span>
+
+            <h3>Repair in Progress</h3>
+
+            <p>
+              Trusted professionals complete the approved repair while we
+              coordinate access and monitor
+            </p>
+
+            <ul>
+              <li><i data-lucide="check"></i> Vendor coordinated</li>
+              <li><i data-lucide="check"></i> Progress monitored</li>
+            </ul>
+          </article>
+
+          <!-- Step 4 -->
+          <article class="maintenance-step reveal">
+            <div class="maintenance-step-top">
+              <span class="maintenance-step-number">04</span>
+              <span class="maintenance-step-icon">
+                <i data-lucide="house"></i>
+              </span>
+            </div>
+
+            <div class="maintenance-step-line maintenance-line-last">
+              <span></span>
+            </div>
+
+            <span class="maintenance-status">STEP FOUR</span>
+
+            <h3>Completion &amp; Review</h3>
+
+            <p>
+              Once the work is complete, we verify the outcome, record the
+              service, and update the owner.
+            </p>
+
+            <ul>
+              <li><i data-lucide="check"></i> Work verified</li>
+              <li><i data-lucide="check"></i> Records updated</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Bottom Information -->
+        <div class="maintenance-bottom reveal">
+          <div class="maintenance-bottom-content">
+            <span class="maintenance-bottom-icon">
+              <i data-lucide="shield-check"></i>
+            </span>
+
+            <div>
+              <h3>Every Repair. Clearly Managed.</h3>
+              <p>
+                Stay informed with organized maintenance records, transparent
+                communication, and reliable property care.
+              </p>
+            </div>
+          </div>
+
+          <a href="contact.html" class="maintenance-cta">
+            Request Property Support
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     CONSULTATION CTA — ESTATENEST
+========================================= -->
+
+    <section class="consultation-cta-section" id="consultation-cta">
+      <div class="consultation-cta-container">
+        <!-- LEFT CONTENT -->
+        <div class="consultation-cta-content reveal">
+          <span class="consultation-eyebrow">
+            YOUR PROPERTY. OUR PRIORITY.
+          </span>
+
+          <h2>
+            Let's Make Property
+            <span>Management Easier.</span>
+          </h2>
+
+          <p>
+            Get expert guidance for your rental property, from tenant screening
+            and rent collection to ongoing property care. Let's create a
+            management plan that works for you.
+          </p>
+
+          <!-- CTA BUTTONS -->
+          <div class="consultation-cta-actions">
+            <a href="contact.html" class="consultation-btn-primary">
+              <span>Book a Consultation</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="service.html" class="consultation-btn-secondary">
+              <span>Explore Our Services</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- TRUST POINTS -->
+          <div class="consultation-trust">
+            <span>
+              <i data-lucide="check-circle-2"></i>
+              Personalised Guidance
+            </span>
+
+            <span>
+              <i data-lucide="check-circle-2"></i>
+              Reliable Property Care
+            </span>
+          </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="consultation-cta-visual reveal">
+          <div class="consultation-image-frame">
+            <img
+              src="images/cta servoice.jpg"
+              alt="Property manager discussing rental management with a client"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================
+     PREMIUM FOOTER — ESTATENEST
+======================================== -->
+    <section class="footer-section">
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- ================= BRAND ================= -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <!-- LOGO IMAGE -->
+              <span class="logo-icon">
+                <img
+                  src="images/logo rentel1.png"
+                  alt="EstateNest Property Management Logo"
+                />
+              </span>
+
+              <!-- BRAND NAME -->
+              <span class="logo-name"> Estate<strong>Nest</strong> </span>
+            </a>
+
+            <p class="footer-description">
+              Simplifying property ownership with reliable rental management and
+              professional tenant screening. From timely rent collection and
+              lease management
+            </p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <i data-lucide="users"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i data-lucide="camera"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i data-lucide="send"></i>
+              </a>
+
+              <a href="#" aria-label="X">
+                <i data-lucide="play"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= QUICK LINKS ================= -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pricing.html">Pricing</a>
+
+            <a href="contact.html">Contact Us</a>
+
+            <a href="login.html">Owner Login</a>
+          </div>
+
+          <!-- ================= PROPERTY SERVICES ================= -->
+          <div class="footer-column">
+            <h3>Our Services</h3>
+
+            <a href="services.html">Property Management</a>
+
+            <a href="services.html">Tenant Screening</a>
+
+            <a href="services.html">Rent Collection</a>
+
+            <a href="services.html">Lease Management</a>
+
+            <a href="services.html">Property Maintenance</a>
+
+            <a href="services.html">Rental Reporting</a>
+          </div>
+
+          <!-- ================= CONTACT ================= -->
+          <div class="footer-column footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>
+              <i data-lucide="map-pin"></i>
+              <span>Hyderabad, India</span>
+            </p>
+
+            <p>
+              <i data-lucide="phone"></i>
+              <a href="tel:+919876543210"> +91 98765 43210 </a>
+            </p>
+
+            <p>
+              <i data-lucide="mail"></i>
+              <a href="mailto:hello@estatenest.com"> hello@estatenest.com </a>
+            </p>
+
+            <p>
+              <i data-lucide="clock"></i>
+              <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+        <div class="footer-bottom">
+          <p>© 2026 EstateNest. All Rights Reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html"> Privacy Policy </a>
+
+            <a href="terms.html"> Terms &amp; Conditions </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="servicedetails.js"></script>
+  </body>
+</html>

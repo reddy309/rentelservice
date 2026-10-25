@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf9f6" />
+
+    <title>property management& rental service</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo rentel1.png"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- TOP-RIGHT HEADER ACTIONS -->
+    <div class="header-actions">
+      <button
+        type="button"
+        class="rtl-button"
+        id="rtlToggle"
+        aria-label="Switch page direction"
+        title="Switch direction"
+      >
+        <i data-lucide="languages"></i>
+        <span id="directionLabel">LTR</span>
+      </button>
+
+      <button
+        type="button"
+        class="icon-button"
+        id="darkToggle"
+        aria-label="Switch color theme"
+        title="Switch theme"
+      >
+        <i data-lucide="moon" id="themeIcon"></i>
+      </button>
+    </div>
+
+    <main class="signup-page">
+      <section class="signup-card">
+        <div class="brand-area">
+          <a href="index.html" class="brand">
+            <span class="brand-icon">
+              <img src="images/logo rentel1.png" alt="EstateNest Logo" />
+            </span>
+
+            <span class="brand-name"> Estate<span>Nest</span> </span>
+          </a>
+
+          <p class="tagline">Your Property, Our Pride</p>
+        </div>
+        <!-- HEADING -->
+        <div class="signup-heading">
+          <h1>Create Account</h1>
+          <p>Join EstateNest and simplify your property management.</p>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <form class="signup-form" id="signupForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+
+            <div class="input-wrapper">
+              <i data-lucide="user-round"></i>
+
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+
+            <div class="input-wrapper">
+              <i data-lucide="mail"></i>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+
+            <div class="input-wrapper">
+              <i data-lucide="phone"></i>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                autocomplete="tel"
+                pattern="[0-9+\-\s()]{7,20}"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+
+            <div class="input-wrapper">
+              <i data-lucide="lock-keyhole"></i>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="password"
+                aria-label="Show password"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+
+            <small class="field-hint">Minimum 8 characters</small>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+
+            <div class="input-wrapper">
+              <i data-lucide="shield-check"></i>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="confirmPassword"
+                aria-label="Show confirm password"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- TERMS -->
+          <label class="terms-row">
+            <input type="checkbox" id="terms" required />
+
+            <span>
+              I agree to the
+              <a href="terms.html">Terms of Service</a>
+              and
+              <a href="privacypolicy.html">Privacy Policy</a>.
+            </span>
+          </label>
+
+          <!-- CREATE ACCOUNT -->
+          <button type="submit" class="signup-btn">
+            <span>Create Account</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+        </form>
+
+        <!-- DIVIDER -->
+        <div class="social-divider">
+          <span>Or sign up with</span>
+        </div>
+
+        <!-- SOCIAL SIGNUP -->
+        <div class="social-login">
+          <button type="button" class="social-btn" id="googleSignup">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path
+                fill="#EA4335"
+                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+                transform="translate(0 4)"
+              />
+              <path
+                fill="#4285F4"
+                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.76 7.18l7.73 6C44.42 38.08 46.98 31.92 46.98 24.55z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.87.93 7.52 2.56 10.78l7.97-6.19z"
+                transform="translate(1 0)"
+              />
+              <path
+                fill="#34A853"
+                d="M24 48c6.48 0 11.93-2.13 15.91-5.8l-7.73-6c-2.15 1.45-4.91 2.3-8.18 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+                transform="translate(0 -2)"
+              />
+            </svg>
+
+            <span>Google</span>
+          </button>
+
+          <button type="button" class="social-btn" id="appleSignup">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M16.37 12.1c.02 2.2 1.93 2.94 1.95 2.95-.02.05-.3 1.04-.99 2.06-.6.9-1.22 1.8-2.2 1.82-.96.02-1.27-.59-2.38-.59-1.1 0-1.45.57-2.36.61-.95.04-1.67-.98-2.27-1.88-1.23-1.83-2.17-5.17-.91-7.42.62-1.12 1.73-1.83 2.94-1.85.92-.02 1.79.65 2.37.65.58 0 1.67-.8 2.82-.68.48.02 1.84.19 2.71 1.45-.07.04-1.62.95-1.6 2.88zM14.53 5.95c.5-.6.84-1.43.75-2.26-.72.03-1.59.48-2.1 1.08-.46.53-.86 1.37-.75 2.17.8.06 1.61-.4 2.1-.99z"
+              />
+            </svg>
+
+            <span>Apple</span>
+          </button>
+        </div>
+
+        <!-- LOGIN LINK -->
+        <p class="login-link">
+          Already have an account?
+          <a href="login.html">Sign In</a>
+        </p>
+      </section>
+
+      <p class="page-footer">© 2026 EstateNest. All rights reserved.</p>
+    </main>
+
+    <script src="signup.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

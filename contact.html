@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>property management& rental service</title>
+
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo rentel1.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo rentel1.png" alt="rental servive" />
+          </span>
+
+          <span class="logo-name"> Estate<strong>Nest</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- ================= HOME DROPDOWN ================= -->
+
+          <div class="nav-dropdown">
+            <button
+              type="button"
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html"> Home 1 </a>
+
+              <a href="index1.html"> Home 2 </a>
+            </div>
+          </div>
+
+          <!-- ================= OUR SERVICES ================= -->
+          <a href="about.html" class="nav-link"> About </a>
+
+          <a href="service.html" class="nav-link"> Services </a>
+
+          <!-- ================= PACKAGES ================= -->
+
+          <!-- ================= PRICING ================= -->
+          <a href="properties.html" class="nav-link"> Properties </a>
+          <a href="pricing.html" class="nav-link"> Pricing </a>
+
+          <!-- ================= DASHBOARD ================= -->
+
+          <!-- ================= CONTACT ================= -->
+
+          <a href="contact.html" class="nav-link"> Contact </a>
+          <a href="dashboard.html" class="nav-link"> Dashboard </a>
+
+          <!-- ================= MOBILE LOGIN ================= -->
+
+          <a href="login.html" class="nav-link mobile-login"> Login </a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTACT HERO SECTION -->
+    <section class="contact-hero">
+      <div class="contact-hero-overlay"></div>
+
+      <div class="contact-hero-content reveal">
+        <span class="contact-hero-label"> ESTATENEST PROPERTY MANAGEMENT </span>
+
+        <h1>
+          Let's Start a
+          <span>Conversation</span>
+        </h1>
+
+        <p>
+          Have questions about property management or rental services? Our team
+          is ready to help you manage your property with confidence and peace of
+          mind.
+        </p>
+
+        <div class="contact-hero-buttons">
+          <a href="contact.html" class="contact-hero-btn">
+            Contact Our Team
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+          <a href="service.html" class="contact-hero-secondary">
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT INFORMATION SECTION -->
+    <section class="contact-info-section" id="contact-form">
+      <div class="contact-info-container">
+        <!-- SECTION INTRODUCTION -->
+        <div class="contact-info-intro reveal">
+          <span class="contact-info-eyebrow">GET IN TOUCH</span>
+
+          <h2>
+            Let's Talk About
+            <span>Your Property</span>
+          </h2>
+
+          <p>
+            Have questions about our property management services? Contact our
+            team for reliable support, expert guidance, and personalized
+            solutions for your property.
+          </p>
+        </div>
+
+        <!-- TWO COLUMN LAYOUT -->
+        <div class="contact-info-layout">
+          <!-- LEFT COLUMN -->
+          <div class="contact-info-left reveal reveal-left">
+            <div class="contact-info-heading reveal">
+              <span class="contact-info-small-label">
+                CONTACT INFORMATION
+              </span>
+
+              <h3>
+                We're Here to
+                <span>Help You</span>
+              </h3>
+
+              <p>
+                Reach out to us using any of the contact options below. Our team
+                will be happy to assist you.
+              </p>
+            </div>
+
+            <!-- FOUR CONTACT CARDS -->
+            <div class="contact-info-cards">
+              <!-- PHONE -->
+              <a href="tel:+919876543210" class="contact-info-card reveal">
+                <div class="contact-info-icon">
+                  <i data-lucide="phone"></i>
+                </div>
+
+                <div class="contact-info-card-content">
+                  <h4>Phone Support</h4>
+                  <p>Speak directly with our team.</p>
+                  <span>+91 98765 43210</span>
+                </div>
+
+                <i data-lucide="arrow-up-right" class="contact-info-arrow"></i>
+              </a>
+
+              <!-- EMAIL -->
+              <a
+                href="mailto:info@estatenest.com"
+                class="contact-info-card reveal"
+              >
+                <div class="contact-info-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+
+                <div class="contact-info-card-content">
+                  <h4>Email Support</h4>
+                  <p>Send us your questions anytime.</p>
+                  <span>info@estatenest.com</span>
+                </div>
+
+                <i data-lucide="arrow-up-right" class="contact-info-arrow"></i>
+              </a>
+
+              <!-- LOCATION -->
+              <div class="contact-info-card reveal">
+                <div class="contact-info-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+
+                <div class="contact-info-card-content">
+                  <h4>Office Location</h4>
+                  <p>Visit our office for assistance.</p>
+                  <span>Hyderabad, Telangana, India</span>
+                </div>
+              </div>
+
+              <!-- BUSINESS HOURS -->
+              <div class="contact-info-card reveal">
+                <div class="contact-info-icon">
+                  <i data-lucide="clock"></i>
+                </div>
+
+                <div class="contact-info-card-content">
+                  <h4>Business Hours</h4>
+                  <p>Monday – Saturday</p>
+                  <span>9:00 AM – 6:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: FORM -->
+          <div class="contact-info-form-wrapper reveal reveal-right">
+            <div class="contact-form-heading">
+              <span class="contact-info-small-label"> SEND US A MESSAGE </span>
+
+              <h3>
+                Contact
+                <span>Our Team</span>
+              </h3>
+
+              <p>
+                Fill out the form below and we'll get back to you as soon as
+                possible.
+              </p>
+            </div>
+
+            <form class="contact-info-form" id="estateContactForm">
+              <!-- NAME + EMAIL -->
+              <div class="contact-form-row">
+                <div class="contact-form-group">
+                  <label for="contactName">Full Name</label>
+
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+
+                <div class="contact-form-group">
+                  <label for="contactEmail">Email Address</label>
+
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- PHONE + SERVICE -->
+              <div class="contact-form-row">
+                <div class="contact-form-group">
+                  <label for="contactPhone">Phone Number</label>
+
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    autocomplete="tel"
+                    required
+                  />
+                </div>
+
+                <div class="contact-form-group">
+                  <label for="contactService"> Service Interested In </label>
+
+                  <select id="contactService" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+
+                    <option value="Property Management">
+                      Property Management
+                    </option>
+
+                    <option value="Rental Services">Rental Services</option>
+
+                    <option value="Tenant Screening">Tenant Screening</option>
+
+                    <option value="Rent Collection">Rent Collection</option>
+
+                    <option value="Maintenance">
+                      Maintenance &amp; Repairs
+                    </option>
+
+                    <option value="Other">Other Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- SUBJECT -->
+              <div class="contact-form-group">
+                <label for="contactSubject">Subject</label>
+
+                <input
+                  type="text"
+                  id="contactSubject"
+                  name="subject"
+                  placeholder="What would you like to discuss?"
+                  required
+                />
+              </div>
+
+              <!-- MESSAGE -->
+              <div class="contact-form-group">
+                <label for="contactMessage">Your Message</label>
+
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us how we can help you..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- SUBMIT -->
+              <button type="submit" class="contact-form-submit">
+                <span>Send Message</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+
+              <p
+                class="contact-form-status"
+                id="contactFormStatus"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP & DIRECTIONS SECTION -->
+    <section class="map-directions-section">
+      <!-- SECTION HEADING -->
+      <div class="map-section-heading reveal">
+        <span class="map-eyebrow"> OUR LOCATION </span>
+
+        <h1>Map & <span>Directions</span></h1>
+
+        <p>
+          Find us easily and get the best route to our office. We're here to
+          help you with all your property needs.
+        </p>
+      </div>
+
+      <!-- MAP AND DIRECTIONS CONTAINER -->
+      <div class="map-directions-container">
+        <!-- LEFT COLUMN -->
+        <div class="map-left-column reveal">
+          <!-- GOOGLE MAP -->
+          <div class="map-frame">
+            <iframe
+              title="EstateNest office location"
+              src="https://maps.google.com/maps?q=Hyderabad%2C%20Telangana%2C%20India&z=13&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+
+          <!-- CONTACT DETAILS -->
+          <div class="map-contact-details">
+            <!-- ADDRESS -->
+            <div class="map-contact-item">
+              <span class="map-contact-icon">
+                <i data-lucide="map-pin"></i>
+              </span>
+
+              <div class="map-contact-info">
+                <h3>Our Address</h3>
+                <p>Hyderabad, Telangana, India</p>
+              </div>
+            </div>
+
+            <!-- PHONE -->
+            <div class="map-contact-item">
+              <span class="map-contact-icon">
+                <i data-lucide="phone"></i>
+              </span>
+
+              <div class="map-contact-info">
+                <h3>Phone Number</h3>
+                <p>
+                  <a href="tel:+919876543210"> +91 98765 43210 </a>
+                </p>
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="map-contact-item">
+              <span class="map-contact-icon">
+                <i data-lucide="mail"></i>
+              </span>
+
+              <div class="map-contact-info">
+                <h3>Email Address</h3>
+                <p>
+                  <a href="mailto:info@estatenest.com"> info@estatenest.com </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="directions-card reveal">
+          <!-- CARD HEADING -->
+          <div class="directions-heading">
+            <span class="directions-main-icon">
+              <i data-lucide="navigation"></i>
+            </span>
+
+            <div>
+              <h2>Get Directions</h2>
+
+              <p>
+                Choose your preferred travel option and find the easiest route
+                to our office. We're here to help you plan your visit.
+              </p>
+            </div>
+          </div>
+
+          <!-- CAR DIRECTIONS -->
+          <a
+            class="direction-option"
+            href="https://www.google.com/maps/dir/?api=1&destination=Hyderabad%2C%20Telangana%2C%20India&travelmode=driving"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="direction-icon">
+              <i data-lucide="car-front"></i>
+            </span>
+
+            <span class="direction-text">
+              <strong>By Car</strong>
+              <small>Get driving directions to our location.</small>
+            </span>
+
+            <i class="direction-arrow" data-lucide="arrow-up-right"></i>
+          </a>
+
+          <!-- PUBLIC TRANSPORT -->
+          <a
+            class="direction-option"
+            href="https://www.google.com/maps/dir/?api=1&destination=Hyderabad%2C%20Telangana%2C%20India&travelmode=transit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="direction-icon">
+              <i data-lucide="train-front"></i>
+            </span>
+
+            <span class="direction-text">
+              <strong>Public Transport</strong>
+              <small>Explore available public transport routes.</small>
+            </span>
+
+            <i class="direction-arrow" data-lucide="arrow-up-right"></i>
+          </a>
+
+          <!-- WALKING DIRECTIONS -->
+          <a
+            class="direction-option"
+            href="https://www.google.com/maps/dir/?api=1&destination=Hyderabad%2C%20Telangana%2C%20India&travelmode=walking"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="direction-icon">
+              <i data-lucide="footprints"></i>
+            </span>
+
+            <span class="direction-text">
+              <strong>By Walking</strong>
+              <small>View walking directions from your location.</small>
+            </span>
+
+            <i class="direction-arrow" data-lucide="arrow-up-right"></i>
+          </a>
+
+          <!-- GOOGLE MAPS BUTTON -->
+          <div class="directions-footer">
+            <span class="footer-location-icon">
+              <i data-lucide="map"></i>
+            </span>
+
+            <div class="directions-footer-content">
+              <h3>Open Google Maps</h3>
+
+              <p>Get turn-by-turn directions and plan your visit.</p>
+
+              <a
+                class="google-maps-button"
+                href="https://www.google.com/maps/dir/?api=1&destination=Hyderabad%2C%20Telangana%2C%20India"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i data-lucide="map-pin"></i>
+                Get Directions
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="owner-enquiry-section">
+      <div class="owner-enquiry-container">
+        <!-- LEFT CONTENT -->
+        <div class="owner-enquiry-content reveal">
+          <span class="owner-enquiry-eyebrow"> PROPERTY OWNER SERVICES </span>
+
+          <h1>
+            Property Owner
+            <span>Enquiry</span>
+          </h1>
+
+          <p class="owner-enquiry-description">
+            Looking for a reliable partner to manage your property? Share your
+            requirements with EstateNest and discover hassle-free property
+            management solutions designed around your investment goals.
+          </p>
+
+          <div class="owner-enquiry-benefits">
+            <div class="owner-benefit">
+              <span class="owner-benefit-icon">
+                <i data-lucide="house"></i>
+              </span>
+
+              <div>
+                <h3>Property Management</h3>
+                <p>Professional support for your property.</p>
+              </div>
+            </div>
+
+            <div class="owner-benefit">
+              <span class="owner-benefit-icon">
+                <i data-lucide="users"></i>
+              </span>
+
+              <div>
+                <h3>Tenant Assistance</h3>
+                <p>Help with tenant enquiries and coordination.</p>
+              </div>
+            </div>
+
+            <div class="owner-benefit">
+              <span class="owner-benefit-icon">
+                <i data-lucide="wallet"></i>
+              </span>
+
+              <div>
+                <h3>Rental Management</h3>
+                <p>Organized rent tracking and property support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT ENQUIRY FORM -->
+        <div class="owner-enquiry-form-card reveal">
+          <div class="owner-form-heading">
+            <span>LET'S GET STARTED</span>
+            <h2>Tell Us About Your Property</h2>
+            <p>Complete the form below to enquire about our services.</p>
+          </div>
+
+          <form id="ownerEnquiryForm">
+            <div class="owner-form-row">
+              <div class="owner-form-group">
+                <label for="ownerName">Full Name *</label>
+                <input
+                  type="text"
+                  id="ownerName"
+                  name="ownerName"
+                  placeholder="Enter your full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="owner-form-group">
+                <label for="ownerEmail">Email Address *</label>
+                <input
+                  type="email"
+                  id="ownerEmail"
+                  name="ownerEmail"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="owner-form-row">
+              <div class="owner-form-group">
+                <label for="ownerPhone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="ownerPhone"
+                  name="ownerPhone"
+                  placeholder="Enter phone number"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+
+              <div class="owner-form-group">
+                <label for="propertyType">Property Type *</label>
+                <select id="propertyType" name="propertyType" required>
+                  <option value="">Select property type</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="Independent House">Independent House</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Commercial Property">
+                    Commercial Property
+                  </option>
+                  <option value="Land">Land</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="owner-form-group">
+              <label for="propertyLocation">Property Location *</label>
+              <input
+                type="text"
+                id="propertyLocation"
+                name="propertyLocation"
+                placeholder="City, area or locality"
+                required
+              />
+            </div>
+
+            <div class="owner-form-row">
+              <div class="owner-form-group">
+                <label for="propertyStatus">Property Status</label>
+                <select id="propertyStatus" name="propertyStatus">
+                  <option value="">Select status</option>
+                  <option value="Ready to Rent">Ready to Rent</option>
+                  <option value="Currently Rented">Currently Rented</option>
+                  <option value="Under Construction">Under Construction</option>
+                  <option value="For Sale">For Sale</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="owner-form-group">
+                <label for="serviceRequired">Service Required *</label>
+                <select id="serviceRequired" name="serviceRequired" required>
+                  <option value="">Select a service</option>
+                  <option value="Full Property Management">
+                    Full Property Management
+                  </option>
+                  <option value="Tenant Finding">Tenant Finding</option>
+                  <option value="Rent Collection">Rent Collection</option>
+                  <option value="Maintenance Support">
+                    Maintenance Support
+                  </option>
+                  <option value="Property Listing">Property Listing</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="owner-form-group">
+              <label for="ownerMessage">Additional Requirements</label>
+              <textarea
+                id="ownerMessage"
+                name="ownerMessage"
+                rows="4"
+                placeholder="Tell us more about your property or requirements..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="owner-submit-btn">
+              Submit Enquiry
+              <i data-lucide="arrow-right"></i>
+            </button>
+
+            <p
+              id="ownerFormMessage"
+              class="owner-form-message"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION ONLY -->
+    <section class="faq-section" id="faqs">
+      <div class="faq-container">
+        <div class="faq-heading reveal">
+          <span class="faq-label">HELP CENTER</span>
+          <h1>Frequently Asked <span>Questions</span></h1>
+          <p>
+            Find answers to common questions about our property management and
+            rental services.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>01</span>
+              <h3>What property management services do you offer?</h3>
+              <i class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We provide rental property management, tenant screening, rent
+                collection, property inspections, maintenance coordination, and
+                lease management services.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>02</span>
+              <h3>How do you find and screen tenants?</h3>
+              <i class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                We review rental applications, verify relevant information,
+                check references where appropriate, and assess prospective
+                tenants according to our screening criteria and applicable laws.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>03</span>
+              <h3>How is rent collected and tracked?</h3>
+              <i class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Rent payments can be tracked through organized payment records.
+                Property owners can review payment status, identify overdue
+                rent, and keep their rental income information up to date.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>04</span>
+              <h3>Can I track my property details online?</h3>
+              <i class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. Through the owner dashboard, you can organize property
+                information, review tenant details, monitor rent payments, and
+                track maintenance requests, depending on the features enabled.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>05</span>
+              <h3>How are property maintenance requests handled?</h3>
+              <i class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Maintenance requests are recorded, reviewed, and coordinated
+                with the appropriate service providers. Owners can monitor
+                request progress and stay informed about necessary repairs.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>06</span>
+              <h3>How much do property management services cost?</h3>
+              <i class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Fees depend on the property, services selected, and management
+                agreement. Review the applicable pricing and terms before
+                choosing a management plan.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>07</span>
+              <h3>Can I manage multiple rental properties?</h3>
+              <i class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. Multiple properties can be organized in one management
+                workflow, making it easier to review individual property
+                details, tenant records, rent status, and maintenance activity.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="property-cta-section">
+      <div class="property-cta-container reveal">
+        <span class="property-cta-label"> YOUR PROPERTY, OUR PRIORITY </span>
+
+        <h2>
+          Ready to Manage Your Property
+          <span>Smarter?</span>
+        </h2>
+
+        <p>
+          Simplify property management with reliable support, organized rental
+          services, and a better experience for every property owner.
+        </p>
+
+        <div class="property-cta-actions">
+          <a href="contact.html" class="property-cta-btn">
+            Get Started
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <a href="services.html" class="property-cta-link">
+            Explore Our Services
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="property-cta-decoration"></div>
+      </div>
+    </section>
+    <!-- ========================================
+     PREMIUM FOOTER — ESTATENEST
+======================================== -->
+    <section class="footer-section">
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- ================= BRAND ================= -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <!-- LOGO IMAGE -->
+              <span class="logo-icon">
+                <img
+                  src="images/logo rentel1.png"
+                  alt="EstateNest Property Management Logo"
+                />
+              </span>
+
+              <!-- BRAND NAME -->
+              <span class="logo-name"> Estate<strong>Nest</strong> </span>
+            </a>
+
+            <p class="footer-description">
+              Simplifying property ownership with reliable rental management and
+              professional tenant screening. From timely rent collection and
+              lease management
+            </p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <i data-lucide="users"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i data-lucide="camera"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i data-lucide="send"></i>
+              </a>
+
+              <a href="#" aria-label="X">
+                <i data-lucide="play"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= QUICK LINKS ================= -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pricing.html">Pricing</a>
+
+            <a href="contact.html">Contact Us</a>
+
+            <a href="login.html">Owner Login</a>
+          </div>
+
+          <!-- ================= PROPERTY SERVICES ================= -->
+          <div class="footer-column">
+            <h3>Our Services</h3>
+
+            <a href="services.html">Property Management</a>
+
+            <a href="services.html">Tenant Screening</a>
+
+            <a href="services.html">Rent Collection</a>
+
+            <a href="services.html">Lease Management</a>
+
+            <a href="services.html">Property Maintenance</a>
+
+            <a href="services.html">Rental Reporting</a>
+          </div>
+
+          <!-- ================= CONTACT ================= -->
+          <div class="footer-column footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>
+              <i data-lucide="map-pin"></i>
+              <span>Hyderabad, India</span>
+            </p>
+
+            <p>
+              <i data-lucide="phone"></i>
+              <a href="tel:+919876543210"> +91 98765 43210 </a>
+            </p>
+
+            <p>
+              <i data-lucide="mail"></i>
+              <a href="mailto:hello@estatenest.com"> hello@estatenest.com </a>
+            </p>
+
+            <p>
+              <i data-lucide="clock"></i>
+              <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+        <div class="footer-bottom">
+          <p>© 2026 EstateNest. All Rights Reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html"> Privacy Policy </a>
+
+            <a href="terms.html"> Terms &amp; Conditions </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

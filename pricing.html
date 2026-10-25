@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>property management& rental service</title>
+
+    <link rel="stylesheet" href="pricing.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo rentel1.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo rentel1.png" alt="rental servive" />
+          </span>
+
+          <span class="logo-name"> Estate<strong>Nest</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- ================= HOME DROPDOWN ================= -->
+
+          <div class="nav-dropdown">
+            <button
+              type="button"
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html"> Home 1 </a>
+
+              <a href="index1.html"> Home 2 </a>
+            </div>
+          </div>
+
+          <!-- ================= OUR SERVICES ================= -->
+          <a href="about.html" class="nav-link"> About </a>
+
+          <a href="service.html" class="nav-link"> Services </a>
+
+          <!-- ================= PACKAGES ================= -->
+
+          <!-- ================= PRICING ================= -->
+          <a href="properties.html" class="nav-link"> Properties </a>
+          <a href="pricing.html" class="nav-link"> Pricing </a>
+
+          <!-- ================= DASHBOARD ================= -->
+
+          <!-- ================= CONTACT ================= -->
+
+          <a href="contact.html" class="nav-link"> Contact </a>
+          <a href="dashboard.html" class="nav-link"> Dashboard </a>
+
+          <!-- ================= MOBILE LOGIN ================= -->
+
+          <a href="login.html" class="nav-link mobile-login"> Login </a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =====================================
+     PRICING HERO SECTION
+===================================== -->
+
+    <section class="pricing-hero" id="pricing-hero">
+      <div class="pricing-hero-overlay"></div>
+
+      <div class="pricing-hero-container">
+        <div class="pricing-hero-content pricing-reveal">
+          <span class="pricing-hero-eyebrow"> SIMPLE & TRANSPARENT </span>
+
+          <h1>
+            Pricing Plans for
+            <span>Smarter Property Management</span>
+          </h1>
+
+          <p>
+            Discover flexible management plans designed to protect your
+            property, simplify rental operations, and give you greater peace of
+            mind.
+          </p>
+
+          <div class="pricing-hero-buttons">
+            <a href="pricing.html" class="pricing-hero-btn">
+              Explore Our Plans
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+            <a href="contact.html" class="pricing-hero-link">
+              Contact Us
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+     PROPERTY MANAGEMENT PLANS
+===================================== -->
+
+    <section class="management-plans-section" id="management-plans">
+      <div class="management-plans-container">
+        <!-- SECTION HEADING -->
+        <div class="management-plans-heading plan-reveal">
+          <span class="management-plans-eyebrow"> OUR MANAGEMENT PLANS </span>
+
+          <h2>
+            Find the Right Plan for
+            <span>Your Property</span>
+          </h2>
+
+          <p>
+            Choose a management solution that fits your property needs. Enjoy
+            reliable support, transparent pricing, and a simpler property
+            management experience.
+          </p>
+        </div>
+
+        <!-- PRICING CARDS -->
+        <div class="management-plans-grid">
+          <!-- BASIC PLAN -->
+          <article class="management-plan-card plan-reveal">
+            <div class="management-plan-icon">
+              <i data-lucide="house"></i>
+            </div>
+
+            <span class="management-plan-label">ESSENTIAL CARE</span>
+
+            <h3>Basic Management Plan</h3>
+
+            <p class="management-plan-description">
+              Essential rental support to keep your property organized and
+              simplify everyday management.
+            </p>
+
+            <div class="management-plan-price">
+              <div class="management-price-value">
+                <span class="management-currency">₹</span>
+                <span class="management-amount">1,999</span>
+              </div>
+              <span class="management-price-period">/ month</span>
+            </div>
+
+            <p class="management-billing-note">
+              Suitable for essential property support
+            </p>
+
+            <div class="management-plan-divider"></div>
+
+            <h4>Plan Features</h4>
+
+            <ul class="management-plan-features">
+              <li><i data-lucide="check"></i> Property listing assistance</li>
+              <li><i data-lucide="check"></i> Tenant enquiry coordination</li>
+              <li><i data-lucide="check"></i> Rent payment tracking</li>
+              <li><i data-lucide="check"></i> Basic tenant communication</li>
+              <li><i data-lucide="check"></i> Monthly property updates</li>
+              <li>
+                <i data-lucide="check"></i> Basic Property Performance Updates
+              </li>
+            </ul>
+
+            <a href="contact.html?plan=basic" class="management-plan-btn">
+              Choose Basic Plan
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- STANDARD PLAN -->
+          <article
+            class="management-plan-card management-plan-featured plan-reveal"
+          >
+            <span class="management-plan-badge">POPULAR PLAN</span>
+
+            <div class="management-plan-icon">
+              <i data-lucide="building-2"></i>
+            </div>
+
+            <span class="management-plan-label">ENHANCED CARE</span>
+
+            <h3>Standard Management Plan</h3>
+
+            <p class="management-plan-description">
+              Extended rental management with tenant coordination and
+              maintenance follow-up support.
+            </p>
+
+            <div class="management-plan-price">
+              <div class="management-price-value">
+                <span class="management-currency">₹</span>
+                <span class="management-amount">3,999</span>
+              </div>
+              <span class="management-price-period">/ month</span>
+            </div>
+
+            <p class="management-billing-note">More support for management</p>
+
+            <div class="management-plan-divider"></div>
+
+            <h4>Everything in Basic, plus</h4>
+
+            <ul class="management-plan-features">
+              <li><i data-lucide="check"></i> Tenant screening coordination</li>
+              <li>
+                <i data-lucide="check"></i> Lease documentation assistance
+              </li>
+              <li>
+                <i data-lucide="check"></i> Maintenance request coordination
+              </li>
+              <li><i data-lucide="check"></i> Rent follow-up assistance</li>
+              <li>
+                <i data-lucide="check"></i> Regular property status reports
+              </li>
+              <li><i data-lucide="check"></i> Priority owner communication</li>
+            </ul>
+
+            <a href="contact.html?plan=standard" class="management-plan-btn1">
+              Choose Standard Plan
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- PREMIUM PLAN -->
+          <article class="management-plan-card plan-reveal">
+            <div class="management-plan-icon">
+              <i data-lucide="building"></i>
+            </div>
+
+            <span class="management-plan-label">PREMIUM CARE</span>
+
+            <h3>Premium Management Plan</h3>
+
+            <p class="management-plan-description">
+              Comprehensive management assistance for owners seeking
+              personalized property care and coordination.
+            </p>
+
+            <div class="management-plan-price">
+              <div class="management-price-value">
+                <span class="management-currency">₹</span>
+                <span class="management-amount">6,999</span>
+              </div>
+              <span class="management-price-period">/ month</span>
+            </div>
+
+            <p class="management-billing-note">
+              Comprehensive property support
+            </p>
+
+            <div class="management-plan-divider"></div>
+
+            <h4>Everything in Standard, plus</h4>
+
+            <ul class="management-plan-features">
+              <li><i data-lucide="check"></i> Detailed property inspections</li>
+              <li>
+                <i data-lucide="check"></i> Coordinated maintenance planning
+              </li>
+              <li><i data-lucide="check"></i> Dedicated owner support</li>
+              <li><i data-lucide="check"></i> Detailed management reports</li>
+              <li><i data-lucide="check"></i> Lease renewal coordination</li>
+              <li>
+                <i data-lucide="check"></i> Personalized management assistance
+              </li>
+            </ul>
+
+            <a href="contact.html?plan=premium" class="management-plan-btn">
+              Choose Premium Plan
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     PLAN COMPARISON SECTION
+========================================= -->
+
+    <section class="plan-comparison-section" id="plan-comparison">
+      <div class="plan-comparison-container">
+        <!-- SECTION HEADING -->
+        <div class="comparison-heading comparison-reveal">
+          <span class="comparison-eyebrow">COMPARE OUR PLANS</span>
+
+          <h2>
+            Choose the Right Plan for
+            <span>Your Property</span>
+          </h2>
+
+          <p>
+            Compare our property management plans and choose the right level of
+            support for your rental property.
+          </p>
+        </div>
+
+        <!-- COMPARISON TABLE -->
+        <div class="comparison-table-wrapper comparison-reveal">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="feature-heading">Features</th>
+
+                <!-- BASIC PLAN -->
+                <th class="comparison-plan-column">
+                  <div class="comparison-plan-header">
+                    <div class="comparison-plan-name">Basic</div>
+                    <div class="comparison-plan-price">
+                      ₹1,999<span>/mo</span>
+                    </div>
+                  </div>
+                </th>
+
+                <!-- STANDARD PLAN -->
+                <th class="comparison-plan-column popular-column">
+                  <div class="comparison-plan-header">
+                    <div class="comparison-plan-name">Standard</div>
+                    <div class="comparison-plan-price">
+                      ₹3,999<span>/mo</span>
+                    </div>
+                  </div>
+                </th>
+
+                <!-- PREMIUM PLAN -->
+                <th class="comparison-plan-column">
+                  <div class="comparison-plan-header">
+                    <div class="comparison-plan-name">Premium</div>
+                    <div class="comparison-plan-price">
+                      ₹6,999<span>/mo</span>
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Property Listing Assistance</td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Tenant Enquiry Coordination</td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Tenant Screening Coordination</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Rent Payment Tracking</td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Rent Follow-up Assistance</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Lease Documentation Assistance</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Maintenance Request Coordination</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Property Inspection Coordination</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="x" class="comparison-cross"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Detailed Property Reports</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="check" class="comparison-check"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Dedicated Owner Support</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="x" class="comparison-cross"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <tr>
+                <td>Lease Renewal Coordination</td>
+                <td><i data-lucide="x" class="comparison-cross"></i></td>
+                <td class="popular-column">
+                  <i data-lucide="x" class="comparison-cross"></i>
+                </td>
+                <td><i data-lucide="check" class="comparison-check"></i></td>
+              </tr>
+
+              <!-- =================================
+               BUTTONS IN LAST TABLE ROW
+          ================================== -->
+
+              <tr class="comparison-action-row">
+                <td>Choose Your Plan</td>
+
+                <td>
+                  <a href="contact.html?plan=basic" class="comparison-btn">
+                    Choose Basic
+                  </a>
+                </td>
+
+                <td class="popular-column">
+                  <a
+                    href="contact.html?plan=standard"
+                    class="comparison-btn comparison-btn-primary"
+                  >
+                    Choose Standard
+                  </a>
+                </td>
+
+                <td>
+                  <a href="contact.html?plan=premium" class="comparison-btn">
+                    Choose Premium
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     INCLUDED SERVICES SECTION
+========================================= -->
+
+    <section class="included-services-section" id="included-services">
+      <div class="included-services-container">
+        <!-- LEFT CONTENT -->
+        <div class="included-services-content service-reveal">
+          <span class="included-services-label">
+            <span class="included-label-line"></span>
+            WHAT'S INCLUDED
+          </span>
+
+          <h2>
+            Complete Care for
+            <span>Your Property</span>
+          </h2>
+
+          <p class="included-services-description">
+            Property ownership should be rewarding, not stressful. EstateNest
+            simplifies your rental experience with reliable management support,
+            organized communication, and services designed to protect your
+            property and your peace of mind.
+          </p>
+
+          <p class="included-services-description secondary-description">
+            From tenant coordination to maintenance follow-ups, we help you
+            manage your property with greater confidence and clarity.Managing a
+            rental property doesn't have to be complicated. EstateNest provides
+            reliable support for property owners. We help coordinate tenant
+            enquiries and screening. Track rental payments with organized rent
+            management. Receive assistance with rent reminders and follow-ups.
+            Simplify lease documentation and renewal coordination. Keep your
+            property in good condition with maintenance support. Stay informed
+            through clear property reports and updates. Enjoy a smoother rental
+            experience with dedicated assistance. Focus on your investments
+            while we help simplify property management.
+          </p>
+
+          <a href="contact.html" class="included-services-btn">
+            Explore Our Services
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <!-- TRUST POINTS -->
+          <div class="included-services-trust">
+            <div class="included-trust-item">
+              <i data-lucide="check-circle-2"></i>
+              <span>Reliable Support</span>
+            </div>
+
+            <div class="included-trust-item">
+              <i data-lucide="check-circle-2"></i>
+              <span>Owner-Focused Care</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: FOUR SERVICE BOXES -->
+        <div class="included-services-grid">
+          <!-- BOX 1 -->
+          <article class="included-service-box service-reveal">
+            <div class="included-service-top">
+              <div class="included-service-icon">
+                <i data-lucide="users-round"></i>
+              </div>
+
+              <span class="included-service-number">01</span>
+            </div>
+
+            <h3>Tenant Management</h3>
+
+            <p>
+              Tenant enquiries, screening coordination, and communication
+              assistance to simplify occupancy management.
+            </p>
+
+            <div class="included-service-bottom">
+              <span>Tenant Support</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+
+          <!-- BOX 2 -->
+          <article class="included-service-box service-reveal">
+            <div class="included-service-top">
+              <div class="included-service-icon">
+                <i data-lucide="wallet"></i>
+              </div>
+
+              <span class="included-service-number">02</span>
+            </div>
+
+            <h3>Rent Collection</h3>
+
+            <p>
+              Organized rent tracking, payment reminders, and follow-up
+              assistance for better financial visibility.We simplify tenant
+              management by coordinating
+            </p>
+
+            <div class="included-service-bottom">
+              <span>Payment Tracking</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+
+          <!-- BOX 3 -->
+          <article class="included-service-box service-reveal">
+            <div class="included-service-top">
+              <div class="included-service-icon">
+                <i data-lucide="wrench"></i>
+              </div>
+
+              <span class="included-service-number">03</span>
+            </div>
+
+            <h3>Property Maintenance</h3>
+
+            <p>
+              Maintenance request coordination and repair follow-ups to help
+              keep your property in good condition.property owners maintain
+              their rental properties
+            </p>
+
+            <div class="included-service-bottom">
+              <span>Property Care</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+
+          <!-- BOX 4 -->
+          <article class="included-service-box service-reveal">
+            <div class="included-service-top">
+              <div class="included-service-icon">
+                <i data-lucide="files"></i>
+              </div>
+
+              <span class="included-service-number">04</span>
+            </div>
+
+            <h3>Reports & Documentation</h3>
+
+            <p>
+              Property reports, lease documentation assistance, and renewal
+              coordination for organized property records.
+            </p>
+
+            <div class="included-service-bottom">
+              <span>Organized Records</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-faq-section" id="pricing-faqs">
+      <div class="pricing-faq-container">
+        <div class="pricing-faq-heading faq-reveal">
+          <span class="pricing-faq-eyebrow">
+            <span class="pricing-faq-line"></span>
+            PRICING FAQS
+            <span class="pricing-faq-line"></span>
+          </span>
+
+          <h2>Questions About <span>Our Pricing</span></h2>
+
+          <p>
+            Find answers to common questions about our property management
+            plans, service charges, and payments.
+          </p>
+        </div>
+
+        <div class="pricing-faq-list">
+          <!-- FAQ 1 -->
+          <article class="pricing-faq-item faq-reveal is-open">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="true"
+              >
+                <span class="pricing-faq-number">01</span>
+                <span class="pricing-faq-question-text">
+                  What is included in the monthly plan?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer">
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  Each plan includes specific property management services such
+                  as tenant coordination, rent tracking, maintenance support,
+                  and property reporting, depending on your selected package.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ 2 -->
+          <article class="pricing-faq-item faq-reveal">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="pricing-faq-number">02</span>
+                <span class="pricing-faq-question-text">
+                  Are the listed prices fixed?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer" hidden>
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  Listed prices are indicative monthly rates. Final charges may
+                  depend on property type, location, selected services, and the
+                  agreed service terms.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ 3 -->
+          <article class="pricing-faq-item faq-reveal">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="pricing-faq-number">03</span>
+                <span class="pricing-faq-question-text">
+                  Are maintenance and repair costs included?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer" hidden>
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  Repair materials, labour, and third-party service charges may
+                  be separate from the monthly management fee. Applicable costs
+                  should be confirmed before repair work begins.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ 4 -->
+          <article class="pricing-faq-item faq-reveal">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="pricing-faq-number">04</span>
+                <span class="pricing-faq-question-text">
+                  Can I change my plan later?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer" hidden>
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  You can contact our team to discuss upgrading or changing your
+                  plan. Changes depend on service availability and your agreed
+                  management terms.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ 5 -->
+          <article class="pricing-faq-item faq-reveal">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="pricing-faq-number">05</span>
+                <span class="pricing-faq-question-text">
+                  How often will I be charged?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer" hidden>
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  Our displayed plans use monthly pricing. Your billing date,
+                  payment method, renewal process, and applicable taxes should
+                  be confirmed in your service agreement.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ 6 -->
+          <article class="pricing-faq-item faq-reveal">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="pricing-faq-number">06</span>
+                <span class="pricing-faq-question-text">
+                  Are there any additional service charges?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer" hidden>
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  Additional charges may apply to services outside your selected
+                  plan, including certain repairs, materials, or third-party
+                  services. Applicable fees should be explained before approval.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ 7 -->
+          <article class="pricing-faq-item faq-reveal">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="pricing-faq-number">07</span>
+                <span class="pricing-faq-question-text">
+                  How do I choose the right pricing plan?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer" hidden>
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  Compare the services offered in each package. Consider your
+                  tenant management, rent tracking, reporting, maintenance
+                  coordination, and owner support requirements before choosing a
+                  plan.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ 8 -->
+          <article class="pricing-faq-item faq-reveal">
+            <h3>
+              <button
+                class="pricing-faq-question"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="pricing-faq-number">08</span>
+                <span class="pricing-faq-question-text">
+                  How can I subscribe to a pricing plan?
+                </span>
+                <span class="pricing-faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+            </h3>
+            <div class="pricing-faq-answer" hidden>
+              <div class="pricing-faq-answer-inner">
+                <p>
+                  Review the available plans and select the package that suits
+                  your property. Contact our team to discuss your requirements
+                  and confirm the pricing, included services, and next steps.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING CTA SECTION -->
+    <section class="pricing-cta-section">
+      <div class="pricing-cta-container reveal">
+        <span class="pricing-cta-label"> YOUR PROPERTY, OUR PRIORITY </span>
+
+        <h2>
+          Ready to Experience
+          <span> Property Management</span>
+        </h2>
+
+        <p>
+          Let EstateNest handle tenant screening, rent collection, and property
+          maintenance while you enjoy complete peace of mind.
+        </p>
+
+        <div class="pricing-cta-buttons">
+          <a href="contact.html" class="pricing-cta-btn">
+            Get Started Today
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <a href="services.html" class="pricing-cta-link">
+            Explore Our Services
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================
+     PREMIUM FOOTER — ESTATENEST
+======================================== -->
+    <section class="footer-section">
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- ================= BRAND ================= -->
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <!-- LOGO IMAGE -->
+              <span class="logo-icon">
+                <img
+                  src="images/logo rentel1.png"
+                  alt="EstateNest Property Management Logo"
+                />
+              </span>
+
+              <!-- BRAND NAME -->
+              <span class="logo-name"> Estate<strong>Nest</strong> </span>
+            </a>
+
+            <p class="footer-description">
+              Simplifying property ownership with reliable rental management and
+              professional tenant screening. From timely rent collection and
+              lease management
+            </p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <i data-lucide="users"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i data-lucide="camera"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i data-lucide="send"></i>
+              </a>
+
+              <a href="#" aria-label="X">
+                <i data-lucide="play"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= QUICK LINKS ================= -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="pricing.html">Pricing</a>
+
+            <a href="contact.html">Contact Us</a>
+
+            <a href="login.html">Owner Login</a>
+          </div>
+
+          <!-- ================= PROPERTY SERVICES ================= -->
+          <div class="footer-column">
+            <h3>Our Services</h3>
+
+            <a href="services.html">Property Management</a>
+
+            <a href="services.html">Tenant Screening</a>
+
+            <a href="services.html">Rent Collection</a>
+
+            <a href="services.html">Lease Management</a>
+
+            <a href="services.html">Property Maintenance</a>
+
+            <a href="services.html">Rental Reporting</a>
+          </div>
+
+          <!-- ================= CONTACT ================= -->
+          <div class="footer-column footer-contact">
+            <h3>Contact Us</h3>
+
+            <p>
+              <i data-lucide="map-pin"></i>
+              <span>Hyderabad, India</span>
+            </p>
+
+            <p>
+              <i data-lucide="phone"></i>
+              <a href="tel:+919876543210"> +91 98765 43210 </a>
+            </p>
+
+            <p>
+              <i data-lucide="mail"></i>
+              <a href="mailto:hello@estatenest.com"> hello@estatenest.com </a>
+            </p>
+
+            <p>
+              <i data-lucide="clock"></i>
+              <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+        <div class="footer-bottom">
+          <p>© 2026 EstateNest. All Rights Reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html"> Privacy Policy </a>
+
+            <a href="terms.html"> Terms &amp; Conditions </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="pricing.js"></script>
+  </body>
+</html>

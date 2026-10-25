@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>property management& rental service</title>
+
+    <link rel="stylesheet" href="properties.css" />
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo car wash13.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <div class="header-container">
+        <!-- ================= LOGO ================= -->
+
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo rentel1.png" alt="rental servive" />
+          </span>
+
+          <span class="logo-name"> Estate<strong>Nest</strong> </span>
+        </a>
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav" id="mainNav">
+          <!-- ================= HOME DROPDOWN ================= -->
+
+          <div class="nav-dropdown">
+            <button
+              type="button"
+              class="nav-link dropdown-button"
+              id="homeDropdownButton"
+              aria-expanded="false"
+            >
+              <span>Home</span>
+
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="index.html"> Home 1 </a>
+
+              <a href="index1.html"> Home 2 </a>
+            </div>
+          </div>
+
+          <!-- ================= OUR SERVICES ================= -->
+          <a href="about.html" class="nav-link"> About </a>
+
+          <a href="service.html" class="nav-link"> Services </a>
+
+          <!-- ================= PACKAGES ================= -->
+
+          <!-- ================= PRICING ================= -->
+          <a href="properties.html" class="nav-link"> Properties </a>
+          <a href="pricing.html" class="nav-link"> Pricing </a>
+
+          <!-- ================= DASHBOARD ================= -->
+
+          <!-- ================= CONTACT ================= -->
+
+          <a href="contact.html" class="nav-link"> Contact </a>
+          <a href="dashboard.html" class="nav-link"> Dashboard </a>
+
+          <!-- ================= MOBILE LOGIN ================= -->
+
+          <a href="login.html" class="nav-link mobile-login"> Login </a>
+        </nav>
+
+        <!-- ================= HEADER ACTIONS ================= -->
+
+        <div class="header-actions">
+          <!-- RTL / LTR -->
+
+          <button
+            type="button"
+            class="rtl-button"
+            id="rtlToggle"
+            aria-label="Switch to RTL"
+            title="Switch to RTL"
+          >
+            <span>RTL</span>
+          </button>
+
+          <!-- DARK / LIGHT -->
+
+          <button
+            type="button"
+            class="icon-button"
+            id="darkToggle"
+            aria-label="Dark Mode"
+            title="Dark Mode"
+          >
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- DESKTOP LOGIN -->
+
+          <a href="login.html" class="login-button">
+            <span>Login</span>
+          </a>
+
+          <!-- HAMBURGER -->
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open Menu"
+            title="Menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- PROPERTIES HERO SECTION -->
+    <section class="properties-hero" id="properties-hero">
+      <div class="properties-hero-overlay"></div>
+
+      <div class="properties-hero-content">
+        <span class="properties-hero-label">
+          <span class="label-line"></span>
+          FIND YOUR PERFECT PROPERTY
+          <span class="label-line"></span>
+        </span>
+
+        <h1>
+          Discover Properties<br />
+          <span>That Feel Like Home</span>
+        </h1>
+
+        <p>
+          Explore quality properties with trusted management, transparent rental
+          services, and support at every step.
+        </p>
+
+        <div class="properties-hero-buttons">
+          <a
+            href="properties.html"
+            class="properties-btn properties-btn-primary"
+          >
+            Explore Properties
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <a href="contact.html" class="properties-btn properties-btn-outline">
+            Contact Us
+            <i data-lucide="phone"></i>
+          </a>
+        </div>
+    </section>
+
+    <!-- PROPERTY SEARCH SECTION -->
+<section class="property-search-section" id="property-search">
+
+  <div class="property-search-container">
+
+    <!-- Section Heading -->
+    <div class="property-search-heading">
+      <span class="property-search-eyebrow">FIND YOUR NEXT PROPERTY</span>
+
+      <h2>Search Your <span>Ideal Property</span></h2>
+
+      <p>
+        Find the right property by location and property type.
+        Explore options that match your requirements.
+      </p>
+    </div>
+
+    <!-- Search Panel -->
+    <form class="property-search-form" id="propertySearchForm">
+
+      <!-- Keyword Search -->
+      <div class="property-search-field keyword-field">
+        <label for="propertyKeyword">Search Property</label>
+
+        <div class="property-input-wrap">
+          <i data-lucide="search"></i>
+
+          <input
+            type="search"
+            id="propertyKeyword"
+            placeholder="Property name or keyword"
+          >
+        </div>
+      </div>
+
+      <!-- Location Filter -->
+      <div class="property-search-field">
+        <label for="propertyLocation">Location</label>
+
+        <div class="property-input-wrap">
+          <i data-lucide="map-pin"></i>
+
+          <select id="propertyLocation">
+            <option value="">All Locations</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="guntur">Guntur</option>
+            <option value="vijayawada">Vijayawada</option>
+            <option value="tirupati">Tirupati</option>
+            <option value="bangalore">Bangalore</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Property Type Filter -->
+      <div class="property-search-field">
+        <label for="propertyType">Property Type</label>
+
+        <div class="property-input-wrap">
+          <i data-lucide="building-2"></i>
+
+          <select id="propertyType">
+            <option value="">All Property Types</option>
+            <option value="apartment">Apartment</option>
+            <option value="house">Independent House</option>
+            <option value="villa">Villa</option>
+            <option value="commercial">Commercial</option>
+            <option value="office">Office Space</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Search Button -->
+      <button type="submit" class="property-search-button">
+        <i data-lucide="search"></i>
+        <span>Search</span>
+      </button>
+
+    </form>
+
+    <!-- Filter Tags -->
+    <div class="property-search-bottom">
+      <span class="popular-search-label">Popular searches:</span>
+
+      <button type="button" class="search-tag" data-location="hyderabad">
+        Hyderabad
+      </button>
+
+      <button type="button" class="search-tag" data-type="apartment">
+        Apartments
+      </button>
+
+      <button type="button" class="search-tag" data-type="villa">
+        Villas
+      </button>
+
+      <button type="button" class="search-tag" data-type="commercial">
+        Commercial
+      </button>
+    </div>
+
+    <!-- Search Feedback -->
+    <p
+      class="property-search-message"
+      id="propertySearchMessage"
+      role="status"
+      aria-live="polite"
+    ></p>
+
+  </div>
+
+</section>
+
+<section class="properties-section" id="properties">
+  <div class="container">
+
+    <header class="section-heading reveal">
+      <span class="eyebrow">EXPLORE OUR COLLECTION</span>
+      <h1>Find Your <span>Perfect Property</span></h1>
+      <p>Discover quality homes and commercial spaces designed around your needs.</p>
+    </header>
+
+    <!-- TOP CATEGORY BUTTONS -->
+    <nav class="category-buttons reveal" aria-label="Property categories">
+      <button class="category-btn active" data-category="featured" aria-pressed="true">
+        <i data-lucide="layout-grid"></i> Featured Properties
+      </button>
+      <button class="category-btn" data-category="apartments" aria-pressed="false">
+        <i data-lucide="building-2"></i> Apartments Collection
+      </button>
+      <button class="category-btn" data-category="houses" aria-pressed="false">
+        <i data-lucide="house"></i> Independent Houses
+      </button>
+      <button class="category-btn" data-category="villas" aria-pressed="false">
+        <i data-lucide="castle"></i> Villas Collection
+      </button>
+      <button class="category-btn" data-category="commercial" aria-pressed="false">
+        <i data-lucide="briefcase-business"></i> Commercial Properties
+      </button>
+    </nav>
+
+
+    <!-- ================= FEATURED: 6 CARDS ================= -->
+    <div class="property-grid category-panel" data-panel="featured">
+
+      <article class="property-card reveal">
+        <div class="property-image">
+          <img src="images/premium height apart.jpg" alt="Premium Heights Apartment" loading="lazy">
+          <span class="badge">Featured</span>
+        </div>
+        <div class="card-body">
+          <p class="price">₹65 Lakhs</p>
+          <h3>Premium Heights Apartment</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Gachibowli, Hyderabad</p>
+          <div class="details">
+            <div><small>Area</small><strong>1,250 sq.ft</strong></div>
+            <div><small>Facing</small><strong>East</strong></div>
+            <div><small>Security Deposit</small><strong>₹2 Lakhs</strong></div>
+            <div><small>Monthly Maintenance</small><strong>₹3,000</strong></div>
+          </div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image">
+          <img src="images/green valley resi.jpg" alt="Green Valley Residency" loading="lazy">
+          <span class="badge">Featured</span>
+        </div>
+        <div class="card-body">
+          <p class="price">₹82 Lakhs</p>
+          <h3>Green Valley Residency</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Kondapur, Hyderabad</p>
+          <div class="details">
+            <div><small>Area</small><strong>1,450 sq.ft</strong></div>
+            <div><small>Facing</small><strong>North</strong></div>
+            <div><small>Security Deposit</small><strong>₹2.5 Lakhs</strong></div>
+            <div><small>Monthly Maintenance</small><strong>₹3,500</strong></div>
+          </div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image">
+          <img src="images/skyline aprrment.webp" alt="Skyline Luxury Apartment" loading="lazy">
+          <span class="badge">Featured</span>
+        </div>
+        <div class="card-body">
+          <p class="price">₹95 Lakhs</p>
+          <h3>Skyline Luxury Apartment</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Miyapur, Hyderabad</p>
+          <div class="details">
+            <div><small>Area</small><strong>1,650 sq.ft</strong></div>
+            <div><small>Facing</small><strong>West</strong></div>
+            <div><small>Security Deposit</small><strong>₹3 Lakhs</strong></div>
+            <div><small>Monthly Maintenance</small><strong>₹4,000</strong></div>
+          </div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image">
+          <img src="images/sunrise indepenent.jpg" alt="Sunrise Independent Home" loading="lazy">
+          <span class="badge">Featured</span>
+        </div>
+        <div class="card-body">
+          <p class="price">₹1.10 Crore</p>
+          <h3>Sunrise Independent Home</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Kukatpally, Hyderabad</p>
+          <div class="details">
+            <div><small>Area</small><strong>1,800 sq.ft</strong></div>
+            <div><small>Facing</small><strong>East</strong></div>
+            <div><small>Security Deposit</small><strong>₹4 Lakhs</strong></div>
+            <div><small>Monthly Maintenance</small><strong>₹2,000</strong></div>
+          </div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image">
+          <img src="images/elite garden villa poper.jpg" alt="Elite Garden Villa" loading="lazy">
+          <span class="badge">Featured</span>
+        </div>
+        <div class="card-body">
+          <p class="price">₹2.20 Crore</p>
+          <h3>Elite Garden Villa</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Narsingi, Hyderabad</p>
+          <div class="details">
+            <div><small>Area</small><strong>2,800 sq.ft</strong></div>
+            <div><small>Facing</small><strong>East</strong></div>
+            <div><small>Security Deposit</small><strong>₹8 Lakhs</strong></div>
+            <div><small>Monthly Maintenance</small><strong>₹5,000</strong></div>
+          </div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image">
+          <img src="images/business office.jpg" alt="Business Square Office" loading="lazy">
+          <span class="badge">Featured</span>
+        </div>
+        <div class="card-body">
+          <p class="price">₹1.50 Crore</p>
+          <h3>Business Square Office</h3>
+          <p class="location"><i data-lucide="map-pin"></i> HITEC City, Hyderabad</p>
+          <div class="details">
+            <div><small>Area</small><strong>2,000 sq.ft</strong></div>
+            <div><small>Facing</small><strong>East</strong></div>
+            <div><small>Security Deposit</small><strong>₹5 Lakhs</strong></div>
+            <div><small>Monthly Maintenance</small><strong>₹6,000</strong></div>
+          </div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- ================= APARTMENTS: 3 CARDS ================= -->
+    <div class="property-grid category-panel" data-panel="apartments" hidden>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/royal resodence pro1.jpg" alt="Royal Residency Apartment" loading="lazy"><span class="badge">Apartment</span></div>
+        <div class="card-body">
+          <p class="price">₹72 Lakhs</p><h3>Royal Residency Apartment</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Madhapur, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>1,300 sq.ft</strong></div><div><small>Facing</small><strong>East</strong></div><div><small>Security Deposit</small><strong>₹2 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹3,200</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/urban nest ap.webp" alt="Urban Nest Apartments" loading="lazy"><span class="badge">Apartment</span></div>
+        <div class="card-body">
+          <p class="price">₹88 Lakhs</p><h3>Urban Nest Apartments</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Manikonda, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>1,500 sq.ft</strong></div><div><small>Facing</small><strong>North</strong></div><div><small>Security Deposit</small><strong>₹2.5 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹3,800</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/lake view residence.jpg" alt="Lake View Residency" loading="lazy"><span class="badge">Apartment</span></div>
+        <div class="card-body">
+          <p class="price">₹1.05 Crore</p><h3>Lake View Residency</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Nallagandla, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>1,750 sq.ft</strong></div><div><small>Facing</small><strong>West</strong></div><div><small>Security Deposit</small><strong>₹3 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹4,200</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- ================= INDEPENDENT HOUSES: 3 CARDS ================= -->
+    <div class="property-grid category-panel" data-panel="houses" hidden>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/classic home residece po.jpg" alt="Classic Family House" loading="lazy"><span class="badge">Independent House</span></div>
+        <div class="card-body">
+          <p class="price">₹95 Lakhs</p><h3>Classic Family House</h3>
+          <p class="location"><i data-lucide="map-pin"></i> LB Nagar, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>1,600 sq.ft</strong></div><div><small>Facing</small><strong>East</strong></div><div><small>Security Deposit</small><strong>₹3 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹1,500</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/green garden home po.webp" alt="Green Garden Home" loading="lazy"><span class="badge">Independent House</span></div>
+        <div class="card-body">
+          <p class="price">₹1.25 Crore</p><h3>Green Garden Home</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Kompally, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>2,000 sq.ft</strong></div><div><small>Facing</small><strong>North</strong></div><div><small>Security Deposit</small><strong>₹4 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹2,000</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/family comfort residemnce.jpg" alt="Family Comfort Residence" loading="lazy"><span class="badge">Independent House</span></div>
+        <div class="card-body">
+          <p class="price">₹1.40 Crore</p><h3>Family Comfort Residence</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Sainikpuri, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>2,200 sq.ft</strong></div><div><small>Facing</small><strong>South</strong></div><div><small>Security Deposit</small><strong>₹5 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹2,200</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- ================= VILLAS: 3 CARDS ================= -->
+    <div class="property-grid category-panel" data-panel="villas" hidden>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/golden villa po1.avif" alt="Golden Palm Villa" loading="lazy"><span class="badge">Villa</span></div>
+        <div class="card-body">
+          <p class="price">₹2.10 Crore</p><h3>Golden Palm Villa</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Tellapur, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>2,600 sq.ft</strong></div><div><small>Facing</small><strong>East</strong></div><div><small>Security Deposit</small><strong>₹8 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹5,000</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/luxury garden villa.jpg" alt="Luxury Garden Villa" loading="lazy"><span class="badge">Villa</span></div>
+        <div class="card-body">
+          <p class="price">₹2.75 Crore</p><h3>Luxury Garden Villa</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Kokapet, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>3,200 sq.ft</strong></div><div><small>Facing</small><strong>North</strong></div><div><small>Security Deposit</small><strong>₹10 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹6,000</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/royal enclsv evila.jpg" alt="Royal Enclave Villa" loading="lazy"><span class="badge">Villa</span></div>
+        <div class="card-body">
+          <p class="price">₹3.20 Crore</p><h3>Royal Enclave Villa</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Shamshabad, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>3,800 sq.ft</strong></div><div><small>Facing</small><strong>West</strong></div><div><small>Security Deposit</small><strong>₹12 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹7,000</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- ================= COMMERCIAL: 3 CARDS ================= -->
+    <div class="property-grid category-panel" data-panel="commercial" hidden>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/coporeate business center.jpg" alt="Corporate Business Centre" loading="lazy"><span class="badge">Commercial</span></div>
+        <div class="card-body">
+          <p class="price">₹1.80 Crore</p><h3>Corporate Business Centre</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Financial District, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>2,200 sq.ft</strong></div><div><small>Facing</small><strong>East</strong></div><div><small>Security Deposit</small><strong>₹6 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹7,500</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/cars show rom.jpg" alt="Prime Retail Showroom" loading="lazy"><span class="badge">Commercial</span></div>
+        <div class="card-body">
+          <p class="price">₹1.25 Crore</p><h3>Prime Retail Showroom</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Kukatpally, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>1,800 sq.ft</strong></div><div><small>Facing</small><strong>North</strong></div><div><small>Security Deposit</small><strong>₹4 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹5,000</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+
+      <article class="property-card reveal">
+        <div class="property-image"><img src="images/office spac eexecutive.avif" alt="Executive Office Space" loading="lazy"><span class="badge">Commercial</span></div>
+        <div class="card-body">
+          <p class="price">₹2.40 Crore</p><h3>Executive Office Space</h3>
+          <p class="location"><i data-lucide="map-pin"></i> Madhapur, Hyderabad</p>
+          <div class="details"><div><small>Area</small><strong>2,800 sq.ft</strong></div><div><small>Facing</small><strong>West</strong></div><div><small>Security Deposit</small><strong>₹8 Lakhs</strong></div><div><small>Monthly Maintenance</small><strong>₹8,000</strong></div></div>
+          <p class="furnished"><i data-lucide="check-circle"></i> Semi-Furnished</p>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+<!-- AMENITIES & FACILITIES -->
+<section class="amenities-section" id="amenities">
+  <div class="amenities-container">
+
+    <!-- LEFT SIDE: FOUR BOXES -->
+    <div class="amenities-grid reveal-left">
+
+      <article class="amenity-card">
+        <div class="amenity-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+        <h3>24/7 Security</h3>
+        <p>Reliable security for peace of mind.Enjoy complete peace of mind with round-the-clock security, CCTV surveillance, and controlled access to ensure a safe and secure living environment for all residents.</p>
+      </article>
+
+      <article class="amenity-card">
+        <div class="amenity-icon">
+          <i data-lucide="car-front"></i>
+        </div>
+        <h3>Parking Space</h3>
+        <p>Convenient parking for residents and visitorsEnjoy convenient and secure parking facilities with dedicated spaces for residents and visitors, ensuring easy access and a hassle-free parking.</p>
+      </article>
+
+      <article class="amenity-card">
+        <div class="amenity-icon">
+          <i data-lucide="dumbbell"></i>
+        </div>
+        <h3>Fitness Center</h3>
+        <p>Stay active with dedicated workout facilities.Stay active and healthy with a well-equipped fitness center featuring modern workout equipment, providing residents with a convenient space</p>
+      </article>
+
+      <article class="amenity-card">
+        <div class="amenity-icon">
+          <i data-lucide="trees"></i>
+        </div>
+        <h3>Green Spaces</h3>
+        <p>Enjoy peaceful outdoor and landscaped areasnjoy beautifully landscaped gardens and peaceful outdoor spaces that offer a refreshing environment for relaxation, family activities, and connecting with nature..</p>
+      </article>
+
+    </div>
+
+    <!-- RIGHT SIDE: CONTENT -->
+    <div class="amenities-content reveal-right">
+
+      <span class="amenities-eyebrow">AMENITIES & FACILITIES</span>
+
+      <h2>
+        Comfort, Convenience
+        <span>& Everyday Living</span>
+      </h2>
+
+      <p>
+        Discover properties designed to make everyday living easier.
+        From security and parking to fitness and green spaces, explore
+        facilities that add comfort, convenience, and value to your
+        living experience.
+      </p>
+
+      <p>
+        Whether you are searching for a family home or a modern
+        apartment, find a space with facilities suited to your needs.Experience a lifestyle designed for comfort, convenience, and peace of mind.
+Enjoy modern amenities that make everyday living effortless and enjoyable.
+From secure parking to 24/7 security, every detail is thoughtfully planned.
+Relax in green spaces and stay active in our well-equipped fitness center.
+Discover a perfect balance of comfort, safety, and modern living.
+      </p>
+
+      <a href="service.html" class="amenities-btn">
+        Explore Our Facilities
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="rental-price-section" id="rental-prices">
+  <div class="rental-price-container">
+
+    <div class="rental-price-heading reveal">
+      <span class="rental-eyebrow">RENTAL PRICE OVERVIEW</span>
+      <h2>Find a Home That<span>Fits Your Budget</span> </h2>
+      <p>
+        Explore our rental properties with flexible options,
+        modern amenities, and comfortable living spaces.
+      </p>
+    </div>
+
+    <div class="rental-price-grid">
+
+      <!-- Card 1 -->
+      <article class="rental-price-card reveal">
+        <div class="rental-image">
+          <img src="images/modern apartment po.jpg"
+               alt="Modern apartment for rent"
+               loading="lazy">
+          <span class="rental-type">Apartment</span>
+        </div>
+        <div class="rental-card-content">
+          <h3>Modern Apartment</h3>
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Prime Residential Area
+          </p>
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 2 Beds</span>
+            <span><i data-lucide="bath"></i> 2 Baths</span>
+          </div>
+          <div class="rental-price-bottom">
+            <div>
+              <strong>₹15,000</strong>
+              <span>/ month</span>
+            </div>
+            <a href="contact.html" class="rental-view-btn"
+               aria-label="Enquire about Modern Apartment">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="rental-price-card reveal">
+        <div class="rental-image">
+          <img src="images/spacies home po.jpg"
+               alt="Family house for rent"
+               loading="lazy">
+          <span class="rental-type">Family Home</span>
+        </div>
+        <div class="rental-card-content">
+          <h3>Spacious Family Home</h3>
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Peaceful Neighborhood
+          </p>
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 3 Beds</span>
+            <span><i data-lucide="bath"></i> 2 Baths</span>
+          </div>
+          <div class="rental-price-bottom">
+            <div>
+              <strong>₹22,000</strong>
+              <span>/ month</span>
+            </div>
+            <a href="contact.html" class="rental-view-btn"
+               aria-label="Enquire about Spacious Family Home">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="rental-price-card reveal">
+        <div class="rental-image">
+          <img src="images/crytal clasic villa.jpg"
+               alt="Luxury villa for rent"
+               loading="lazy">
+          <span class="rental-type">Luxury Villa</span>
+        </div>
+        <div class="rental-card-content">
+          <h3>Crystal Palace Villa</h3>
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Premium Community
+          </p>
+          <div class="rental-details">
+            <span><i data-lucide="bed-double"></i> 4 Beds</span>
+            <span><i data-lucide="bath"></i> 3 Baths</span>
+          </div>
+          <div class="rental-price-bottom">
+            <div>
+              <strong>₹40,000</strong>
+              <span>/ month</span>
+            </div>
+            <a href="contact.html" class="rental-view-btn"
+               aria-label="Enquire about Luxury Garden Villa">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="rental-price-card reveal">
+        <div class="rental-image">
+          <img src="images/commercial spavce po.jpg"
+               alt="Commercial property for rent"
+               loading="lazy">
+          <span class="rental-type">Commercial</span>
+        </div>
+        <div class="rental-card-content">
+          <h3>Commercial Space</h3>
+          <p class="rental-location">
+            <i data-lucide="map-pin"></i>
+            Business District
+          </p>
+          <div class="rental-details">
+            <span><i data-lucide="building-2"></i> Office</span>
+            <span><i data-lucide="maximize"></i> 900 sq.ft.</span>
+          </div>
+          <div class="rental-price-bottom">
+            <div>
+              <strong>₹30,000</strong>
+              <span>/ month</span>
+            </div>
+            <a href="contact.html" class="rental-view-btn"
+               aria-label="Enquire about Commercial Space">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================
+     LIST YOUR PROPERTY CTA
+===================================== -->
+
+<section class="list-property-cta" id="list-property-cta">
+  <div class="list-property-container">
+
+    <div class="list-property-content cta-reveal">
+
+      <span class="list-property-eyebrow">
+        START YOUR JOURNEY
+      </span>
+
+      <h2>
+        List Your Property
+        <span>With Confidence</span>
+      </h2>
+
+      <p>
+        Showcase your property to the right audience with our
+        professional property management services. Simplify
+        the rental process, connect with potential tenants,
+        and manage your investment with confidence.
+      </p>
+
+      <a href="contact.html" class="list-property-btn">
+        List Your Property
+        <i data-lucide="arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+<!-- ========================================
+     PREMIUM FOOTER — ESTATENEST
+======================================== -->
+        <section class="footer-section">
+          <footer class="site-footer">
+            <div class="footer-container">
+              <!-- ================= BRAND ================= -->
+              <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                  <!-- LOGO IMAGE -->
+                  <span class="logo-icon">
+                    <img
+                      src="images/logo rentel1.png"
+                      alt="EstateNest Property Management Logo"
+                    />
+                  </span>
+
+                  <!-- BRAND NAME -->
+                  <span class="logo-name"> Estate<strong>Nest</strong> </span>
+                </a>
+
+                <p class="footer-description">
+                  Simplifying property ownership with reliable rental management
+                  and professional tenant screening. From timely rent collection
+                  and lease management
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="social-links">
+                  <a href="#" aria-label="Facebook">
+                    <i data-lucide="users"></i>
+                  </a>
+
+                  <a href="#" aria-label="Instagram">
+                    <i data-lucide="camera"></i>
+                  </a>
+
+                  <a href="#" aria-label="LinkedIn">
+                    <i data-lucide="send"></i>
+                  </a>
+
+                  <a href="#" aria-label="X">
+                    <i data-lucide="play"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- ================= QUICK LINKS ================= -->
+              <div class="footer-column">
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="pricing.html">Pricing</a>
+
+                <a href="contact.html">Contact Us</a>
+
+                <a href="login.html">Owner Login</a>
+              </div>
+
+              <!-- ================= PROPERTY SERVICES ================= -->
+              <div class="footer-column">
+                <h3>Our Services</h3>
+
+                <a href="services.html">Property Management</a>
+
+                <a href="services.html">Tenant Screening</a>
+
+                <a href="services.html">Rent Collection</a>
+
+                <a href="services.html">Lease Management</a>
+
+                <a href="services.html">Property Maintenance</a>
+
+                <a href="services.html">Rental Reporting</a>
+              </div>
+
+              <!-- ================= CONTACT ================= -->
+              <div class="footer-column footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>
+                  <i data-lucide="map-pin"></i>
+                  <span>Hyderabad, India</span>
+                </p>
+
+                <p>
+                  <i data-lucide="phone"></i>
+                  <a href="tel:+919876543210"> +91 98765 43210 </a>
+                </p>
+
+                <p>
+                  <i data-lucide="mail"></i>
+                  <a href="mailto:hello@estatenest.com">
+                    hello@estatenest.com
+                  </a>
+                </p>
+
+                <p>
+                  <i data-lucide="clock"></i>
+                  <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- ================= FOOTER BOTTOM ================= -->
+            <div class="footer-bottom">
+              <p>© 2026 EstateNest. All Rights Reserved.</p>
+
+              <div class="footer-bottom-links">
+                <a href="privacy-policy.html"> Privacy Policy </a>
+
+                <a href="terms.html"> Terms &amp; Conditions </a>
+              </div>
+            </div>
+          </footer>
+        </section>
+
+
+    <script src="main.js"></script>
+    <script src="properties.js"></script>
+  </body>
+</html>

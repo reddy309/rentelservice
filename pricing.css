@@ -1,0 +1,3078 @@
+/* =====================================
+   PRICING HERO SECTION
+===================================== */
+
+.pricing-hero {
+  position: relative;
+  width: 100%;
+  min-height: 570px;
+  height: 90vh;
+  margin-top: var(--header-height, 70px);
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: url("images/pricing\ bg\ po.jpg");
+
+  color: #ffffff;
+}
+
+.pricing-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: rgba(0, 0, 0, 0.85);
+  transition: background 0.4s ease;
+}
+
+/* DARK MODE OVERLAY */
+
+html.dark .pricing-hero-overlay {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* CONTAINER */
+
+.pricing-hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CENTER CONTENT */
+
+.pricing-hero-content {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* EYEBROW */
+
+.pricing-hero-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+/* HEADING */
+
+.pricing-hero-content h1 {
+  margin: 0 0 22px;
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.pricing-hero-content h1 span {
+  display: block;
+  margin-top: 8px;
+  color: var(--secondary);
+}
+
+/* DESCRIPTION */
+
+.pricing-hero-content p {
+  max-width: 680px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* BUTTONS */
+
+.pricing-hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pricing-hero-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pricing-hero-btn svg,
+.pricing-hero-link svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.pricing-hero-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+/* SECONDARY LINK */
+
+.pricing-hero-link {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: var(--secondary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pricing-hero-link:hover {
+  color: var(--text);
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* SCROLL REVEAL */
+
+.pricing-reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.pricing-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================================
+   NET HUB / DESKTOP
+===================================== */
+
+@media (min-width: 1025px) {
+  .pricing-hero {
+    min-height: 520px;
+    padding: 80px 30px;
+  }
+}
+
+/* =====================================
+   IPAD MINI
+   600px - 1024px
+===================================== */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .pricing-hero {
+    min-height: 450px;
+    padding: 65px 28px;
+    background-position: center;
+  }
+
+  .pricing-hero-content {
+    max-width: 680px;
+  }
+
+  .pricing-hero-content h1 {
+    font-size: clamp(36px, 5.5vw, 48px);
+  }
+
+  .pricing-hero-content p {
+    max-width: 580px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+/* =====================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+===================================== */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .pricing-hero {
+    min-height: 420px;
+    padding: 55px 18px;
+    background-position: center;
+  }
+
+  .pricing-hero-eyebrow {
+    margin-bottom: 17px;
+    padding: 7px 12px;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .pricing-hero-content h1 {
+    margin-bottom: 16px;
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .pricing-hero-content h1 span {
+    margin-top: 5px;
+  }
+
+  .pricing-hero-content p {
+    margin-bottom: 23px;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .pricing-hero-buttons {
+    gap: 10px;
+  }
+
+  .pricing-hero-btn {
+    min-height: 43px;
+    padding: 0 15px;
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .pricing-hero-link {
+    min-height: 43px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+}
+
+/* EXTRA SMALL MOBILE */
+
+@media (max-width: 359px) {
+  .pricing-hero {
+    min-height: 400px;
+    padding: 45px 13px;
+  }
+
+  .pricing-hero-eyebrow {
+    padding: 6px 10px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .pricing-hero-content h1 {
+    font-size: 29px;
+  }
+
+  .pricing-hero-content p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .pricing-hero-buttons {
+    gap: 8px;
+  }
+
+  .pricing-hero-btn {
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 10px;
+  }
+
+  .pricing-hero-link {
+    font-size: 10px;
+  }
+}
+
+/* =====================================
+   MANAGEMENT PLANS SECTION
+===================================== */
+
+.management-plans-section {
+  width: 100%;
+  padding: 85px 24px;
+  background: var(--background);
+  color: var(--text);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.management-plans-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: -30px;
+}
+
+/* SECTION HEADING */
+
+.management-plans-heading {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.management-plans-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.management-plans-heading h2 {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.management-plans-heading h2 span {
+  display: block;
+  margin-top: 5px;
+  color: var(--secondary);
+}
+
+.management-plans-heading > p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.85;
+  opacity: 0.8;
+}
+
+/* THREE PLAN COLUMNS */
+
+.management-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* PLAN CARD */
+
+.management-plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 30px 24px;
+  box-sizing: border-box;
+  background: var(--bg);
+  border: 1px solid rgba(139, 100, 44, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(60, 45, 20, 0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.management-plan-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 18px 38px rgba(60, 45, 20, 0.11);
+}
+
+/* STANDARD FEATURED CARD */
+
+.management-plan-featured {
+  border: 1.5px solid var(--primary);
+  background: linear-gradient(
+    145deg,
+    rgba(201, 164, 92, 0.13),
+    rgba(139, 100, 44, 0.04)
+  );
+}
+
+/* BADGE */
+
+.management-plan-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  max-width: 115px;
+  padding: 6px 9px;
+  border-radius: 30px;
+  background: var(--primary);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+
+/* ICON */
+
+.management-plan-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border: 1px solid rgba(201, 164, 92, 0.5);
+  border-radius: 13px;
+  background: rgba(201, 164, 92, 0.12);
+  color: var(--secondary);
+}
+
+.management-plan-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+/* LABEL & TITLE */
+
+.management-plan-label {
+  margin-bottom: 10px;
+  color: var(--secondary);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.management-plan-card h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(23px, 2.1vw, 29px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.management-plan-description {
+  min-height: 88px;
+  margin: 0 0 18px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+/* PLAN LEVEL */
+
+.management-plan-price {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.management-plan-price span {
+  color: var(--secondary);
+  font-family: var(--font-heading);
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.management-plan-price small {
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+/* DIVIDER */
+
+.management-plan-divider {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 20px;
+  background: rgba(139, 100, 44, 0.2);
+}
+
+/* FEATURES */
+
+.management-plan-card h4 {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.management-plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0 0 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.management-plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.management-plan-features li svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--secondary);
+  stroke-width: 2.5;
+}
+
+/* BUTTON */
+
+.management-plan-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.management-plan-btn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.management-plan-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+.management-plan-btn1 {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: var(--secondary);
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+.management-plan-btn1:hover {
+  color: var(--text);
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+/* SCROLL REVEAL */
+
+.plan-reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.plan-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   NETHUB / DESKTOP - 1025px AND ABOVE
+========================================= */
+
+@media (min-width: 1025px) {
+  .management-plans-section {
+    padding: 85px 24px;
+  }
+
+  .management-plans-container {
+    max-width: 1100px;
+    margin-top: -30px;
+  }
+
+  .management-plans-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .management-plan-card {
+    padding: 30px 24px;
+  }
+
+  .management-plan-card h3 {
+    font-size: 27px;
+  }
+
+  .management-plan-description {
+    min-height: 88px;
+  }
+
+  .management-plan-btn,
+  .management-plan-btn1 {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+  }
+}
+
+/* =========================================
+   IPAD MINI - 600px TO 1024px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .management-plans-section {
+    padding: 65px 22px;
+  }
+
+  .management-plans-container {
+    max-width: 850px;
+    margin-top: -25px;
+  }
+
+  .management-plans-heading {
+    max-width: 680px;
+    margin-bottom: 35px;
+  }
+
+  .management-plans-eyebrow {
+    font-size: 10px;
+    padding: 7px 15px;
+  }
+
+  .management-plans-heading h2 {
+    font-size: clamp(38px, 5.5vw, 48px);
+  }
+
+  .management-plans-heading > p {
+    font-size: 13px;
+  }
+
+  .management-plans-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .management-plan-card {
+    padding: 26px 20px;
+  }
+
+  .management-plan-card h3 {
+    font-size: 25px;
+  }
+
+  .management-plan-description {
+    min-height: 85px;
+    font-size: 12px;
+  }
+
+  .management-plan-price span {
+    font-size: 25px;
+  }
+
+  .management-plan-features {
+    gap: 12px;
+  }
+
+  .management-plan-features li {
+    font-size: 12px;
+  }
+
+  .management-plan-btn,
+  .management-plan-btn1 {
+    width: 100%;
+    min-height: 43px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: auto;
+  }
+
+  /* Center the third card */
+  .management-plan-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: center;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+ - 360px TO 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .management-plans-section {
+    padding: 50px 15px;
+  }
+
+  .management-plans-container {
+    max-width: 100%;
+    margin-top: -20px;
+  }
+
+  .management-plans-heading {
+    margin-bottom: 28px;
+  }
+
+  .management-plans-eyebrow {
+    padding: 6px 13px;
+    margin-bottom: 14px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .management-plans-heading h2 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .management-plans-heading h2 span {
+    margin-top: 4px;
+  }
+
+  .management-plans-heading > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .management-plans-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .management-plan-card {
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 13px;
+  }
+
+  .management-plan-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .management-plan-badge {
+    top: 12px;
+    right: 12px;
+    max-width: 100px;
+    padding: 5px 8px;
+    font-size: 8px;
+  }
+
+  .management-plan-icon {
+    width: 43px;
+    height: 43px;
+    margin-bottom: 15px;
+  }
+
+  .management-plan-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .management-plan-label {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .management-plan-card h3 {
+    font-size: 25px;
+  }
+
+  .management-plan-description {
+    min-height: 0;
+    margin-bottom: 17px;
+    font-size: 12px;
+  }
+
+  .management-plan-price {
+    margin-bottom: 18px;
+  }
+
+  .management-plan-price span {
+    font-size: 25px;
+  }
+
+  .management-plan-divider {
+    margin-bottom: 18px;
+  }
+
+  .management-plan-card h4 {
+    font-size: 13px;
+  }
+
+  .management-plan-features {
+    gap: 11px;
+    margin-bottom: 22px;
+  }
+
+  .management-plan-features li {
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .management-plan-features li svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .management-plan-btn,
+  .management-plan-btn1 {
+    width: 100%;
+    min-height: 42px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE - BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .management-plans-section {
+    padding: 40px 11px;
+  }
+
+  .management-plans-container {
+    margin-top: -10px;
+  }
+
+  .management-plans-heading {
+    margin-bottom: 25px;
+  }
+
+  .management-plans-eyebrow {
+    padding: 6px 10px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .management-plans-heading h2 {
+    font-size: 27px;
+  }
+
+  .management-plans-heading > p {
+    font-size: 12px;
+  }
+
+  .management-plans-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .management-plan-card {
+    padding: 22px 16px;
+  }
+
+  .management-plan-badge {
+    max-width: 88px;
+    font-size: 7px;
+  }
+
+  .management-plan-card h3 {
+    font-size: 23px;
+  }
+
+  .management-plan-description {
+    min-height: 0;
+    font-size: 12px;
+  }
+
+  .management-plan-price span {
+    font-size: 23px;
+  }
+
+  .management-plan-features li {
+    font-size: 11px;
+  }
+
+  .management-plan-btn,
+  .management-plan-btn1 {
+    width: 100%;
+    min-height: 40px;
+    padding: 0 9px;
+    box-sizing: border-box;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+}
+
+/* =========================================
+   PLAN COMPARISON SECTION
+========================================= */
+
+.plan-comparison-section {
+  width: 100%;
+  padding: 80px 24px;
+  background: var(--bg);
+  color: var(--text);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.plan-comparison-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: -30px auto 0;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.comparison-heading {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.comparison-eyebrow {
+  display: inline-block;
+  padding: 7px 18px;
+  margin-bottom: 18px;
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+  color: var(--secondary);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+
+.comparison-heading h2 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.comparison-heading h2 span {
+  display: block;
+  color: var(--secondary);
+}
+
+.comparison-heading p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.comparison-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 12px 35px rgba(61, 43, 15, 0.08);
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+}
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.comparison-table thead th {
+  padding: 25px 14px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  border-left: 1px solid rgba(201, 164, 92, 0.18);
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.comparison-table thead th:first-child {
+  width: 37%;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.comparison-table thead th.comparison-plan-column {
+  width: 21%;
+  height: 145px;
+  vertical-align: top;
+}
+
+.comparison-table .feature-heading {
+  color: var(--heading);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Plan names and prices */
+
+.comparison-plan-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.comparison-plan-name {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.comparison-plan-price {
+  margin: 0;
+  color: var(--secondary);
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.comparison-plan-price span {
+  margin-left: 3px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================
+   POPULAR COLUMN
+========================================= */
+
+.comparison-table .popular-column {
+  background: rgba(201, 164, 92, 0.1);
+  border-left-color: rgba(201, 164, 92, 0.28);
+  border-right: 1px solid rgba(201, 164, 92, 0.28);
+}
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.comparison-table tbody td {
+  padding: 17px 15px;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.2);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody td:first-child {
+  padding-left: 25px;
+  text-align: left;
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.comparison-table tbody tr:hover td {
+  background-color: rgba(201, 164, 92, 0.07);
+}
+
+.comparison-table tbody tr:hover .popular-column {
+  background-color: rgba(201, 164, 92, 0.16);
+}
+
+/* =========================================
+   CHECK / CROSS ICONS
+========================================= */
+
+.comparison-check,
+.comparison-cross {
+  width: 19px;
+  height: 19px;
+  vertical-align: middle;
+}
+
+.comparison-check {
+  color: var(--secondary);
+  stroke-width: 2.5;
+}
+
+.comparison-cross {
+  color: #999084;
+  stroke-width: 1.8;
+}
+
+/* =========================================
+   BUTTONS IN LAST TABLE ROW
+========================================= */
+
+.comparison-table tbody .comparison-action-row td {
+  padding: 22px 10px;
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  background: var(--card);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comparison-table tbody .comparison-action-row td:first-child {
+  padding-left: 25px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.comparison-table tbody .comparison-action-row td.popular-column {
+  background: rgba(201, 164, 92, 0.1);
+}
+
+/* Button base */
+
+.comparison-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: var(--secondary);
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.comparison-btn:hover {
+  color: var(--text);
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+.comparison-btn-primary {
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+}
+
+.comparison-btn-primary:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.comparison-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.comparison-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* =========================================
+   DESKTOP / NETHUB - 1025px+
+========================================= */
+
+@media (min-width: 1025px) {
+  .plan-comparison-section {
+    padding: 80px 24px;
+  }
+
+  .plan-comparison-container {
+    margin-top: -30px;
+  }
+
+  .comparison-table {
+    min-width: 720px;
+  }
+}
+
+/* =========================================
+   IPAD MINI - 600px TO 1024px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .plan-comparison-section {
+    padding: 65px 20px;
+  }
+
+  .plan-comparison-container {
+    margin-top: -25px;
+  }
+
+  .comparison-heading {
+    margin-bottom: 35px;
+  }
+
+  .comparison-heading h2 {
+    font-size: clamp(36px, 5vw, 48px);
+  }
+
+  .comparison-table {
+    min-width: 720px;
+  }
+
+  .comparison-table thead th.comparison-plan-column {
+    height: 140px;
+  }
+
+  .comparison-plan-name {
+    font-size: 16px;
+  }
+
+  .comparison-plan-price {
+    font-size: 22px;
+  }
+
+  .comparison-table tbody td {
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+
+  .comparison-table tbody .comparison-action-row td {
+    padding: 18px 7px;
+  }
+
+  .comparison-table .comparison-action-row .comparison-btn {
+    min-height: 41px;
+    padding: 7px 5px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+ - 360px TO 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .plan-comparison-section {
+    padding: 50px 14px;
+  }
+
+  .plan-comparison-container {
+    margin-top: -20px;
+  }
+
+  .comparison-heading {
+    margin-bottom: 28px;
+  }
+
+  .comparison-eyebrow {
+    padding: 6px 12px;
+    margin-bottom: 14px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .comparison-heading h2 {
+    font-size: 31px;
+    line-height: 1.25;
+  }
+
+  .comparison-heading p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .comparison-table-wrapper {
+    border-radius: 10px;
+  }
+
+  .comparison-table {
+    min-width: 680px;
+  }
+
+  .comparison-table thead th.comparison-plan-column {
+    height: 135px;
+    padding: 18px 8px;
+  }
+
+  .comparison-table thead th:first-child {
+    padding-left: 14px;
+  }
+
+  .comparison-plan-name {
+    margin-bottom: 9px;
+    font-size: 15px;
+  }
+
+  .comparison-plan-price {
+    font-size: 20px;
+  }
+
+  .comparison-plan-price span {
+    font-size: 11px;
+  }
+
+  .comparison-popular-badge {
+    margin-top: -5px;
+    margin-bottom: 8px;
+    padding: 4px 7px;
+    font-size: 8px;
+  }
+
+  .comparison-table tbody td {
+    padding: 13px 9px;
+    font-size: 12px;
+  }
+
+  .comparison-table tbody td:first-child {
+    padding-left: 14px;
+  }
+
+  .comparison-table tbody .comparison-action-row td {
+    padding: 15px 6px;
+  }
+
+  .comparison-table tbody .comparison-action-row td:first-child {
+    padding-left: 10px;
+    font-size: 11px;
+  }
+
+  .comparison-table .comparison-action-row .comparison-btn {
+    min-height: 38px;
+    padding: 6px 4px;
+    font-size: 10px;
+    border-radius: 7px;
+  }
+
+  .comparison-note {
+    font-size: 11px;
+    text-align: left;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE - BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .plan-comparison-section {
+    padding: 40px 10px;
+  }
+
+  .plan-comparison-container {
+    margin-top: -10px;
+  }
+
+  .comparison-heading h2 {
+    font-size: 27px;
+  }
+
+  .comparison-heading p {
+    font-size: 12px;
+  }
+
+  .comparison-table {
+    min-width: 650px;
+  }
+
+  .comparison-table thead th.comparison-plan-column {
+    height: 130px;
+    padding: 16px 7px;
+  }
+
+  .comparison-plan-name {
+    font-size: 14px;
+  }
+
+  .comparison-plan-price {
+    font-size: 18px;
+  }
+
+  .comparison-table tbody td {
+    padding: 12px 7px;
+    font-size: 11px;
+  }
+
+  .comparison-table tbody .comparison-action-row td {
+    padding: 12px 4px;
+  }
+
+  .comparison-table tbody .comparison-action-row td:first-child {
+    padding-left: 7px;
+    font-size: 10px;
+  }
+
+  .comparison-table .comparison-action-row .comparison-btn {
+    min-height: 36px;
+    padding: 5px 3px;
+    font-size: 9px;
+    border-radius: 6px;
+  }
+
+  .comparison-note {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   INCLUDED SERVICES SECTION
+   ESTATENEST
+========================================= */
+
+.included-services-section {
+  position: relative;
+  width: 100%;
+  padding: 85px 24px;
+  background: var(--background);
+  color: var(--text);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.included-services-container,
+.included-services-container * {
+  box-sizing: border-box;
+}
+
+.included-services-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: -30px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 38px;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.included-services-content {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.included-services-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.included-services-content h2 {
+  width: 100%;
+  margin: 0 0 22px;
+
+  color: var(--text);
+  font-family: var(--font-heading, inherit);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.included-services-content h2 span {
+  display: block;
+  color: var(--secondary);
+}
+
+.included-services-description {
+  width: 100%;
+  margin: 0 0 15px;
+
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.82;
+}
+
+.included-services-content .secondary-description {
+  margin-bottom: 24px;
+}
+
+/* CTA BUTTON */
+
+.included-services-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.included-services-btn i {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.3s ease;
+}
+
+.included-services-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.included-services-btn:hover i {
+  transform: translate(3px, -3px);
+}
+
+/* TRUST POINTS */
+
+.included-services-trust {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 26px;
+}
+
+.included-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.included-trust-item i {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--secondary);
+}
+
+.included-trust-item span {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================================
+   RIGHT SIDE - FOUR EQUAL BOXES
+========================================= */
+
+.included-services-grid {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  align-self: stretch;
+  gap: 16px;
+}
+
+/* SERVICE BOX */
+
+.included-service-box {
+  position: relative;
+  min-width: 0;
+  min-height: 225px;
+  height: 100%;
+  padding: 21px 19px 17px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  background: var(--card);
+  box-shadow: 0 7px 22px rgba(61, 43, 15, 0.045);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.included-service-box:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 14px 28px rgba(61, 43, 15, 0.09);
+}
+
+/* BOX TOP */
+
+.included-service-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 19px;
+}
+
+.included-service-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(201, 164, 92, 0.25);
+  border-radius: 6px;
+  background: rgba(201, 164, 92, 0.14);
+  color: var(--secondary);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.included-service-icon i {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.7;
+}
+
+.included-service-box:hover .included-service-icon {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.included-service-number {
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+/* BOX HEADING */
+
+.included-service-box h3 {
+  width: 100%;
+  margin: 0 0 10px;
+
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* BOX DESCRIPTION */
+
+.included-service-box > p {
+  width: 100%;
+  margin: 0 0 17px;
+
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.78;
+}
+
+/* BOTTOM LABEL */
+
+.included-service-bottom {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  border-top: 1px solid rgba(201, 164, 92, 0.3);
+}
+
+.included-service-bottom span {
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.included-service-bottom i {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--secondary);
+
+  transition: transform 0.3s ease;
+}
+
+.included-service-box:hover .included-service-bottom i {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+.included-services-section .service-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.included-services-section .service-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* STAGGER EFFECT FOR FOUR BOXES */
+
+.included-services-grid .included-service-box:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.included-services-grid .included-service-box:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.included-services-grid .included-service-box:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+.included-services-grid .included-service-box:nth-child(4) {
+  transition-delay: 0.36s;
+}
+
+/* =========================================
+   TABLET - IPAD MINI
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .included-services-section {
+    padding: 70px 24px;
+  }
+
+  .included-services-container {
+    max-width: 820px;
+    gap: 25px;
+  }
+
+  .included-services-content h2 {
+    font-size: 32px;
+  }
+
+  .included-services-description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .included-services-grid {
+    gap: 12px;
+  }
+
+  .included-service-box {
+    min-height: 225px;
+    padding: 18px 13px 15px;
+  }
+
+  .included-service-top {
+    margin-bottom: 15px;
+  }
+
+  .included-service-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .included-service-box h3 {
+    font-size: 14px;
+  }
+
+  .included-service-box > p {
+    font-size: 11px;
+    line-height: 1.75;
+  }
+
+  .included-service-bottom span {
+    font-size: 10px;
+  }
+
+  .included-services-trust {
+    gap: 10px;
+  }
+
+  .included-trust-item span {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   MOBILE - GALAXY S8+
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .included-services-section {
+    padding: 55px 18px;
+  }
+
+  .included-services-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .included-services-content {
+    height: auto;
+  }
+
+  .included-services-content h2 {
+    font-size: 34px;
+  }
+
+  .included-services-description {
+    font-size: 13px;
+  }
+
+  .included-services-trust {
+    gap: 12px;
+  }
+
+  .included-services-grid {
+    height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    gap: 12px;
+  }
+
+  .included-service-box {
+    min-height: 225px;
+    height: 100%;
+    padding: 17px 12px 14px;
+  }
+
+  .included-service-top {
+    margin-bottom: 15px;
+  }
+
+  .included-service-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .included-service-icon i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .included-service-box h3 {
+    font-size: 14px;
+  }
+
+  .included-service-box > p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .included-service-bottom span {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 359px) {
+  .included-services-section {
+    padding: 45px 14px;
+  }
+
+  .included-services-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .included-services-content h2 {
+    font-size: 29px;
+  }
+
+  .included-services-description {
+    font-size: 13px;
+  }
+
+  .included-services-trust {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .included-services-grid {
+    height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+  .included-service-box {
+    min-height: 200px;
+    height: auto;
+    padding: 20px 18px;
+  }
+
+  .included-service-box h3 {
+    font-size: 16px;
+  }
+
+  .included-service-box > p {
+    font-size: 12px;
+  }
+
+  .included-service-bottom span {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   MAINTENANCE & REPAIR CHARGES
+   ESTATENEST
+========================================= */
+
+.repair-charges-section {
+  width: 100%;
+  padding: 85px 24px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at 5% 5%, rgba(201, 164, 92, 0.1), transparent 30%),
+    var(--background, #ffffff);
+
+  color: var(--text, #292216);
+}
+
+.repair-charges-container,
+.repair-charges-container * {
+  box-sizing: border-box;
+}
+
+.repair-charges-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: -30px auto 0;
+}
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px – 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .repair-charges-section {
+    padding: 40px 15px;
+  }
+
+  .repair-charges-container {
+    width: 100%;
+    max-width: 100%;
+    margin: -15px auto 0;
+  }
+}
+
+/* =========================================
+   iPAD MINI
+   600px – 768px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .repair-charges-section {
+    padding: 55px 22px;
+  }
+
+  .repair-charges-container {
+    width: 100%;
+    max-width: 100%;
+    margin: -20px auto 0;
+  }
+}
+
+/* =========================================
+   NETHUB / TABLET LANDSCAPE
+   769px – 1024px
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .repair-charges-section {
+    padding: 65px 28px;
+  }
+
+  .repair-charges-container {
+    width: 100%;
+    max-width: 100%;
+    margin: -25px auto 0;
+  }
+}
+
+/* =========================================
+   DESKTOP / LARGE NETHUB
+   1025px and above
+========================================= */
+
+@media (min-width: 1025px) {
+  .repair-charges-section {
+    padding: 85px 24px;
+  }
+
+  .repair-charges-container {
+    max-width: 1100px;
+    margin: -30px auto 0;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   Below 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .repair-charges-section {
+    padding: 30px 12px;
+  }
+
+  .repair-charges-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* =========================================
+   PRICING FAQS - ESTATENEST
+========================================= */
+
+.pricing-faq-section {
+  width: 100%;
+  padding: 80px 24px;
+  background: var(--bg);
+
+  color: var(--text, #292216);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.pricing-faq-container,
+.pricing-faq-container * {
+  box-sizing: border-box;
+}
+
+.pricing-faq-container {
+  width: 100%;
+  max-width: 900px;
+  margin: -30px auto 0;
+}
+
+/* HEADING */
+
+.pricing-faq-heading {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.pricing-faq-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.pricing-faq-heading h2 {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.pricing-faq-heading h2 span {
+  color: var(--secondary);
+}
+
+.pricing-faq-heading > p {
+  max-width: 570px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.78;
+}
+
+/* FAQ LIST */
+
+.pricing-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.pricing-faq-item {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--card);
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pricing-faq-item:hover,
+.pricing-faq-item.is-open {
+  border-color: var(--primary);
+  box-shadow: 0 8px 23px rgba(61, 43, 15, 0.06);
+}
+
+.pricing-faq-item h3 {
+  margin: 0;
+  font-size: inherit;
+}
+
+/* QUESTION */
+
+.pricing-faq-question {
+  width: 100%;
+  min-height: 72px;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 15px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pricing-faq-question:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: -3px;
+}
+
+.pricing-faq-number {
+  color: var(--secondary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.pricing-faq-question-text {
+  color: var(--heading);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+/* TOGGLE ICON */
+
+.pricing-faq-toggle {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--secondary);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pricing-faq-toggle i {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-faq-item.is-open .pricing-faq-toggle {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.pricing-faq-item.is-open .pricing-faq-toggle i {
+  transform: rotate(45deg);
+}
+
+/* ANSWER */
+
+.pricing-faq-answer[hidden] {
+  display: none;
+}
+
+.pricing-faq-answer-inner {
+  padding: 0 24px 20px 67px;
+}
+
+.pricing-faq-answer-inner p {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+/* SCROLL REVEAL */
+
+.pricing-faq-section .faq-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.pricing-faq-section .faq-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pricing-faq-list .pricing-faq-item:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.pricing-faq-list .pricing-faq-item:nth-child(3) {
+  transition-delay: 0.16s;
+}
+
+.pricing-faq-list .pricing-faq-item:nth-child(4) {
+  transition-delay: 0.24s;
+}
+
+.pricing-faq-list .pricing-faq-item:nth-child(5) {
+  transition-delay: 0.32s;
+}
+
+.pricing-faq-list .pricing-faq-item:nth-child(6) {
+  transition-delay: 0.4s;
+}
+
+.pricing-faq-list .pricing-faq-item:nth-child(7) {
+  transition-delay: 0.48s;
+}
+
+.pricing-faq-list .pricing-faq-item:nth-child(8) {
+  transition-delay: 0.56s;
+}
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px – 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .pricing-faq-section {
+    padding: 40px 15px;
+  }
+
+  .pricing-faq-container {
+    max-width: 100%;
+    margin: -15px auto 0;
+  }
+
+  .pricing-faq-heading {
+    margin-bottom: 25px;
+  }
+
+  .pricing-faq-eyebrow {
+    padding: 6px 13px;
+    margin-bottom: 14px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .pricing-faq-heading h2 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .pricing-faq-heading > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .pricing-faq-list {
+    gap: 10px;
+  }
+
+  .pricing-faq-question {
+    min-height: 62px;
+    padding: 12px;
+    grid-template-columns: 23px minmax(0, 1fr) 30px;
+    gap: 9px;
+  }
+
+  .pricing-faq-number {
+    font-size: 10px;
+  }
+
+  .pricing-faq-question-text {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .pricing-faq-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pricing-faq-toggle i {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pricing-faq-answer-inner {
+    padding: 0 14px 16px 44px;
+  }
+
+  .pricing-faq-answer-inner p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================================
+   IPAD MINI
+   600px – 768px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .pricing-faq-section {
+    padding: 55px 22px;
+  }
+
+  .pricing-faq-container {
+    max-width: 100%;
+    margin: -20px auto 0;
+  }
+
+  .pricing-faq-heading {
+    margin-bottom: 30px;
+  }
+
+  .pricing-faq-heading h2 {
+    font-size: 42px;
+  }
+
+  .pricing-faq-heading > p {
+    font-size: 14px;
+  }
+
+  .pricing-faq-question {
+    min-height: 68px;
+    padding: 14px 17px;
+    grid-template-columns: 28px minmax(0, 1fr) 32px;
+    gap: 12px;
+  }
+
+  .pricing-faq-question-text {
+    font-size: 13px;
+  }
+
+  .pricing-faq-answer-inner {
+    padding: 0 20px 18px 57px;
+  }
+
+  .pricing-faq-answer-inner p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   NETHUB / TABLET LANDSCAPE
+   769px – 1024px
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pricing-faq-section {
+    padding: 65px 28px;
+  }
+
+  .pricing-faq-container {
+    max-width: 900px;
+    margin: -25px auto 0;
+  }
+
+  .pricing-faq-heading h2 {
+    font-size: 48px;
+  }
+
+  .pricing-faq-question {
+    padding: 15px 18px;
+    gap: 13px;
+  }
+
+  .pricing-faq-answer-inner {
+    padding-left: 63px;
+  }
+}
+
+/* =========================================
+   DESKTOP / LARGE NETHUB
+   1025px AND ABOVE
+========================================= */
+
+@media (min-width: 1025px) {
+  .pricing-faq-section {
+    padding: 80px 24px;
+  }
+
+  .pricing-faq-container {
+    max-width: 900px;
+    margin: -30px auto 0;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .pricing-faq-section {
+    padding: 30px 10px;
+  }
+
+  .pricing-faq-container {
+    margin: 0 auto;
+  }
+
+  .pricing-faq-heading {
+    margin-bottom: 22px;
+  }
+
+  .pricing-faq-heading h2 {
+    font-size: 27px;
+  }
+
+  .pricing-faq-question {
+    min-height: 58px;
+    padding: 10px 8px;
+    grid-template-columns: 20px minmax(0, 1fr) 27px;
+    gap: 7px;
+  }
+
+  .pricing-faq-question-text {
+    font-size: 11px;
+  }
+
+  .pricing-faq-toggle {
+    width: 27px;
+    height: 27px;
+  }
+
+  .pricing-faq-answer-inner {
+    padding: 0 10px 14px 35px;
+  }
+
+  .pricing-faq-answer-inner p {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   PRICING CTA SECTION
+========================================= */
+
+.pricing-cta-section {
+  position: relative;
+  width: 100%;
+  padding: 65px 24px;
+  background: var(--background);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.pricing-cta-container {
+  position: relative;
+  max-width: 1100px;
+  margin: -30px auto 0;
+
+  padding: 20px 30px;
+
+  text-align: center;
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  border-radius: 8px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.85),
+    transparent 42%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(201, 164, 92, 0.2),
+    rgba(139, 100, 44, 0.1)
+  );
+  box-shadow: 0 12px 35px rgba(61, 43, 15, 0.08);
+  isolation: isolate;
+}
+
+/* Shine animation */
+
+.pricing-cta-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: pricingCtaShine 7s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes pricingCtaShine {
+  0%,
+  65% {
+    left: -120%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.pricing-cta-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.pricing-cta-container h2 {
+  max-width: 780px;
+  margin: 0 auto 20px;
+  color: var(--text);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.pricing-cta-container h2 span {
+  display: block;
+  margin-top: 6px;
+  color: var(--secondary);
+}
+
+.pricing-cta-container p {
+  max-width: 690px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.pricing-cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.pricing-cta-btn,
+.pricing-cta-link {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pricing-cta-btn {
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+}
+
+.pricing-cta-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.pricing-cta-link {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: var(--secondary);
+  border: 1px solid var(--primary);
+}
+
+.pricing-cta-link:hover {
+  color: var(--text);
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+.pricing-cta-btn i,
+.pricing-cta-link i {
+  width: 17px;
+  height: 17px;
+}
+
+/* Scroll reveal */
+
+.pricing-cta-section .reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.pricing-cta-section .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px – 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .pricing-cta-section {
+    padding: 35px 15px;
+  }
+
+  .pricing-cta-container {
+    width: 100%;
+    max-width: 100%;
+    margin: -10px auto 0;
+    padding: 20px 15px;
+  }
+
+  .pricing-cta-label {
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .pricing-cta-container h2 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .pricing-cta-container h2 span {
+    margin-top: 4px;
+  }
+
+  .pricing-cta-container p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .pricing-cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .pricing-cta-btn,
+  .pricing-cta-link {
+    min-height: 40px;
+    max-width: 100%;
+    padding: 0 15px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* =========================================
+   IPAD MINI
+   600px – 768px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .pricing-cta-section {
+    padding: 45px 22px;
+  }
+
+  .pricing-cta-container {
+    max-width: 100%;
+    margin: -20px auto 0;
+    padding: 28px 25px;
+  }
+
+  .pricing-cta-label {
+    margin-bottom: 14px;
+    font-size: 10px;
+  }
+
+  .pricing-cta-container h2 {
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .pricing-cta-container p {
+    max-width: 560px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .pricing-cta-buttons {
+    gap: 16px;
+    margin-top: 22px;
+  }
+
+  .pricing-cta-btn,
+  .pricing-cta-link {
+    min-height: 42px;
+    padding: 0 17px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   NETHUB / TABLET LANDSCAPE
+   769px – 1024px
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pricing-cta-section {
+    padding: 55px 28px;
+  }
+
+  .pricing-cta-container {
+    max-width: 950px;
+    margin: -25px auto 0;
+    padding: 30px 30px;
+  }
+
+  .pricing-cta-container h2 {
+    font-size: 46px;
+    line-height: 1.25;
+  }
+
+  .pricing-cta-container p {
+    max-width: 620px;
+    font-size: 14px;
+  }
+
+  .pricing-cta-buttons {
+    margin-top: 24px;
+    gap: 18px;
+  }
+}
+
+/* =========================================
+   DESKTOP / LARGE NETHUB
+   1025px AND ABOVE
+========================================= */
+
+@media (min-width: 1025px) {
+  .pricing-cta-section {
+    padding: 65px 24px;
+  }
+
+  .pricing-cta-container {
+    max-width: 1100px;
+    margin: -30px auto 0;
+    padding: 20px 30px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .pricing-cta-section {
+    padding: 25px 10px;
+  }
+
+  .pricing-cta-container {
+    margin: 0 auto;
+    padding: 18px 10px;
+  }
+
+  .pricing-cta-label {
+    padding: 5px 9px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .pricing-cta-container h2 {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+
+  .pricing-cta-container p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .pricing-cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .pricing-cta-btn,
+  .pricing-cta-link {
+    min-height: 38px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+}

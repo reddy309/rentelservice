@@ -1,0 +1,999 @@
+/* =========================================
+   01. RESET & VARIABLES
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #75502f;
+  --primary-dark: #4b321e;
+  --secondary: #9a742f;
+
+  --text: #292216;
+  --heading: #1c1810;
+  --bg: #faf9f6;
+  --card: #ffffff;
+  --border: #d8c49a;
+  --muted: #858176;
+
+  --shadow: rgba(61, 43, 15, 0.12);
+  --input-bg: #ffffff;
+  --hover-bg: rgba(117, 80, 47, 0.06);
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+  --transition: 0.25s ease;
+}
+
+/* =========================================
+   02. BASE
+========================================= */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  font-family: var(--font-body);
+  color: var(--text);
+
+  background:
+    radial-gradient(circle at top left, #e9dcc5 0, transparent 35%), var(--bg);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   03. HEADER ACTIONS
+========================================= */
+
+.header-actions {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rtl-button,
+.icon-button {
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: var(--card);
+  color: var(--text);
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.rtl-button {
+  min-width: 43px;
+  padding: 0 9px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.icon-button {
+  width: 38px;
+}
+
+.rtl-button svg,
+.icon-button svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+}
+
+.rtl-button:hover,
+.icon-button:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   04. LOGIN PAGE
+========================================= */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20px 20px;
+}
+
+/* =========================================
+   05. LOGIN CARD
+========================================= */
+
+.login-card {
+  width: 100%;
+  max-width: 410px;
+
+  padding: 25px 30px 22px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+
+  box-shadow: 0 12px 36px var(--shadow);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================
+   06. LOGO + BRAND NAME
+========================================= */
+
+.brand-area {
+  width: 100%;
+  text-align: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.brand img {
+  width: 65px;
+  height: 65px;
+
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand-highlight {
+  color: var(--secondary);
+}
+
+/* =========================================
+   07. TAGLINE
+========================================= */
+
+.tagline {
+  color: var(--secondary);
+  text-align: center;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.5;
+
+  position: relative;
+  inset-inline-start: 65px;
+  bottom: 22px;
+}
+
+/* =========================================
+   08. LOGIN HEADING
+========================================= */
+
+.login-heading {
+  margin: 19px 0 19px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--secondary);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.login-heading h1 {
+  color: var(--primary);
+
+  font-family: var(--font-heading);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.login-heading p {
+  margin-top: 5px;
+
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   09. FORM GROUPS
+========================================= */
+
+.form-group {
+  margin-bottom: 13px;
+}
+
+.form-group > label {
+  display: block;
+  margin-bottom: 6px;
+
+  color: var(--text);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   10. INPUT FIELDS
+========================================= */
+
+.input-wrapper {
+  width: 100%;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 11px;
+
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    background var(--transition);
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(117, 80, 47, 0.08);
+}
+
+.input-wrapper > svg {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  color: var(--secondary);
+  stroke-width: 1.8;
+}
+
+.input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  padding: 0;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+.input-wrapper input:focus-visible {
+  outline: none;
+}
+
+/* =========================================
+   11. PASSWORD TOGGLE
+========================================= */
+
+#passwordToggle {
+  width: 29px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  font-size: 12px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: transparent;
+  color: var(--text);
+}
+
+#passwordToggle:hover {
+  color: var(--primary);
+  background: var(--hover-bg);
+}
+
+#passwordToggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================
+   12. REMEMBER + FORGOT PASSWORD
+========================================= */
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  margin: 2px 0 16px;
+
+  font-size: 10px;
+}
+
+.remember-me {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--text);
+  cursor: pointer;
+}
+
+.remember-me input {
+  width: 13px;
+  height: 13px;
+
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.form-options a,
+.signup-text a {
+  color: var(--secondary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.form-options a:hover,
+.signup-text a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* =========================================
+   13. LOGIN BUTTON
+========================================= */
+
+.login-button {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+
+  background: var(--primary);
+  color: var(--heading);
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    background var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.login-button:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.login-button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   14. FORM MESSAGE
+========================================= */
+
+.form-message {
+  margin-top: 0;
+
+  color: var(--primary);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.form-message:not(:empty) {
+  margin-top: 7px;
+}
+
+/* =========================================
+   15. SOCIAL DIVIDER
+========================================= */
+
+.social-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin: 17px 0 13px;
+}
+
+.social-divider > span {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.social-divider p {
+  flex-shrink: 0;
+
+  color: var(--muted);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+/* =========================================
+   16. GOOGLE + APPLE SIDE BY SIDE
+========================================= */
+
+.social-login {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.social-button {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 9px 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--card);
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.social-button:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px var(--shadow);
+  transform: translateY(-1px);
+}
+
+.social-button:active {
+  transform: translateY(0);
+}
+
+.social-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.google-logo {
+  width: 17px;
+  height: 17px;
+}
+
+.apple-logo {
+  width: 15px;
+  height: 18px;
+}
+
+.social-button:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   17. CONTACT TEXT
+========================================= */
+
+.signup-text {
+  margin-top: 15px;
+
+  text-align: center;
+  color: var(--text);
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   18. DARK MODE
+========================================= */
+
+body.dark {
+  --primary: #d9b66e;
+  --primary-dark: #b89555;
+  --secondary: #c9a45c;
+
+  --text: #f1eadc;
+  --heading: #fff8e9;
+
+  --bg: #171511;
+  --card: #211e18;
+  --border: #51432d;
+  --muted: #b5ad9d;
+
+  --shadow: rgba(0, 0, 0, 0.3);
+  --input-bg: #211e18;
+  --hover-bg: rgba(217, 182, 110, 0.08);
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(201, 164, 92, 0.12),
+      transparent 35%
+    ),
+    var(--bg);
+
+  color: var(--text);
+}
+
+body.dark .login-card {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+body.dark .input-wrapper {
+  background: var(--input-bg);
+  border-color: var(--border);
+}
+
+body.dark .input-wrapper:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(217, 182, 110, 0.12);
+}
+
+body.dark .login-button {
+  background: var(--primary);
+  color: #21180b;
+}
+
+body.dark .login-button:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
+}
+
+body.dark .social-button,
+body.dark .rtl-button,
+body.dark .icon-button {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body.dark .social-button:hover {
+  border-color: var(--primary);
+}
+
+body.dark .google-button:hover {
+  background: rgba(66, 133, 244, 0.08);
+}
+
+body.dark .social-divider > span {
+  background: var(--border);
+}
+
+/* =========================================
+   19. RTL SUPPORT
+========================================= */
+
+html[dir="rtl"] .header-actions {
+  right: auto;
+  left: 18px;
+}
+
+html[dir="rtl"] .login-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .brand-area,
+html[dir="rtl"] .login-heading,
+html[dir="rtl"] .tagline,
+html[dir="rtl"] .signup-text {
+  text-align: center;
+}
+
+html[dir="rtl"] .form-options {
+  flex-direction: row;
+}
+
+html[dir="rtl"] .social-button {
+  direction: ltr;
+}
+
+/* =========================================
+   20. RESPONSIVE — SAMSUNG GALAXY S8+
+   Small mobile: 360px - 599px
+   Existing design preserved
+========================================= */
+
+@media screen and (max-width: 599px) {
+  html,
+  body {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .login-page {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 62px 14px 22px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 410px;
+    padding: 25px 20px 22px;
+  }
+
+  .header-actions {
+    top: 10px;
+    right: 10px;
+    gap: 7px;
+  }
+
+  .rtl-button,
+  .icon-button {
+    height: 35px;
+  }
+
+  .rtl-button {
+    min-width: 39px;
+    padding: 0 7px;
+  }
+
+  .icon-button {
+    width: 35px;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .brand-name {
+    font-size: 21px;
+  }
+
+  .tagline {
+    inset-inline-start: 48px;
+    bottom: 18px;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+
+  .login-heading {
+    margin: 16px 0 18px;
+  }
+
+  .login-heading h1 {
+    font-size: 22px;
+  }
+
+  .login-heading p {
+    font-size: 12px;
+  }
+
+  .form-group > label {
+    font-size: 11px;
+  }
+
+  .input-wrapper {
+    height: 43px;
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .input-wrapper input {
+    font-size: 12px;
+  }
+
+  .form-options {
+    gap: 6px;
+    font-size: 9px;
+  }
+
+  .remember-me {
+    gap: 5px;
+  }
+
+  .login-button {
+    min-height: 43px;
+    font-size: 13px;
+  }
+
+  .social-login {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .social-button {
+    min-width: 0;
+    min-height: 41px;
+    padding: 8px 5px;
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  .social-button svg,
+  .google-logo {
+    width: 15px;
+    height: 15px;
+  }
+
+  .apple-logo {
+    width: 14px;
+    height: 16px;
+  }
+
+  .signup-text {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   21. EXTRA SMALL MOBILE
+   Width: below 360px
+========================================= */
+
+@media screen and (max-width: 359px) {
+  .login-page {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .login-card {
+    padding: 21px 14px 19px;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .tagline {
+    inset-inline-start: 40px;
+    bottom: 15px;
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .form-options {
+    font-size: 8px;
+  }
+
+  .social-login {
+    gap: 6px;
+  }
+
+  .social-button {
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   22. IPAD MINI — TABLET
+   Width: 600px - 1024px
+========================================= */
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .login-page {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 65px 24px 28px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 28px 32px 25px;
+  }
+
+  .header-actions {
+    top: 14px;
+    right: 18px;
+  }
+
+  .brand img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .brand-name {
+    font-size: 25px;
+  }
+
+  .tagline {
+    inset-inline-start: 66px;
+    bottom: 22px;
+    font-size: 10px;
+  }
+
+  .login-heading h1 {
+    font-size: 25px;
+  }
+
+  .input-wrapper {
+    height: 46px;
+  }
+
+  .input-wrapper input {
+    font-size: 13px;
+  }
+
+  .login-button {
+    min-height: 46px;
+  }
+
+  .social-button {
+    min-height: 44px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   23. NETHUB — DESKTOP
+   Width: 1025px and above
+========================================= */
+
+@media screen and (min-width: 1025px) {
+  .login-page {
+    width: 100%;
+    padding: 60px 30px 30px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 410px;
+  }
+
+  .header-actions {
+    top: 14px;
+    right: 18px;
+  }
+}
+
+/* =========================================
+   24. SHORT SCREEN SUPPORT
+========================================= */
+
+@media screen and (max-height: 650px) {
+  .login-page {
+    align-items: flex-start;
+    padding-top: 58px;
+    padding-bottom: 18px;
+  }
+
+  .login-card {
+    margin-top: 0;
+  }
+}

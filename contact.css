@@ -1,0 +1,3360 @@
+/* =========================================
+   CONTACT HERO SECTION
+========================================= */
+
+.contact-hero {
+  position: relative;
+  width: 100%;
+  min-height: 570px;
+  height: 90vh;
+  margin-top: var(--header-height, 70px);
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: url("images/contact\ bgr.jpg");
+
+  color: #ffffff;
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: rgba(0, 0, 0, 0.85);
+  transition: background 0.4s ease;
+}
+
+/* DARK MODE OVERLAY */
+
+html.dark .contact-hero-overlay {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Center content */
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact-hero-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.contact-hero-content h1 {
+  margin: 0 0 22px;
+  color: var(--primary);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.15;
+  animation: contactTitleReveal 1s ease 0.15s both;
+}
+
+.contact-hero-content h1 span {
+  display: block;
+  color: var(--secondary);
+}
+
+.contact-hero-content p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.9;
+  animation: contactTextReveal 1s ease 0.3s both;
+}
+
+/* Buttons */
+
+.contact-hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+  animation: contactButtonReveal 1s ease 0.45s both;
+}
+
+.contact-hero-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-hero-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.contact-hero-btn i {
+  width: 17px;
+  height: 17px;
+}
+
+.contact-hero-secondary {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  border-color: var(--secondary);
+  border: 1px solid var(--primary);
+}
+
+.contact-hero-secondary:hover {
+  color: var(--text);
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   CONTENT ANIMATIONS
+========================================= */
+
+@keyframes contactLabelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactButtonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   NETHUB / TABLET LANDSCAPE
+   769px – 1024px
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-hero {
+    min-height: 500px;
+    height: 75vh;
+    padding: 45px 30px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .contact-hero-content {
+    max-width: 760px;
+  }
+
+  .contact-hero-label {
+    margin-bottom: 18px;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: clamp(40px, 5.2vw, 55px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .contact-hero-content p {
+    max-width: 620px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .contact-hero-buttons {
+    gap: 22px;
+    margin-top: 27px;
+  }
+
+  .contact-hero-btn {
+    min-height: 48px;
+    padding: 0 22px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   IPAD MINI PORTRAIT
+   600px – 768px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .contact-hero {
+    min-height: 460px;
+    height: 68vh;
+    padding: 45px 25px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .contact-hero-content {
+    max-width: 620px;
+  }
+
+  .contact-hero-label {
+    gap: 8px;
+    margin-bottom: 18px;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+  }
+
+  .contact-hero-label i {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: clamp(36px, 5.5vw, 46px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .contact-hero-content p {
+    max-width: 540px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .contact-hero-buttons {
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .contact-hero-btn {
+    min-height: 46px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+
+  .contact-hero-secondary {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px – 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .contact-hero {
+    min-height: 430px;
+    height: auto;
+    padding: 65px 18px;
+    margin-top: var(--header-height, 70px);
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .contact-hero-content {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .contact-hero-label {
+    gap: 7px;
+    margin-bottom: 17px;
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .contact-hero-label i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: clamp(32px, 8vw, 40px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .contact-hero-content h1 span {
+    margin-top: 4px;
+  }
+
+  .contact-hero-content p {
+    max-width: 450px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .contact-hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 25px;
+  }
+
+  .contact-hero-btn {
+    width: 100%;
+    max-width: 250px;
+    min-height: 47px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+
+  .contact-hero-secondary {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .contact-hero {
+    min-height: 400px;
+    height: auto;
+    padding: 55px 13px;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .contact-hero-content {
+    width: 100%;
+  }
+
+  .contact-hero-label {
+    gap: 6px;
+    margin-bottom: 15px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 29px;
+    line-height: 1.25;
+    margin-bottom: 15px;
+  }
+
+  .contact-hero-content p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .contact-hero-buttons {
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .contact-hero-btn {
+    width: 100%;
+    max-width: 230px;
+    min-height: 44px;
+    padding: 0 15px;
+    font-size: 12px;
+  }
+
+  .contact-hero-secondary {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.contact-info-section {
+  position: relative;
+  width: 100%;
+  padding: 75px 24px;
+  background: var(--background);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.contact-info-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECTION INTRODUCTION
+========================================= */
+
+.contact-info-intro {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.contact-info-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.contact-info-intro h2 {
+  margin: 0 0 16px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.contact-info-intro h2 span,
+.contact-info-heading h3 span,
+.contact-form-heading h3 span {
+  color: var(--secondary);
+}
+
+.contact-info-intro > p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+/* =========================================
+   EQUAL LEFT AND RIGHT COLUMNS
+========================================= */
+
+.contact-info-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 28px;
+  width: 100%;
+}
+
+.contact-info-left,
+.contact-info-form-wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================
+   LEFT SIDE HEADING
+========================================= */
+
+.contact-info-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-heading {
+  margin-bottom: 23px;
+}
+
+.contact-info-small-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.contact-info-heading h3,
+.contact-form-heading h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(25px, 2.5vw, 32px);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contact-info-heading > p,
+.contact-form-heading > p {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+/* =========================================
+   FOUR CONTACT CARDS
+========================================= */
+
+.contact-info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(190px, 1fr));
+  gap: 15px;
+  width: 100%;
+  flex: 1;
+}
+
+.contact-info-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 190px;
+  height: 100%;
+
+  padding: 20px 17px;
+
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  background: var(--card);
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(61, 43, 15, 0.08);
+}
+
+/* CARD ICON */
+
+.contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+
+  margin-bottom: 15px;
+
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  border-radius: 6px;
+
+  background: rgba(201, 164, 92, 0.14);
+  color: var(--secondary);
+}
+
+.contact-info-icon svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 1.8;
+}
+
+/* CARD CONTENT */
+
+.contact-info-card-content {
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-info-card-content h4 {
+  margin: 0 0 7px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.contact-info-card-content p {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.75;
+  overflow-wrap: anywhere;
+}
+
+.contact-info-card-content > span {
+  display: block;
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* CARD ARROW */
+
+.contact-info-arrow {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+
+  width: 16px;
+  height: 16px;
+
+  color: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover .contact-info-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================
+   RIGHT SIDE FORM CONTAINER
+========================================= */
+
+.contact-info-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 30px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--card);
+  box-shadow: 0 12px 35px rgba(61, 43, 15, 0.06);
+}
+
+.contact-form-heading {
+  margin-bottom: 25px;
+}
+
+/* =========================================
+   FORM LAYOUT
+========================================= */
+
+.contact-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+}
+
+.contact-form-group label {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* INPUTS */
+
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  outline: none;
+
+  background: var(--background);
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-form-group input,
+.contact-form-group select {
+  min-height: 45px;
+}
+
+.contact-form-group select {
+  cursor: pointer;
+}
+
+.contact-form-group textarea {
+  min-height: 115px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+  color: var(--text);
+  opacity: 0.5;
+}
+
+/* INPUT FOCUS */
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.13);
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.contact-form-submit {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-form-submit:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.contact-form-submit svg {
+  width: 17px;
+  height: 17px;
+}
+
+.contact-form-submit:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+.contact-form-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* FORM STATUS */
+
+.contact-form-status {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contact-form-status:empty {
+  display: none;
+}
+
+/* =========================================
+   NETHUB / TABLET LANDSCAPE
+   769px – 1024px
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-info-section {
+    padding: 60px 22px;
+  }
+
+  .contact-info-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .contact-info-heading {
+    margin-bottom: 20px;
+  }
+
+  .contact-info-heading h3,
+  .contact-form-heading h3 {
+    font-size: 27px;
+  }
+
+  .contact-info-cards {
+    grid-template-rows: repeat(2, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .contact-info-card {
+    min-height: 180px;
+    padding: 16px 12px;
+  }
+
+  .contact-info-icon {
+    width: 39px;
+    height: 39px;
+    margin-bottom: 12px;
+  }
+
+  .contact-info-card-content h4 {
+    font-size: 14px;
+  }
+
+  .contact-info-card-content p,
+  .contact-info-card-content > span {
+    font-size: 11px;
+  }
+
+  .contact-info-form-wrapper {
+    padding: 24px 18px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-info-form {
+    gap: 16px;
+  }
+}
+
+/* =========================================
+   IPAD MINI PORTRAIT
+   600px – 768px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .contact-info-section {
+    padding: 55px 22px;
+  }
+
+  .contact-info-intro {
+    margin-bottom: 35px;
+  }
+
+  .contact-info-intro h2 {
+    font-size: 38px;
+  }
+
+  .contact-info-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-info-heading h3,
+  .contact-form-heading h3 {
+    font-size: 30px;
+  }
+
+  .contact-info-cards {
+    grid-template-rows: repeat(2, minmax(175px, 1fr));
+    gap: 15px;
+  }
+
+  .contact-info-card {
+    min-height: 175px;
+    padding: 20px;
+  }
+
+  .contact-info-form-wrapper {
+    padding: 28px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px – 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .contact-info-section {
+    padding: 40px 15px;
+  }
+
+  .contact-info-intro {
+    margin-bottom: 30px;
+  }
+
+  .contact-info-eyebrow {
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .contact-info-intro h2 {
+    font-size: 31px;
+  }
+
+  .contact-info-intro > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .contact-info-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-info-heading {
+    margin-bottom: 18px;
+  }
+
+  .contact-info-heading h3,
+  .contact-form-heading h3 {
+    font-size: 26px;
+  }
+
+  .contact-info-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(170px, auto));
+    gap: 10px;
+  }
+
+  .contact-info-card {
+    min-height: 170px;
+    padding: 15px 12px;
+  }
+
+  .contact-info-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 12px;
+  }
+
+  .contact-info-card-content h4 {
+    font-size: 13px;
+  }
+
+  .contact-info-card-content p,
+  .contact-info-card-content > span {
+    font-size: 11px;
+  }
+
+  .contact-info-arrow {
+    top: 12px;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-info-form-wrapper {
+    padding: 22px 16px;
+  }
+
+  .contact-form-heading {
+    margin-bottom: 20px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .contact-info-form {
+    gap: 16px;
+  }
+
+  .contact-form-group input,
+  .contact-form-group select,
+  .contact-form-group textarea {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .contact-info-section {
+    padding: 32px 11px;
+  }
+
+  .contact-info-intro {
+    margin-bottom: 25px;
+  }
+
+  .contact-info-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .contact-info-intro h2 {
+    font-size: 27px;
+  }
+
+  .contact-info-intro > p {
+    font-size: 12px;
+  }
+
+  .contact-info-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-info-heading h3,
+  .contact-form-heading h3 {
+    font-size: 24px;
+  }
+
+  .contact-info-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  .contact-info-card {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .contact-info-card-content h4 {
+    font-size: 14px;
+  }
+
+  .contact-info-form-wrapper {
+    padding: 18px 12px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-submit {
+    padding: 12px;
+  }
+}
+/* =========================================
+   MAP SECTION
+========================================= */
+
+.map-directions-section {
+  width: 100%;
+  padding: 80px 30px;
+  overflow: hidden;
+
+  background: var(--bg);
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.map-section-heading {
+  width: 80%;
+  max-width: 700px;
+  margin: -30px auto 0;
+
+  text-align: center;
+}
+
+.map-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.map-section-heading h1 {
+  margin-bottom: 15px;
+
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-top: -5px;
+}
+
+.map-section-heading h1 span {
+  color: var(--secondary);
+}
+
+.map-section-heading > p {
+  max-width: 590px;
+  margin: 0 auto;
+
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+  transform: translateY(-10px);
+}
+
+/* =========================================
+   TWO COLUMN LAYOUT
+========================================= */
+
+.map-directions-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+  align-items: stretch;
+  gap: 28px;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.map-left-column,
+.directions-card {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+
+  box-shadow: 0 8px 28px rgba(41, 34, 22, 0.05);
+}
+
+/* =========================================
+   GOOGLE MAP
+========================================= */
+
+.map-left-column {
+  overflow: hidden;
+}
+
+.map-frame {
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  background: #e9e4d8;
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.map-contact-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 26px 16px;
+}
+
+.map-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 5px 12px;
+}
+
+.map-contact-item + .map-contact-item {
+  border-left: 1px solid var(--border);
+}
+
+.map-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  background: rgba(201, 164, 92, 0.19);
+  color: var(--secondary);
+}
+
+.map-contact-icon i {
+  width: 18px;
+  height: 18px;
+}
+
+.map-contact-info {
+  min-width: 0;
+}
+
+.map-contact-item h3 {
+  margin: 6px 0 10px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.map-contact-item p,
+.map-contact-item a {
+  overflow-wrap: anywhere;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+  text-decoration: none;
+}
+
+.map-contact-item a:hover {
+  color: var(--secondary);
+}
+
+/* =========================================
+   DIRECTIONS CARD
+========================================= */
+
+.directions-card {
+  padding: 30px 25px;
+}
+
+.directions-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.directions-main-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  color: var(--heading);
+
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.directions-main-icon i {
+  width: 23px;
+  height: 23px;
+}
+
+.directions-heading h2 {
+  margin-bottom: 8px;
+
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.directions-heading p {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   DIRECTION OPTIONS
+========================================= */
+
+.direction-option {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 11px;
+  padding: 15px 13px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  background: #faf9f6;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.direction-option:hover {
+  transform: translateY(-3px);
+  border-color: var(--border);
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(41, 34, 22, 0.07);
+}
+
+.direction-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  background: rgba(201, 164, 92, 0.19);
+  color: var(--secondary);
+}
+
+.direction-icon i {
+  width: 20px;
+  height: 20px;
+}
+
+.direction-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.direction-text strong {
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.direction-text small {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.direction-arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.direction-option:hover .direction-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   GOOGLE MAPS FOOTER CARD
+========================================= */
+
+.directions-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  margin-top: 13px;
+  padding: 18px 13px;
+
+  border: 1px solid rgba(201, 164, 92, 0.25);
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(201, 164, 92, 0.1),
+    rgba(139, 100, 44, 0.06)
+  );
+}
+
+.footer-location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  background: rgba(201, 164, 92, 0.19);
+  color: var(--secondary);
+}
+
+.footer-location-icon i {
+  width: 20px;
+  height: 20px;
+}
+
+.directions-footer-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.directions-footer h3 {
+  margin-bottom: 6px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 18px;
+}
+
+.directions-footer p {
+  margin-bottom: 13px;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.google-maps-button {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.google-maps-button:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.google-maps-button i {
+  width: 15px;
+  height: 15px;
+}
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   NETHUB / TABLET LANDSCAPE
+   769px - 1024px
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .map-directions-section {
+    padding: 60px 22px;
+  }
+
+  .map-directions-container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 18px;
+  }
+
+  .map-frame {
+    height: 330px;
+  }
+
+  .map-contact-details {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 22px;
+  }
+
+  .map-contact-item {
+    padding: 0;
+  }
+
+  .map-contact-item + .map-contact-item {
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .map-contact-item h3 {
+    margin-top: 2px;
+    margin-bottom: 4px;
+  }
+
+  .directions-card {
+    padding: 24px 17px;
+  }
+
+  .directions-heading {
+    gap: 12px;
+  }
+
+  .directions-heading h2 {
+    font-size: 27px;
+  }
+
+  .direction-option {
+    gap: 10px;
+    padding: 13px 10px;
+  }
+
+  .direction-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .direction-text strong {
+    font-size: 16px;
+  }
+
+  .direction-text small {
+    font-size: 10px;
+  }
+
+  .directions-footer {
+    padding: 14px 10px;
+  }
+}
+
+/* =========================================
+   IPAD MINI PORTRAIT
+   600px - 768px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .map-directions-section {
+    padding: 55px 25px;
+  }
+
+  .map-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .map-section-heading h1 {
+    font-size: 48px;
+  }
+
+  .map-directions-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 650px;
+  }
+
+  .map-frame {
+    height: 350px;
+  }
+
+  .map-contact-details {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 23px 12px;
+  }
+
+  .map-contact-item {
+    flex-direction: column;
+    padding: 5px 10px;
+  }
+
+  .map-contact-item h3 {
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+  .directions-card {
+    padding: 28px;
+  }
+
+  .direction-text small {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .map-directions-section {
+    padding: 45px 15px;
+  }
+
+  .map-section-heading {
+    margin-bottom: 26px;
+  }
+
+  .map-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .map-section-heading h1 {
+    font-size: 39px;
+  }
+
+  .map-section-heading > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .map-directions-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .map-frame {
+    height: 270px;
+  }
+
+  .map-contact-details {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding: 22px 18px;
+  }
+
+  .map-contact-item {
+    align-items: center;
+    padding: 0;
+  }
+
+  .map-contact-item + .map-contact-item {
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .map-contact-item h3 {
+    margin: 0 0 4px;
+    font-size: 12px;
+  }
+
+  .map-contact-item p,
+  .map-contact-item a {
+    font-size: 11px;
+  }
+
+  .directions-card {
+    padding: 22px 15px;
+  }
+
+  .directions-heading {
+    gap: 12px;
+    margin-bottom: 19px;
+  }
+
+  .directions-main-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .directions-heading h2 {
+    font-size: 27px;
+  }
+
+  .directions-heading p {
+    font-size: 11px;
+  }
+
+  .direction-option {
+    gap: 10px;
+    padding: 13px 10px;
+  }
+
+  .direction-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .direction-text strong {
+    font-size: 15px;
+  }
+
+  .direction-text small {
+    font-size: 10px;
+  }
+
+  .direction-arrow {
+    width: 15px;
+    height: 15px;
+  }
+
+  .directions-footer {
+    gap: 10px;
+    padding: 14px 10px;
+  }
+
+  .footer-location-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .directions-footer h3 {
+    font-size: 17px;
+  }
+
+  .directions-footer p {
+    font-size: 10px;
+  }
+
+  .google-maps-button {
+    padding: 10px;
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .map-directions-section {
+    padding: 35px 11px;
+  }
+
+  .map-section-heading h1 {
+    font-size: 33px;
+  }
+
+  .map-section-heading > p {
+    font-size: 11px;
+  }
+
+  .map-directions-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .map-frame {
+    height: 230px;
+  }
+
+  .map-contact-details {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 18px 13px;
+  }
+
+  .map-contact-item {
+    align-items: center;
+    padding: 0;
+  }
+
+  .map-contact-item + .map-contact-item {
+    padding-top: 13px;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .directions-card {
+    padding: 18px 11px;
+  }
+
+  .directions-heading h2 {
+    font-size: 24px;
+  }
+
+  .directions-heading p {
+    font-size: 10px;
+  }
+
+  .direction-option {
+    gap: 8px;
+    padding: 12px 8px;
+  }
+
+  .direction-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .direction-text strong {
+    font-size: 14px;
+  }
+
+  .direction-text small {
+    font-size: 9px;
+  }
+
+  .directions-footer {
+    padding: 12px 8px;
+  }
+
+  .footer-location-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .google-maps-button {
+    gap: 5px;
+    padding: 9px 7px;
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.owner-enquiry-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 30px;
+  overflow: hidden;
+
+  background: var(--background);
+}
+
+.owner-enquiry-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 55px;
+
+  width: 100%;
+  max-width: 1100px;
+  margin: -30px auto 0;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.owner-enquiry-content {
+  min-width: 0;
+}
+
+.owner-enquiry-eyebrow {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.owner-enquiry-content h1 {
+  margin-bottom: 22px;
+  color: var(--heading);
+
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.owner-enquiry-content h1 span {
+  display: block;
+  color: var(--secondary);
+}
+
+.owner-enquiry-description {
+  max-width: 520px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.owner-enquiry-benefits {
+  display: grid;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.owner-benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.owner-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  border-radius: 12px;
+
+  background: rgba(201, 164, 92, 0.15);
+  color: var(--secondary);
+}
+
+.owner-benefit-icon i {
+  width: 22px;
+  height: 22px;
+}
+
+.owner-benefit h3 {
+  margin-bottom: 5px;
+  color: var(--heading);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.owner-benefit p {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.owner-enquiry-form-card {
+  min-width: 0;
+  padding: 35px;
+
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius);
+
+  background: var(--card-bg);
+  box-shadow: 0 18px 50px rgba(41, 34, 22, 0.08);
+}
+
+.owner-form-heading {
+  margin-bottom: 27px;
+}
+
+.owner-form-heading > span {
+  color: var(--secondary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.owner-form-heading h2 {
+  margin: 10px 0;
+
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.owner-form-heading p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.owner-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.owner-form-group {
+  min-width: 0;
+  margin-bottom: 19px;
+}
+
+.owner-form-group label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--heading);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.owner-form-group input,
+.owner-form-group select,
+.owner-form-group textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  outline: none;
+
+  background: #ffffff;
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.owner-form-group input,
+.owner-form-group select {
+  min-height: 44px;
+}
+
+.owner-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.owner-form-group input::placeholder,
+.owner-form-group textarea::placeholder {
+  color: #999083;
+  opacity: 1;
+}
+
+.owner-form-group input:focus,
+.owner-form-group select:focus,
+.owner-form-group textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.17);
+}
+
+/* =========================================
+   SUBMIT BUTTON - CENTER
+========================================= */
+
+.owner-submit-btn {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  width: fit-content;
+  margin: 0 auto;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.owner-submit-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.owner-submit-btn:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+.owner-submit-btn i {
+  width: 17px;
+  height: 17px;
+}
+
+.owner-form-message {
+  margin-top: 13px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   NETHUB / TABLET LANDSCAPE
+   769px - 1024px
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .owner-enquiry-section {
+    padding: 60px 22px;
+  }
+
+  .owner-enquiry-container {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 25px;
+  }
+
+  .owner-enquiry-content h1 {
+    font-size: 45px;
+  }
+
+  .owner-enquiry-description {
+    font-size: 12px;
+  }
+
+  .owner-enquiry-benefits {
+    gap: 18px;
+  }
+
+  .owner-benefit-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .owner-enquiry-form-card {
+    padding: 25px 20px;
+  }
+
+  .owner-form-heading h2 {
+    font-size: 29px;
+  }
+
+  .owner-form-row {
+    gap: 12px;
+  }
+
+  .owner-form-group input,
+  .owner-form-group select,
+  .owner-form-group textarea {
+    padding: 10px;
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   IPAD MINI PORTRAIT
+   600px - 768px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .owner-enquiry-section {
+    padding: 55px 25px;
+  }
+
+  .owner-enquiry-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    max-width: 620px;
+  }
+
+  .owner-enquiry-content h1 {
+    font-size: 49px;
+  }
+
+  .owner-enquiry-description {
+    max-width: 600px;
+  }
+
+  .owner-enquiry-benefits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .owner-benefit {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .owner-enquiry-note {
+    margin-top: 25px;
+  }
+
+  .owner-enquiry-form-card {
+    padding: 30px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+========================================= */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .owner-enquiry-section {
+    padding: 42px 15px;
+  }
+
+  .owner-enquiry-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .owner-enquiry-eyebrow {
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .owner-enquiry-content h1 {
+    margin-bottom: 16px;
+    font-size: 39px;
+  }
+
+  .owner-enquiry-description {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .owner-enquiry-benefits {
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .owner-benefit-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .owner-benefit h3 {
+    font-size: 12px;
+  }
+
+  .owner-benefit p {
+    font-size: 10px;
+  }
+
+  .owner-enquiry-note {
+    margin-top: 25px;
+    padding: 13px;
+  }
+
+  .owner-enquiry-note p {
+    font-size: 10px;
+  }
+
+  .owner-enquiry-form-card {
+    padding: 24px 17px;
+  }
+
+  .owner-form-heading {
+    margin-bottom: 23px;
+  }
+
+  .owner-form-heading h2 {
+    font-size: 27px;
+  }
+
+  .owner-form-heading p {
+    font-size: 11px;
+  }
+
+  .owner-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .owner-form-group {
+    margin-bottom: 16px;
+  }
+
+  .owner-form-group input,
+  .owner-form-group select,
+  .owner-form-group textarea {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+  .owner-enquiry-section {
+    padding: 32px 11px;
+  }
+
+  .owner-enquiry-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .owner-enquiry-content h1 {
+    font-size: 33px;
+  }
+
+  .owner-enquiry-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .owner-enquiry-description {
+    font-size: 11px;
+  }
+
+  .owner-enquiry-benefits {
+    gap: 16px;
+  }
+
+  .owner-enquiry-form-card {
+    padding: 20px 13px;
+  }
+
+  .owner-form-heading h2 {
+    font-size: 25px;
+  }
+
+  .owner-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .owner-form-group input,
+  .owner-form-group select,
+  .owner-form-group textarea {
+    padding: 10px;
+    font-size: 11px;
+  }
+}
+
+.faq-section {
+  width: 100%;
+  padding: 100px 24px;
+  background: var(--bg);
+
+  overflow: hidden;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 920px;
+  margin: -30px auto 0;
+}
+
+/* ========================================
+   FAQ HEADING
+======================================== */
+
+.faq-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.faq-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+.faq-heading h1 {
+  font-size: clamp(45px, 6vw, 60px);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  color: var(--text);
+}
+
+.faq-heading h1 span {
+  color: var(--secondary);
+}
+
+.faq-heading p {
+  max-width: 580px;
+  margin: 17px auto 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   FAQ ITEMS
+======================================== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.faq-item:hover,
+.faq-item.active {
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px rgba(139, 100, 44, 0.09);
+}
+
+.faq-question {
+  width: 100%;
+  min-height: 80px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.faq-question > span {
+  flex-shrink: 0;
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.faq-question h3 {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* ========================================
+   PLUS / MINUS ICON
+======================================== */
+
+.faq-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--secondary);
+  transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  background: var(--primary);
+}
+
+.faq-item.active .faq-icon::before,
+.faq-item.active .faq-icon::after {
+  background: #ffffff;
+}
+
+.faq-item.active .faq-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* ========================================
+   FAQ ANSWER
+======================================== */
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-answer-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 74px 0 58px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0;
+  transition:
+    padding 0.35s ease,
+    opacity 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-item.active .faq-answer-inner {
+  padding-top: 0;
+  padding-bottom: 24px;
+  opacity: 1;
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATION
+======================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-item.reveal:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.faq-item.reveal:nth-child(3) {
+  transition-delay: 0.14s;
+}
+
+.faq-item.reveal:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+/* ========================================
+   NET HUB / LARGE SCREENS
+   1025px and above
+======================================== */
+
+@media (min-width: 1025px) {
+  .faq-section {
+    padding: 100px 40px;
+  }
+
+  .faq-container {
+    max-width: 920px;
+  }
+
+  .faq-heading {
+    max-width: 720px;
+    margin-bottom: 48px;
+  }
+
+  .faq-heading h1 {
+    font-size: 45px;
+  }
+
+  .faq-question {
+    min-height: 80px;
+    padding: 20px 24px;
+  }
+
+  .faq-question h3 {
+    font-size: 16px;
+  }
+}
+
+/* ========================================
+   IPAD MINI
+   600px - 1024px
+======================================== */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .faq-section {
+    padding: 75px 30px;
+  }
+
+  .faq-container {
+    max-width: 780px;
+  }
+
+  .faq-heading {
+    margin-bottom: 38px;
+  }
+
+  .faq-heading h1 {
+    font-size: 36px;
+  }
+
+  .faq-heading p {
+    font-size: 14px;
+  }
+
+  .faq-list {
+    gap: 13px;
+  }
+
+  .faq-question {
+    min-height: 76px;
+    padding: 19px 20px;
+    gap: 16px;
+  }
+
+  .faq-question h3 {
+    font-size: 15px;
+  }
+
+  .faq-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .faq-answer-inner {
+    padding-right: 55px;
+    padding-left: 52px;
+    font-size: 13px;
+  }
+
+  .faq-item.active .faq-answer-inner {
+    padding-bottom: 22px;
+  }
+}
+
+/* ========================================
+   SAMSUNG GALAXY S8+
+   360px - 599px
+======================================== */
+
+@media (min-width: 360px) and (max-width: 599px) {
+  .faq-section {
+    padding: 55px 16px;
+  }
+
+  .faq-container {
+    max-width: 100%;
+  }
+
+  .faq-heading {
+    margin-bottom: 30px;
+  }
+
+  .faq-label {
+    font-size: 10px;
+    padding: 8px 14px;
+    letter-spacing: 1.5px;
+  }
+
+  .faq-heading h1 {
+    font-size: 29px;
+    line-height: 1.35;
+  }
+
+  .faq-heading p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .faq-list {
+    gap: 11px;
+  }
+
+  .faq-question {
+    min-height: 70px;
+    padding: 15px 12px;
+    gap: 10px;
+  }
+
+  .faq-question > span {
+    font-size: 10px;
+  }
+
+  .faq-question h3 {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .faq-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .faq-answer-inner {
+    padding-right: 15px;
+    padding-left: 34px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .faq-item.active .faq-answer-inner {
+    padding-bottom: 18px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+   Below 360px
+======================================== */
+
+@media (max-width: 359px) {
+  .faq-section {
+    padding: 42px 12px;
+  }
+
+  .faq-heading h1 {
+    font-size: 25px;
+  }
+
+  .faq-heading p {
+    font-size: 12px;
+  }
+
+  .faq-question {
+    min-height: 65px;
+    padding: 13px 10px;
+    gap: 8px;
+  }
+
+  .faq-question > span {
+    font-size: 9px;
+  }
+
+  .faq-question h3 {
+    font-size: 12px;
+  }
+
+  .faq-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .faq-answer-inner {
+    padding-right: 12px;
+    padding-left: 28px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   PROPERTY CTA SECTION
+========================================= */
+
+.property-cta-section {
+  width: 100%;
+  padding: 75px 30px;
+  background: var(--background);
+  overflow: hidden;
+}
+
+.property-cta-container {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 390px;
+  margin: -30px auto 0;
+
+  padding: 30px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    rgba(201, 164, 92, 0.22),
+    rgba(139, 100, 44, 0.22)
+  );
+
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(139, 100, 44, 0.16);
+}
+
+/* Decorative circles */
+
+.property-cta-container::before,
+.property-cta-container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.property-cta-container::before {
+  width: 340px;
+  height: 340px;
+  top: -190px;
+  left: -100px;
+  animation: ctaFloat 8s ease-in-out infinite;
+}
+
+.property-cta-container::after {
+  width: 420px;
+  height: 420px;
+  right: -150px;
+  bottom: -270px;
+  animation: ctaFloat 10s ease-in-out infinite reverse;
+}
+
+/* Label */
+
+.property-cta-label {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid var(--primary);
+
+  border-radius: 30px;
+
+  color: var(--secondary);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  box-sizing: border-box;
+  transform: translateY(10px);
+}
+
+/* Heading */
+
+.property-cta-container h2 {
+  max-width: 760px;
+  margin: 0 0 20px;
+
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(45px, 6vw, 60px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.property-cta-container h2 span {
+  display: inline-block;
+  color: var(--secondary);
+}
+
+/* Description */
+
+.property-cta-container p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Buttons */
+
+.property-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.property-cta-btn,
+.property-cta-link {
+  min-height: 43px;
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: var(--font-body);
+  border-radius: 9px;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.property-cta-btn {
+  background: var(--primary-light);
+  color: var(--heading);
+
+  border: 1px solid var(--primary);
+}
+
+.property-cta-btn svg,
+.property-cta-link svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.3s ease;
+}
+
+.property-cta-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid var(--secondary);
+}
+
+.property-cta-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.property-cta-link {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: var(--secondary);
+  border: 1px solid var(--primary);
+}
+
+.property-cta-link:hover {
+  color: var(--text);
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+.property-cta-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+.property-cta-section .reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.property-cta-section .reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative animation */
+
+@keyframes ctaFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(18px) rotate(8deg);
+  }
+}
+
+/* =========================================
+   TABLET / NETHUB
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .property-cta-section {
+    padding: 65px 25px;
+  }
+
+  .property-cta-container {
+    min-height: 360px;
+    padding: 65px 35px;
+  }
+
+  .property-cta-container h2 {
+    max-width: 650px;
+    font-size: 40px;
+  }
+}
+
+/* =========================================
+   IPAD MINI
+========================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .property-cta-section {
+    padding: 55px 22px;
+  }
+
+  .property-cta-container {
+    min-height: 350px;
+    padding: 55px 28px;
+    border-radius: 15px;
+  }
+
+  .property-cta-container h2 {
+    font-size: 34px;
+  }
+
+  .property-cta-container p {
+    max-width: 540px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   SAMSUNG GALAXY S8+
+========================================= */
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .property-cta-section {
+    padding: 40px 15px;
+  }
+
+  .property-cta-container {
+    min-height: 0;
+    padding: 45px 20px;
+    border-radius: 12px;
+  }
+
+  .property-cta-label {
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .property-cta-container h2 {
+    margin-bottom: 15px;
+    font-size: 29px;
+    line-height: 1.3;
+  }
+
+  .property-cta-container p {
+    margin-bottom: 23px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .property-cta-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .property-cta-btn,
+  .property-cta-link {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 359px) {
+  .property-cta-section {
+    padding: 30px 12px;
+  }
+
+  .property-cta-container {
+    min-height: 0;
+    padding: 38px 15px;
+  }
+
+  .property-cta-container h2 {
+    font-size: 25px;
+  }
+
+  .property-cta-container p {
+    font-size: 12px;
+  }
+
+  .property-cta-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .property-cta-btn,
+  .property-cta-link {
+    width: 100%;
+  }
+}

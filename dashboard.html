@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>property management& rental service</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="120x120"
+      href="images/logo rentel1.png"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-logo">
+          <div class="logo-icon">
+            <img src="images/logo rentel1.png" alt="EstateNest logo" />
+          </div>
+
+          <div class="brand-content">
+            <div class="logo-text">Estate<strong>Nest</strong></div>
+            <span class="logo-tagline">Your Property, Our Pride</span>
+          </div>
+        </a>
+        <nav class="sidebar-nav" aria-label="Main navigation">
+          <p class="nav-heading">WORKSPACE</p>
+
+          <a href="#dashboard" class="nav-item active" data-page="dashboard">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a href="#properties" class="nav-item" data-page="properties">
+            <i data-lucide="building-2"></i>
+            <span>My Properties</span>
+          </a>
+
+          <a href="#tenants" class="nav-item" data-page="tenants">
+            <i data-lucide="users"></i>
+            <span>Tenants</span>
+          </a>
+
+          <a href="#rent" class="nav-item" data-page="rent">
+            <i data-lucide="wallet"></i>
+            <span>Rent Collection</span>
+          </a>
+
+          <a href="#maintenance" class="nav-item" data-page="maintenance">
+            <i data-lucide="wrench"></i>
+            <span>Maintenance</span>
+            <span class="nav-count">3</span>
+          </a>
+
+          <a href="#reports" class="nav-item" data-page="reports">
+            <i data-lucide="chart-no-axes-combined"></i>
+            <span>Financial Reports</span>
+          </a>
+
+          <div class="nav-divider"></div>
+          <p class="nav-heading">MANAGEMENT</p>
+
+          <a href="#services" class="nav-item" data-page="services">
+            <i data-lucide="clipboard-list"></i>
+            <span>Our Services</span>
+          </a>
+
+          <a href="#notifications" class="nav-item" data-page="notifications">
+            <i data-lucide="bell"></i>
+            <span>Notifications</span>
+            <span class="notification-count">3</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <div class="help-icon">
+              <i data-lucide="headset"></i>
+            </div>
+            <div>
+              <strong>Need assistance?</strong>
+              <small>We're here to help you.</small>
+              <a href="contact.html">Contact support</a>
+            </div>
+          </div>
+
+          <button class="logout" id="sidebarLogoutButton" type="button">
+            <i data-lucide="log-out"></i>
+            <span>Log Out</span>
+          </button>
+
+          <div class="sidebar-footer">© 2026 EstateNest</div>
+        </div>
+      </aside>
+
+      <!-- MAIN AREA -->
+      <main class="main-area">
+        <header class="top-header">
+          <div class="header-left">
+            <span class="page-label" id="headerLabel"
+              >PROPERTY OWNER PORTAL</span
+            >
+            <h1 id="headerTitle">Welcome to EstateNest</h1>
+          </div>
+
+          <div class="header-actions">
+            <button
+              class="menu-toggle"
+              id="menuToggle"
+              type="button"
+              aria-label="Open navigation"
+              aria-controls="sidebar"
+            >
+              <i data-lucide="menu"></i>
+            </button>
+
+            <button
+              class="header-icon-button"
+              id="darkToggle"
+              type="button"
+              aria-label="Switch to dark mode"
+            >
+              <i data-lucide="moon"></i>
+            </button>
+
+            <button
+              class="header-icon-button"
+              id="rtlToggle"
+              type="button"
+              aria-label="Toggle right-to-left layout"
+            >
+              <i data-lucide="languages"></i>
+            </button>
+
+            <div class="admin-profile-wrapper">
+              <button
+                class="admin-profile"
+                id="adminProfileButton"
+                type="button"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span class="admin-avatar"
+                  ><i data-lucide="user-round"></i
+                ></span>
+                <span class="admin-info">
+                  <strong>Property Owner</strong>
+                  <span>Owner Account</span>
+                </span>
+                <i data-lucide="chevron-down" class="admin-chevron"></i>
+              </button>
+
+              <div class="admin-dropdown" id="adminDropdown">
+                <div class="admin-dropdown-header">
+                  <strong>Property Owner</strong>
+                  <span>Manage your EstateNest account</span>
+                </div>
+
+                <button
+                  class="admin-dropdown-item"
+                  type="button"
+                  data-page-link="profile"
+                >
+                  <i data-lucide="user-round"></i> My Profile
+                </button>
+
+                <button
+                  class="admin-dropdown-item"
+                  type="button"
+                  data-page-link="settings"
+                >
+                  <i data-lucide="settings"></i> Account Settings
+                </button>
+
+                <div class="admin-dropdown-divider"></div>
+
+                <button
+                  class="admin-dropdown-item logout-item"
+                  id="adminLogoutButton"
+                  type="button"
+                >
+                  <i data-lucide="log-out"></i> Log Out
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <!-- DASHBOARD HOME -->
+          <section class="page-content dynamic-page" data-content="dashboard">
+            <div class="welcome-banner">
+              <div>
+                <span class="section-label">YOUR PROPERTY, OUR PRIORITY</span>
+                <h2>Property ownership,<br />made effortless.</h2>
+                <p>
+                  Manage your properties, keep track of rental income, and stay
+                  on top of maintenance — all in one place.
+                </p>
+
+                <div class="welcome-actions">
+                  <button
+                    class="primary-button"
+                    type="button"
+                    data-page-link="properties"
+                  >
+                    Explore Properties <i data-lucide="arrow-right"></i>
+                  </button>
+                  <button
+                    class="outline-button"
+                    type="button"
+                    data-page-link="rent"
+                  >
+                    View Rent Payments
+                  </button>
+                </div>
+              </div>
+
+              <div class="welcome-art" aria-hidden="true">
+                <div class="art-circle circle-one"></div>
+                <div class="art-circle circle-two"></div>
+                <i data-lucide="house" class="house-art"></i>
+                <div class="art-caption">
+                  <i data-lucide="shield-check"></i>
+                  <span>Property care you can trust</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-grid">
+              <article class="stat-card">
+                <div class="stat-icon"><i data-lucide="building-2"></i></div>
+                <div class="stat-content">
+                  <span>Total Properties</span>
+                  <strong>12</strong>
+                  <small>Across your portfolio</small>
+                </div>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-icon gold"><i data-lucide="users"></i></div>
+                <div class="stat-content">
+                  <span>Active Tenants</span>
+                  <strong>10</strong>
+                  <small>Currently occupied units</small>
+                </div>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-icon green"><i data-lucide="wallet"></i></div>
+                <div class="stat-content">
+                  <span>Monthly Rent</span>
+                  <strong>₹1.8L</strong>
+                  <small>Expected rental income</small>
+                </div>
+              </article>
+
+              <article class="stat-card">
+                <div class="stat-icon red"><i data-lucide="wrench"></i></div>
+                <div class="stat-content">
+                  <span>Open Requests</span>
+                  <strong>03</strong>
+                  <small>Maintenance follow-ups</small>
+                </div>
+              </article>
+            </div>
+
+            <div class="main-grid">
+              <article class="dashboard-card">
+                <div class="card-header">
+                  <div>
+                    <span class="mini-label">PORTFOLIO</span>
+                    <h3>Property Overview</h3>
+                  </div>
+                  <button
+                    class="text-link"
+                    data-page-link="properties"
+                    type="button"
+                  >
+                    View all <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </div>
+
+                <div class="property-mini-list">
+                  <div class="property-mini">
+                    <div class="property-symbol">
+                      <i data-lucide="building-2"></i>
+                    </div>
+                    <div class="property-mini-info">
+                      <strong>Greenwood Residency</strong>
+                      <span>Hyderabad · 3 BHK Apartment</span>
+                    </div>
+                    <div class="property-mini-right">
+                      <strong>₹25,000</strong>
+                      <span class="status-badge completed">Occupied</span>
+                    </div>
+                  </div>
+
+                  <div class="property-mini">
+                    <div class="property-symbol gold">
+                      <i data-lucide="house"></i>
+                    </div>
+                    <div class="property-mini-info">
+                      <strong>Maple Heights</strong>
+                      <span>Hyderabad · 2 BHK Apartment</span>
+                    </div>
+                    <div class="property-mini-right">
+                      <strong>₹18,000</strong>
+                      <span class="status-badge completed">Occupied</span>
+                    </div>
+                  </div>
+
+                  <div class="property-mini">
+                    <div class="property-symbol green">
+                      <i data-lucide="building"></i>
+                    </div>
+                    <div class="property-mini-info">
+                      <strong>Lakeview Villa</strong>
+                      <span>Hyderabad · Independent Villa</span>
+                    </div>
+                    <div class="property-mini-right">
+                      <strong>₹32,000</strong>
+                      <span class="status-badge pending">Vacant</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="dashboard-card">
+                <div class="card-header">
+                  <div>
+                    <span class="mini-label">RENT COLLECTION</span>
+                    <h3>Payment Summary</h3>
+                  </div>
+                  <button class="text-link" data-page-link="rent" type="button">
+                    Details <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </div>
+
+                <div class="income-summary">
+                  <span>Collected this month</span>
+                  <strong>₹1,42,000</strong>
+                  <div class="progress-top">
+                    <span>Collection progress</span>
+                    <strong>79%</strong>
+                  </div>
+                  <div class="progress-bar">
+                    <span style="width: 79%"></span>
+                  </div>
+                  <div class="income-breakdown">
+                    <span
+                      ><i class="dot green-dot"></i> Collected
+                      <strong>₹1,42,000</strong></span
+                    >
+                    <span
+                      ><i class="dot gold-dot"></i> Outstanding
+                      <strong>₹38,000</strong></span
+                    >
+                  </div>
+                </div>
+
+                <button
+                  class="secondary-button full-button"
+                  type="button"
+                  data-page-link="rent"
+                >
+                  Manage Rent Payments
+                </button>
+              </article>
+            </div>
+
+            <div class="main-grid">
+              <article class="dashboard-card">
+                <div class="card-header">
+                  <div>
+                    <span class="mini-label">ACTION REQUIRED</span>
+                    <h3>Maintenance Requests</h3>
+                  </div>
+                  <button
+                    class="text-link"
+                    data-page-link="maintenance"
+                    type="button"
+                  >
+                    View all <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </div>
+
+                <div class="simple-list">
+                  <div class="simple-row">
+                    <div class="row-icon red">
+                      <i data-lucide="droplets"></i>
+                    </div>
+                    <div class="row-info">
+                      <strong>Bathroom plumbing</strong>
+                      <small>Greenwood Residency · Unit 302</small>
+                    </div>
+                    <span class="status-badge urgent">High</span>
+                  </div>
+
+                  <div class="simple-row">
+                    <div class="row-icon gold"><i data-lucide="zap"></i></div>
+                    <div class="row-info">
+                      <strong>Electrical inspection</strong>
+                      <small>Maple Heights · Unit 104</small>
+                    </div>
+                    <span class="status-badge pending">Medium</span>
+                  </div>
+
+                  <div class="simple-row">
+                    <div class="row-icon">
+                      <i data-lucide="paint-roller"></i>
+                    </div>
+                    <div class="row-info">
+                      <strong>Wall repainting</strong>
+                      <small>Lakeview Villa · Ground floor</small>
+                    </div>
+                    <span class="status-badge">Scheduled</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="dashboard-card">
+                <div class="card-header">
+                  <div>
+                    <span class="mini-label">RECENT ACTIVITY</span>
+                    <h3>Latest Rent Payments</h3>
+                  </div>
+                  <button class="text-link" data-page-link="rent" type="button">
+                    All payments <i data-lucide="arrow-up-right"></i>
+                  </button>
+                </div>
+
+                <div class="simple-list">
+                  <div class="simple-row">
+                    <div class="tenant-avatar">PS</div>
+                    <div class="row-info">
+                      <strong>Priya Sharma</strong>
+                      <small>Greenwood Residency</small>
+                    </div>
+                    <div class="amount-info">
+                      <strong>₹25,000</strong>
+                      <span class="paid-text">Paid</span>
+                    </div>
+                  </div>
+
+                  <div class="simple-row">
+                    <div class="tenant-avatar blue">RK</div>
+                    <div class="row-info">
+                      <strong>Rahul Kumar</strong>
+                      <small>Maple Heights</small>
+                    </div>
+                    <div class="amount-info">
+                      <strong>₹18,000</strong>
+                      <span class="paid-text">Paid</span>
+                    </div>
+                  </div>
+
+                  <div class="simple-row">
+                    <div class="tenant-avatar gold">AM</div>
+                    <div class="row-info">
+                      <strong>Ananya Mehta</strong>
+                      <small>Sunrise Apartments</small>
+                    </div>
+                    <div class="amount-info">
+                      <strong>₹20,000</strong>
+                      <span class="pending-text">Due</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- MY PROPERTIES -->
+          <section
+            class="page-content dynamic-page"
+            data-content="properties"
+            hidden
+          >
+            <span class="section-label">YOUR PORTFOLIO</span>
+            <h2>My Properties</h2>
+            <p>
+              Keep your rental portfolio organized and review the occupancy
+              status of each property.
+            </p>
+
+            <div class="toolbar">
+              <div class="search-box">
+                <i data-lucide="search"></i>
+                <input
+                  type="search"
+                  placeholder="Search properties..."
+                  data-search="properties"
+                />
+              </div>
+              <button
+                class="primary-button"
+                type="button"
+                data-notice="Connect a property form to add a listing."
+              >
+                <i data-lucide="plus"></i> Add Property
+              </button>
+            </div>
+
+            <div class="content-list searchable-list" data-list="properties">
+              <article class="content-row">
+                <div class="content-icon"><i data-lucide="building-2"></i></div>
+                <div>
+                  <strong>Greenwood Residency</strong
+                  ><small>3 BHK · Hyderabad · Unit 302</small>
+                </div>
+                <span class="status-badge completed">Occupied</span>
+                <span class="price">₹25,000/mo</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon"><i data-lucide="house"></i></div>
+                <div>
+                  <strong>Maple Heights</strong
+                  ><small>2 BHK · Hyderabad · Unit 104</small>
+                </div>
+                <span class="status-badge completed">Occupied</span>
+                <span class="price">₹18,000/mo</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon"><i data-lucide="building"></i></div>
+                <div>
+                  <strong>Lakeview Villa</strong
+                  ><small>Independent villa · Hyderabad</small>
+                </div>
+                <span class="status-badge pending">Vacant</span>
+                <span class="price">₹32,000/mo</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon"><i data-lucide="building-2"></i></div>
+                <div>
+                  <strong>Sunrise Apartments</strong
+                  ><small>2 BHK · Hyderabad · Unit 208</small>
+                </div>
+                <span class="status-badge completed">Occupied</span>
+                <span class="price">₹20,000/mo</span>
+              </article>
+            </div>
+            <p class="empty-state" hidden>No matching properties found.</p>
+          </section>
+
+          <!-- TENANTS -->
+          <section
+            class="page-content dynamic-page"
+            data-content="tenants"
+            hidden
+          >
+            <span class="section-label">PEOPLE & LEASES</span>
+            <h2>Tenant Management</h2>
+            <p>
+              Review tenant information, rental agreements, and payment status.
+            </p>
+
+            <div class="toolbar">
+              <div class="search-box">
+                <i data-lucide="search"></i>
+                <input
+                  type="search"
+                  placeholder="Search tenants..."
+                  data-search="tenants"
+                />
+              </div>
+              <button
+                class="primary-button"
+                type="button"
+                data-notice="Connect a tenant form to add a tenant."
+              >
+                <i data-lucide="user-plus"></i> Add Tenant
+              </button>
+            </div>
+
+            <div class="content-list searchable-list" data-list="tenants">
+              <article class="content-row">
+                <div class="tenant-avatar">PS</div>
+                <div>
+                  <strong>Priya Sharma</strong
+                  ><small>Greenwood Residency · Lease ends 31 Mar 2027</small>
+                </div>
+                <span class="status-badge completed">Active</span>
+                <span class="price">₹25,000/mo</span>
+              </article>
+              <article class="content-row">
+                <div class="tenant-avatar blue">RK</div>
+                <div>
+                  <strong>Rahul Kumar</strong
+                  ><small>Maple Heights · Lease ends 30 Jun 2027</small>
+                </div>
+                <span class="status-badge completed">Active</span>
+                <span class="price">₹18,000/mo</span>
+              </article>
+              <article class="content-row">
+                <div class="tenant-avatar gold">AM</div>
+                <div>
+                  <strong>Ananya Mehta</strong
+                  ><small>Sunrise Apartments · Lease ends 31 Dec 2026</small>
+                </div>
+                <span class="status-badge pending">Rent Due</span>
+                <span class="price">₹20,000/mo</span>
+              </article>
+              <article class="content-row">
+                <div class="tenant-avatar blue">VS</div>
+                <div>
+                  <strong>Vikram Singh</strong
+                  ><small>Oakwood Homes · Lease ends 31 Jan 2027</small>
+                </div>
+                <span class="status-badge completed">Active</span>
+                <span class="price">₹22,000/mo</span>
+              </article>
+            </div>
+            <p class="empty-state" hidden>No matching tenants found.</p>
+          </section>
+
+          <!-- RENT COLLECTION -->
+          <section class="page-content dynamic-page" data-content="rent" hidden>
+            <span class="section-label">RENTAL INCOME</span>
+            <h2>Rent Collection</h2>
+            <p>
+              Monitor rental income, upcoming due dates, and outstanding
+              payments.
+            </p>
+
+            <div class="stats-grid three-stats">
+              <article class="stat-card">
+                <div class="stat-icon green">
+                  <i data-lucide="check-circle"></i>
+                </div>
+                <div class="stat-content">
+                  <span>Collected</span><strong>₹1,42,000</strong
+                  ><small>This month</small>
+                </div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-icon gold"><i data-lucide="clock"></i></div>
+                <div class="stat-content">
+                  <span>Outstanding</span><strong>₹38,000</strong
+                  ><small>Pending payments</small>
+                </div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-icon">
+                  <i data-lucide="calendar-clock"></i>
+                </div>
+                <div class="stat-content">
+                  <span>Next Due Date</span><strong>25 Oct</strong
+                  ><small>Upcoming collection</small>
+                </div>
+              </article>
+            </div>
+
+            <div class="toolbar">
+              <div class="search-box">
+                <i data-lucide="search"></i>
+                <input
+                  type="search"
+                  placeholder="Search payments..."
+                  data-search="rent"
+                />
+              </div>
+              <button
+                class="outline-button"
+                type="button"
+                data-notice="Connect your payment provider to record and verify payments."
+              >
+                <i data-lucide="plus"></i> Record Payment
+              </button>
+            </div>
+
+            <div class="content-list searchable-list" data-list="rent">
+              <article class="content-row">
+                <div class="content-icon green">
+                  <i data-lucide="receipt"></i>
+                </div>
+                <div>
+                  <strong>Priya Sharma</strong
+                  ><small>Greenwood Residency · 05 Oct 2026</small>
+                </div>
+                <span class="status-badge completed">Paid</span>
+                <span class="price">₹25,000</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon green">
+                  <i data-lucide="receipt"></i>
+                </div>
+                <div>
+                  <strong>Rahul Kumar</strong
+                  ><small>Maple Heights · 07 Oct 2026</small>
+                </div>
+                <span class="status-badge completed">Paid</span>
+                <span class="price">₹18,000</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon gold"><i data-lucide="clock"></i></div>
+                <div>
+                  <strong>Ananya Mehta</strong
+                  ><small>Sunrise Apartments · Due 25 Oct 2026</small>
+                </div>
+                <span class="status-badge pending">Pending</span>
+                <span class="price">₹20,000</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon gold"><i data-lucide="clock"></i></div>
+                <div>
+                  <strong>Vikram Singh</strong
+                  ><small>Oakwood Homes · Due 28 Oct 2026</small>
+                </div>
+                <span class="status-badge pending">Pending</span>
+                <span class="price">₹22,000</span>
+              </article>
+            </div>
+            <p class="empty-state" hidden>No matching payments found.</p>
+          </section>
+
+          <!-- MAINTENANCE -->
+          <section
+            class="page-content dynamic-page"
+            data-content="maintenance"
+            hidden
+          >
+            <span class="section-label">PROPERTY CARE</span>
+            <h2>Maintenance Requests</h2>
+            <p>
+              Track repair requests, prioritize issues, and monitor maintenance
+              progress.
+            </p>
+
+            <div class="toolbar">
+              <div class="search-box">
+                <i data-lucide="search"></i>
+                <input
+                  type="search"
+                  placeholder="Search requests..."
+                  data-search="maintenance"
+                />
+              </div>
+              <button
+                class="primary-button"
+                type="button"
+                data-notice="Connect a maintenance request form to log a new issue."
+              >
+                <i data-lucide="plus"></i> New Request
+              </button>
+            </div>
+
+            <div class="content-list searchable-list" data-list="maintenance">
+              <article class="content-row">
+                <div class="content-icon red">
+                  <i data-lucide="droplets"></i>
+                </div>
+                <div>
+                  <strong>Bathroom plumbing repair</strong
+                  ><small>Greenwood Residency · Unit 302</small>
+                </div>
+                <span class="status-badge urgent">High Priority</span>
+                <span class="price">Open</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon gold"><i data-lucide="zap"></i></div>
+                <div>
+                  <strong>Electrical inspection</strong
+                  ><small>Maple Heights · Unit 104</small>
+                </div>
+                <span class="status-badge pending">Medium</span>
+                <span class="price">Scheduled</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon">
+                  <i data-lucide="paint-roller"></i>
+                </div>
+                <div>
+                  <strong>Interior wall repainting</strong
+                  ><small>Lakeview Villa · Ground floor</small>
+                </div>
+                <span class="status-badge">Low Priority</span>
+                <span class="price">Planned</span>
+              </article>
+            </div>
+            <p class="empty-state" hidden>
+              No matching maintenance requests found.
+            </p>
+          </section>
+
+          <!-- FINANCIAL REPORTS -->
+          <section
+            class="page-content dynamic-page"
+            data-content="reports"
+            hidden
+          >
+            <span class="section-label">FINANCIAL PERFORMANCE</span>
+            <h2>Financial Reports</h2>
+            <p>
+              Review rental income, expenses, and outstanding balances across
+              your portfolio.
+            </p>
+
+            <div class="stats-grid">
+              <article class="stat-card">
+                <div class="stat-icon green">
+                  <i data-lucide="trending-up"></i>
+                </div>
+                <div class="stat-content">
+                  <span>Rent Collected</span><strong>₹1.42L</strong
+                  ><small>Illustrative monthly total</small>
+                </div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-icon gold">
+                  <i data-lucide="hourglass"></i>
+                </div>
+                <div class="stat-content">
+                  <span>Outstanding Rent</span><strong>₹38,000</strong
+                  ><small>Awaiting payment</small>
+                </div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-icon red"><i data-lucide="receipt"></i></div>
+                <div class="stat-content">
+                  <span>Maintenance Costs</span><strong>₹12,500</strong
+                  ><small>Sample expenses</small>
+                </div>
+              </article>
+              <article class="stat-card">
+                <div class="stat-icon"><i data-lucide="landmark"></i></div>
+                <div class="stat-content">
+                  <span>Net Income</span><strong>₹1.29L</strong
+                  ><small>After sample expenses</small>
+                </div>
+              </article>
+            </div>
+
+            <article class="dashboard-card report-card">
+              <div class="card-header">
+                <div>
+                  <span class="mini-label">MONTHLY OVERVIEW</span>
+                  <h3>Income & Expenses</h3>
+                </div>
+                <span class="report-period">October 2026</span>
+              </div>
+
+              <div class="report-bars">
+                <div class="report-bar-row">
+                  <span>Rental income</span>
+                  <div class="report-track">
+                    <span style="width: 90%"></span>
+                  </div>
+                  <strong>₹1,42,000</strong>
+                </div>
+                <div class="report-bar-row">
+                  <span>Expenses</span>
+                  <div class="report-track expense-track">
+                    <span style="width: 18%"></span>
+                  </div>
+                  <strong>₹12,500</strong>
+                </div>
+                <div class="report-bar-row">
+                  <span>Outstanding</span>
+                  <div class="report-track outstanding-track">
+                    <span style="width: 27%"></span>
+                  </div>
+                  <strong>₹38,000</strong>
+                </div>
+              </div>
+              <p class="report-note">
+                Sample dashboard figures only. Connect your accounting data
+                source for accurate financial reporting.
+              </p>
+            </article>
+          </section>
+
+          <!-- SERVICES -->
+          <section
+            class="page-content dynamic-page"
+            data-content="services"
+            hidden
+          >
+            <span class="section-label">A BETTER WAY TO OWN PROPERTY</span>
+            <h2>Our Management Services</h2>
+            <p>
+              EstateNest helps simplify the day-to-day responsibilities of
+              rental property ownership.
+            </p>
+
+            <div class="content-grid">
+              <article class="content-box">
+                <div class="content-box-icon">
+                  <i data-lucide="user-check"></i>
+                </div>
+                <h3>Tenant Screening</h3>
+                <p>
+                  Organize tenant applications, review required documents, and
+                  manage screening workflows.
+                </p>
+                <strong>Reliable tenant management</strong>
+              </article>
+              <article class="content-box">
+                <div class="content-box-icon"><i data-lucide="wallet"></i></div>
+                <h3>Rent Collection</h3>
+                <p>
+                  Track rental due dates, record payments, and identify
+                  outstanding balances.
+                </p>
+                <strong>Clear payment tracking</strong>
+              </article>
+              <article class="content-box">
+                <div class="content-box-icon"><i data-lucide="wrench"></i></div>
+                <h3>Maintenance Support</h3>
+                <p>
+                  Log property issues, assign priorities, and follow maintenance
+                  progress.
+                </p>
+                <strong>Organized property care</strong>
+              </article>
+              <article class="content-box">
+                <div class="content-box-icon">
+                  <i data-lucide="file-chart-column"></i>
+                </div>
+                <h3>Financial Reporting</h3>
+                <p>
+                  Bring rent collection, expenses, and outstanding amounts into
+                  one overview.
+                </p>
+                <strong>Informed decisions</strong>
+              </article>
+              <article class="content-box">
+                <div class="content-box-icon"><i data-lucide="files"></i></div>
+                <h3>Lease Management</h3>
+                <p>
+                  Keep lease periods, tenant details, and renewal dates
+                  organized.
+                </p>
+                <strong>Better record keeping</strong>
+              </article>
+              <article class="content-box">
+                <div class="content-box-icon">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <h3>Owner Support</h3>
+                <p>
+                  Access property information and management updates through the
+                  owner portal.
+                </p>
+                <strong>Support for owners</strong>
+              </article>
+            </div>
+          </section>
+
+          <!-- NOTIFICATIONS -->
+          <section
+            class="page-content dynamic-page"
+            data-content="notifications"
+            hidden
+          >
+            <span class="section-label">STAY INFORMED</span>
+            <h2>Notifications</h2>
+            <p>
+              Review important reminders and updates related to your properties.
+            </p>
+
+            <div class="content-list notification-list">
+              <article class="content-row">
+                <div class="content-icon gold">
+                  <i data-lucide="calendar-clock"></i>
+                </div>
+                <div>
+                  <strong>Rent payment due soon</strong
+                  ><small
+                    >Ananya Mehta · Sunrise Apartments · Due 25 Oct 2026</small
+                  >
+                </div>
+                <span class="status-badge pending">Reminder</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon red"><i data-lucide="wrench"></i></div>
+                <div>
+                  <strong>Maintenance request requires attention</strong
+                  ><small>Bathroom plumbing · Greenwood Residency</small>
+                </div>
+                <span class="status-badge urgent">Action needed</span>
+              </article>
+              <article class="content-row">
+                <div class="content-icon green">
+                  <i data-lucide="check-circle"></i>
+                </div>
+                <div>
+                  <strong>Rent payment recorded</strong
+                  ><small>Priya Sharma · Greenwood Residency · ₹25,000</small>
+                </div>
+                <span class="status-badge completed">Completed</span>
+              </article>
+            </div>
+          </section>
+
+          <!-- SETTINGS -->
+          <section
+            class="page-content dynamic-page"
+            data-content="settings"
+            hidden
+          >
+            <span class="section-label">PREFERENCES</span>
+            <h2>Account Settings</h2>
+            <p>
+              Manage the display preferences and contact details for your owner
+              account.
+            </p>
+
+            <div class="settings-list">
+              <div class="setting-row">
+                <div>
+                  <strong>Dark appearance</strong
+                  ><small
+                    >Switch between light and dark dashboard themes.</small
+                  >
+                </div>
+                <button
+                  class="outline-button"
+                  type="button"
+                  data-setting="dark"
+                >
+                  Toggle Theme
+                </button>
+              </div>
+              <div class="setting-row">
+                <div>
+                  <strong>Right-to-left layout</strong
+                  ><small>Switch the dashboard layout direction.</small>
+                </div>
+                <button class="outline-button" type="button" data-setting="rtl">
+                  Toggle Layout
+                </button>
+              </div>
+              <div class="setting-row">
+                <div>
+                  <strong>Contact support</strong
+                  ><small
+                    >Get help with your property management account.</small
+                  >
+                </div>
+                <a class="primary-button" href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- PROFILE -->
+          <section
+            class="page-content dynamic-page"
+            data-content="profile"
+            hidden
+          >
+            <span class="section-label">YOUR ACCOUNT</span>
+            <h2>My Profile</h2>
+            <p>View your owner account information.</p>
+
+            <div class="profile-card">
+              <div class="profile-avatar"><i data-lucide="user-round"></i></div>
+              <div class="profile-details">
+                <h3>Property Owner</h3>
+                <p>Owner account · EstateNest</p>
+                <span
+                  ><i data-lucide="shield-check"></i> Property management
+                  portal</span
+                >
+              </div>
+            </div>
+
+            <div class="settings-list">
+              <div class="setting-row">
+                <div>
+                  <strong>Account type</strong><small>Property Owner</small>
+                </div>
+              </div>
+              <div class="setting-row">
+                <div>
+                  <strong>Email address</strong
+                  ><small
+                    >Connect your owner's email through your account
+                    settings.</small
+                  >
+                </div>
+              </div>
+              <div class="setting-row">
+                <div>
+                  <strong>Property portfolio</strong
+                  ><small
+                    >Manage properties, tenants, rent, and maintenance from your
+                    dashboard.</small
+                  >
+                </div>
+                <button
+                  class="outline-button"
+                  type="button"
+                  data-page-link="properties"
+                >
+                  View Properties
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <footer class="main-footer">
+            <span>© 2026 EstateNest. Property Care. Simplified.</span>
+            <span>Designed for better property management.</span>
+          </footer>
+        </div>
+      </main>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="dashboard.js" defer></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>
