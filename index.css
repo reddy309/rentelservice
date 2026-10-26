@@ -925,7 +925,7 @@ body.rtl .estate-hero-stats {
 
 .how-it-works {
   width: 100%;
-  padding: 80px 0;
+  padding: 90px 0;
   background: var(#ffffff);
   color: var(--text);
   overflow: hidden;
@@ -1526,7 +1526,7 @@ html[dir="rtl"] .how-heading p {
   color: var(--text);
   box-sizing: border-box;
   overflow: hidden;
-  margin-top: -80px;
+  margin-top: -50px;
 }
 
 .tenant-container {
