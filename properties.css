@@ -87,7 +87,7 @@ html.dark .properties-hero-overlay {
 .properties-hero-content h1 {
   margin: 0;
 
-  color: var(--primary);
+  color: #ffffff;
   font-family: var(--font-heading);
   font-size: clamp(45px, 6vw, 60px);
   font-weight: 600;
@@ -188,20 +188,22 @@ html.dark .properties-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   PROPERTIES PRIMARY BUTTON — DARK MODE
+========================================= */
 
-/* Outline button */
-
-.properties-btn-outline {
-  background: rgba(255, 255, 255, 0.04);
+html.dark .properties-btn-primary,
+body.dark .properties-btn-primary {
+  background: #4a90e2;
   color: #ffffff;
-  border-color: var(--secondary);
-  border: 1px solid var(--primary);
+  border: 1px solid #4a90e2;
 }
 
-.properties-btn-outline:hover {
-  color: var(--text);
-  background: var(--secondary);
-  transform: translateY(-3px);
+html.dark .properties-btn-primary:hover,
+body.dark .properties-btn-primary:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
 }
 
 /* =========================================
@@ -1584,6 +1586,23 @@ html.dark .properties-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   AMENITIES BUTTON — DARK MODE
+========================================= */
+
+html.dark .amenities-btn,
+body.dark .amenities-btn {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+}
+
+html.dark .amenities-btn:hover,
+body.dark .amenities-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
 
 .amenities-btn i {
   width: 17px;
@@ -2332,11 +2351,12 @@ html.dark .properties-hero-overlay {
 
   background: linear-gradient(
     135deg,
-    rgba(201, 164, 92, 0.2),
-    rgba(139, 100, 44, 0.1)
+    rgba(74, 144, 226, 0.16),
+    rgba(15, 118, 110, 0.1)
   );
 
-  border: 1px solid rgba(201, 164, 92, 0.45);
+  border: 1px solid var(--primary);
+
   border-radius: 18px;
   box-shadow: 0 12px 35px rgba(60, 45, 20, 0.07);
 }
@@ -2470,7 +2490,38 @@ html.dark .properties-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   LIST PROPERTY BUTTON — DARK MODE
+========================================= */
 
+html.dark .list-property-btn,
+body.dark .list-property-btn {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .list-property-btn i,
+body.dark .list-property-btn i {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .list-property-btn:hover,
+body.dark .list-property-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .list-property-btn:hover i,
+body.dark .list-property-btn:hover i {
+  color: #ffffff;
+}
 /* =====================================
    SCROLL REVEAL
 ===================================== */

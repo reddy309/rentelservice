@@ -1,12 +1,20 @@
+/* ==================================================
+   ESTATENEST SIGNUP PAGE
+   PREMIUM DECORATIVE BACKGROUND + FIXED CARD
+   Existing design, dark mode and RTL preserved
+================================================== */
+
 /* =========================================
    01. ROOT VARIABLES
 ========================================= */
 
 :root {
-  --primary: #75502f;
-  --primary-light: #98734b;
-  --secondary: #9a742f;
-  --secondary-light: #e5d6bb;
+  --primary: #4a90e2;
+
+  --secondary: #0f766e;
+
+  --primary-light: #eaf3ff;
+  --secondary-light: #e6f5f2;
 
   --text: #292216;
   --heading: #1c1810;
@@ -17,18 +25,23 @@
 
   --shadow: 0 14px 40px rgba(61, 43, 15, 0.09);
   --transition: 0.25s ease;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
 }
 
 /* =========================================
    02. DARK MODE VARIABLES
 ========================================= */
 
-/* =========================================
-   CRAFT NEST — DARK MODE COLORS
-========================================= */
-
 html.dark,
 body.dark {
+  --primary: #4a90e2;
+
+  --secondary: #0f766e;
+
+  --primary-light: #eaf3ff;
+  --secondary-light: #e6f5f2;
   --background: #181b1d;
   --bg: #181b1d;
   --card: #222629;
@@ -36,65 +49,9 @@ body.dark {
   --heading: #faf3dd;
   --border: rgba(255, 255, 255, 0.14);
 
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+
   color-scheme: dark;
-  background-color: var(--background);
-  color: var(--text);
-}
-
-/* Main page backgrounds */
-.dark body,
-body.dark,
-html.dark body {
-  background-color: var(--background);
-  color: var(--text);
-}
-
-/* Cards and content sections */
-.dark .card,
-.dark .service-card,
-.dark .portfolio-card,
-.dark .content-card,
-.dark .material-card {
-  background-color: var(--card);
-  color: var(--text);
-  border-color: var(--border);
-}
-
-/* Headings and paragraphs */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark p,
-.dark li,
-.dark label {
-  color: var(--text);
-}
-
-/* Inputs */
-.dark input,
-.dark textarea,
-.dark select {
-  background-color: var(--card);
-  color: var(--text);
-  border-color: var(--border);
-}
-
-/* Smooth theme transition */
-html,
-body,
-.card,
-.service-card,
-.portfolio-card,
-.content-card,
-.material-card,
-input,
-textarea,
-select {
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
 }
 
 /* =========================================
@@ -108,47 +65,331 @@ select {
 }
 
 html {
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
   scroll-behavior: smooth;
-  background-color: var(--background);
+
+  background: var(--background);
   color: var(--text);
+
+  overflow: hidden;
 }
 
 body {
-  min-height: 100vh;
-  min-height: 100svh;
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  color: var(--text);
+
+  overflow: hidden;
+  overscroll-behavior: none;
+
   background-color: var(--background);
-  color: var(--text);
-
-  font-family: "Montserrat", sans-serif;
-
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(201, 164, 92, 0.12),
-      transparent 38%
-    ),
-    var(--background);
-
-  color: var(--text);
 
   transition:
-    background var(--transition),
-    color var(--transition);
-  margin-top: -15px;
+    background-color 0.35s ease,
+    color 0.35s ease;
 }
 
-button,
-input {
-  font: inherit;
-}
-
-button {
-  -webkit-tap-highlight-color: transparent;
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
 }
 
 /* =========================================
-   03. HEADER ACTIONS
+   04. COLORFUL ANIMATED BACKGROUND
+========================================= */
+
+body {
+  background-image:
+    radial-gradient(
+      ellipse at 8% 12%,
+      rgba(255, 213, 125, 0.66),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 92% 16%,
+      rgba(236, 166, 104, 0.42),
+      transparent 31%
+    ),
+    radial-gradient(
+      ellipse at 85% 88%,
+      rgba(186, 127, 64, 0.32),
+      transparent 33%
+    ),
+    radial-gradient(
+      ellipse at 15% 85%,
+      rgba(255, 226, 167, 0.66),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 52% 48%,
+      rgba(246, 204, 128, 0.2),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #fffdf7 0%, #f7e6c8 30%, #fff9ec 60%, #ead0a3 100%);
+
+  background-size: 180% 180%;
+
+  animation: estateBackgroundFlow 18s ease-in-out infinite alternate;
+}
+
+@keyframes estateBackgroundFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 55%;
+  }
+
+  100% {
+    background-position: 25% 100%;
+  }
+}
+
+/* =========================================
+   05. LARGE FLOATING GLOWING CIRCLES
+========================================= */
+
+body::before,
+body::after {
+  content: "";
+
+  position: fixed;
+  z-index: -2;
+
+  display: block;
+
+  border-radius: 50%;
+  pointer-events: none;
+
+  will-change: transform;
+}
+
+/* Large golden glow */
+
+body::before {
+  width: 370px;
+  height: 370px;
+
+  top: -105px;
+  left: -125px;
+
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(255, 224, 151, 0.75),
+    rgba(201, 164, 92, 0.25) 42%,
+    rgba(201, 164, 92, 0.06) 62%,
+    transparent 73%
+  );
+
+  filter: blur(12px);
+
+  animation: estateGoldOrb 14s ease-in-out infinite alternate;
+}
+
+/* Bronze and peach glow */
+
+body::after {
+  width: 430px;
+  height: 430px;
+
+  right: -160px;
+  bottom: -175px;
+
+  background: radial-gradient(
+    circle at 40% 35%,
+    rgba(255, 206, 135, 0.54),
+    rgba(166, 109, 47, 0.2) 43%,
+    rgba(222, 176, 95, 0.06) 65%,
+    transparent 74%
+  );
+
+  filter: blur(18px);
+
+  animation: estateBronzeOrb 17s ease-in-out infinite alternate;
+}
+
+@keyframes estateGoldOrb {
+  0% {
+    transform: translate(0, 0) scale(0.88);
+  }
+
+  50% {
+    transform: translate(75px, 80px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(25px, 145px) scale(0.98);
+  }
+}
+
+@keyframes estateBronzeOrb {
+  0% {
+    transform: translate(0, 0) scale(0.92);
+  }
+
+  50% {
+    transform: translate(-75px, -65px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-30px, -120px) scale(1.02);
+  }
+}
+
+/* =========================================
+   06. EXTRA DECORATIVE RINGS
+========================================= */
+
+.signup-page::before,
+.signup-page::after {
+  content: "";
+
+  position: fixed;
+  z-index: -1;
+
+  display: block;
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Double rotating ring */
+
+.signup-page::before {
+  width: 245px;
+  height: 245px;
+
+  top: 8%;
+  right: 7%;
+
+  border: 1px solid rgba(154, 116, 47, 0.36);
+
+  box-shadow:
+    0 0 0 14px rgba(201, 164, 92, 0.06),
+    0 0 0 30px rgba(201, 164, 92, 0.04),
+    inset 0 0 35px rgba(201, 164, 92, 0.08);
+
+  animation: estateRingRotate 30s linear infinite;
+}
+
+/* Bottom decorative ring */
+
+.signup-page::after {
+  width: 125px;
+  height: 125px;
+
+  bottom: 7%;
+  left: 7%;
+
+  border: 2px dashed rgba(154, 116, 47, 0.38);
+
+  box-shadow:
+    0 0 0 11px rgba(201, 164, 92, 0.06),
+    inset 0 0 25px rgba(201, 164, 92, 0.1);
+
+  animation: estateSmallRing 9s ease-in-out infinite;
+}
+
+@keyframes estateRingRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes estateSmallRing {
+  0%,
+  100% {
+    transform: scale(0.92) rotate(0deg);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.08) rotate(22deg);
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   07. DARK MODE BACKGROUND
+========================================= */
+
+html.dark body,
+body.dark {
+  background-color: var(--background);
+
+  background-image:
+    radial-gradient(
+      ellipse at 8% 12%,
+      rgba(217, 182, 110, 0.24),
+      transparent 32%
+    ),
+    radial-gradient(
+      ellipse at 92% 18%,
+      rgba(184, 149, 85, 0.18),
+      transparent 31%
+    ),
+    radial-gradient(
+      ellipse at 85% 90%,
+      rgba(183, 127, 63, 0.15),
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 15% 85%,
+      rgba(217, 182, 110, 0.12),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #15130f, #211d15, #17140f, #201a10);
+
+  background-size: 180% 180%;
+}
+
+html.dark body::before,
+body.dark::before {
+  background: radial-gradient(
+    circle,
+    rgba(217, 182, 110, 0.27),
+    rgba(201, 164, 92, 0.08) 48%,
+    transparent 72%
+  );
+}
+
+html.dark body::after,
+body.dark::after {
+  background: radial-gradient(
+    circle,
+    rgba(184, 149, 85, 0.22),
+    rgba(222, 176, 95, 0.06) 48%,
+    transparent 72%
+  );
+}
+
+html.dark .signup-page::before,
+html.dark .signup-page::after,
+body.dark .signup-page::before,
+body.dark .signup-page::after {
+  border-color: rgba(217, 182, 110, 0.25);
+}
+
+/* =========================================
+   08. HEADER ACTIONS
 ========================================= */
 
 .header-actions {
@@ -177,11 +418,14 @@ button {
   background: var(--card);
   color: var(--text);
 
+  box-shadow: 0 4px 14px rgba(61, 43, 15, 0.07);
+
   transition:
     background var(--transition),
     color var(--transition),
     border-color var(--transition),
-    transform var(--transition);
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .rtl-button {
@@ -207,65 +451,171 @@ button {
 .icon-button:hover {
   color: var(--secondary);
   border-color: var(--secondary);
-  transform: translateY(-1px);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 18px rgba(139, 100, 44, 0.16);
 }
 
 /* =========================================
-   05. SIGNUP PAGE LAYOUT
+   09. FIXED SIGNUP PAGE
 ========================================= */
 
 .signup-page {
-  position: relative;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
 
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
 
-  padding: 70px 20px 25px;
+  padding: 65px 20px 12px;
 
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 /* =========================================
-   06. SIGNUP CARD
+   10. SIGNUP CARD
 ========================================= */
 
 .signup-card {
+  position: relative;
+  isolation: isolate;
+
   width: 100%;
   max-width: 570px;
+  max-height: calc(100dvh - 82px);
+  min-height: 0;
 
-  margin: 8px auto 0;
-  padding: 25px 30px;
+  margin: 0 auto;
+  padding: 18px 28px;
+
+  flex: 0 1 auto;
 
   background: var(--card);
   color: var(--text);
 
-  border: 1px solid var(--border);
-  border-radius: 16px;
+  border: 1px solid rgba(201, 164, 92, 0.72);
+  border-radius: 20px;
 
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 22px 65px rgba(81, 59, 25, 0.15),
+    0 5px 18px rgba(201, 164, 92, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  animation: estateCardEntrance 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 
   transition:
-    background var(--transition),
-    border-color var(--transition),
-    box-shadow var(--transition);
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.signup-card::-webkit-scrollbar {
+  display: none;
+}
+
+/* Gold animated line */
+
+.signup-card::before {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 3px;
+
+  border-radius: 0 0 8px 8px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #9a742f,
+    #ffe8a6,
+    #c9a45c,
+    #fff0bf,
+    transparent
+  );
+
+  background-size: 220% 100%;
+
+  animation: estateCardShine 5s linear infinite;
+}
+
+/* Card entrance */
+
+@keyframes estateCardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes estateCardShine {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -120% 0;
+  }
+}
+
+.signup-card:hover {
+  border-color: var(--secondary);
+
+  box-shadow:
+    0 25px 70px rgba(81, 59, 25, 0.18),
+    0 0 25px rgba(201, 164, 92, 0.1);
+}
+
+html.dark .signup-card,
+body.dark .signup-card {
+  background: var(--card);
+  color: var(--text);
+
+  border-color: rgba(217, 182, 110, 0.42);
+
+  box-shadow:
+    0 22px 65px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(217, 182, 110, 0.06);
 }
 
 /* =========================================
-   07. BRAND / LOGO
+   11. BRAND / LOGO
 ========================================= */
 
 .brand-area {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin-bottom: 7px;
 }
 
 .brand {
@@ -273,27 +623,35 @@ button {
   align-items: center;
   justify-content: center;
   gap: 10px;
+
   text-decoration: none;
   color: var(--heading);
 }
 
 .brand-icon {
-  width: 65px;
-  height: 65px;
+  min-width: 60px;
+  min-height: 60px;
   flex-shrink: 0;
 }
 
 .brand-icon img {
+  display: block;
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: contain;
+}
+
+.brand:hover .brand-icon img {
+  transform: scale(1.06) rotate(-3deg);
 }
 
 .brand-name {
   font-family: var(--font-heading);
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1;
+
   color: var(--primary);
   white-space: nowrap;
 }
@@ -303,36 +661,36 @@ button {
 }
 
 .tagline {
-  margin-top: 8px;
-  color: var(--secondary);
-  text-align: center;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: 1.5;
   position: relative;
-  inset-inline-start: 50px;
-  bottom: 25px;
+  top: -16px;
+
+  color: var(--secondary);
+  margin-inline-start: 90px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 1.4;
 }
+
 /* =========================================
-   08. SIGNUP HEADING
+   12. SIGNUP HEADING
 ========================================= */
 
 .signup-heading {
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 11px;
 }
 
 .signup-heading h1,
 .signup-heading h2 {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 
   color: var(--primary);
 
   font-family: var(--font-heading);
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .signup-heading p {
@@ -342,21 +700,21 @@ button {
   color: var(--text);
 
   font-size: 13px;
-  line-height: 1.7;
+  line-height: 1.5;
 
-  opacity: 0.78;
+  opacity: 0.82;
 }
 
 /* =========================================
-   09. SIGNUP FORM GRID
+   13. SIGNUP FORM GRID
 ========================================= */
 
 .signup-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  column-gap: 14px;
-  row-gap: 11px;
+  column-gap: 12px;
+  row-gap: 8px;
 
   width: 100%;
 }
@@ -364,7 +722,7 @@ button {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 
   min-width: 0;
   margin: 0;
@@ -373,13 +731,13 @@ button {
 .form-group label {
   color: var(--heading);
 
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* =========================================
-   10. INPUT WRAPPER WITH LUCIDE ICONS
+   14. INPUT WRAPPER WITH ICONS
 ========================================= */
 
 .input-wrapper {
@@ -392,10 +750,10 @@ button {
 
 .input-wrapper > svg {
   position: absolute;
-  left: 12px;
+  left: 11px;
 
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
 
   color: var(--secondary);
 
@@ -409,31 +767,29 @@ button {
 
   width: 100%;
   min-width: 0;
-  height: 42px;
+  height: 36px;
 
-  padding: 0 12px;
+  padding: 0 11px;
 
   border: 1px solid var(--border);
-  border-radius: 9px;
+  border-radius: 8px;
   outline: none;
 
   background: var(--background);
   color: var(--text);
 
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 12px;
 
   transition:
     border-color var(--transition),
     box-shadow var(--transition),
-    background var(--transition);
+    background-color var(--transition);
 }
 
-/* Space for icons inside input-wrapper */
-
 .input-wrapper input {
-  padding-left: 38px;
-  padding-right: 38px;
+  padding-left: 34px;
+  padding-right: 34px;
 }
 
 .input-wrapper input::placeholder,
@@ -442,8 +798,27 @@ button {
   opacity: 1;
 }
 
+.input-wrapper input:focus,
+.form-group > input:focus,
+.password-wrapper input:focus {
+  border-color: var(--primary-light);
+
+  box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.15);
+}
+
+html.dark .input-wrapper input,
+html.dark .form-group > input,
+html.dark .password-wrapper input,
+body.dark .input-wrapper input,
+body.dark .form-group > input,
+body.dark .password-wrapper input {
+  background: #1a1813;
+  color: var(--text);
+  border-color: var(--border);
+}
+
 /* =========================================
-   11. PASSWORD FIELD
+   15. PASSWORD FIELD
 ========================================= */
 
 .password-wrapper {
@@ -452,16 +827,16 @@ button {
 }
 
 .password-wrapper input {
-  padding-right: 43px;
+  padding-right: 40px;
 }
 
 .password-toggle {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 8px;
 
-  width: 27px;
-  height: 27px;
+  width: 26px;
+  height: 26px;
 
   display: flex;
   align-items: center;
@@ -474,13 +849,11 @@ button {
 
   background: transparent;
   color: var(--text);
-
-  cursor: pointer;
 }
 
 .password-toggle svg {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
 }
 
 .password-toggle:hover {
@@ -489,13 +862,13 @@ button {
 
 .field-hint {
   color: var(--text);
-  font-size: 11px;
-  line-height: 1.5;
+  font-size: 9px;
+  line-height: 1.35;
   opacity: 0.7;
 }
 
 /* =========================================
-   12. FULL-WIDTH FORM ELEMENTS
+   16. FULL-WIDTH FORM ELEMENTS
 ========================================= */
 
 .signup-form .form-group:nth-child(n + 3),
@@ -506,20 +879,20 @@ button {
 }
 
 /* =========================================
-   13. TERMS AND CONDITIONS
+   17. TERMS AND CONDITIONS
 ========================================= */
 
 .terms-row {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 7px;
 
-  margin-top: 2px;
+  margin-top: 1px;
 
   color: var(--text);
 
   font-size: 11px;
-  line-height: 1.6;
+  line-height: 1.45;
 
   cursor: pointer;
 }
@@ -528,7 +901,7 @@ button {
   width: 14px;
   height: 14px;
 
-  margin: 3px 0 0;
+  margin: 2px 0 0;
   flex-shrink: 0;
 
   accent-color: var(--primary);
@@ -550,22 +923,19 @@ button {
 }
 
 /* =========================================
-   14. CREATE ACCOUNT BUTTON
+   18. CREATE ACCOUNT BUTTON
 ========================================= */
 
 .signup-btn {
-  width: 100%;
-  min-height: 45px;
+  min-height: 43px;
+  padding: 0 22px;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 9px;
 
-  margin-top: 1px;
-  padding: 10px 16px;
-
-  border: none;
+  font-family: var(--font-body);
   border-radius: 9px;
 
   background: var(--primary-light);
@@ -573,21 +943,22 @@ button {
 
   border: 1px solid var(--primary);
 
-  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 1px;
   font-size: 14px;
-  font-weight: 700;
 
-  cursor: pointer;
+  text-decoration: none;
 
   transition:
-    transform var(--transition),
-    box-shadow var(--transition),
-    opacity var(--transition);
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .signup-btn svg {
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
 }
 
 .signup-btn:hover {
@@ -597,15 +968,11 @@ button {
 }
 
 .signup-btn:active {
-  transform: translateY(0);
-}
-
-body.dark-mode .signup-btn {
-  color: #21180c;
+  transform: scale(0.99);
 }
 
 /* =========================================
-   15. FORM MESSAGE
+   19. FORM MESSAGE
 ========================================= */
 
 .form-message {
@@ -614,7 +981,7 @@ body.dark-mode .signup-btn {
   color: var(--secondary);
 
   font-size: 11px;
-  line-height: 1.5;
+  line-height: 1.4;
   text-align: center;
 }
 
@@ -627,24 +994,24 @@ body.dark-mode .signup-btn {
 }
 
 /* =========================================
-   16. SOCIAL DIVIDER
+   20. SOCIAL DIVIDER
 ========================================= */
 
 .social-divider {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 
-  margin: 13px 0 10px;
+  margin: 8px 0 6px;
 
   color: var(--text);
 
   font-size: 11px;
-  line-height: 1.5;
+  line-height: 1.4;
   text-align: center;
   white-space: nowrap;
 
-  opacity: 0.72;
+  opacity: 0.78;
 }
 
 .social-divider::before,
@@ -652,17 +1019,18 @@ body.dark-mode .signup-btn {
   content: "";
   flex: 1;
   height: 1px;
+
   background: var(--border);
 }
 
 /* =========================================
-   17. SOCIAL LOGIN BUTTONS
+   21. SOCIAL LOGIN BUTTONS
 ========================================= */
 
 .social-login {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
 
   width: 100%;
 }
@@ -670,26 +1038,24 @@ body.dark-mode .signup-btn {
 .social-btn,
 .social-login button {
   min-width: 0;
-  min-height: 40px;
+  min-height: 32px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
 
-  padding: 8px 10px;
+  padding: 6px 8px;
 
   border: 1px solid var(--border);
-  border-radius: 9px;
+  border-radius: 8px;
 
   background: var(--card);
   color: var(--text);
 
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
-
-  cursor: pointer;
 
   transition:
     background var(--transition),
@@ -699,8 +1065,8 @@ body.dark-mode .signup-btn {
 
 .social-btn svg,
 .social-login button svg {
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   flex-shrink: 0;
 }
 
@@ -708,24 +1074,34 @@ body.dark-mode .signup-btn {
 .social-login button:hover {
   border-color: var(--primary);
   background: var(--background);
+
   transform: translateY(-1px);
 }
 
+html.dark .social-btn,
+html.dark .social-login button,
+body.dark .social-btn,
+body.dark .social-login button {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+}
+
 /* =========================================
-   18. SIGNUP FOOTER / LOGIN LINK
+   22. SIGNUP FOOTER / LOGIN LINK
 ========================================= */
 
 .signup-footer,
 .login-link {
-  margin: 12px 0 0;
+  margin: 7px 0 0;
 
   color: var(--text);
 
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 9px;
+  line-height: 1.5;
   text-align: center;
 
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
 .login-link a {
@@ -733,523 +1109,531 @@ body.dark-mode .signup-btn {
 }
 
 /* =========================================
-   19. PAGE FOOTER
+   23. PAGE FOOTER
 ========================================= */
 
 .page-footer {
   width: 100%;
   max-width: 570px;
 
-  margin-top: 2px;
+  margin-top: 0;
 
   color: var(--text);
 
-  font-size: 10px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.4;
   text-align: center;
 
-  opacity: 0.65;
+  opacity: 0.7;
+
+  display: none;
 }
 
 /* =========================================
-   20. RTL SUPPORT
+   24. RTL SUPPORT
 ========================================= */
 
 html[dir="rtl"] .header-actions,
 [dir="rtl"] .header-actions {
   right: auto;
-  left: 20px;
+  left: 18px;
 }
 
 html[dir="rtl"] .signup-card,
-html[dir="rtl"] .signup-form,
-[dir="rtl"] .signup-card,
-[dir="rtl"] .signup-form {
+html[dir="rtl"] .signup-form {
   direction: rtl;
 }
 
-html[dir="rtl"] .input-wrapper > svg,
-[dir="rtl"] .input-wrapper > svg {
-  right: 12px;
+html[dir="rtl"] .input-wrapper > svg {
+  right: 11px;
   left: auto;
 }
 
 html[dir="rtl"] .input-wrapper input {
-  padding-right: 38px;
-  padding-left: 38px;
+  padding-right: 34px;
+  padding-left: 34px;
   text-align: right;
 }
 
-html[dir="rtl"] .password-wrapper input,
-[dir="rtl"] .password-wrapper input {
-  padding-right: 12px;
-  padding-left: 43px;
+html[dir="rtl"] .password-wrapper input {
+  padding-right: 11px;
+  padding-left: 40px;
   text-align: right;
 }
 
-html[dir="rtl"] .password-toggle,
-[dir="rtl"] .password-toggle {
+html[dir="rtl"] .password-toggle {
   right: auto;
-  left: 10px;
+  left: 8px;
 }
 
-html[dir="rtl"] .terms-row,
-[dir="rtl"] .terms-row {
+html[dir="rtl"] .terms-row {
   text-align: right;
 }
 
-html[dir="rtl"] .login-link a,
-[dir="rtl"] .login-link a {
+html[dir="rtl"] .login-link a {
   margin-left: 0;
   margin-right: 4px;
 }
 
 /* =========================================
-   21. SHORT DESKTOP SCREENS
-========================================= */
-
-@media (min-width: 769px) and (max-height: 800px) {
-  .signup-page {
-    padding-top: 65px;
-    padding-bottom: 16px;
-    gap: 8px;
-  }
-
-  .signup-card {
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
-
-  .brand-area {
-    margin-bottom: 8px;
-  }
-
-  .signup-heading {
-    margin-bottom: 12px;
-  }
-
-  .signup-form {
-    row-gap: 8px;
-  }
-
-  .input-wrapper input,
-  .form-group > input,
-  .password-wrapper input {
-    height: 38px;
-  }
-
-  .signup-btn {
-    min-height: 40px;
-  }
-
-  .social-divider {
-    margin-top: 9px;
-    margin-bottom: 7px;
-  }
-
-  .social-login button,
-  .social-btn {
-    min-height: 36px;
-  }
-
-  .signup-footer,
-  .login-link {
-    margin-top: 8px;
-  }
-}
-
-/* =========================================
-   22. TABLET - IPAD MINI
+   25. TABLET
 ========================================= */
 
 @media (min-width: 600px) and (max-width: 1024px) {
   .signup-page {
-    justify-content: center;
-    padding: 80px 22px 30px;
+    padding: 65px 22px 12px;
   }
 
   .signup-card {
-    max-width: 540px;
-    margin-top: 8px;
-    padding: 25px;
+    max-width: 550px;
+    padding: 18px 25px;
   }
 
   .signup-form {
-    column-gap: 13px;
-    row-gap: 11px;
+    column-gap: 12px;
+    row-gap: 8px;
   }
 
-  .form-group label {
-    font-size: 12px;
-  }
-
-  .input-wrapper input,
-  .form-group > input,
-  .password-wrapper input {
-    height: 41px;
+  .brand-icon {
+    width: 44px;
+    height: 44px;
   }
 }
 
 /* =========================================
-   23. MOBILE - SAMSUNG GALAXY S8+
+   26. MOBILE
 ========================================= */
 
 @media (max-width: 599px) {
-  .signup-page {
-    min-height: 100vh;
-    min-height: 100svh;
-
-    justify-content: flex-start;
-
-    padding: 76px 15px 24px;
-    gap: 10px;
-  }
-
   .header-actions {
-    top: 14px;
-    right: 15px;
-    gap: 8px;
+    top: 8px;
+    right: 10px;
+    gap: 6px;
   }
 
   .header-actions button {
-    min-width: 40px;
-    height: 37px;
-    border-radius: 9px;
+    height: 33px;
+    border-radius: 8px;
   }
 
   .icon-button {
-    width: 38px;
+    width: 33px;
     padding: 0;
   }
 
   .rtl-button {
-    padding: 0 8px;
-    font-size: 10px;
+    min-width: 36px;
+    padding: 0 6px;
+  }
+
+  .signup-page {
+    padding: 48px 10px 8px;
+    gap: 5px;
   }
 
   .signup-card {
     width: 100%;
     max-width: 430px;
 
-    margin: 4px auto 0;
-    padding: 23px 19px;
+    max-height: calc(100dvh - 60px);
 
-    border-radius: 13px;
+    padding: 13px 15px;
+
+    border-radius: 16px;
   }
 
   .brand-area {
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
 
-  .brand,
-  .signup-logo {
-    gap: 9px;
-    margin-bottom: 7px;
+  .brand {
+    gap: 7px;
   }
 
   .brand-icon {
-    width: 36px;
-    height: 36px;
+    width: 35px;
+    height: 35px;
   }
 
-  .signup-logo img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .brand-name,
-  .signup-logo h2 {
-    font-size: 27px;
+  .brand-name {
+    font-size: 22px;
   }
 
   .tagline {
-    font-size: 9px;
+    margin-top: 3px;
+    font-size: 8px;
+    letter-spacing: 0.5px;
   }
 
   .signup-heading {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 
   .signup-heading h1,
   .signup-heading h2 {
-    font-size: 25px;
+    font-size: 21px;
   }
 
   .signup-heading p {
-    font-size: 11px;
+    font-size: 10px;
+    line-height: 1.4;
   }
 
+  /* Two columns help reduce overall card height */
   .signup-form {
-    grid-template-columns: 1fr;
-    row-gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 8px;
+    row-gap: 7px;
   }
 
-  .signup-form .form-group,
+  .form-group label {
+    font-size: 9px;
+  }
+
+  .input-wrapper input,
+  .form-group > input,
+  .password-wrapper input {
+    height: 33px;
+    font-size: 10px;
+  }
+
+  .input-wrapper > svg {
+    left: 8px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .input-wrapper input {
+    padding-left: 26px;
+    padding-right: 25px;
+  }
+
+  .password-wrapper input {
+    padding-right: 32px;
+  }
+
+  .password-toggle {
+    right: 4px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .signup-form .form-group:nth-child(n + 3),
   .signup-form .terms-row,
   .signup-form .signup-btn,
   .signup-form .form-message {
     grid-column: 1 / -1;
   }
 
-  .form-group label {
-    font-size: 12px;
-  }
-
-  .input-wrapper input,
-  .form-group > input,
-  .password-wrapper input {
-    height: 43px;
-    font-size: 12px;
-  }
-
   .terms-row {
-    font-size: 10px;
+    font-size: 9px;
+    line-height: 1.4;
   }
 
   .signup-btn {
-    min-height: 44px;
-    font-size: 12px;
+    min-height: 34px;
+    padding: 6px 10px;
+    font-size: 11px;
   }
 
   .social-divider {
-    gap: 9px;
-    margin: 12px 0 9px;
-    font-size: 10px;
+    gap: 7px;
+    margin: 6px 0 5px;
+    font-size: 8px;
   }
 
   .social-login {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+    gap: 6px;
   }
 
   .social-btn,
   .social-login button {
-    min-height: 39px;
-    gap: 6px;
-    padding: 8px 5px;
-    font-size: 10px;
+    min-height: 29px;
+    padding: 4px;
+    gap: 4px;
+    font-size: 8px;
+  }
+
+  .social-btn svg,
+  .social-login button svg {
+    width: 13px;
+    height: 13px;
   }
 
   .signup-footer,
   .login-link {
-    margin-top: 10px;
-    font-size: 10px;
+    margin-top: 5px;
+    font-size: 9px;
   }
 
-  .page-footer {
-    font-size: 9px;
+  .signup-page::before {
+    width: 155px;
+    height: 155px;
+    top: 10%;
+    right: -65px;
+  }
+
+  .signup-page::after {
+    width: 80px;
+    height: 80px;
+    bottom: 8%;
+    left: -20px;
+  }
+
+  body::before {
+    width: 230px;
+    height: 230px;
+    top: -65px;
+    left: -105px;
+  }
+
+  body::after {
+    width: 260px;
+    height: 260px;
+    right: -130px;
+    bottom: -100px;
   }
 }
 
 /* =========================================
-   24. VERY SMALL MOBILE
+   27. VERY SMALL MOBILE
 ========================================= */
 
 @media (max-width: 350px) {
   .signup-page {
-    padding-right: 9px;
-    padding-left: 9px;
+    padding-right: 7px;
+    padding-left: 7px;
   }
 
   .header-actions {
-    right: 9px;
-    gap: 6px;
+    right: 8px;
+    gap: 5px;
   }
 
-  html[dir="rtl"] .header-actions,
-  [dir="rtl"] .header-actions {
+  html[dir="rtl"] .header-actions {
     right: auto;
-    left: 9px;
+    left: 8px;
   }
 
   .header-actions button {
-    min-width: 34px;
-    height: 34px;
-    padding: 0 6px;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 5px;
   }
 
   .icon-button {
-    width: 34px;
+    width: 32px;
     padding: 0;
   }
 
   .signup-card {
-    padding: 20px 14px;
+    padding: 11px 10px;
   }
 
-  .brand-name,
-  .signup-logo h2 {
-    font-size: 24px;
+  .brand-icon {
+    width: 31px;
+    height: 31px;
   }
 
-  .signup-heading h1,
-  .signup-heading h2 {
-    font-size: 23px;
-  }
-
-  .social-login {
-    gap: 6px;
-  }
-
-  .social-btn,
-  .social-login button {
-    gap: 4px;
-    padding: 7px 4px;
-    font-size: 9px;
-  }
-
-  .terms-row {
-    font-size: 9px;
-  }
-}
-
-/* =========================================
-   SIGNUP PAGE - NO SCROLL
-========================================= */
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-.signup-page {
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  min-height: 0;
-
-  padding: 65px 20px 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-.signup-card {
-  margin: 0 auto;
-  flex-shrink: 1;
-}
-
-/* Short desktop screens */
-
-@media (min-width: 600px) and (max-height: 800px) {
-  .signup-page {
-    padding: 55px 16px 10px;
-  }
-
-  .signup-card {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
-  .brand-area {
-    margin-bottom: 6px;
-  }
-
-  .signup-heading {
-    margin-bottom: 9px;
-  }
-
-  .signup-form {
-    row-gap: 7px;
-  }
-
-  .social-divider {
-    margin: 7px 0 6px;
-  }
-
-  .signup-footer,
-  .login-link {
-    margin-top: 6px;
-  }
-}
-
-/* Mobile */
-
-@media (max-width: 599px) {
-  .signup-page {
-    height: 100dvh;
-    min-height: 0;
-
-    padding: 65px 12px 10px;
-    justify-content: center;
-
-    overflow: hidden;
-  }
-
-  .signup-card {
-    max-width: 430px;
-    max-height: 100%;
-    margin: 0 auto;
-    padding: 15px 18px;
-    overflow: hidden;
-  }
-
-  .brand-area {
-    margin-bottom: 7px;
-  }
-
-  .brand,
-  .signup-logo {
-    margin-bottom: 5px;
-  }
-
-  .brand-icon,
-  .signup-logo img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .brand-name,
-  .signup-logo h2 {
-    font-size: 24px;
-  }
-
-  .signup-heading {
-    margin-bottom: 10px;
+  .brand-name {
+    font-size: 19px;
   }
 
   .signup-heading h1,
   .signup-heading h2 {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .signup-form {
-    row-gap: 8px;
+    column-gap: 6px;
+    row-gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 8px;
   }
 
   .input-wrapper input,
   .form-group > input,
   .password-wrapper input {
-    height: 36px;
+    font-size: 9px;
+  }
+
+  .terms-row {
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   28. SHORT SCREEN — DESKTOP / LAPTOP
+========================================= */
+
+@media (min-width: 600px) and (max-height: 760px) {
+  .signup-page {
+    padding: 53px 15px 8px;
+  }
+
+  .signup-card {
+    max-height: calc(100dvh - 62px);
+    padding: 10px 22px;
+  }
+
+  .brand-area {
+    margin-bottom: 4px;
+  }
+
+  .brand-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tagline {
+    margin-top: 2px;
+    font-size: 8px;
+  }
+
+  .signup-heading {
+    margin-bottom: 6px;
+  }
+
+  .signup-heading h1,
+  .signup-heading h2 {
+    font-size: 20px;
+  }
+
+  .signup-form {
+    row-gap: 5px;
+  }
+
+  .form-group {
+    gap: 3px;
+  }
+
+  .input-wrapper input,
+  .form-group > input,
+  .password-wrapper input {
+    height: 30px;
   }
 
   .signup-btn {
-    min-height: 38px;
-    padding: 7px 12px;
+    min-height: 31px;
   }
 
   .social-divider {
-    margin: 8px 0 6px;
+    margin: 5px 0 4px;
   }
 
-  .social-login button,
-  .social-btn {
-    min-height: 32px;
-    padding: 5px;
+  .social-btn,
+  .social-login button {
+    min-height: 27px;
   }
 
   .signup-footer,
   .login-link {
-    margin-top: 6px;
+    margin-top: 4px;
+  }
+}
+
+/* =========================================
+   29. VERY SHORT SCREEN
+========================================= */
+
+@media (max-height: 600px) {
+  .signup-page {
+    padding-top: 44px;
+    padding-bottom: 5px;
   }
 
-  .page-footer {
-    display: none;
+  .signup-card {
+    max-height: calc(100dvh - 50px);
+    padding: 8px 14px;
+  }
+
+  .brand-area {
+    margin-bottom: 3px;
+  }
+
+  .brand-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .tagline {
+    margin-top: 2px;
+    font-size: 7px;
+  }
+
+  .signup-heading {
+    margin-bottom: 4px;
+  }
+
+  .signup-heading h1,
+  .signup-heading h2 {
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+
+  .signup-heading p {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .signup-form {
+    row-gap: 4px;
+  }
+
+  .form-group label {
+    font-size: 8px;
+  }
+
+  .input-wrapper input,
+  .form-group > input,
+  .password-wrapper input {
+    height: 27px;
+  }
+
+  .terms-row {
+    font-size: 8px;
+    line-height: 1.25;
+  }
+
+  .signup-btn {
+    min-height: 28px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .social-divider {
+    margin: 4px 0 3px;
+    font-size: 8px;
+  }
+
+  .social-btn,
+  .social-login button {
+    min-height: 25px;
+    padding: 3px;
+    font-size: 8px;
+  }
+
+  .signup-footer,
+  .login-link {
+    margin-top: 3px;
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   30. RTL HEADER ON MOBILE
+========================================= */
+
+@media (max-width: 599px) {
+  html[dir="rtl"] .header-actions,
+  [dir="rtl"] .header-actions {
+    right: auto;
+    left: 10px;
   }
 }

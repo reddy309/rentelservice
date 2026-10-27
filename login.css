@@ -1,5 +1,11 @@
 /* =========================================
-   01. RESET & VARIABLES
+   ESTATENEST LOGIN PAGE
+   COMPLETE UPDATED CSS
+   Premium Gold + Bronze Animated Theme
+========================================= */
+
+/* =========================================
+   01. RESET & ROOT VARIABLES
 ========================================= */
 
 * {
@@ -9,24 +15,323 @@
 }
 
 :root {
-  --primary: #75502f;
-  --primary-dark: #4b321e;
-  --secondary: #9a742f;
+  /* Primary — Blue */
+  --primary: #4a90e2;
+  --primary-light: #eaf3ff;
+  --primary-dark: #2563a8;
 
+  /* Secondary — Teal */
+  --secondary: #0f766e;
+  --secondary-light: #e6f5f2;
+  --secondary-dark: #115e59;
+
+  /* Text Colors */
   --text: #292216;
   --heading: #1c1810;
-  --bg: #faf9f6;
-  --card: #ffffff;
-  --border: #d8c49a;
   --muted: #858176;
 
-  --shadow: rgba(61, 43, 15, 0.12);
+  /* Background Colors */
+  --bg: #faf9f6;
+  --background: #faf9f6;
+  --card: #ffffff;
   --input-bg: #ffffff;
-  --hover-bg: rgba(117, 80, 47, 0.06);
+  --hover-bg: rgba(74, 144, 226, 0.07);
 
+  /* Border & Shadow */
+  --border: #d8e2ed;
+  --shadow: 0 14px 40px rgba(41, 66, 92, 0.1);
+
+  /* Fonts */
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Montserrat", sans-serif;
+
+  /* Transition */
   --transition: 0.25s ease;
+}
+
+/* =========================================
+   02. DARK MODE VARIABLES
+========================================= */
+
+html.dark,
+body.dark {
+  /* Primary — Bright Blue */
+  --primary: #78b5ff;
+  --primary-light: #203d5d;
+  --primary-dark: #a6d0ff;
+
+  /* Secondary — Bright Teal */
+  --secondary: #2dd4bf;
+  --secondary-light: #164843;
+  --secondary-dark: #5eead4;
+
+  /* Text Colors */
+  --text: #e2e8f0;
+  --heading: #f8fafc;
+  --muted: #a7b2c0;
+
+  /* Background Colors */
+  --bg: #111827;
+  --background: #111827;
+  --card: #1e293b;
+  --input-bg: #172235;
+  --hover-bg: rgba(120, 181, 255, 0.1);
+
+  /* Border & Shadow */
+  --border: #374151;
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+
+  color-scheme: dark;
+}
+
+/* =========================================
+   03. GLOBAL STYLES
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+  font-family: var(--font-heading);
+}
+
+p,
+span,
+label {
+  color: inherit;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================
+   04. COMMON CARD STYLES
+========================================= */
+
+.card,
+.signup-card,
+.dashboard-card {
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+/* =========================================
+   05. INPUT STYLES
+========================================= */
+
+input,
+select,
+textarea {
+  color: var(--text);
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* =========================================
+   06. PRIMARY BUTTON
+========================================= */
+
+.btn-primary,
+.signup-btn {
+  color: #ffffff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover,
+.signup-btn:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* =========================================
+   07. SECONDARY BUTTON
+========================================= */
+
+.btn-secondary {
+  color: #ffffff;
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+}
+
+/* =========================================
+   08. OUTLINE BUTTON
+========================================= */
+
+.btn-outline {
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  color: #ffffff;
+  background: var(--primary);
+}
+
+/* =========================================
+   09. DARK MODE CARD & FORM OVERRIDES
+========================================= */
+
+html.dark .card,
+html.dark .signup-card,
+html.dark .dashboard-card,
+body.dark .card,
+body.dark .signup-card,
+body.dark .dashboard-card {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea,
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: var(--input-bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus,
+body.dark input:focus,
+body.dark select:focus,
+body.dark textarea:focus {
+  border-color: var(--primary);
+}
+
+/* =========================================
+   10. DARK MODE BUTTONS
+========================================= */
+
+html.dark .btn-primary,
+html.dark .signup-btn,
+body.dark .btn-primary,
+body.dark .signup-btn {
+  color: #102033;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+html.dark .btn-primary:hover,
+html.dark .signup-btn:hover,
+body.dark .btn-primary:hover,
+body.dark .signup-btn:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+html.dark .btn-secondary,
+body.dark .btn-secondary {
+  color: #102b28;
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+/* =========================================
+   11. SELECTION & SCROLLBAR
+========================================= */
+
+::selection {
+  color: #ffffff;
+  background: var(--secondary);
+}
+
+html.dark ::selection {
+  color: #111827;
+  background: var(--secondary);
+}
+
+/* =========================================
+   12. RTL SUPPORT
+   Existing RTL layout remains supported
+========================================= */
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="ltr"] body {
+  direction: ltr;
 }
 
 /* =========================================
@@ -40,19 +345,40 @@ html {
 }
 
 body {
+  position: relative;
+  isolation: isolate;
+
   width: 100%;
   min-height: 100vh;
   min-height: 100svh;
 
+  overflow-x: hidden;
+
   font-family: var(--font-body);
   color: var(--text);
 
-  background:
-    radial-gradient(circle at top left, #e9dcc5 0, transparent 35%), var(--bg);
+  background-color: #faf9f6;
+
+  background-image:
+    radial-gradient(
+      ellipse at 12% 20%,
+      rgba(224, 192, 128, 0.32),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 85% 75%,
+      rgba(139, 100, 44, 0.18),
+      transparent 40%
+    ),
+    linear-gradient(125deg, #fffdf8, #f3e8d2, #faf9f6, #eee0c4);
+
+  background-size: 180% 180%;
+
+  animation: premiumBackground 16s ease-in-out infinite alternate;
 
   transition:
-    background 0.3s ease,
-    color 0.3s ease;
+    background-color 0.35s ease,
+    color 0.35s ease;
 }
 
 button,
@@ -81,7 +407,107 @@ input:focus-visible {
 }
 
 /* =========================================
-   03. HEADER ACTIONS
+   03. ANIMATED BACKGROUND GRADIENT
+========================================= */
+
+@keyframes premiumBackground {
+  0% {
+    background-position: 0% 20%;
+  }
+
+  50% {
+    background-position: 100% 80%;
+  }
+
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+/* =========================================
+   04. FLOATING GOLD & BRONZE ORBS
+========================================= */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+  pointer-events: none;
+
+  will-change: transform;
+}
+
+body::before {
+  top: 5%;
+  left: -130px;
+
+  background: radial-gradient(
+    circle,
+    rgba(201, 164, 92, 0.38),
+    rgba(201, 164, 92, 0.08) 45%,
+    transparent 72%
+  );
+
+  filter: blur(35px);
+
+  animation: floatGoldOrb 13s ease-in-out infinite alternate;
+}
+
+body::after {
+  right: -150px;
+  bottom: 0;
+
+  width: 400px;
+  height: 400px;
+
+  background: radial-gradient(
+    circle,
+    rgba(139, 100, 44, 0.24),
+    rgba(201, 164, 92, 0.07) 48%,
+    transparent 72%
+  );
+
+  filter: blur(45px);
+
+  animation: floatBronzeOrb 16s ease-in-out infinite alternate;
+}
+
+@keyframes floatGoldOrb {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+  }
+
+  50% {
+    transform: translate(100px, 120px) scale(1.2);
+  }
+
+  100% {
+    transform: translate(40px, 240px) scale(1);
+  }
+}
+
+@keyframes floatBronzeOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-100px, -100px) scale(1.15);
+  }
+
+  100% {
+    transform: translate(-50px, -180px) scale(0.9);
+  }
+}
+
+/* =========================================
+   05. HEADER ACTIONS
 ========================================= */
 
 .header-actions {
@@ -110,11 +536,14 @@ input:focus-visible {
   background: var(--card);
   color: var(--text);
 
+  box-shadow: 0 3px 10px rgba(61, 43, 15, 0.05);
+
   transition:
     background var(--transition),
     color var(--transition),
     border-color var(--transition),
-    transform var(--transition);
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .rtl-button {
@@ -140,14 +569,19 @@ input:focus-visible {
 .icon-button:hover {
   color: var(--secondary);
   border-color: var(--secondary);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 14px rgba(139, 100, 44, 0.12);
 }
 
 /* =========================================
-   04. LOGIN PAGE
+   06. LOGIN PAGE
 ========================================= */
 
 .login-page {
+  position: relative;
+  z-index: 1;
+
   width: 100%;
   min-height: 100vh;
   min-height: 100svh;
@@ -160,29 +594,167 @@ input:focus-visible {
 }
 
 /* =========================================
-   05. LOGIN CARD
+   07. LOGIN CARD
 ========================================= */
 
 .login-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
   width: 100%;
   max-width: 410px;
 
   padding: 25px 30px 22px;
 
   background: var(--card);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(201, 164, 92, 0.7);
   border-radius: 17px;
 
-  box-shadow: 0 12px 36px var(--shadow);
+  box-shadow:
+    0 20px 55px rgba(81, 59, 25, 0.12),
+    0 4px 15px rgba(201, 164, 92, 0.08);
+
+  animation:
+    loginCardEnter 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+    cardFloating 6s ease-in-out 1s infinite;
 
   transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Top gold border */
+
+.login-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+
+  top: 0;
+  left: 12%;
+  right: 12%;
+
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #8b642c,
+    #f5d991,
+    #c9a45c,
+    transparent
+  );
+
+  background-size: 200% 100%;
+  opacity: 0.9;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  animation:
+    goldLineReveal 1s ease 0.4s forwards,
+    goldLineShine 4s linear 1.4s infinite;
+}
+
+/* Card shimmer */
+
+.login-card::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+
+  top: -80%;
+  left: -70%;
+
+  width: 45%;
+  height: 200%;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 164, 92, 0.08),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  animation: cardShimmer 1.5s ease 0.8s both;
+}
+
+/* Keep card content above shimmer */
+
+.login-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-card:hover {
+  border-color: var(--secondary);
+
+  box-shadow:
+    0 22px 60px rgba(81, 59, 25, 0.16),
+    0 0 25px rgba(201, 164, 92, 0.1);
 }
 
 /* =========================================
-   06. LOGO + BRAND NAME
+   08. LOGIN CARD ANIMATIONS
+========================================= */
+
+@keyframes loginCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardFloating {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -5px;
+  }
+}
+
+@keyframes goldLineReveal {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes goldLineShine {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes cardShimmer {
+  from {
+    left: -70%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+
+/* =========================================
+   09. LOGO & BRAND NAME
 ========================================= */
 
 .brand-area {
@@ -201,11 +773,14 @@ input:focus-visible {
 }
 
 .brand img {
-  width: 65px;
-  height: 65px;
-
+  width: 100px;
+  height: 100px;
+  min-height: 70px;
+  min-width: 70px;
   flex-shrink: 0;
   object-fit: contain;
+  animation: logoAppear 0.8s ease 0.25s both;
+  transition: transform 0.35s ease;
 }
 
 .brand-name {
@@ -214,37 +789,54 @@ input:focus-visible {
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
+  color: var(--primary);
+
+  transition: color 0.3s ease;
 }
 
 .brand-highlight {
   color: var(--secondary);
 }
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+  }
 
-/* =========================================
-   07. TAGLINE
-========================================= */
-
-.tagline {
-  color: var(--secondary);
-  text-align: center;
-
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  line-height: 1.5;
-
-  position: relative;
-  inset-inline-start: 65px;
-  bottom: 22px;
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* =========================================
-   08. LOGIN HEADING
+   10. TAGLINE
+========================================= */
+
+.tagline {
+  position: relative;
+  inset-inline-start: 65px;
+  bottom: 22px;
+
+  color: var(--secondary);
+  text-align: center;
+  margin-top: -8px;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   11. LOGIN HEADING
 ========================================= */
 
 .login-heading {
   margin: 19px 0 19px;
   text-align: center;
+
+  animation: headingAppear 0.7s ease 0.2s both;
 }
 
 .eyebrow {
@@ -275,8 +867,20 @@ input:focus-visible {
   line-height: 1.6;
 }
 
+@keyframes headingAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* =========================================
-   09. FORM GROUPS
+   12. FORM GROUPS
 ========================================= */
 
 .form-group {
@@ -294,10 +898,12 @@ input:focus-visible {
 }
 
 /* =========================================
-   10. INPUT FIELDS
+   13. INPUT FIELDS
 ========================================= */
 
 .input-wrapper {
+  position: relative;
+
   width: 100%;
   height: 43px;
 
@@ -314,12 +920,18 @@ input:focus-visible {
   transition:
     border-color var(--transition),
     box-shadow var(--transition),
-    background var(--transition);
+    background var(--transition),
+    transform var(--transition);
 }
 
 .input-wrapper:focus-within {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(117, 80, 47, 0.08);
+  border-color: #c9a45c;
+
+  box-shadow:
+    0 0 0 3px rgba(201, 164, 92, 0.13),
+    0 0 18px rgba(201, 164, 92, 0.09);
+
+  transform: translateY(-2px);
 }
 
 .input-wrapper > svg {
@@ -330,6 +942,15 @@ input:focus-visible {
 
   color: var(--secondary);
   stroke-width: 1.8;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.input-wrapper:focus-within > svg {
+  color: var(--primary);
+  transform: scale(1.08);
 }
 
 .input-wrapper input {
@@ -359,7 +980,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   11. PASSWORD TOGGLE
+   14. PASSWORD TOGGLE
 ========================================= */
 
 #passwordToggle {
@@ -378,6 +999,10 @@ input:focus-visible {
 
   background: transparent;
   color: var(--text);
+
+  transition:
+    color var(--transition),
+    background var(--transition);
 }
 
 #passwordToggle:hover {
@@ -391,7 +1016,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   12. REMEMBER + FORGOT PASSWORD
+   15. REMEMBER & FORGOT PASSWORD
 ========================================= */
 
 .form-options {
@@ -427,6 +1052,8 @@ input:focus-visible {
   color: var(--secondary);
   font-weight: 700;
   text-decoration: none;
+
+  transition: color var(--transition);
 }
 
 .form-options a:hover,
@@ -436,33 +1063,41 @@ input:focus-visible {
 }
 
 /* =========================================
-   13. LOGIN BUTTON
+   16. LOGIN BUTTON
 ========================================= */
 
 .login-button {
+  position: relative;
+  overflow: hidden;
+
   width: 100%;
   min-height: 43px;
   padding: 10px 14px;
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
 
-  border: 1px solid var(--primary);
-  border-radius: 8px;
+  font-family: var(--font-body);
+  border-radius: 9px;
 
-  background: var(--primary);
+  background: var(--primary-light);
   color: var(--heading);
 
-  font-family: var(--font-body);
+  border: 1px solid var(--primary);
+
+  font-weight: 600;
+  letter-spacing: 1px;
   font-size: 14px;
-  font-weight: 700;
+
+  text-decoration: none;
 
   transition:
-    background var(--transition),
-    transform var(--transition),
-    box-shadow var(--transition);
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .login-button:hover {
@@ -472,7 +1107,7 @@ input:focus-visible {
 }
 
 .login-button:active {
-  transform: translateY(0);
+  transform: scale(0.99);
 }
 
 .login-button svg {
@@ -482,7 +1117,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   14. FORM MESSAGE
+   17. FORM MESSAGE
 ========================================= */
 
 .form-message {
@@ -498,7 +1133,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   15. SOCIAL DIVIDER
+   18. SOCIAL DIVIDER
 ========================================= */
 
 .social-divider {
@@ -527,7 +1162,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   16. GOOGLE + APPLE SIDE BY SIDE
+   19. GOOGLE & APPLE BUTTONS
 ========================================= */
 
 .social-login {
@@ -539,6 +1174,9 @@ input:focus-visible {
 }
 
 .social-button {
+  position: relative;
+  overflow: hidden;
+
   width: 100%;
   min-width: 0;
   min-height: 42px;
@@ -569,9 +1207,11 @@ input:focus-visible {
 }
 
 .social-button:hover {
+  background: var(--hover-bg);
   border-color: var(--primary);
+
   box-shadow: 0 4px 12px var(--shadow);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .social-button:active {
@@ -582,6 +1222,12 @@ input:focus-visible {
   width: 17px;
   height: 17px;
   flex-shrink: 0;
+
+  transition: transform 0.25s ease;
+}
+
+.social-button:hover svg {
+  transform: scale(1.1);
 }
 
 .google-logo {
@@ -600,7 +1246,7 @@ input:focus-visible {
 }
 
 /* =========================================
-   17. CONTACT TEXT
+   20. SIGNUP TEXT
 ========================================= */
 
 .signup-text {
@@ -613,41 +1259,12 @@ input:focus-visible {
   line-height: 1.7;
 }
 
-/* =========================================
-   18. DARK MODE
-========================================= */
+body.dark .login-card:hover {
+  border-color: var(--primary);
 
-body.dark {
-  --primary: #d9b66e;
-  --primary-dark: #b89555;
-  --secondary: #c9a45c;
-
-  --text: #f1eadc;
-  --heading: #fff8e9;
-
-  --bg: #171511;
-  --card: #211e18;
-  --border: #51432d;
-  --muted: #b5ad9d;
-
-  --shadow: rgba(0, 0, 0, 0.3);
-  --input-bg: #211e18;
-  --hover-bg: rgba(217, 182, 110, 0.08);
-
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(201, 164, 92, 0.12),
-      transparent 35%
-    ),
-    var(--bg);
-
-  color: var(--text);
-}
-
-body.dark .login-card {
-  background: var(--card);
-  border-color: var(--border);
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.35),
+    0 0 28px rgba(201, 164, 92, 0.09);
 }
 
 body.dark .input-wrapper {
@@ -657,17 +1274,31 @@ body.dark .input-wrapper {
 
 body.dark .input-wrapper:focus-within {
   border-color: var(--primary);
+
   box-shadow: 0 0 0 3px rgba(217, 182, 110, 0.12);
 }
 
+body.dark .input-wrapper input {
+  color: var(--text);
+}
+
+body.dark .input-wrapper input::placeholder {
+  color: var(--muted);
+}
+
 body.dark .login-button {
-  background: var(--primary);
+  background: linear-gradient(115deg, #b89555, #d9b66e, #b89555);
+
+  background-size: 200% 100%;
+
   color: #21180b;
+  border-color: var(--primary);
+
+  box-shadow: 0 4px 15px rgba(217, 182, 110, 0.12);
 }
 
 body.dark .login-button:hover {
-  background: var(--primary-dark);
-  color: #ffffff;
+  box-shadow: 0 7px 20px rgba(217, 182, 110, 0.2);
 }
 
 body.dark .social-button,
@@ -679,6 +1310,7 @@ body.dark .icon-button {
 }
 
 body.dark .social-button:hover {
+  background: var(--hover-bg);
   border-color: var(--primary);
 }
 
@@ -690,8 +1322,17 @@ body.dark .social-divider > span {
   background: var(--border);
 }
 
+body.dark .form-options a,
+body.dark .signup-text a {
+  color: var(--secondary);
+}
+
+body.dark .brand {
+  color: var(--primary);
+}
+
 /* =========================================
-   19. RTL SUPPORT
+   22. RTL SUPPORT
 ========================================= */
 
 html[dir="rtl"] .header-actions {
@@ -719,9 +1360,7 @@ html[dir="rtl"] .social-button {
 }
 
 /* =========================================
-   20. RESPONSIVE — SAMSUNG GALAXY S8+
-   Small mobile: 360px - 599px
-   Existing design preserved
+   23. MOBILE — 360px TO 599px
 ========================================= */
 
 @media screen and (max-width: 599px) {
@@ -735,13 +1374,19 @@ html[dir="rtl"] .social-button {
     width: 100%;
     min-height: 100vh;
     min-height: 100svh;
+
     padding: 62px 14px 22px;
   }
 
   .login-card {
     width: 100%;
     max-width: 410px;
+
     padding: 25px 20px 22px;
+
+    animation:
+      loginCardEnter 0.7s ease both,
+      cardFloating 7s ease-in-out 1s infinite;
   }
 
   .header-actions {
@@ -780,6 +1425,7 @@ html[dir="rtl"] .social-button {
   .tagline {
     inset-inline-start: 48px;
     bottom: 18px;
+
     font-size: 9px;
     letter-spacing: 0.7px;
   }
@@ -834,6 +1480,7 @@ html[dir="rtl"] .social-button {
     min-height: 41px;
     padding: 8px 5px;
     gap: 5px;
+
     font-size: 10px;
   }
 
@@ -851,11 +1498,26 @@ html[dir="rtl"] .social-button {
   .signup-text {
     font-size: 10px;
   }
+
+  body::before {
+    width: 240px;
+    height: 240px;
+    left: -100px;
+
+    filter: blur(30px);
+  }
+
+  body::after {
+    width: 260px;
+    height: 260px;
+    right: -120px;
+
+    filter: blur(35px);
+  }
 }
 
 /* =========================================
-   21. EXTRA SMALL MOBILE
-   Width: below 360px
+   24. EXTRA SMALL MOBILE — BELOW 360px
 ========================================= */
 
 @media screen and (max-width: 359px) {
@@ -880,6 +1542,7 @@ html[dir="rtl"] .social-button {
   .tagline {
     inset-inline-start: 40px;
     bottom: 15px;
+
     font-size: 8px;
     letter-spacing: 0.5px;
   }
@@ -895,13 +1558,14 @@ html[dir="rtl"] .social-button {
   .social-button {
     padding-right: 4px;
     padding-left: 4px;
+
     font-size: 9px;
   }
 }
 
 /* =========================================
-   22. IPAD MINI — TABLET
-   Width: 600px - 1024px
+   25. IPAD MINI — TABLET
+   600px TO 1024px
 ========================================= */
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -909,12 +1573,14 @@ html[dir="rtl"] .social-button {
     width: 100%;
     min-height: 100vh;
     min-height: 100svh;
+
     padding: 65px 24px 28px;
   }
 
   .login-card {
     width: 100%;
     max-width: 430px;
+
     padding: 28px 32px 25px;
   }
 
@@ -935,6 +1601,7 @@ html[dir="rtl"] .social-button {
   .tagline {
     inset-inline-start: 66px;
     bottom: 22px;
+
     font-size: 10px;
   }
 
@@ -961,8 +1628,7 @@ html[dir="rtl"] .social-button {
 }
 
 /* =========================================
-   23. NETHUB — DESKTOP
-   Width: 1025px and above
+   26. DESKTOP — 1025px AND ABOVE
 ========================================= */
 
 @media screen and (min-width: 1025px) {
@@ -983,17 +1649,229 @@ html[dir="rtl"] .social-button {
 }
 
 /* =========================================
-   24. SHORT SCREEN SUPPORT
+   27. SHORT SCREEN SUPPORT
 ========================================= */
 
 @media screen and (max-height: 650px) {
   .login-page {
     align-items: flex-start;
+
     padding-top: 58px;
     padding-bottom: 18px;
   }
 
   .login-card {
     margin-top: 0;
+  }
+}
+
+/* =========================================
+   28. FIXED LOGIN PAGE — NO SCROLLING
+========================================= */
+
+/* Stop page scrolling */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  margin: 0;
+
+  overscroll-behavior: none;
+}
+
+/* Keep the background fixed */
+body {
+  position: fixed;
+  inset: 0;
+
+  isolation: isolate;
+}
+
+/* Keep login wrapper fixed to viewport */
+.login-page {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20px 15px;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Login card stays within the screen */
+.login-card {
+  flex: 0 1 auto;
+
+  width: 100%;
+  max-width: 410px;
+
+  max-height: 100%;
+  min-height: 0;
+
+  margin: 0;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Keep header controls fixed */
+.header-actions {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 1000;
+}
+
+/* Mobile screens */
+@media screen and (max-width: 599px) {
+  .login-page {
+    padding: 52px 12px 10px;
+  }
+
+  .login-card {
+    max-width: 410px;
+    padding: 20px 18px;
+  }
+
+  .header-actions {
+    top: 8px;
+    right: 10px;
+  }
+}
+
+/* Tablet screens */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .login-page {
+    padding: 55px 20px 12px;
+  }
+
+  .login-card {
+    max-width: 430px;
+  }
+}
+
+/* Short screens */
+@media screen and (max-height: 750px) {
+  .login-page {
+    padding-top: 48px;
+    padding-bottom: 8px;
+  }
+
+  .login-card {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .login-heading {
+    margin: 8px 0 10px;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+
+  .form-options {
+    margin-bottom: 10px;
+  }
+
+  .social-divider {
+    margin: 9px 0 7px;
+  }
+
+  .signup-text {
+    margin-top: 8px;
+  }
+}
+
+/* Very short screens */
+@media screen and (max-height: 600px) {
+  .login-page {
+    padding: 42px 12px 5px;
+  }
+
+  .login-card {
+    padding: 8px 18px;
+  }
+
+  .brand img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .tagline {
+    bottom: 12px;
+    font-size: 8px;
+  }
+
+  .login-heading {
+    margin: 5px 0 7px;
+  }
+
+  .login-heading h1 {
+    font-size: 20px;
+  }
+
+  .login-heading p {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+
+  .form-group {
+    margin-bottom: 6px;
+  }
+
+  .input-wrapper {
+    height: 38px;
+  }
+
+  .form-options {
+    margin-bottom: 7px;
+  }
+
+  .login-button {
+    min-height: 37px;
+    padding: 7px 12px;
+  }
+
+  .social-divider {
+    margin: 6px 0;
+  }
+
+  .social-button {
+    min-height: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .signup-text {
+    margin-top: 5px;
+  }
+}
+
+/* RTL header positioning */
+html[dir="rtl"] .header-actions {
+  right: auto;
+  left: 18px;
+}
+
+@media screen and (max-width: 599px) {
+  html[dir="rtl"] .header-actions {
+    right: auto;
+    left: 10px;
   }
 }

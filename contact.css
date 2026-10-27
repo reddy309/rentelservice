@@ -74,7 +74,7 @@ html.dark .contact-hero-overlay {
 
 .contact-hero-content h1 {
   margin: 0 0 22px;
-  color: var(--primary);
+  color: #ffffff;
   font-size: clamp(45px, 6vw, 60px);
   font-weight: 600;
   line-height: 1.15;
@@ -141,6 +141,30 @@ html.dark .contact-hero-overlay {
   background: var(--bg);
   color: var(--text);
   border: 2px solid var(--secondary);
+}
+/* CONTACT HERO BUTTON — DARK MODE */
+html.dark .contact-hero-btn,
+body.dark .contact-hero-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .contact-hero-btn:hover,
+body.dark .contact-hero-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .contact-hero-btn svg,
+body.dark .contact-hero-btn svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
 }
 
 .contact-hero-btn i {
@@ -930,7 +954,36 @@ html.dark .contact-hero-overlay {
 .contact-form-status:empty {
   display: none;
 }
+/* CONTACT FORM SUBMIT — DARK MODE */
+html.dark .contact-form-submit,
+body.dark .contact-form-submit {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  opacity: 1;
+  visibility: visible;
+}
 
+html.dark .contact-form-submit:hover,
+body.dark .contact-form-submit:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .contact-form-submit svg,
+body.dark .contact-form-submit svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .contact-form-submit:focus-visible,
+body.dark .contact-form-submit:focus-visible {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 3px;
+}
 /* =========================================
    NETHUB / TABLET LANDSCAPE
    769px – 1024px
@@ -1528,6 +1581,60 @@ html.dark .contact-hero-overlay {
 .direction-option:hover .direction-arrow {
   transform: translate(3px, -3px);
 }
+/* =========================================
+   DIRECTION OPTION — DARK MODE FIX
+========================================= */
+
+html.dark .direction-option,
+body.dark .direction-option,
+.dark .direction-option {
+  background: var(--surface, #202c3d);
+  border-color: var(--border, #3a4b61);
+  color: #f8fafc;
+}
+
+/* Icon */
+html.dark .direction-option .direction-icon,
+body.dark .direction-option .direction-icon,
+.dark .direction-option .direction-icon {
+  background: rgba(45, 212, 191, 0.18);
+  color: #2dd4bf;
+}
+
+/* Heading */
+html.dark .direction-option .direction-text strong,
+body.dark .direction-option .direction-text strong,
+.dark .direction-option .direction-text strong {
+  color: #f8fafc;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Description */
+html.dark .direction-option .direction-text small,
+body.dark .direction-option .direction-text small,
+.dark .direction-option .direction-text small {
+  color: #cbd5e1;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Arrow */
+html.dark .direction-option .direction-arrow,
+body.dark .direction-option .direction-arrow,
+.dark .direction-option .direction-arrow {
+  color: #2dd4bf;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover */
+html.dark .direction-option:hover,
+body.dark .direction-option:hover,
+.dark .direction-option:hover {
+  background: #253447;
+  border-color: #2dd4bf;
+}
 
 /* =========================================
    GOOGLE MAPS FOOTER CARD
@@ -1624,7 +1731,36 @@ html.dark .contact-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* GOOGLE MAPS BUTTON — DARK MODE */
+html.dark .google-maps-button,
+body.dark .google-maps-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  opacity: 1;
+  visibility: visible;
+}
 
+html.dark .google-maps-button:hover,
+body.dark .google-maps-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .google-maps-button svg,
+body.dark .google-maps-button svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .google-maps-button:focus-visible,
+body.dark .google-maps-button:focus-visible {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 3px;
+}
 .google-maps-button i {
   width: 15px;
   height: 15px;
@@ -2244,7 +2380,66 @@ html.dark .contact-hero-overlay {
   border-color: var(--secondary);
   box-shadow: 0 0 0 3px rgba(201, 164, 92, 0.17);
 }
+/* =========================================
+   OWNER FORM FIELDS — DARK MODE
+========================================= */
 
+html.dark .owner-form-group label,
+body.dark .owner-form-group label {
+  color: var(--heading);
+}
+
+html.dark .owner-form-group input,
+html.dark .owner-form-group select,
+html.dark .owner-form-group textarea,
+body.dark .owner-form-group input,
+body.dark .owner-form-group select,
+body.dark .owner-form-group textarea {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  color-scheme: dark;
+}
+
+/* Placeholder */
+html.dark .owner-form-group input::placeholder,
+html.dark .owner-form-group textarea::placeholder,
+body.dark .owner-form-group input::placeholder,
+body.dark .owner-form-group textarea::placeholder {
+  color: var(--text);
+  opacity: 1;
+}
+
+/* Focus */
+html.dark .owner-form-group input:focus,
+html.dark .owner-form-group select:focus,
+html.dark .owner-form-group textarea:focus,
+body.dark .owner-form-group input:focus,
+body.dark .owner-form-group select:focus,
+body.dark .owner-form-group textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.18);
+  outline: none;
+}
+
+/* Dropdown options */
+html.dark .owner-form-group select option,
+body.dark .owner-form-group select option {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Disabled fields */
+html.dark .owner-form-group input:disabled,
+html.dark .owner-form-group select:disabled,
+html.dark .owner-form-group textarea:disabled,
+body.dark .owner-form-group input:disabled,
+body.dark .owner-form-group select:disabled,
+body.dark .owner-form-group textarea:disabled {
+  background: var(--bg);
+  color: var(--text);
+  opacity: 0.7;
+}
 /* =========================================
    SUBMIT BUTTON - CENTER
 ========================================= */
@@ -2289,7 +2484,36 @@ html.dark .contact-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* OWNER SUBMIT BUTTON — DARK MODE */
+html.dark .owner-submit-btn,
+body.dark .owner-submit-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  opacity: 1;
+  visibility: visible;
+}
 
+html.dark .owner-submit-btn:hover,
+body.dark .owner-submit-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .owner-submit-btn svg,
+body.dark .owner-submit-btn svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .owner-submit-btn:focus-visible,
+body.dark .owner-submit-btn:focus-visible {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 3px;
+}
 .owner-submit-btn:focus-visible {
   outline: 2px solid var(--secondary);
   outline-offset: 3px;
@@ -3030,15 +3254,18 @@ html.dark .contact-hero-overlay {
   justify-content: center;
   text-align: center;
 
-  background: linear-gradient(
-    135deg,
-    rgba(201, 164, 92, 0.22),
-    rgba(139, 100, 44, 0.22)
-  );
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.85),
+      transparent 42%
+    ),
+    linear-gradient(135deg, rgba(74, 144, 226, 0.2), rgba(15, 118, 110, 0.12));
 
+  border: 1px solid rgba(74, 144, 226, 0.3);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 18px 45px rgba(139, 100, 44, 0.16);
+  box-shadow: 0 18px 45px rgba(30, 70, 110, 0.1);
 }
 
 /* Decorative circles */
@@ -3186,7 +3413,39 @@ html.dark .contact-hero-overlay {
 .property-cta-btn:hover svg {
   transform: translate(3px, -3px);
 }
+/* PROPERTY CTA BUTTON — DARK MODE */
+html.dark .property-cta-btn,
+body.dark .property-cta-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  opacity: 1;
+  visibility: visible;
+}
 
+html.dark .property-cta-btn:hover,
+body.dark .property-cta-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .property-cta-btn svg,
+html.dark .property-cta-link svg,
+body.dark .property-cta-btn svg,
+body.dark .property-cta-link svg {
+  width: 17px;
+  height: 17px;
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .property-cta-btn:hover svg,
+body.dark .property-cta-btn:hover svg {
+  transform: translateX(3px);
+}
 .property-cta-link {
   background: rgba(255, 255, 255, 0.04);
   color: var(--text);

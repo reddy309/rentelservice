@@ -94,7 +94,7 @@ html.dark .service-details-overlay {
   max-width: 820px;
   margin: 0 0 20px;
 
-  color: var(--primary);
+  color: #ffffff;
   font-family: var(--font-heading);
   font-size: clamp(45px, 6vw, 60px);
   font-weight: 700;
@@ -161,6 +161,39 @@ html.dark .service-details-overlay {
 }
 
 .service-details-button:hover span {
+  transform: translate(3px, -3px);
+}
+/* =========================================
+   SERVICE DETAILS BUTTON — DARK MODE
+========================================= */
+
+html.dark .service-details-button,
+body.dark .service-details-button {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .service-details-button span,
+body.dark .service-details-button span {
+  color: inherit;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .service-details-button:hover,
+body.dark .service-details-button:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .service-details-button:hover span,
+body.dark .service-details-button:hover span {
+  color: #ffffff;
   transform: translate(3px, -3px);
 }
 
@@ -896,7 +929,40 @@ html.dark .service-details-overlay {
   width: 16px;
   height: 16px;
 }
+/* =========================================
+   RENT PROCESS CTA — DARK MODE
+========================================= */
 
+html.dark .rent-process-cta,
+body.dark .rent-process-cta {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .rent-process-cta svg,
+body.dark .rent-process-cta svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .rent-process-cta:hover,
+body.dark .rent-process-cta:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .rent-process-cta:hover svg,
+body.dark .rent-process-cta:hover svg {
+  color: #ffffff;
+  stroke: currentColor;
+}
 /* IMAGE SIDE */
 
 .rent-process-visual {
@@ -1410,7 +1476,40 @@ html.dark .service-details-overlay {
   width: 16px;
   height: 16px;
 }
+/* =========================================
+   TENANT SCREENING CTA — DARK MODE
+========================================= */
 
+html.dark .tenant-screening-cta,
+body.dark .tenant-screening-cta {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .tenant-screening-cta svg,
+body.dark .tenant-screening-cta svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .tenant-screening-cta:hover,
+body.dark .tenant-screening-cta:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .tenant-screening-cta:hover svg,
+body.dark .tenant-screening-cta:hover svg {
+  color: #ffffff;
+  stroke: currentColor;
+}
 /* =====================================================
    TENANT SCREENING — RESPONSIVE DESIGN
    SAMSUNG S8+ | IPAD MINI | GOOGLE NEST HUB
@@ -1994,7 +2093,39 @@ html.dark .service-details-overlay {
 .inspection-btn:hover span {
   transform: translate(3px, -2px);
 }
+/* =========================================
+   INSPECTION BUTTON — DARK MODE
+========================================= */
 
+html.dark .inspection-btn,
+body.dark .inspection-btn {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .inspection-btn span,
+body.dark .inspection-btn span {
+  color: inherit;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .inspection-btn:hover,
+body.dark .inspection-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .inspection-btn:hover span,
+body.dark .inspection-btn:hover span {
+  color: #ffffff;
+  transform: translate(3px, -2px);
+}
 /* RIGHT IMAGE */
 
 .inspection-image {
@@ -2607,7 +2738,7 @@ html.dark .service-details-overlay {
   flex: 0 0 14px;
   margin-top: 1px;
 
-  color: var(--secondary, #9a742f);
+  color: var(--secondary);
   stroke-width: 2;
 }
 
@@ -2622,8 +2753,20 @@ html.dark .service-details-overlay {
   margin-top: 35px;
   padding: 27px 30px;
 
-  background: rgba(154, 116, 47, 0.08);
+  background: var(--primary-light);
   border: 1px solid var(--border);
+}
+/* MAINTENANCE BOTTOM — DARK MODE */
+
+html.dark .maintenance-bottom,
+body.dark .maintenance-bottom {
+  background: linear-gradient(
+    135deg,
+    rgba(74, 144, 226, 0.14),
+    rgba(15, 118, 110, 0.12)
+  );
+
+  border-color: #38516a;
 }
 
 .maintenance-bottom-content {
@@ -2710,6 +2853,40 @@ html.dark .service-details-overlay {
   background: var(--bg);
   color: var(--text);
   border: 2px solid var(--secondary);
+}
+/* =========================================
+   MAINTENANCE CTA — DARK MODE
+========================================= */
+
+html.dark .maintenance-cta,
+body.dark .maintenance-cta {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .maintenance-cta svg,
+body.dark .maintenance-cta svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .maintenance-cta:hover,
+body.dark .maintenance-cta:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .maintenance-cta:hover svg,
+body.dark .maintenance-cta:hover svg {
+  color: #ffffff;
+  stroke: currentColor;
 }
 
 /* SCROLL REVEAL
@@ -3337,7 +3514,7 @@ html.dark .service-details-overlay {
 
 .consultation-btn-secondary {
   background: rgba(255, 255, 255, 0.04);
-  color: var(--bg);
+  color: var(--text);
   border-color: var(--secondary);
   border: 1px solid var(--primary);
 }
@@ -3350,6 +3527,52 @@ html.dark .service-details-overlay {
 
 .consultation-btn-secondary:hover svg {
   transform: translateX(4px);
+}
+/* =========================================
+   CONSULTATION BUTTONS — DARK MODE
+========================================= */
+
+html.dark .consultation-btn-primary,
+body.dark .consultation-btn-primary {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+}
+
+html.dark .consultation-btn-secondary,
+body.dark .consultation-btn-secondary {
+  background: #202b35;
+  color: #e2e8f0;
+  border: 1px solid #38516a;
+}
+
+/* BUTTON ICONS */
+
+html.dark .consultation-btn-primary svg,
+html.dark .consultation-btn-secondary svg,
+body.dark .consultation-btn-primary svg,
+body.dark .consultation-btn-secondary svg {
+  color: inherit;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+/* PRIMARY BUTTON HOVER */
+
+html.dark .consultation-btn-primary:hover,
+body.dark .consultation-btn-primary:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+/* SECONDARY BUTTON HOVER */
+
+html.dark .consultation-btn-secondary:hover,
+body.dark .consultation-btn-secondary:hover {
+  background: #263d4b;
+  color: #5eead4;
+  border: 2px solid #2dd4bf;
 }
 
 /* =========================================

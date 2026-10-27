@@ -7,6 +7,10 @@
    Home 1: index.html
    Home 2: index1.html
 
+   Responsive: Samsung Galaxy S8+
+               iPad Mini
+               Google Nest Hub
+
    Dark Mode: Removed
    RTL: Removed
 ========================================================= */
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
      1. LUCIDE ICONS
   ========================================================= */
 
-  function refreshIcons(root = document) {
+  function refreshIcons() {
     if (window.lucide && typeof window.lucide.createIcons === "function") {
       window.lucide.createIcons({
         attrs: {
@@ -66,18 +70,131 @@ document.addEventListener("DOMContentLoaded", () => {
       const url = new URL(href, window.location.href);
 
       return url.pathname.split("/").pop().toLowerCase() || "index.html";
-    } catch {
+    } catch (error) {
       return href.split("#")[0].split("?")[0].split("/").pop().toLowerCase();
     }
   }
 
   /* =========================================================
-     4. HOME DROPDOWN + ACTIVE UNDERLINE
+     4. HOME DROPDOWN ELEMENTS
   ========================================================= */
 
-  const homeButton = document.getElementById("homeDropdownButton");
+  const homeButton =
+    document.getElementById("homeDropdownButton") ||
+    document.querySelector(".dropdown-button");
 
   const homeDropdown = homeButton ? homeButton.closest(".nav-dropdown") : null;
+
+  const dropdownMenu = homeDropdown
+    ? homeDropdown.querySelector(".dropdown-menu")
+    : null;
+
+  /* =========================================================
+     5. HOME DROPDOWN OPEN / CLOSE
+     Supports .open AND .active
+     Works with touch and mouse
+  ========================================================= */
+
+  function openHomeDropdown() {
+    if (!homeButton || !homeDropdown || !dropdownMenu) {
+      return;
+    }
+
+    homeDropdown.classList.add("open", "active");
+
+    homeButton.setAttribute("aria-expanded", "true");
+
+    dropdownMenu.setAttribute("aria-hidden", "false");
+  }
+
+  function closeHomeDropdown() {
+    if (!homeButton || !homeDropdown || !dropdownMenu) {
+      return;
+    }
+
+    homeDropdown.classList.remove("open", "active");
+
+    homeButton.setAttribute("aria-expanded", "false");
+
+    dropdownMenu.setAttribute("aria-hidden", "true");
+  }
+
+  function toggleHomeDropdown(event) {
+    if (!homeButton || !homeDropdown || !dropdownMenu) {
+      return;
+    }
+
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    const isOpen =
+      homeDropdown.classList.contains("open") ||
+      homeDropdown.classList.contains("active");
+
+    if (isOpen) {
+      closeHomeDropdown();
+    } else {
+      openHomeDropdown();
+    }
+  }
+
+  if (homeButton && homeDropdown && dropdownMenu) {
+    homeButton.setAttribute("aria-haspopup", "true");
+
+    homeButton.setAttribute("aria-expanded", "false");
+
+    homeButton.setAttribute("aria-controls", "homeDropdownMenu");
+
+    dropdownMenu.id = "homeDropdownMenu";
+
+    dropdownMenu.setAttribute("aria-hidden", "true");
+
+    /*
+      Use click for touchscreens.
+      Do not depend only on CSS hover.
+    */
+
+    homeButton.addEventListener("click", toggleHomeDropdown);
+
+    /*
+      Close after selecting Home 1 or Home 2.
+      Normal navigation is not prevented.
+    */
+
+    dropdownMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        closeHomeDropdown();
+      });
+    });
+
+    /*
+      Close when clicking outside the dropdown.
+    */
+
+    document.addEventListener("click", (event) => {
+      if (!homeDropdown.contains(event.target)) {
+        closeHomeDropdown();
+      }
+    });
+
+    /*
+      Close dropdown with Escape.
+    */
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeHomeDropdown();
+      }
+    });
+  }
+
+  /* =========================================================
+     6. ACTIVE HOME UNDERLINE
+     Home 1: index.html
+     Home 2: index1.html
+  ========================================================= */
 
   function setActiveHomeLine() {
     if (!homeButton || !homeDropdown) return;
@@ -99,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const dropdownLinks = homeDropdown.querySelectorAll(
-      ".dropdown-menu a, .dropdown-menu .dropdown-link",
+      ".dropdown-menu a, .dropdown-link",
     );
 
     dropdownLinks.forEach((link) => {
@@ -121,80 +238,14 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveHomeLine();
 
   /* =========================================================
-     5. HOME DROPDOWN OPEN / CLOSE
-  ========================================================= */
-
-  if (homeButton && homeDropdown) {
-    const dropdownMenu = homeDropdown.querySelector(".dropdown-menu");
-
-    function closeHomeDropdown() {
-      homeDropdown.classList.remove("open");
-
-      homeButton.setAttribute("aria-expanded", "false");
-    }
-
-    function openHomeDropdown() {
-      homeDropdown.classList.add("open");
-
-      homeButton.setAttribute("aria-expanded", "true");
-    }
-
-    homeButton.setAttribute("aria-haspopup", "true");
-
-    homeButton.setAttribute("aria-expanded", "false");
-
-    homeButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-
-      const isOpen = homeDropdown.classList.contains("open");
-
-      if (isOpen) {
-        closeHomeDropdown();
-      } else {
-        openHomeDropdown();
-      }
-    });
-
-    if (dropdownMenu) {
-      dropdownMenu.addEventListener("click", (event) => {
-        const link = event.target.closest("a");
-
-        if (link) {
-          closeHomeDropdown();
-        }
-      });
-    }
-
-    document.addEventListener("click", (event) => {
-      if (!homeDropdown.contains(event.target)) {
-        closeHomeDropdown();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeHomeDropdown();
-        homeButton.focus();
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth <= 820) {
-        closeHomeDropdown();
-      }
-    });
-  }
-
-  /* =========================================================
-     6. NAVIGATION ACTIVE STATE
+     7. OTHER NAVIGATION ACTIVE STATE
   ========================================================= */
 
   function setActiveNavigation() {
     const currentPage = getCurrentPage();
 
     const navigationLinks = document.querySelectorAll(
-      ".main-nav a, .nav-links a, .site-nav a, #mainNav a",
+      ".main-nav a, " + ".nav-links a, " + ".site-nav a, " + "#mainNav a",
     );
 
     navigationLinks.forEach((link) => {
@@ -204,7 +255,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const linkPage = normalizePagePath(href);
 
-      // Home underline is handled separately.
+      /*
+        Home 1 and Home 2 are handled separately.
+      */
+
       if (linkPage === "index.html" || linkPage === "index1.html") {
         return;
       }
@@ -224,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveNavigation();
 
   /* =========================================================
-     7. STICKY HEADER
+     8. STICKY HEADER
   ========================================================= */
 
   function updateHeader() {
@@ -253,8 +307,12 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   /* =========================================================
-     8. MOBILE NAVIGATION
+     9. MOBILE NAVIGATION
   ========================================================= */
+
+  function isMobileNavigation() {
+    return window.matchMedia("(max-width: 820px)").matches;
+  }
 
   function closeMobileMenu() {
     if (nav) {
@@ -268,6 +326,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.body.classList.remove("menu-open");
+
+    closeHomeDropdown();
   }
 
   if (menuToggle && nav) {
@@ -282,6 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       nav.classList.toggle("active", isOpen);
+
       nav.classList.toggle("open", isOpen);
 
       menuToggle.classList.toggle("active", isOpen);
@@ -290,14 +351,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.body.classList.toggle("menu-open", isOpen);
 
+      if (!isOpen) {
+        closeHomeDropdown();
+      }
+
       refreshIcons();
     });
+
+    /*
+      Close navigation after selecting a normal link.
+      Home dropdown button itself is not an anchor.
+    */
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         closeMobileMenu();
       });
     });
+
+    /*
+      Clicking inside navigation must not close it.
+      Clicking outside closes it.
+    */
 
     document.addEventListener("click", (event) => {
       if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
@@ -311,21 +386,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    /*
+      Reset mobile navigation when switching to desktop.
+      Do not close the dropdown simply because the
+      device is a touchscreen.
+    */
+
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 820) {
+      if (!isMobileNavigation()) {
         closeMobileMenu();
       }
     });
   }
 
   /* =========================================================
-     9. SCROLL REVEAL — FIXED
-     Supports .revealed and .is-visible CSS classes
+     10. SCROLL REVEAL
+     Supports .reveal and .is-visible
   ========================================================= */
 
   const revealElements = document.querySelectorAll(
-    ".reveal, .reveal-left, .reveal-right, " +
-      ".reveal-up, .fade-in, .scroll-reveal",
+    ".reveal, " +
+      ".reveal-left, " +
+      ".reveal-right, " +
+      ".reveal-up, " +
+      ".fade-in, " +
+      ".scroll-reveal",
   );
 
   if ("IntersectionObserver" in window) {
@@ -333,8 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            entry.target.classList.add("revealed");
+            entry.target.classList.add("is-visible", "revealed");
 
             observer.unobserve(entry.target);
           }
@@ -356,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================================================
-     10. HERO / STATISTICS COUNTERS
+     11. HERO / STATISTICS COUNTERS
   ========================================================= */
 
   const counters = document.querySelectorAll(
@@ -386,6 +470,7 @@ document.addEventListener("DOMContentLoaded", () => {
     element.dataset.countAnimated = "true";
 
     const duration = 1600;
+
     const startTime = performance.now();
 
     const prefix = element.getAttribute("data-prefix") || "";
@@ -444,119 +529,75 @@ document.addEventListener("DOMContentLoaded", () => {
       animateCounter(counter);
     });
   }
-  /* =========================================
-   3. ESTATENEST TESTIMONIAL SLIDER
-========================================= */
 
-  document.querySelectorAll(".cs-testimonial-slider").forEach((slider) => {
-    const section = slider.closest(".cs-testimonials");
-    if (!section || slider.dataset.initialized === "true") return;
+  /* =========================================================
+   ESTATENEST TESTIMONIALS — JAVASCRIPT
+========================================================= */
 
-    slider.dataset.initialized = "true";
+  document.addEventListener("DOMContentLoaded", () => {
+    /* =====================================================
+     01. SCROLL REVEAL
+  ===================================================== */
 
-    const slides = Array.from(slider.querySelectorAll(".cs-testimonial-slide"));
-    const prevButton = slider.querySelector(".cs-prev");
-    const nextButton = slider.querySelector(".cs-next");
-    const dots = Array.from(section.querySelectorAll(".cs-testimonial-dot"));
-
-    if (!slides.length) return;
-
-    let currentIndex = Math.max(
-      0,
-      slides.findIndex((slide) => slide.classList.contains("active")),
+    const revealElements = document.querySelectorAll(
+      ".cs-testimonials .reveal",
     );
 
-    let timer;
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
 
-    function showSlide(index) {
-      currentIndex = (index + slides.length) % slides.length;
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -30px 0px",
+        },
+      );
 
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === currentIndex);
-        slide.setAttribute("aria-hidden", String(i !== currentIndex));
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
       });
-
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentIndex);
-
-        if (i === currentIndex) {
-          dot.setAttribute("aria-current", "true");
-        } else {
-          dot.removeAttribute("aria-current");
-        }
-      });
-
-      console.log("Showing testimonial:", currentIndex + 1);
-    }
-
-    function startAutoSlide() {
-      clearInterval(timer);
-
-      if (!document.hidden && slides.length > 1) {
-        timer = setInterval(() => {
-          showSlide(currentIndex + 1);
-        }, 4000);
-      }
-    }
-
-    if (prevButton) {
-      prevButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        showSlide(currentIndex - 1);
-        startAutoSlide();
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("is-visible");
       });
     }
 
-    if (nextButton) {
-      nextButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        showSlide(currentIndex + 1);
-        startAutoSlide();
-      });
-    }
+    /* =====================================================
+     03. INITIAL ACTIVE TESTIMONIAL
+  ===================================================== */
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener("click", (event) => {
-        event.preventDefault();
-        showSlide(index);
-        startAutoSlide();
-      });
-    });
-
-    slider.addEventListener("mouseenter", () => clearInterval(timer));
-    slider.addEventListener("mouseleave", startAutoSlide);
-
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) {
-        clearInterval(timer);
-      } else {
-        startAutoSlide();
-      }
-    });
-
-    showSlide(currentIndex);
-    startAutoSlide();
+    activateTestimonial(0);
   });
+
   /* =========================================================
-     12. CTA BUTTON FEEDBACK
+     13. CTA BUTTON FEEDBACK
   ========================================================= */
 
   document
     .querySelectorAll(".cta-button, .btn-primary, .btn-secondary")
     .forEach((button) => {
-      if (button.tagName === "A" || button.tagName === "BUTTON") {
-        button.addEventListener("click", () => {
-          button.classList.add("is-clicked");
-
-          window.setTimeout(() => {
-            button.classList.remove("is-clicked");
-          }, 180);
-        });
+      if (button.tagName !== "A" && button.tagName !== "BUTTON") {
+        return;
       }
+
+      button.addEventListener("click", () => {
+        button.classList.add("is-clicked");
+
+        window.setTimeout(() => {
+          button.classList.remove("is-clicked");
+        }, 180);
+      });
     });
 
   /* =========================================================
-     13. SMOOTH SCROLL FOR SAME-PAGE LINKS
+     14. SMOOTH SCROLL
   ========================================================= */
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -569,7 +610,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         target = document.querySelector(href);
-      } catch {
+      } catch (error) {
         return;
       }
 
@@ -581,13 +622,14 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
           ? "auto"
           : "smooth",
+
         block: "start",
       });
     });
   });
 
   /* =========================================================
-     14. FOOTER CURRENT YEAR
+     15. FOOTER CURRENT YEAR
   ========================================================= */
 
   document
@@ -597,28 +639,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   /* =========================================================
-     15. FORM VALIDATION FEEDBACK
-     Native HTML validation remains enabled
+     16. FORM VALIDATION FEEDBACK
   ========================================================= */
 
   document.querySelectorAll("form[data-validate]").forEach((form) => {
     form.addEventListener("submit", (event) => {
       if (!form.checkValidity()) {
         event.preventDefault();
+
         form.reportValidity();
+
         return;
       }
 
-      // Add real form submission/backend handling here.
+      /*
+          Add backend submission logic here if required.
+        */
     });
   });
 
   /* =========================================================
-     16. FINAL INITIALIZATION
+     17. FINAL INITIALIZATION
   ========================================================= */
 
   setActiveHomeLine();
+
   setActiveNavigation();
+
   updateHeader();
+
   refreshIcons();
 });

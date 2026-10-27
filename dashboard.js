@@ -1,20 +1,35 @@
 /* =========================================================
    ESTATENEST — PROPERTY OWNER DASHBOARD
+   Complete Updated JavaScript
+
+   Features:
+   1. Fixed Dashboard Header
+   2. Sidebar Page Navigation
+   3. Active Sidebar Button
+   4. URL Hash Navigation
+   5. Mobile Sidebar Toggle
+   6. Sidebar Overlay
+   7. Profile Dropdown
+   8. Search Filters
+   9. Toast Notifications
+   10. Logout
+   11. Lucide Icon Refresh
+   12. Escape Key Support
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
+  "use strict";
+
+  /* =====================================================
+     1. ELEMENT SELECTORS
+  ===================================================== */
 
   const sidebar = document.getElementById("sidebar");
   const sidebarOverlay = document.getElementById("sidebarOverlay");
   const menuToggle = document.getElementById("menuToggle");
 
   const profileWrapper = document.querySelector(".admin-profile-wrapper");
-
   const profileButton = document.getElementById("adminProfileButton");
-
-  const darkToggle = document.getElementById("darkToggle");
-  const rtlToggle = document.getElementById("rtlToggle");
 
   const headerLabel = document.getElementById("headerLabel");
   const headerTitle = document.getElementById("headerTitle");
@@ -23,7 +38,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let toastTimeout;
 
-  /* PAGE TITLES */
+  /* =====================================================
+     2. FIXED DASHBOARD HEADER
+     Header text NEVER changes when navigating pages
+  ===================================================== */
+
+  if (headerLabel) {
+    headerLabel.textContent = "PROPERTY OWNER PORTAL";
+  }
+
+  if (headerTitle) {
+    headerTitle.textContent = "Welcome to EstateNest";
+  }
+
+  /* =====================================================
+     3. PAGE DATA
+     Used for navigation validation
+  ===================================================== */
 
   const pageData = {
     dashboard: {
@@ -77,15 +108,19 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  /* ICON REFRESH */
+  /* =====================================================
+     4. LUCIDE ICON REFRESH
+  ===================================================== */
 
   function refreshIcons() {
-    if (window.lucide) {
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
       window.lucide.createIcons();
     }
   }
 
-  /* TOAST */
+  /* =====================================================
+     5. TOAST NOTIFICATION
+  ===================================================== */
 
   function showToast(message) {
     if (!toast) return;
@@ -100,16 +135,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3200);
   }
 
-  /* SIDEBAR */
+  /* =====================================================
+     6. SIDEBAR OPEN
+  ===================================================== */
 
   function openSidebar() {
     if (!sidebar) return;
 
     sidebar.classList.add("open");
-
-    if (sidebarOverlay) {
-      sidebarOverlay.classList.add("show");
-    }
+    sidebarOverlay?.classList.add("show");
 
     if (menuToggle) {
       menuToggle.setAttribute("aria-expanded", "true");
@@ -124,14 +158,13 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshIcons();
   }
 
+  /* =====================================================
+     7. SIDEBAR CLOSE
+  ===================================================== */
+
   function closeSidebar() {
-    if (!sidebar) return;
-
-    sidebar.classList.remove("open");
-
-    if (sidebarOverlay) {
-      sidebarOverlay.classList.remove("show");
-    }
+    sidebar?.classList.remove("open");
+    sidebarOverlay?.classList.remove("show");
 
     if (menuToggle) {
       menuToggle.setAttribute("aria-expanded", "false");
@@ -144,11 +177,15 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshIcons();
   }
 
+  /* =====================================================
+     8. MOBILE MENU BUTTON
+  ===================================================== */
+
   if (menuToggle) {
     menuToggle.setAttribute("aria-expanded", "false");
 
     menuToggle.addEventListener("click", () => {
-      if (sidebar && sidebar.classList.contains("open")) {
+      if (sidebar?.classList.contains("open")) {
         closeSidebar();
       } else {
         openSidebar();
@@ -156,9 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (sidebarOverlay) {
-    sidebarOverlay.addEventListener("click", closeSidebar);
-  }
+  sidebarOverlay?.addEventListener("click", closeSidebar);
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 900) {
@@ -166,16 +201,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* PROFILE DROPDOWN */
+  /* =====================================================
+     9. PROFILE DROPDOWN
+  ===================================================== */
 
   function closeProfileDropdown() {
-    if (!profileWrapper) return;
-
-    profileWrapper.classList.remove("open");
-
-    if (profileButton) {
-      profileButton.setAttribute("aria-expanded", "false");
-    }
+    profileWrapper?.classList.remove("open");
+    profileButton?.setAttribute("aria-expanded", "false");
   }
 
   if (profileButton && profileWrapper) {
@@ -196,16 +228,24 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", closeProfileDropdown);
   }
 
-  /* PAGE NAVIGATION */
+  /* =====================================================
+     10. PAGE NAVIGATION
+     Changes page content and active sidebar item only.
+     Dashboard header remains fixed.
+  ===================================================== */
 
   function showPage(pageName, updateHash = true) {
     if (!pageData[pageName]) {
       pageName = "dashboard";
     }
 
+    /* Hide all dashboard page sections */
+
     document.querySelectorAll(".dynamic-page").forEach((page) => {
       page.hidden = true;
     });
+
+    /* Show selected page section */
 
     const target = document.querySelector(
       `.dynamic-page[data-content="${pageName}"]`,
@@ -215,28 +255,34 @@ document.addEventListener("DOMContentLoaded", () => {
       target.hidden = false;
     }
 
+    /* Update active sidebar button */
+
     document.querySelectorAll(".nav-item[data-page]").forEach((item) => {
-      const active = item.dataset.page === pageName;
+      const isActive = item.dataset.page === pageName;
 
-      item.classList.toggle("active", active);
+      item.classList.toggle("active", isActive);
 
-      if (active) {
+      if (isActive) {
         item.setAttribute("aria-current", "page");
       } else {
         item.removeAttribute("aria-current");
       }
     });
 
-    if (headerLabel) {
-      headerLabel.textContent = pageData[pageName].label;
-    }
+    /*
+      IMPORTANT:
+      Do not update headerLabel or headerTitle here.
+      Header always displays:
+      PROPERTY OWNER PORTAL
+      Welcome to EstateNest
+    */
 
-    if (headerTitle) {
-      headerTitle.textContent = pageData[pageName].title;
-    }
+    /* Close mobile sidebar and profile menu */
 
     closeSidebar();
     closeProfileDropdown();
+
+    /* Update URL hash without reloading */
 
     if (updateHash && window.location.hash !== `#${pageName}`) {
       history.replaceState(null, "", `#${pageName}`);
@@ -245,12 +291,21 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshIcons();
   }
 
+  /* =====================================================
+     11. SIDEBAR NAVIGATION BUTTONS
+  ===================================================== */
+
   document.querySelectorAll(".nav-item[data-page]").forEach((item) => {
     item.addEventListener("click", (event) => {
       event.preventDefault();
+
       showPage(item.dataset.page);
     });
   });
+
+  /* =====================================================
+     12. OTHER PAGE LINKS
+  ===================================================== */
 
   document.querySelectorAll("[data-page-link]").forEach((item) => {
     item.addEventListener("click", (event) => {
@@ -260,113 +315,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* =====================================================
+     13. URL HASH CHANGE
+     Supports #dashboard, #properties, #tenants, etc.
+  ===================================================== */
+
   window.addEventListener("hashchange", () => {
     const pageName = window.location.hash.slice(1);
 
     showPage(pageData[pageName] ? pageName : "dashboard", false);
   });
 
-  /* DARK MODE */
-
-  function updateThemeIcon() {
-    if (!darkToggle) return;
-
-    const isDark = root.classList.contains("dark");
-
-    darkToggle.innerHTML = isDark
-      ? '<i data-lucide="sun"></i>'
-      : '<i data-lucide="moon"></i>';
-
-    darkToggle.setAttribute(
-      "aria-label",
-      isDark ? "Switch to light mode" : "Switch to dark mode",
-    );
-
-    refreshIcons();
-  }
-
-  darkToggle?.addEventListener("click", () => {
-    const isDark = root.classList.toggle("dark");
-
-    try {
-      localStorage.setItem("estatenest-theme", isDark ? "dark" : "light");
-    } catch (error) {
-      // Theme still works if browser storage is unavailable.
-    }
-
-    updateThemeIcon();
-  });
-
-  /* RTL MODE */
-
-  function updateRTLButton() {
-    if (!rtlToggle) return;
-
-    const isRTL = root.classList.contains("rtl");
-
-    rtlToggle.setAttribute("aria-pressed", String(isRTL));
-
-    rtlToggle.setAttribute(
-      "aria-label",
-      isRTL
-        ? "Switch to left-to-right layout"
-        : "Switch to right-to-left layout",
-    );
-  }
-
-  function setRTL(enabled) {
-    root.classList.toggle("rtl", enabled);
-    root.setAttribute("dir", enabled ? "rtl" : "ltr");
-
-    try {
-      localStorage.setItem("estatenest-direction", enabled ? "rtl" : "ltr");
-    } catch (error) {
-      // RTL still works if browser storage is unavailable.
-    }
-
-    updateRTLButton();
-    refreshIcons();
-  }
-
-  rtlToggle?.addEventListener("click", () => {
-    setRTL(!root.classList.contains("rtl"));
-  });
-
-  /* SETTINGS PAGE THEME BUTTONS */
-
-  document.querySelectorAll('[data-setting="dark"]').forEach((button) => {
-    button.addEventListener("click", () => {
-      const isDark = root.classList.toggle("dark");
-
-      try {
-        localStorage.setItem("estatenest-theme", isDark ? "dark" : "light");
-      } catch (error) {
-        // Ignore unavailable storage.
-      }
-
-      updateThemeIcon();
-
-      showToast(
-        isDark ? "Dark appearance enabled." : "Light appearance enabled.",
-      );
-    });
-  });
-
-  document.querySelectorAll('[data-setting="rtl"]').forEach((button) => {
-    button.addEventListener("click", () => {
-      const isRTL = !root.classList.contains("rtl");
-
-      setRTL(isRTL);
-
-      showToast(
-        isRTL
-          ? "Right-to-left layout enabled."
-          : "Left-to-right layout enabled.",
-      );
-    });
-  });
-
-  /* SEARCH FILTERS */
+  /* =====================================================
+     14. SEARCH FILTERS
+     Requires:
+     input[data-search="properties"]
+     container[data-list="properties"]
+     rows with class .content-row
+  ===================================================== */
 
   document.querySelectorAll("[data-search]").forEach((input) => {
     input.addEventListener("input", () => {
@@ -379,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const query = input.value.trim().toLowerCase();
 
       const rows = list.querySelectorAll(".content-row");
+
       let visibleCount = 0;
 
       rows.forEach((row) => {
@@ -392,7 +359,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const page = input.closest(".page-content");
-
       const emptyState = page?.querySelector(".empty-state");
 
       if (emptyState) {
@@ -401,7 +367,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* DEMO ACTION MESSAGES */
+  /* =====================================================
+     15. DEMO ACTION NOTIFICATIONS
+  ===================================================== */
 
   document.querySelectorAll("[data-notice]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -409,19 +377,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* LOGOUT */
+  /* =====================================================
+     16. LOGOUT
+  ===================================================== */
 
   document
     .querySelectorAll("#sidebarLogoutButton, #adminLogoutButton")
     .forEach((button) => {
       button.addEventListener("click", () => {
-        /*
-        Connect this action to your actual owner authentication
-        system before using it in production.
-
-        This demo redirects to login.html.
-      */
-
         closeSidebar();
         closeProfileDropdown();
 
@@ -429,7 +392,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  /* ESCAPE KEY */
+  /* =====================================================
+     17. ESCAPE KEY
+  ===================================================== */
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
@@ -438,37 +403,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RESTORE PREFERENCES */
-
-  try {
-    const savedTheme = localStorage.getItem("estatenest-theme");
-    const savedDirection = localStorage.getItem("estatenest-direction");
-
-    if (savedTheme === "dark") {
-      root.classList.add("dark");
-    } else if (savedTheme === "light") {
-      root.classList.remove("dark");
-    }
-
-    if (savedDirection === "rtl") {
-      root.classList.add("rtl");
-      root.setAttribute("dir", "rtl");
-    } else if (savedDirection === "ltr") {
-      root.classList.remove("rtl");
-      root.setAttribute("dir", "ltr");
-    }
-  } catch (error) {
-    // Default light, LTR dashboard remains functional.
-  }
-
-  /* INITIALIZE */
-
-  updateThemeIcon();
-  updateRTLButton();
+  /* =====================================================
+     18. INITIALIZE DASHBOARD
+     Open the page specified by the URL hash.
+  ===================================================== */
 
   const initialPage = window.location.hash.slice(1);
 
   showPage(pageData[initialPage] ? initialPage : "dashboard", false);
+
+  /* Ensure fixed header text is correct on startup */
+
+  if (headerLabel) {
+    headerLabel.textContent = "PROPERTY OWNER PORTAL";
+  }
+
+  if (headerTitle) {
+    headerTitle.textContent = "Welcome to EstateNest";
+  }
 
   refreshIcons();
 });

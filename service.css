@@ -93,7 +93,7 @@ html.dark .services-hero-overlay {
   line-height: 1.13;
   font-weight: 700;
   letter-spacing: -1px;
-  color: var(--primary);
+  color: #ffffff;
 }
 
 .services-hero-content h1 span {
@@ -193,7 +193,38 @@ html.dark .services-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   SERVICES HERO BUTTON — DARK MODE
+========================================= */
 
+html.dark .services-hero-btn,
+body.dark .services-hero-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .services-hero-btn i,
+body.dark .services-hero-btn i {
+  color: inherit;
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+}
+
+html.dark .services-hero-btn:hover,
+body.dark .services-hero-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+html.dark .services-hero-btn:hover i,
+body.dark .services-hero-btn:hover i {
+  transform: translateX(4px);
+}
 /* =========================================
    NET HUB
    1025px - 1600px
@@ -454,39 +485,50 @@ html.dark .services-hero-overlay {
   }
 }
 
-/* =========================================
-   TENANT SCREENING SECTION
-   Primary: #C9A45C
-   Secondary: #8B642C
-========================================= */
+/* =========================================================
+   ESTATENEST — TENANT SCREENING SECTION
+   Uses existing EstateNest color variables
+========================================================= */
 
 .tenant-screening-section {
   position: relative;
   width: 100%;
-  padding: 90px 24px;
+  padding: 80px 24px;
   overflow: hidden;
+  isolation: isolate;
+  box-sizing: border-box;
+
   background: var(--bg);
   color: var(--text);
-  isolation: isolate;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.tenant-screening-section *,
+.tenant-screening-section *::before,
+.tenant-screening-section *::after {
+  box-sizing: border-box;
 }
 
 .tenant-screening-container {
-  width: 87%;
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* =========================================
+/* =========================================================
    SECTION HEADER
-========================================= */
+========================================================= */
 
 .tenant-screening-header {
   max-width: 760px;
-  margin: 0 auto 55px;
+  margin: 0 auto 46px;
   text-align: center;
 }
 
-.section-label {
+.tenant-screening-section .section-label {
   display: inline-block;
 
   padding: 7px 18px;
@@ -512,8 +554,9 @@ html.dark .services-hero-overlay {
 }
 
 .tenant-screening-header h1 {
-  margin: 0 0 18px;
-  color: var(--text);
+  margin: 0 0 16px;
+
+  color: var(--heading);
   font-family: var(--font-heading);
   font-size: clamp(45px, 6vw, 60px);
   font-weight: 700;
@@ -525,299 +568,297 @@ html.dark .services-hero-overlay {
 }
 
 .tenant-screening-header > p {
-  max-width: 680px;
+  max-width: 660px;
   margin: 0 auto;
+
   color: var(--text);
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: 15px;
   line-height: 1.9;
+  opacity: 0.85;
 }
 
-/* =========================================
-   CARDS GRID
-========================================= */
+/* =========================================================
+   SERVICE CARDS GRID
+========================================================= */
 
 .tenant-screening-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
   gap: 25px;
 }
 
-.screening-card {
+.tenant-screening-section .screening-card {
   position: relative;
   display: flex;
   min-width: 0;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 30px 27px;
+  align-items: stretch;
+
+  padding: 0 0 25px;
   overflow: hidden;
 
-  background: var(--card-bg);
-  border: 1px solid var(--border, rgba(139, 100, 44, 0.2));
-  border-radius: var(--radius, 16px);
+  background: var(--card-bg, var(--card));
+  border: 1px solid var(--border);
+  border-radius: 15px;
 
-  box-shadow: var(--shadow, 0 8px 28px rgba(0, 0, 0, 0.06));
-
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease,
-    background-color 0.35s ease;
-}
-
-.screening-card::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  content: "";
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s ease;
-}
-
-.screening-card:hover {
-  transform: translateY(-7px);
-  border-color: var(--primary);
-  box-shadow: 0 18px 38px rgba(139, 100, 44, 0.13);
-}
-
-.screening-card:hover::before {
-  transform: scaleX(1);
-}
-
-/* =========================================
-   ICONS AND NUMBER
-========================================= */
-
-.screening-icon {
-  display: flex;
-  width: 58px;
-  height: 58px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 23px;
-
-  color: var(--secondary);
-  background: rgba(201, 164, 92, 0.15);
-  border: 1px solid rgba(201, 164, 92, 0.32);
-  border-radius: 14px;
-
-  transition:
-    color 0.3s ease,
-    background 0.3s ease,
-    transform 0.3s ease;
-}
-
-.screening-icon svg {
-  width: 27px;
-  height: 27px;
-  stroke-width: 1.8;
-}
-
-.screening-card:hover .screening-icon {
-  color: #ffffff;
-  background: var(--secondary);
-  transform: translateY(-3px);
-}
-
-/* =========================================
-   CARD CONTENT
-========================================= */
-
-.screening-card h2 {
-  margin: 0 0 13px;
-  color: var(--text);
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-.screening-card p {
-  flex-grow: 1;
-  margin: 0 0 25px;
-  color: var(--text);
-  font-size: 13px;
-  line-height: 1.85;
-}
-
-/* =========================================
-   SERVICE DETAIL BUTTON
-========================================= */
-
-.screening-button {
-  min-height: 43px;
-  padding: 0 22px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-
-  font-family: var(--font-body);
-  border-radius: 9px;
-
-  background: var(--primary-light);
-  color: var(--heading);
-
-  border: 1px solid var(--primary);
-
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 14px;
-
-  text-decoration: none;
+  box-shadow: 0 7px 24px var(--shadow, rgba(61, 43, 15, 0.08));
 
   transition:
     transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
-.screening-button svg {
-  width: 16px;
-  height: 16px;
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.tenant-screening-section .screening-image {
+  position: relative;
+  width: 100%;
+  height: 190px;
   flex-shrink: 0;
+
+  margin: 0 0 21px;
+  overflow: hidden;
+
+  background: var(--secondary-light);
 }
 
-.screening-button:hover {
-  background: var(--bg);
+.tenant-screening-section .screening-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.55s ease,
+    filter 0.35s ease;
+}
+
+.tenant-screening-section .screening-card:hover .screening-image img {
+  transform: scale(1.055);
+}
+
+/* =========================================================
+   CARD HEADING AND DESCRIPTION
+========================================================= */
+
+.tenant-screening-section .screening-card h2 {
+  margin: 0 23px 11px;
+
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.tenant-screening-section .screening-card p {
+  flex-grow: 1;
+  margin: 0 23px 23px;
+
   color: var(--text);
-  border: 2px solid var(--secondary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.85;
+  opacity: 0.85;
 }
 
+/* =========================================================
+   SERVICE DETAILS BUTTON
+========================================================= */
+
+.tenant-screening-section .screening-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+
+  min-height: 43px;
+  margin: auto 23px 0;
+  padding: 9px 15px;
+
+  border: 1px solid var(--primary);
+  border-radius: 9px;
+
+  background: var(--primary-light);
+  color: var(--text);
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tenant-screening-section .screening-button:hover {
+  background: transparent;
+  color: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.tenant-screening-section .screening-button:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 4px;
+}
 /* =========================================
-   SCROLL REVEAL ANIMATION
+   TENANT SCREENING BUTTON — DARK MODE
 ========================================= */
 
-.reveal {
+html.dark .tenant-screening-section .screening-button,
+body.dark .tenant-screening-section .screening-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .tenant-screening-section .screening-button:hover,
+body.dark .tenant-screening-section .screening-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+html.dark .tenant-screening-section .screening-button:focus-visible,
+body.dark .tenant-screening-section .screening-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+   Compatible with existing .reveal.is-visible JavaScript
+========================================================= */
+
+.tenant-screening-section .reveal {
   opacity: 0;
-  transform: translateY(35px);
+  transform: translateY(28px);
+
   transition:
-    opacity 0.75s ease,
-    transform 0.75s cubic-bezier(0.2, 0.65, 0.3, 1);
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.65, 0.3, 1);
+
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
 
-.reveal.is-visible {
+.tenant-screening-section .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* =========================================
-   TENANT SCREENING RESPONSIVE
-   Samsung Galaxy S8+
-   iPad Mini
-   NetHub
-========================================= */
-
-/* =========================================
-   NETHUB / LARGE SCREENS
+/* =========================================================
+   NETBOOK / DESKTOP
    1025px and above
-========================================= */
+========================================================= */
 
 @media (min-width: 1025px) {
   .tenant-screening-section {
-    padding: 90px 40px;
+    padding: 80px 35px;
   }
 
   .tenant-screening-container {
-    max-width: 1250px;
+    max-width: 1200px;
   }
 
   .tenant-screening-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px;
+    gap: 25px;
   }
 
-  .screening-card {
-    padding: 32px 28px;
-  }
-
-  .screening-card h2 {
-    font-size: 21px;
-  }
-
-  .screening-card p {
-    font-size: 13px;
+  .tenant-screening-section .screening-image {
+    height: 190px;
   }
 }
 
-/* =========================================
+/* =========================================================
    IPAD MINI / TABLET
-   600px - 1024px
-========================================= */
+   600px – 1024px
+========================================================= */
 
 @media (min-width: 600px) and (max-width: 1024px) {
   .tenant-screening-section {
-    padding: 75px 28px;
+    padding: 65px 25px;
   }
 
   .tenant-screening-container {
-    max-width: 900px;
+    max-width: 850px;
   }
 
   .tenant-screening-header {
-    max-width: 700px;
-    margin-bottom: 42px;
+    max-width: 680px;
+    margin-bottom: 35px;
   }
 
   .tenant-screening-header h1 {
-    font-size: 45px;
+    font-size: 43px;
   }
 
   .tenant-screening-header > p {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .tenant-screening-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 21px;
   }
 
-  .screening-card {
-    padding: 27px 23px;
+  .tenant-screening-section .screening-image {
+    height: 175px;
+    margin-bottom: 18px;
   }
 
-  .screening-card h2 {
-    font-size: 19px;
+  .tenant-screening-section .screening-card {
+    padding-bottom: 22px;
   }
 
-  .screening-card p {
+  .tenant-screening-section .screening-card h2 {
+    margin-right: 19px;
+    margin-left: 19px;
+    font-size: 20px;
+  }
+
+  .tenant-screening-section .screening-card p {
+    margin-right: 19px;
+    margin-left: 19px;
     font-size: 12px;
-    line-height: 1.8;
   }
 
-  .screening-icon {
-    width: 54px;
-    height: 54px;
-    margin-bottom: 20px;
-  }
-
-  .card-number {
-    top: 28px;
-    right: 23px;
-  }
-
-  .screening-button {
-    min-height: 42px;
-    padding: 0 17px;
-    font-size: 12px;
+  .tenant-screening-section .screening-button {
+    margin-right: 19px;
+    margin-left: 19px;
+    padding: 9px 12px;
+    font-size: 10px;
   }
 }
 
-/* =========================================
-   SAMSUNG GALAXY S8+
-   360px - 599px
-========================================= */
+/* =========================================================
+   SAMSUNG GALAXY S8+ / MOBILE
+   360px – 599px
+========================================================= */
 
 @media (min-width: 360px) and (max-width: 599px) {
   .tenant-screening-section {
-    padding: 60px 18px;
+    padding: 50px 17px;
   }
 
   .tenant-screening-container {
@@ -825,19 +866,24 @@ html.dark .services-hero-overlay {
   }
 
   .tenant-screening-header {
-    margin-bottom: 32px;
+    margin-bottom: 29px;
   }
 
-  .section-label {
-    padding: 7px 13px;
-    margin-bottom: 16px;
+  .tenant-screening-section .section-label {
+    gap: 7px;
+    padding: 7px 12px;
+    margin-bottom: 14px;
     font-size: 9px;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.2px;
+  }
+
+  .tenant-screening-section .label-line {
+    width: 16px;
   }
 
   .tenant-screening-header h1 {
-    margin-bottom: 15px;
-    font-size: 35px;
+    margin-bottom: 13px;
+    font-size: 34px;
     line-height: 1.25;
   }
 
@@ -848,129 +894,104 @@ html.dark .services-hero-overlay {
 
   .tenant-screening-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
+    gap: 20px;
   }
 
-  .screening-card {
-    padding: 25px 22px;
-    border-radius: 14px;
+  .tenant-screening-section .screening-card {
+    padding-bottom: 22px;
+    border-radius: 13px;
   }
 
-  .screening-card:hover {
-    transform: translateY(-4px);
+  .tenant-screening-section .screening-card:hover {
+    transform: translateY(-3px);
   }
 
-  .screening-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 19px;
-    border-radius: 12px;
+  .tenant-screening-section .screening-image {
+    height: 200px;
+    margin-bottom: 18px;
   }
 
-  .screening-icon svg {
-    width: 24px;
-    height: 24px;
+  .tenant-screening-section .screening-card h2 {
+    margin: 0 20px 10px;
+    font-size: 21px;
   }
 
-  .card-number {
-    top: 26px;
-    right: 22px;
-    font-size: 12px;
-  }
-
-  .screening-card h2 {
-    margin-bottom: 10px;
-    font-size: 19px;
-    line-height: 1.45;
-  }
-
-  .screening-card p {
-    margin-bottom: 20px;
+  .tenant-screening-section .screening-card p {
+    margin: 0 20px 20px;
     font-size: 12px;
     line-height: 1.8;
   }
 
-  .screening-button {
-    min-height: 42px;
-    padding: 0 17px;
-    gap: 8px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-  }
-
-  .screening-button svg {
-    width: 15px;
-    height: 15px;
+  .tenant-screening-section .screening-button {
+    min-height: 39px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 9px 13px;
+    font-size: 10px;
   }
 }
 
-/* =========================================
-   SMALL SCREENS
+/* =========================================================
+   EXTRA SMALL SCREENS
    Below 360px
-========================================= */
+========================================================= */
 
 @media (max-width: 359px) {
   .tenant-screening-section {
-    padding: 45px 13px;
+    padding: 42px 13px;
   }
 
   .tenant-screening-header {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
-  .section-label {
+  .tenant-screening-section .section-label {
+    gap: 6px;
     padding: 6px 10px;
     font-size: 8px;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
   }
 
   .tenant-screening-header h1 {
-    font-size: 30px;
+    font-size: 29px;
   }
 
   .tenant-screening-header > p {
     font-size: 11px;
+    line-height: 1.8;
   }
 
   .tenant-screening-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 15px;
+    gap: 17px;
   }
 
-  .screening-card {
-    padding: 22px 17px;
+  .tenant-screening-section .screening-image {
+    height: 165px;
+    margin-bottom: 16px;
   }
 
-  .screening-icon {
-    width: 45px;
-    height: 45px;
-    margin-bottom: 17px;
+  .tenant-screening-section .screening-card {
+    padding-bottom: 19px;
   }
 
-  .screening-icon svg {
-    width: 22px;
-    height: 22px;
+  .tenant-screening-section .screening-card h2 {
+    margin-right: 16px;
+    margin-left: 16px;
+    font-size: 19px;
   }
 
-  .card-number {
-    top: 23px;
-    right: 17px;
+  .tenant-screening-section .screening-card p {
+    margin-right: 16px;
+    margin-left: 16px;
     font-size: 11px;
   }
 
-  .screening-card h2 {
-    font-size: 17px;
-  }
-
-  .screening-card p {
-    font-size: 11px;
-    line-height: 1.75;
-  }
-
-  .screening-button {
-    min-height: 40px;
-    padding: 0 13px;
-    font-size: 11px;
+  .tenant-screening-section .screening-button {
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 8px 10px;
+    font-size: 10px;
   }
 }
 
@@ -1201,7 +1222,34 @@ html.dark .services-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   INSPECTION BUTTON — DARK MODE
+========================================= */
 
+html.dark .inspection-button,
+body.dark .inspection-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .inspection-button svg,
+body.dark .inspection-button svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .inspection-button:hover,
+body.dark .inspection-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
 /* =========================================
    SCROLL REVEAL
 ========================================= */
@@ -3016,12 +3064,14 @@ html[dir="rtl"] .pm-service-item:hover .pm-service-arrow {
   justify-content: center;
   min-width: 0;
   padding: 36px;
+
   background: linear-gradient(
     145deg,
-    rgba(201, 164, 92, 0.15),
-    rgba(139, 100, 44, 0.06)
+    rgba(74, 144, 226, 0.15),
+    rgba(15, 118, 110, 0.06)
   );
-  border: 1px solid var(--border, rgba(139, 100, 44, 0.22));
+
+  border: 1px solid var(--border, rgba(74, 144, 226, 0.22));
   border-radius: var(--radius, 18px);
   position: relative;
   overflow: hidden;
@@ -3180,7 +3230,34 @@ html[dir="rtl"] .pm-service-item:hover .pm-service-arrow {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   FINANCIAL CTA — DARK MODE
+========================================= */
 
+html.dark .financial-cta,
+body.dark .financial-cta {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .financial-cta svg,
+body.dark .financial-cta svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .financial-cta:hover,
+body.dark .financial-cta:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
 .financial-footer-note {
   display: flex;
   align-items: center;
@@ -3678,12 +3755,12 @@ html[dir="rtl"] .pm-service-item:hover .pm-service-arrow {
 
   background: linear-gradient(
     120deg,
-    var(--cta-light, #f5ecdc) 0%,
-    var(--cta-light-secondary, #eee0c7) 55%,
-    #e9d5ae 100%
+    var(--primary-light, #eaf3ff) 0%,
+    var(--secondary-light, #e6f5f2) 55%,
+    #d5e9f5 100%
   );
 
-  border: 1px solid var(--cta-border, #d8c49a);
+  border: 1px solid var(--border, #b8d5ed);
   border-radius: 0;
   box-shadow: var(--cta-shadow, 0 10px 30px rgba(61, 43, 15, 0.1));
 }
@@ -3918,57 +3995,128 @@ html[dir="rtl"] .pm-service-item:hover .pm-service-arrow {
   font-size: 13px;
   line-height: 1.8;
 }
-
 /* =========================================
-   DARK MODE
+   PROPERTY CTA — DARK MODE
 ========================================= */
 
-html.dark .property-cta {
-  background: var(--bg);
+html.dark .property-cta,
+body.dark .property-cta {
+  background: var(--bg, #181b1d);
 }
 
-html.dark .property-cta-container {
-  background: linear-gradient(120deg, #292216 0%, #332719 55%, #3b2c1c 100%);
+/* CTA MAIN CONTAINER */
 
-  border-color: var(--border, #493b25);
-  box-shadow: var(--shadow, 0 10px 30px rgba(0, 0, 0, 0.35));
+html.dark .property-cta-container,
+body.dark .property-cta-container {
+  background: linear-gradient(120deg, #172b42 0%, #1c3448 55%, #163b38 100%);
+
+  border-color: #38516a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-html.dark .property-cta-label {
-  color: var(--secondary-light, #e5d6bb);
-  border-color: var(--primary-light, #98734b);
+/* LEFT CONTENT */
+
+html.dark .property-cta-label,
+body.dark .property-cta-label {
+  color: #60a5fa;
+  border-color: #4a90e2;
 }
 
 html.dark .property-cta-content h2,
-html.dark .property-cta-info h3 {
-  color: var(--heading);
+body.dark .property-cta-content h2 {
+  color: #f1f5f9;
 }
 
-html.dark .property-cta-content h2 span {
-  color: var(--secondary-light, #e5d6bb);
+html.dark .property-cta-content h2 span,
+body.dark .property-cta-content h2 span {
+  color: #5eead4;
 }
 
 html.dark .property-cta-content > p,
+body.dark .property-cta-content > p {
+  color: #cbd5e1;
+}
+
+/* FEATURES */
+
 html.dark .property-cta-features span,
-html.dark .property-cta-info p {
-  color: var(--text);
+body.dark .property-cta-features span {
+  color: #e2e8f0;
 }
 
-html.dark .property-cta-decoration {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--border, #493b25);
+html.dark .property-cta-features span::before,
+body.dark .property-cta-features span::before {
+  background: #2dd4bf;
 }
 
-html.dark .property-cta-info {
-  background: rgba(17, 17, 17, 0.82);
+/* BUTTON */
+
+html.dark .property-cta-button,
+body.dark .property-cta-button {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
 }
 
-html.dark .property-cta-info-label {
-  color: var(--secondary-light, #e5d6bb);
+html.dark .property-cta-button:hover,
+body.dark .property-cta-button:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
 }
 
-html.dark .property-cta-square {
-  border-color: rgba(229, 214, 187, 0.2);
+html.dark .property-cta-button span,
+body.dark .property-cta-button span {
+  color: inherit;
+}
+
+/* RIGHT DECORATIVE PANEL */
+
+html.dark .property-cta-decoration,
+body.dark .property-cta-decoration {
+  background: rgba(15, 118, 110, 0.12);
+  border-color: #38516a;
+}
+
+/* DECORATIVE SQUARES */
+
+html.dark .property-cta-square,
+body.dark .property-cta-square {
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+html.dark .square-one,
+body.dark .square-one {
+  background: rgba(74, 144, 226, 0.15);
+}
+
+html.dark .square-two,
+body.dark .square-two {
+  background: rgba(45, 212, 191, 0.08);
+}
+
+/* INFO CARD */
+
+html.dark .property-cta-info,
+body.dark .property-cta-info {
+  background: #202b35;
+  border-left-color: #4a90e2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+html.dark .property-cta-info-label,
+body.dark .property-cta-info-label {
+  color: #5eead4;
+}
+
+html.dark .property-cta-info h3,
+body.dark .property-cta-info h3 {
+  color: #f1f5f9;
+}
+
+html.dark .property-cta-info p,
+body.dark .property-cta-info p {
+  color: #cbd5e1;
 }
 
 /* =========================================

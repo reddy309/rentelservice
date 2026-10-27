@@ -1,80 +1,98 @@
 /* =========================================================
-   ESTATENEST — PROPERTY OWNER DASHBOARD
+   ESTATENEST — ROOT VARIABLES
 ========================================================= */
 
 :root {
-  --primary: #75502f;
-  --primary-dark: #4b321e;
-  --primary-light: #98734b;
+  /* Primary & Secondary */
+  --primary: #2563eb;
+  --secondary: #0f766e;
 
-  --secondary: #9a742f;
-  --secondary-dark: #765620;
-  --secondary-light: #e5d6bb;
+  /* Light colors */
+  --primary-light: #dbeafe;
+  --secondary-light: #ccfbf1;
 
-  --bg: #faf9f6;
-  --background: #faf9f6;
+  /* Backgrounds */
+  --background: #f3f7fc;
+  --bg: #eaf1f8;
   --surface: #ffffff;
-  --surface-soft: #f5f1e9;
+  --surface-soft: #f0f7f6;
   --card: #ffffff;
 
-  --text: #292216;
-  --text-soft: #655b4a;
-  --muted: #8a806e;
-  --heading: #1c1810;
-  --heading-color: #1c1810;
+  /* Text */
+  --text: #263244;
+  --text-soft: #5b6879;
 
-  --border: #e1d8c8;
-  --shadow: rgba(61, 43, 15, 0.1);
+  --heading: #172554;
+  --heading-color: #172554;
 
-  --success: #36805b;
-  --danger: #c94b4b;
-  --warning: #b9852e;
+  /* Borders & shadows */
+  --border: #d5e1ed;
+  --shadow: rgba(37, 99, 235, 0.1);
 
+  /* Status colors */
+  --success: #16804a;
+  --danger: #dc4242;
+  --warning: #b7791f;
+
+  /* Fonts */
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Montserrat", sans-serif;
 
+  /* Layout */
   --sidebar-width: 270px;
   --header-height: 88px;
 
+  /* Radius */
   --radius-sm: 8px;
   --radius-md: 13px;
   --radius-lg: 18px;
 
-  --shadow-sm: 0 4px 18px rgba(61, 43, 15, 0.05);
-  --shadow-md: 0 10px 30px rgba(61, 43, 15, 0.09);
+  /* Shadows */
+  --shadow-sm: 0 4px 18px rgba(37, 99, 235, 0.05);
+  --shadow-md: 0 10px 30px rgba(37, 99, 235, 0.09);
 
   --transition-smooth: all 0.3s ease;
 }
 
+/* =========================================================
+   DARK MODE — BLUE + TEAL
+========================================================= */
+
 html.dark,
 body.dark {
-  --primary: #c49a68;
-  --primary-dark: #a77d4b;
-  --primary-light: #d7b58a;
+  /* Primary & Secondary */
+  --primary: #60a5fa;
+  --secondary: #2dd4bf;
 
-  --secondary: #d2ad67;
-  --secondary-dark: #b78e48;
-  --secondary-light: #ead7b3;
+  /* Dark-friendly light colors */
+  --primary-light: #243d5d;
+  --secondary-light: #19433e;
 
-  --bg: #191817;
-  --background: #191817;
-  --surface: #242321;
-  --surface-soft: #2c2925;
-  --card: #242321;
+  /* Backgrounds — separate shades */
+  --background: #0b1120;
+  --bg: #151f30;
+  --surface: #202c3d;
+  --surface-soft: #253447;
+  --card: #1f2b3d;
 
-  --text: #f3eee5;
-  --text-soft: #d0c6b6;
-  --muted: #a69a88;
-  --heading: #fff8e9;
-  --heading-color: #fff8e9;
+  /* Text */
+  --text: #e5eaf2;
+  --text-soft: #c0ccda;
 
-  --border: #42382b;
+  --heading: #f8fafc;
+  --heading-color: #f8fafc;
+  --muted: #a8b5c5;
+
+  /* Borders & shadows */
+  --border: #3a4b61;
   --shadow: rgba(0, 0, 0, 0.3);
 
-  --success: #6fc394;
-  --danger: #f07878;
-  --warning: #e5b75e;
+  /* Status colors */
+  --success: #6fcf97;
+  --danger: #ff8585;
+  --warning: #f5c66b;
 
+  /* Shadows */
   --shadow-sm: 0 4px 18px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -207,8 +225,8 @@ svg {
   align-items: center;
   justify-content: center;
 
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
 }
 
@@ -242,7 +260,7 @@ svg {
 }
 
 .logo-tagline {
-  color: var(--text-soft);
+  color: var(--secondary);
   font-family: var(--font-body);
   font-size: 10px;
   font-weight: 600;
@@ -724,6 +742,10 @@ svg {
 
 /* WELCOME BANNER */
 
+/* =========================================================
+   WELCOME BANNER — LIGHT MODE
+========================================================= */
+
 .welcome-banner {
   position: relative;
   display: grid;
@@ -735,10 +757,49 @@ svg {
   padding: 35px 38px;
   overflow: hidden;
 
-  color: #fff8ed;
-  background: #4b3929;
-  border: 1px solid rgba(154, 116, 47, 0.25);
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #2563eb 0%, #1d70bd 48%, #0f766e 100%);
+
+  border: 1px solid rgba(37, 99, 235, 0.25);
   border-radius: var(--radius-lg);
+}
+
+/* Ensure banner content is visible */
+.welcome-banner h1,
+.welcome-banner h2,
+.welcome-banner h3,
+.welcome-banner p,
+.welcome-banner span {
+  color: #ffffff;
+}
+
+/* =========================================================
+   WELCOME BANNER — DARK MODE
+========================================================= */
+
+html.dark .welcome-banner,
+body.dark .welcome-banner,
+.dark .welcome-banner {
+  color: #f8fafc;
+
+  background: linear-gradient(135deg, #172b49 0%, #173d59 48%, #124b46 100%);
+
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+/* Dark mode content visibility */
+html.dark .welcome-banner h1,
+html.dark .welcome-banner h2,
+html.dark .welcome-banner h3,
+html.dark .welcome-banner p,
+html.dark .welcome-banner span,
+body.dark .welcome-banner h1,
+body.dark .welcome-banner h2,
+body.dark .welcome-banner h3,
+body.dark .welcome-banner p,
+body.dark .welcome-banner span {
+  color: #f8fafc;
 }
 
 .welcome-banner > div:first-child {
@@ -761,8 +822,8 @@ svg {
 .welcome-banner p {
   max-width: 520px;
   margin-top: 14px;
-  color: #e3d7c5;
-  font-size: 12px;
+  color: #ffffff;
+  font-size: 13px;
   line-height: 1.9;
 }
 
@@ -802,6 +863,24 @@ svg {
     color 0.3s ease,
     border-color 0.3s ease;
 }
+/* =========================================
+   WELCOME BANNER BUTTON — DARK MODE
+========================================= */
+
+html.dark .welcome-banner .primary-button,
+body.dark .welcome-banner .primary-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+}
+
+html.dark .welcome-banner .primary-button:hover,
+body.dark .welcome-banner .primary-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+  transform: translateY(-2px);
+}
 
 .welcome-banner .primary-button:hover {
   background: var(--bg);
@@ -826,6 +905,7 @@ svg {
   border-color: var(--secondary);
   font-weight: 600;
   letter-spacing: 1px;
+  border: 1px solid var(--secondary);
   font-size: 14px;
 
   text-decoration: none;
@@ -1854,11 +1934,6 @@ svg {
 }
 
 /* FOOTER / DARK MODE COMPATIBILITY */
-
-html.dark .welcome-banner {
-  background: #30261d;
-  border-color: #4b3c2b;
-}
 
 html.dark .welcome-banner p {
   color: #e0d5c5;

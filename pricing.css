@@ -88,7 +88,7 @@ html.dark .pricing-hero-overlay {
 
 .pricing-hero-content h1 {
   margin: 0 0 22px;
-  color: var(--primary);
+  color: #ffffff;
   font-family: var(--font-heading);
   font-size: clamp(45px, 6vw, 60px);
   font-weight: 600;
@@ -164,43 +164,39 @@ html.dark .pricing-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   PRICING HERO BUTTON — DARK MODE
+========================================= */
 
-/* SECONDARY LINK */
-
-.pricing-hero-link {
-  min-height: 43px;
-  padding: 0 22px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-
-  font-family: var(--font-body);
-  border-radius: 9px;
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  border-color: var(--secondary);
-
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 14px;
-
-  text-decoration: none;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+html.dark .pricing-hero-btn,
+body.dark .pricing-hero-btn {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+  opacity: 1;
+  visibility: visible;
 }
 
-.pricing-hero-link:hover {
-  color: var(--text);
-  background: var(--secondary);
-  transform: translateY(-3px);
+/* BUTTON & LINK ICONS */
+
+html.dark .pricing-hero-btn svg,
+html.dark .pricing-hero-link svg,
+body.dark .pricing-hero-btn svg,
+body.dark .pricing-hero-link svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
 }
 
+/* BUTTON HOVER */
+
+html.dark .pricing-hero-btn:hover,
+body.dark .pricing-hero-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
 /* SCROLL REVEAL */
 
 .pricing-reveal {
@@ -646,6 +642,43 @@ html.dark .pricing-hero-overlay {
   background: var(--bg);
   color: var(--text);
   border: 2px solid var(--secondary);
+}
+/* =========================================
+   MANAGEMENT PLAN BUTTON — DARK MODE
+========================================= */
+
+html.dark .management-plan-btn,
+body.dark .management-plan-btn {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* BUTTON ICON */
+
+html.dark .management-plan-btn svg,
+body.dark .management-plan-btn svg {
+  color: inherit;
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* BUTTON HOVER */
+
+html.dark .management-plan-btn:hover,
+body.dark .management-plan-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .management-plan-btn:hover svg,
+body.dark .management-plan-btn:hover svg {
+  color: #ffffff;
+  stroke: currentColor;
 }
 .management-plan-btn1 {
   min-height: 43px;
@@ -1309,6 +1342,23 @@ html.dark .pricing-hero-overlay {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================
+   COMPARISON PRIMARY BUTTON — DARK MODE
+========================================= */
+
+html.dark .comparison-btn-primary,
+body.dark .comparison-btn-primary {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+}
+
+html.dark .comparison-btn-primary:hover,
+body.dark .comparison-btn-primary:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
 
 /* =========================================
    SCROLL REVEAL
@@ -1707,6 +1757,40 @@ html.dark .pricing-hero-overlay {
   background: var(--bg);
   color: var(--text);
   border: 2px solid var(--secondary);
+}
+/* =========================================
+   INCLUDED SERVICES BUTTON — DARK MODE
+========================================= */
+
+html.dark .included-services-btn,
+body.dark .included-services-btn {
+  background: #4a90e2;
+  color: #ffffff;
+  border: 1px solid #4a90e2;
+}
+
+/* BUTTON ICON */
+
+html.dark .included-services-btn i,
+body.dark .included-services-btn i {
+  color: inherit;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* BUTTON HOVER */
+
+html.dark .included-services-btn:hover,
+body.dark .included-services-btn:hover {
+  background: #0f766e;
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
+}
+
+html.dark .included-services-btn:hover i,
+body.dark .included-services-btn:hover i {
+  color: #ffffff;
+  transform: translateX(3px);
 }
 
 .included-services-btn:hover i {
@@ -2708,16 +2792,13 @@ html.dark .pricing-hero-overlay {
   text-align: center;
   border: 1px solid rgba(201, 164, 92, 0.45);
   border-radius: 8px;
-  background: radial-gradient(
-    circle at top left,
-    rgba(255, 255, 255, 0.85),
-    transparent 42%
-  );
-  background: linear-gradient(
-    135deg,
-    rgba(201, 164, 92, 0.2),
-    rgba(139, 100, 44, 0.1)
-  );
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.9),
+      transparent 42%
+    ),
+    linear-gradient(135deg, rgba(74, 144, 226, 0.16), rgba(15, 118, 110, 0.1));
   box-shadow: 0 12px 35px rgba(61, 43, 15, 0.08);
   isolation: isolate;
 }
@@ -2753,6 +2834,24 @@ html.dark .pricing-hero-overlay {
   }
 }
 
+/* =========================================
+   PRICING CTA CONTAINER — DARK MODE
+========================================= */
+
+html.dark .pricing-cta-container,
+body.dark .pricing-cta-container {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(96, 165, 250, 0.12),
+      transparent 42%
+    ),
+    linear-gradient(135deg, rgba(74, 144, 226, 0.18), rgba(15, 118, 110, 0.12));
+
+  border: 1px solid rgba(74, 144, 226, 0.4);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
 .pricing-cta-label {
   display: inline-block;
 
@@ -2847,6 +2946,22 @@ html.dark .pricing-hero-overlay {
   background: var(--bg);
   color: var(--text);
   border: 2px solid var(--secondary);
+}
+/* PRICING CTA BUTTON — DARK MODE */
+html.dark .pricing-cta-btn,
+body.dark .pricing-cta-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .pricing-cta-btn:hover,
+body.dark .pricing-cta-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid #2dd4bf;
 }
 
 .pricing-cta-link {

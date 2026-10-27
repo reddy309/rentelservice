@@ -78,7 +78,7 @@ html.dark .about-hero-overlay {
 .about-hero-content h1 {
   margin: 0 0 24px;
 
-  color: var(--primary);
+  color: #ffffff;
   font-family: var(--font-heading);
   font-size: clamp(35px, 6vw, 60px);
   font-weight: 700;
@@ -162,40 +162,34 @@ html.dark .about-hero-overlay {
 .about-hero-btn:hover span {
   transform: translateX(4px);
 }
+/* ABOUT HERO BUTTON — DARK MODE */
 
-.about-hero-link {
-  min-height: 43px;
-  padding: 0 22px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-
-  font-family: var(--font-body);
-  border-radius: 9px;
-
-  background: rgba(255, 255, 255, 0.04);
+html.dark .about-hero-btn,
+body.dark .about-hero-btn {
+  background: var(--primary);
   color: #ffffff;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--primary);
 
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 14px;
-
-  text-decoration: none;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+  opacity: 1;
+  visibility: visible;
 }
 
-.about-hero-link:hover {
-  color: var(--text);
+html.dark .about-hero-btn:hover,
+body.dark .about-hero-btn:hover {
   background: var(--secondary);
-  transform: translateY(-3px);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+html.dark .about-hero-btn span,
+body.dark .about-hero-btn span {
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+html.dark .about-hero-btn:hover span,
+body.dark .about-hero-btn:hover span {
+  transform: translateX(4px);
 }
 
 /* =========================================
@@ -593,6 +587,37 @@ html.dark .about-hero-overlay {
 .our-story-btn:hover .story-btn-arrow {
   transform: translateX(4px);
 }
+/* =========================================
+   OUR STORY BUTTON — DARK MODE
+========================================= */
+
+html.dark .our-story-btn,
+body.dark .our-story-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .our-story-btn:hover,
+body.dark .our-story-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+html.dark .story-btn-arrow,
+body.dark .story-btn-arrow {
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+html.dark .our-story-btn:hover .story-btn-arrow,
+body.dark .our-story-btn:hover .story-btn-arrow {
+  transform: translateX(4px);
+}
 
 /* =========================================
    SCROLL REVEAL
@@ -912,7 +937,34 @@ html.dark .about-hero-overlay {
   color: #ffffff;
   transform: scale(1.06);
 }
+/* =========================================
+   VALUE ICON — DARK MODE
+========================================= */
 
+html.dark .value-icon,
+body.dark .value-icon {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .value-icon svg,
+body.dark .value-icon svg {
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .value-card:hover .value-icon,
+body.dark .value-card:hover .value-icon {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: scale(1.06);
+}
 /* Number */
 
 .value-number {
@@ -1317,6 +1369,26 @@ html.dark .about-hero-overlay {
   height: 24px;
   stroke-width: 1.7;
 }
+/* =========================================
+   TITLE ICON — DARK MODE
+========================================= */
+
+html.dark .mv-title-icon,
+body.dark .mv-title-icon {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .mv-title-icon svg,
+body.dark .mv-title-icon svg {
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
+}
 
 /* =========================================
    HEADINGS
@@ -1381,6 +1453,26 @@ html.dark .about-hero-overlay {
   border-radius: 50%;
   background: var(--primary-light);
   color: var(--text);
+}
+/* =========================================
+   MV CHECK — DARK MODE
+========================================= */
+
+html.dark .mv-check,
+body.dark .mv-check {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .mv-check svg,
+body.dark .mv-check svg {
+  stroke: currentColor;
+  opacity: 1;
+  visibility: visible;
 }
 
 .mv-check svg {
@@ -1981,6 +2073,38 @@ html.dark .about-hero-overlay {
   outline: 3px solid var(--primary);
   outline-offset: 4px;
 }
+/* =========================================
+   TEAM BUTTON — DARK MODE
+========================================= */
+
+html.dark .team-button,
+body.dark .team-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .team-button svg,
+body.dark .team-button svg {
+  stroke: currentColor;
+  color: inherit;
+}
+
+html.dark .team-button:hover,
+body.dark .team-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+html.dark .team-button:focus-visible,
+body.dark .team-button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
 
 /* =========================================
    SCROLL REVEAL
@@ -2372,7 +2496,32 @@ html.dark .about-hero-overlay {
   outline: 3px solid var(--primary);
   outline-offset: 4px;
 }
+/* =========================================
+   PHILOSOPHY BUTTON — DARK MODE
+========================================= */
 
+html.dark .philosophy-button,
+body.dark .philosophy-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .philosophy-button svg,
+body.dark .philosophy-button svg {
+  color: inherit;
+  stroke: currentColor;
+}
+
+html.dark .philosophy-button:hover,
+body.dark .philosophy-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
 /* =========================================
    RIGHT: FOUR-BOX GRID
 ========================================= */
@@ -3211,11 +3360,10 @@ html.dark .about-hero-overlay {
 
   background: linear-gradient(
     135deg,
-    rgba(201, 164, 92, 0.17) 0%,
-    rgba(201, 164, 92, 0.1) 48%,
-    rgba(139, 100, 44, 0.13) 100%
+    rgba(74, 144, 226, 0.17) 0%,
+    rgba(74, 144, 226, 0.1) 48%,
+    rgba(15, 118, 110, 0.13) 100%
   );
-
   box-shadow: 0 10px 30px rgba(65, 46, 18, 0.06);
 
   transition:
@@ -3433,6 +3581,177 @@ html.dark .about-hero-overlay {
 
 .contact-cta.is-visible .contact-cta-action {
   transition-delay: 0.15s;
+}
+/* =========================================
+   CONTACT CTA — PREMIUM DARK MODE
+   Blue & Teal Theme
+========================================= */
+
+html.dark .contact-cta,
+body.dark .contact-cta {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* LEFT LABEL */
+
+html.dark .contact-cta-label,
+body.dark .contact-cta-label {
+  color: #60a5fa;
+  background: rgba(74, 144, 226, 0.1);
+  border-color: var(--primary);
+}
+
+/* MAIN HEADING */
+
+html.dark .contact-cta-content h2,
+body.dark .contact-cta-content h2 {
+  color: #f8fafc;
+}
+
+html.dark .contact-cta-content h2 span,
+body.dark .contact-cta-content h2 span {
+  color: #2dd4bf;
+}
+
+/* DESCRIPTION */
+
+html.dark .contact-cta-content > p,
+body.dark .contact-cta-content > p {
+  color: #cbd5e1;
+}
+
+/* BENEFITS */
+
+html.dark .contact-cta-points span,
+body.dark .contact-cta-points span {
+  color: #e2e8f0;
+}
+
+html.dark .contact-cta-points i,
+body.dark .contact-cta-points i {
+  color: #2dd4bf;
+}
+
+/* =========================================
+   RIGHT CTA CARD
+========================================= */
+
+html.dark .contact-cta-action,
+body.dark .contact-cta-action {
+  background: linear-gradient(135deg, #172b42 0%, #1c3448 52%, #163b38 100%);
+
+  border: 1px solid #38516a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+html.dark .contact-cta-action:hover,
+body.dark .contact-cta-action:hover {
+  border-color: var(--primary);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+}
+
+/* ANIMATED SHINE */
+
+html.dark .contact-cta-action::before,
+body.dark .contact-cta-action::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+}
+
+/* DECORATIVE CIRCLE */
+
+html.dark .contact-cta-action::after,
+body.dark .contact-cta-action::after {
+  border-color: rgba(74, 144, 226, 0.3);
+  box-shadow: 0 0 0 18px rgba(15, 118, 110, 0.1);
+}
+
+/* =========================================
+   CTA ICON
+========================================= */
+
+html.dark .cta-action-icon,
+body.dark .cta-action-icon {
+  background: rgba(74, 144, 226, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(74, 144, 226, 0.4);
+}
+
+html.dark .contact-cta-action:hover .cta-action-icon,
+body.dark .contact-cta-action:hover .cta-action-icon {
+  background: var(--secondary);
+  color: #ffffff;
+  border-color: var(--secondary);
+}
+
+/* =========================================
+   CTA TEXT
+========================================= */
+
+html.dark .cta-action-eyebrow,
+body.dark .cta-action-eyebrow {
+  color: #2dd4bf;
+}
+
+html.dark .contact-cta-action h3,
+body.dark .contact-cta-action h3 {
+  color: #f8fafc;
+}
+
+html.dark .contact-cta-action > p,
+body.dark .contact-cta-action > p {
+  color: #cbd5e1;
+}
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+html.dark .contact-cta-button,
+body.dark .contact-cta-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+html.dark .contact-cta-button i,
+body.dark .contact-cta-button i {
+  color: inherit;
+}
+
+html.dark .contact-cta-button:hover,
+body.dark .contact-cta-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+html.dark .contact-cta-button:focus-visible,
+body.dark .contact-cta-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   BOTTOM NOTE
+========================================= */
+
+html.dark .cta-bottom-note,
+body.dark .cta-bottom-note {
+  color: #cbd5e1;
+}
+
+html.dark .cta-bottom-note i,
+body.dark .cta-bottom-note i {
+  color: #2dd4bf;
 }
 
 /* =========================================

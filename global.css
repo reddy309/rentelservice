@@ -26,24 +26,24 @@ body {
 }
 
 /* =========================================================
-   ROOT VARIABLES
+   ROOT VARIABLES — LIGHT MODE
 ========================================================= */
 
 :root {
-  --primary: #75502f;
+  --primary: #4a90e2;
+  --secondary: #0f766e;
 
-  --primary-light: #98734b;
+  --primary-light: #eaf3ff;
+  --secondary-light: #e6f5f2;
 
-  --secondary: #9a742f;
-
-  --secondary-light: #e5d6bb;
   --text: #292216;
   --heading: #1c1810;
-  --bg: #faf9f6;
+
+  --bg: #f4f7fb;
   --card: #ffffff;
 
-  --border: #d8c49a;
-  --shadow: rgba(61, 43, 15, 0.1);
+  --border: #d5e1ed;
+  --shadow: rgba(30, 70, 110, 0.1);
 
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Montserrat", sans-serif;
@@ -52,29 +52,30 @@ body {
 }
 
 /* =========================================================
-   DARK MODE VARIABLES
+   DARK MODE — BLUE + TEAL
 ========================================================= */
 
 html.dark {
-  --primary: #75502f;
+  --primary: #60a5fa;
+  --secondary: #2dd4bf;
 
-  --primary-light: #98734b;
+  /* Light shades for buttons and icon backgrounds */
+  --primary-light: #263f60;
+  --secondary-light: #1d4945;
 
-  --secondary: #9a742f;
+  /* Text colors */
+  --text: #e5e7eb;
+  --heading: #ffffff;
 
-  --secondary-light: #e5d6bb;
-  --bg: #292216;
+  /* Background colors — different shades */
+  --background: #0b1120;
+  --bg: #151f30;
+  --card: #202d40;
 
-  --text: #faf9f6;
-  --heading: #fff8e9;
-
-  --background: #111111;
-  --card: #222222;
-
-  --border: #493b25;
+  /* Borders and shadows */
+  --border: #40516a;
   --shadow: rgba(0, 0, 0, 0.35);
 }
-
 /* =========================================================
    BODY
 ========================================================= */
@@ -170,8 +171,8 @@ body {
 }
 
 .logo-icon img {
-  width: 65px;
-  height: 65px;
+  width: 75px;
+  height: 75px;
   margin-bottom: 15px;
   display: block;
   object-fit: contain;
@@ -556,7 +557,7 @@ body.rtl .logo-name {
   border-radius: 9px;
 
   background: var(--primary-light);
-  color: var(--text);
+  color: var(--heading);
 
   border: 1px solid var(--primary);
 
@@ -578,7 +579,23 @@ body.rtl .logo-name {
   color: var(--text);
   border: 2px solid var(--secondary);
 }
+/* =========================================================
+   LOGIN BUTTON — DARK MODE
+========================================================= */
 
+html.dark .login-button,
+body.dark .login-button {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+}
+
+html.dark .login-button:hover,
+body.dark .login-button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 2px solid var(--secondary);
+}
 /* =========================================================
    HAMBURGER
 ========================================================= */
@@ -1117,8 +1134,8 @@ body.rtl .logo-name {
 ========================================================= */
 
 .footer-logo .logo-icon img {
-  width: 65px;
-  height: 65px;
+  width: 75px;
+  height: 75px;
 
   display: block;
 
