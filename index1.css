@@ -191,18 +191,6 @@ html.dark .primary-btn svg {
   stroke: currentColor;
 }
 
-.secondary-btn {
-  background: rgba(255, 255, 255, 0.04);
-  color: #ffffff;
-  border-color: var(--secondary);
-}
-
-.secondary-btn:hover {
-  color: var(--text);
-  background: var(--secondary);
-  transform: translateY(-3px);
-}
-
 /* ANIMATIONS */
 
 @keyframes heroFadeUp {
