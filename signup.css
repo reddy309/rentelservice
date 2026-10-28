@@ -970,7 +970,18 @@ body.dark .password-wrapper input {
 .signup-btn:active {
   transform: scale(0.99);
 }
-
+html.dark .signup-btn,
+body.dark .signup-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+html.dark .signup-btn:hover,
+body.dark .signup-btn:hover {
+  background: var(--secondary);
+  color: #ffffff;
+  border-color: var(--secondary);
+}
 /* =========================================
    19. FORM MESSAGE
 ========================================= */

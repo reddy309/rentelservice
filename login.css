@@ -1116,6 +1116,11 @@ body::after {
   flex-shrink: 0;
 }
 
+/* ACTIVE */
+.login-button:active {
+  transform: scale(0.99);
+}
+
 /* =========================================
    17. FORM MESSAGE
 ========================================= */
@@ -1287,18 +1292,16 @@ body.dark .input-wrapper input::placeholder {
 }
 
 body.dark .login-button {
-  background: linear-gradient(115deg, #b89555, #d9b66e, #b89555);
-
-  background-size: 200% 100%;
-
-  color: #21180b;
+  background: var(--primary);
+  color: #ffffff;
   border-color: var(--primary);
-
-  box-shadow: 0 4px 15px rgba(217, 182, 110, 0.12);
 }
 
 body.dark .login-button:hover {
-  box-shadow: 0 7px 20px rgba(217, 182, 110, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  border-color: var(--secondary);
+  border: 1px solid var(--primary);
 }
 
 body.dark .social-button,
