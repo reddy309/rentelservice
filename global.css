@@ -1282,7 +1282,7 @@ body.rtl .footer-logo .logo-name::after {
 
   flex-shrink: 0;
 
-  border: 1px solid var(--border);
+  border: 1px solid var(--primary);
 
   border-radius: 50%;
 
